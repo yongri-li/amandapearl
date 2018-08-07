@@ -1,0 +1,28 @@
+<div class="col-xs-3 sidebar collection-sidebar">
+  {% if settings.display_sidebar_categories %}
+  <div class="widget sidebar-links">
+    <div class="widget-title">
+      <h3>
+          <span>Sort By</span>
+      </h3>
+    </div>
+    {% include 'collection-sort' %}
+  </div>
+  {% endif %}
+  
+  
+  {% include 'collection-sidebar-shop-by-blocks' %}
+  
+  {% if settings.show_featured_product %}
+  {% include 'collection-sidebar-featured-products' %}
+  {% endif %}
+  
+  {% if settings.display_banner_sidebar %}
+  {% include 'collection-sidebar-banner-block' %}
+  {% endif %}
+  
+  {% if settings.display_sidebar_custom %}
+  {% include 'collection-sidebar-custom-cms-block' %}
+  {% endif %}
+  
+</div>

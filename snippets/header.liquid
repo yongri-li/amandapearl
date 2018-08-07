@@ -1,0 +1,113 @@
+<header class="site-header" role="banner">
+
+  <div class="header-bottom">
+    <div class="container">
+
+      <div class="header-mobile">
+        <div class="menu-block visible-phone" style="border-right: 0px solid #fff;"><!-- start Navigation Mobile  -->
+          <div id="showLeftPush"></div>
+        </div><!-- end Navigation Mobile  -->
+
+        <div class="customer-area dropdown hidden-xs" style="border-left: 0px solid #fff;">
+          <a data-toggle="dropdown" href="#">Dropdown trigger</a>
+          <div class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+            <p {% if customer %}class="login"{% endif %}>
+              <a href="/account" {% if settings.enable_multilang %}data-translate="customer.account.title"{% endif %}>{{ 'customer.account.title' | t }}</a>
+            </p>
+            <div class="wishlist">
+              <a href="/pages/wish-list" {% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}>
+              {{ 'wishlist.general.my_wishlist' | t }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-panel-top visible-xs">
+        <div class="nav-search on">{% include 'search-bar' %}</div>
+        <div class="currency">{% include 'new-currency-picker' %}</div>
+
+        {% if settings.enable_multilang %}
+        <div class="lang-block">
+          <select id="lang-switcher">
+            <option value="1">{{ settings.lange_1 }}</option>
+            <option value="2">{{ settings.lange_2 }}</option>
+          </select>
+        </div>
+        <script>
+          translator.updateLangSwitcher();
+          jQuery('#lang-switcher').selectize();
+        </script>
+        <style>
+        .selectize-control div[data-value~="1"] {background: url({{ "i-lang-1.png" | asset_url }}) no-repeat;}
+        .selectize-control div[data-value~="2"] {background: url({{ "i-lang-2.png" | asset_url }}) no-repeat;}
+        </style>
+        {% endif %}
+
+        <div class="top-header" style="margin-left:30px">
+          <div class="wrapper-top-cart">
+            <p class="top-cart">
+              <a href="/cart">
+                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><i class="fa fa-shopping-bag hidden-xs" aria-hidden="true"></i></span>
+                <span>( {{ cart.item_count }} )</span>
+              </a>
+            </p>
+          </div>
+
+          {% comment %}
+          If customer accounts are enabled, provide login and create account links
+          {% endcomment %}
+        </div> <!-- End Top Header -->
+
+      </div>
+
+      <div class="header-panel">
+        <div class="row">
+          <h1 class="header-logo col-xs-12">
+            <center>
+            {% if settings.brand_type == 'image' %}
+            <a href="/">
+              {{ 'logo.png' | asset_url | img_tag: shop.name }}</a><h4><font size="6"><b>{{ settings.brand_text }}</b></font></h4>
+              {% if settings.enable_retina %}
+              	{{ 'logo_2x.png' | asset_url | img_tag: shop.name }}
+              <h2>{{ settings.brand_text }}</h2>
+              {% endif %}
+
+
+            {% elsif settings.brand_text != "" %}
+            <a class="logo-title" href="/">{{ settings.brand_text }}</a>
+            {% else %}
+            <a class="logo-title" href="/">{{shop.name}}</a>
+            {% endif %}
+
+            </center>
+          </h1>
+
+          <div class="header-panel-bottom col-xs-12">
+
+
+          </div>
+          <div class="nav-search on hidden-xs">{% include 'search-bar' %}</div>
+        </div>
+
+      </div>
+    </div>
+
+    <nav class="nav-bar" role="navigation">
+      <div class="container visible-xs" style="margin-top: -30px">
+        {% include 'site-nav-mobile' %}
+      </div>
+      <div class="hidden-xs" style="margin-top: -33px">
+        {% include 'site-nav' %}
+      </div>
+    </nav>
+
+
+  </div>
+
+</header>
+{% if settings.enable_multilang %}
+<script>
+  translator.doTranslate(".site-header");
+</script>
+{% endif %}

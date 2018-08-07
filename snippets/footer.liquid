@@ -1,0 +1,136 @@
+{% if settings.display_header_top_text %}
+    {% if settings.header_top_text != blank %}
+    <div class="header-top" >
+      <div class="container">
+      <p>
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.header_top_text | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.header_top_text | split: '|' | last }}</span>
+          {% else %}
+          {{ settings.header_top_text | split: '|' | first }}
+          {% endif %}
+          
+          {% if settings.header_top_link_text != blank %}
+            {% if settings.enable_multilang %}
+            <a href="{{ settings.header_top_link }}" class="link lang1">{{ settings.header_top_link_text | split: '|' | first }}</a>
+            <a href="{{ settings.header_top_link }}" class="link lang2">{{ settings.header_top_link_text | split: '|' | last }}</a>
+            {% else %}
+            <a href="{{ settings.header_top_link }}" class="link">{{ settings.header_top_link_text | split: '|' | first }}</a>
+            {% endif %}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <script>
+      if (jQuery.cookie('headerTop') == 'closed') {
+        jQuery('.header-top').remove();
+      }
+
+      jQuery('.header-top a.close').bind('click',function(){
+        jQuery('.header-top').remove();
+        jQuery.cookie('headerTop', 'closed', {expires:1, path:'/'});
+      });  
+  </script>
+    {% endif %}
+  {% endif %}
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-top"> 
+      <div class="row">
+        {% if settings.footer_column_1_title != blank %}
+        <div class="col-1 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
+          {% if settings.enable_multilang %}
+            <h3 class="lang1">{{ settings.footer_column_1_title | split: '|' | first }}</h3>
+            <h3 class="lang2">{{ settings.footer_column_1_title | split: '|' | last }}</h3>
+          {% else %}
+          	<h3>{{ settings.footer_column_1_title | split: '|' | first }}</h3>
+          {% endif %}
+          
+          <ul>
+            {% assign footerCol1 = settings.footer_column_1_title | handleize %}
+            {% for link in linklists.[footerCol1].links %}
+              {% if settings.enable_multilang %}
+                <li class="lang1">{{ link.title | split: '|' | first | link_to: link.url }}</li>
+                <li class="lang2">{{ link.title | split: '|' | last | link_to: link.url }}</li>
+              {% else %}
+              	<li>{{ link.title | split: '|' | first | link_to: link.url }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        
+        {% if settings.footer_column_2_title != blank %}
+        <div class="col-2 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
+          {% if settings.enable_multilang %}
+            <h3 class="lang1">{{ settings.footer_column_2_title | split: '|' | first }}</h3>
+            <h3 class="lang2">{{ settings.footer_column_2_title | split: '|' | last }}</h3>
+          {% else %}
+          	<h3>{{ settings.footer_column_2_title | split: '|' | first }}</h3>
+          {% endif %}
+          <ul>
+            {% assign footerCol2 = settings.footer_column_2_title | handleize %}
+            {% for link in linklists.[footerCol2].links %}
+              {% if settings.enable_multilang %}
+                <li class="lang1">{{ link.title | split: '|' | first | link_to: link.url }}</li>
+                <li class="lang2">{{ link.title | split: '|' | last | link_to: link.url }}</li>
+              {% else %}
+              	<li>{{ link.title | split: '|' | first | link_to: link.url }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        {% if settings.footer_column_3_title != blank %}
+        <div class="col-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+          {% if settings.enable_multilang %}
+            <h3 class="lang1">{{ settings.footer_column_3_title | split: '|' | first }}</h3>
+            <h3 class="lang2">{{ settings.footer_column_3_title | split: '|' | last }}</h3>
+          {% else %}
+          	<h3>{{ settings.footer_column_3_title | split: '|' | first }}</h3>
+          {% endif %}
+          <ul>
+            {% assign footerCol3 = settings.footer_column_3_title | handleize %}
+            {% for link in linklists.[footerCol3].links %}
+              {% if settings.enable_multilang %}
+                <li class="lang1">{{ link.title | split: '|' | first | link_to: link.url }}</li>
+                <li class="lang2">{{ link.title | split: '|' | last | link_to: link.url }}</li>
+              {% else %}
+              	<li>{{ link.title | split: '|' | first | link_to: link.url }}</li>
+              {% endif %}
+            {% endfor %}
+          </ul>
+        </div>
+        {% endif %}
+        <div class="col-4 wow fadeInUp last" data-wow-delay="{{ settings.time_lazy_load | times: 4 }}ms">
+          {% if settings.enable_multilang %}
+            <h3 class="lang1">{{ settings.footer_column_4_title | split: '|' | first }}</h3>
+            <h3 class="lang2">{{ settings.footer_column_4_title | split: '|' | last }}</h3>
+          {% else %}
+          	<h3>{{ settings.footer_column_4_title | split: '|' | first }}</h3>
+          {% endif %}
+          {% include 'social' %}
+          {% include 'homepage-block-newsletter' %}
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom  wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 5 }}ms">
+      {% if settings.display_footer_address and settings.footer_address_code != blank %}
+        {% if settings.enable_multilang %}
+          <address class="lang1">{{ settings.footer_address_code | split: '|' | first }}</address>
+          <address class="lang2">{{ settings.footer_address_code | split: '|' | last }}</address>
+        {% else %}
+      	  <address>{{ settings.footer_address_code | split: '|' | first }}</address>
+        {% endif %}
+      {% endif %}
+      <address> 
+        <a href="http://minionmade.com" target="blank">Made with <i class="fa fa-heart" aria-hidden="true"></i> & <i class="fa fa-coffee" aria-hidden="true"></i> in New York by Minion Made.</a> <a href="https://www.shopify.com/?ref=minion-made" target="blank"> Powered by Shopify.</a>
+      </address>
+      {% comment %}
+        Loop through available payment methods and show their icons.
+      {% endcomment %}
+      {% include 'payment_methods' %}          
+    </div>
+  </div>
+</footer>
+{% include 'message-modal' %}

@@ -1,0 +1,43 @@
+{% if settings.display_social %}
+
+{% comment %}
+Loop through the persistent theme settings and list out each social network link.
+{% endcomment %}
+
+<ul class="social">
+  {% if settings.footer_social_link_1 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_1 }}" title="{{ shop.name }} on Facebook" target="blank"><span><i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+  {% if settings.footer_social_link_2 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_2 }}" title="{{ shop.name }} on Twitter" target="blank"><span><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+  {% if settings.footer_social_link_3 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_3 }}" title="{{ shop.name }} on Google +" target="blank"><span><i class="fa fa-google-plus fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+  {% if settings.footer_social_link_4 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_4 }}" title="{{ shop.name }} on Instagram" target="blank"><span><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+  {% if settings.footer_social_link_5 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_5 }}" title="{{ shop.name }} on Rss" target="blank"><span><i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+  {% if settings.footer_social_link_6 != blank %}
+  <li class="">
+    <a href="{{ settings.footer_social_link_6 }}" title="{{ shop.name }} on Pinterest" target="blank"><span><i class="fa fa-pinterest fa-2x" aria-hidden="true"></i></span></a>
+  </li>
+  {% endif %}
+</ul>
+
+<div class="text">
+  {{ settings.fb_like_code }}
+</div>
+{% endif %}

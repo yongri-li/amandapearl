@@ -1,0 +1,35 @@
+{% if settings.display_header_top_text %}
+    {% if settings.header_top_text != blank %}
+    <div class="header-top hidden-xs">
+      <div class="container">
+      <p>
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.header_top_text | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.header_top_text | split: '|' | last }}</span>
+          {% else %}
+          {{ settings.header_top_text | split: '|' | first }}
+          {% endif %}
+
+          {% if settings.header_top_link_text != blank %}
+            {% if settings.enable_multilang %}
+            <a href="{{ settings.header_top_link }}" class="link lang1">{{ settings.header_top_link_text | split: '|' | first }}</a>
+            <a href="{{ settings.header_top_link }}" class="link lang2">{{ settings.header_top_link_text | split: '|' | last }}</a>
+            {% else %}
+            <a href="{{ settings.header_top_link }}" class="link">{{ settings.header_top_link_text | split: '|' | first }}</a>
+            {% endif %}
+          {% endif %}
+        </p>
+      </div>
+    </div>
+    <script>
+      if (jQuery.cookie('headerTop') == 'closed') {
+        jQuery('.header-top').remove();
+      }
+
+      jQuery('.header-top a.close').bind('click',function(){
+        jQuery('.header-top').remove();
+        jQuery.cookie('headerTop', 'closed', {expires:1, path:'/'});
+      });
+  </script>
+    {% endif %}
+  {% endif %}

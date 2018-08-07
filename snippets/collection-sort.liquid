@@ -1,0 +1,43 @@
+<!-- /snippets/collection-sorting.liquid -->
+<div class="form-horizontal">
+  <div class="widget-content filter-sortby">
+  <div class="os_categoryFilterLinks">
+    <ul>
+      <li><a href="#sort" data-select="best-selling">Best Sellers</a></li>
+      <li><a href="#sort" data-select="created-descending">Newest Items</a></li>
+      <li><a href="#sort" data-select="price-ascending">Lowest Price</a></li>
+      <li><a href="#sort" data-select="price-descending">Highest Price</a></li>
+    </ul>
+  </div>
+  </div>
+</div>
+
+<script>
+  Shopify.queryParams = {};
+  if (location.search.length) {
+    for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
+      aKeyValue = aCouples[i].split('=');
+      if (aKeyValue.length > 1) {
+        Shopify.queryParams[decodeURIComponent(aKeyValue[0])] = decodeURIComponent(aKeyValue[1]);
+      }
+    }
+  }
+
+    var $select = $('#SortBy');
+    $('a[href="#sort"]').click(function () {
+        $select.val( $(this).data('select') );
+        event.preventDefault();
+        Shopify.queryParams.sort_by = jQuery(this).data('select');
+        location.search = jQuery.param(Shopify.queryParams);
+    });
+
+  $(function() {
+    $('#SortBy')
+      .val('{{ collection.sort_by | default: collection.default_sort_by }}')
+      .bind('change', function() {
+        Shopify.queryParams.sort_by = jQuery(this).val();
+        location.search = jQuery.param(Shopify.queryParams);
+      }
+    );
+  });
+</script>

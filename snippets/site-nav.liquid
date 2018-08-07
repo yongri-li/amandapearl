@@ -1,0 +1,240 @@
+{% comment %}
+  List out your main-menu linklist (default)
+  More info on linklists:
+    - http://docs.shopify.com/themes/liquid-variables/linklists
+{% endcomment %}
+
+{% if settings.display_megamenu %}
+{% assign items_list = settings.megamenu_items | split:"," | strip | downcase %}
+{% endif %}
+
+<div class="row">
+<div class="col-xs-12 col-sm-5">
+<ul class="site-nav">
+
+  {% for link in linklists.main-menu.links %}
+  	{% assign i = forloop.index | downcase %}
+    {% assign cat = link.title | downcase %}
+    <li {% if linklists[link.handle] != empty %}class="dropdown {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
+      <a href="{{ link.url }}" class="{% if link.active %}current{% endif %}">
+        <span>
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ link.title | split: '|' | first }}</span>
+          <span class="lang2">{{ link.title | split: '|' | last }}</span>
+          {% else %}
+          {{ link.title | split: '|' | first }}
+          {% endif %}
+        </span>
+      </a>
+
+      {% comment %}
+      Check if menu item is Mega menu
+      {% endcomment %}
+      {% if settings.display_megamenu and items_list contains cat %}
+        <div class="site-nav-dropdown">
+        {% include 'mega-menu' %}
+        </div>
+
+      {% else %}
+      {% comment %} normal menu {% endcomment %}
+      <ul class="site-nav-dropdown">
+        {% for childlink in linklists[link.handle].links %}
+          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+            <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
+              <span>
+                {% if settings.enable_multilang %}
+                <span class="lang1">{{ childlink.title | split: '|' | first }}</span>
+                <span class="lang2">{{ childlink.title | split: '|' | last }}</span>
+                {% else %}
+                {{ childlink.title | split: '|' | first }}
+                {% endif %}
+              </span>
+              {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+            </a>
+            <ul class="site-nav-dropdown">
+              {% for childlink2 in linklists.[childlink.handle].links %}
+                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                  <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
+                    <span>
+                      {% if settings.enable_multilang %}
+                      <span class="lang1">{{ childlink2.title | split: '|' | first }}</span>
+                      <span class="lang2">{{ childlink2.title | split: '|' | last }}</span>
+                      {% else %}
+                      {{ childlink2.title | split: '|' | first }}
+                      {% endif %}
+                    </span>
+                  </a>
+                  <ul class="site-nav-dropdown">
+                    {% for childlink3 in linklists.[childlink2.handle].links %}
+                      <li>
+                        <a href="{{ childlink3.url }}" class="{% if link.active %}current{% endif %}">
+                          <span>
+                            {% if settings.enable_multilang %}
+                            <span class="lang1">{{ childlink3.title | split: '|' | first }}</span>
+                            <span class="lang2">{{ childlink3.title | split: '|' | last }}</span>
+                            {% else %}
+                            {{ childlink3.title | split: '|' | first }}
+                            {% endif %}
+                          </span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </li>
+  {% endfor %}
+
+</ul>
+</div>
+<div class="col-xs-0 col-sm-2 hidden-xs"></div>
+<div class="col-xs-12 col-sm-5">
+<ul class="site-nav">
+
+  {% for link in linklists.main-menu-2.links %}
+  	{% assign i = forloop.index | downcase %}
+    {% assign cat = link.title | downcase %}
+    <li {% if linklists[link.handle] != empty %}class="dropdown {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
+      <a href="{{ link.url }}" class="{% if link.active %}current{% endif %}">
+        <span>
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ link.title | split: '|' | first }}</span>
+          <span class="lang2">{{ link.title | split: '|' | last }}</span>
+          {% else %}
+          {{ link.title | split: '|' | first }}
+          {% endif %}
+        </span>
+      </a>
+
+      {% comment %}
+      Check if menu item is Mega menu
+      {% endcomment %}
+      {% if settings.display_megamenu and items_list contains cat %}
+        <div class="site-nav-dropdown">
+        {% include 'mega-menu' %}
+        </div>
+
+      {% else %}
+      {% comment %} normal menu {% endcomment %}
+      <ul class="site-nav-dropdown">
+        {% for childlink in linklists[link.handle].links %}
+          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+            <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
+              <span>
+                {% if settings.enable_multilang %}
+                <span class="lang1">{{ childlink.title | split: '|' | first }}</span>
+                <span class="lang2">{{ childlink.title | split: '|' | last }}</span>
+                {% else %}
+                {{ childlink.title | split: '|' | first }}
+                {% endif %}
+              </span>
+              {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+            </a>
+            <ul class="site-nav-dropdown">
+              {% for childlink2 in linklists.[childlink.handle].links %}
+                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                  <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
+                    <span>
+                      {% if settings.enable_multilang %}
+                      <span class="lang1">{{ childlink2.title | split: '|' | first }}</span>
+                      <span class="lang2">{{ childlink2.title | split: '|' | last }}</span>
+                      {% else %}
+                      {{ childlink2.title | split: '|' | first }}
+                      {% endif %}
+                    </span>
+                  </a>
+                  <ul class="site-nav-dropdown">
+                    {% for childlink3 in linklists.[childlink2.handle].links %}
+                      <li>
+                        <a href="{{ childlink3.url }}" class="{% if link.active %}current{% endif %}">
+                          <span>
+                            {% if settings.enable_multilang %}
+                            <span class="lang1">{{ childlink3.title | split: '|' | first }}</span>
+                            <span class="lang2">{{ childlink3.title | split: '|' | last }}</span>
+                            {% else %}
+                            {{ childlink3.title | split: '|' | first }}
+                            {% endif %}
+                          </span>
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+    </li>
+  {% endfor %}
+
+  <li>
+    <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
+    <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>CART <i class="fa fa-shopping-cart fa-lg hidden-xs" aria-hidden="true"></i></span>
+    <span id="cartCount" style="position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
+    </a>
+  </li>
+  <div id="dropdown-cart" style="display:none">
+   <div class="no-items">
+     <center><p>{{ 'cart.general.empty' | t }}</p></center>
+     <p class="text-continue"><a href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %} style="text-align: center">{{ 'cart.ajax_cart.continue_shopping' | t }}</a></p>
+   </div>
+   <div class="has-items" style="padding-top:70px">
+     <h2 style="text-align: center; text-transform: uppercase;">Your Cart</h2>
+     <ol class="mini-products-list">
+       {% for item in cart.items %}
+       <li class="item" id="cart-item-{{item.id}}">
+         <a href="{{item.url}}" class="product-image">
+           <img src="{{ item.image | product_img_url: 'small' }}" alt="{{item.title}}">
+         </a>
+         <div class="product-details">
+           <a href="javascript:void(0)" title="{{ 'cart.general.remove' | t }}" class="btn-remove">X</a>
+           <p class="product-name">
+             <a href="{{item.url}}">
+               {% if settings.enable_multilang %}
+                 <span class="lang1">{{ item.product.title | split: '|' | first }}</span>
+                 <span class="lang2">{{ item.product.title | split: '|' | last }}</span>
+               {% else %}
+                 {{ item.product.title | split: '|' | first }}
+               {% endif %}
+             </a>
+           </p>
+           <div class="option">
+             {% if item.product.variants.size != 0 %}
+             {% unless item.variant.title contains 'Default' %}
+             <small>{{ item.variant.title }}</small>
+             {% endunless %}
+             {% endif %}
+           </div>
+           <div class="cart-collateral"><span class="price">{{item.price | money}}</span> x {{item.quantity}}</div>
+         </div>
+       </li>
+       {% endfor %}
+     </ol>
+     <div class="summary">
+       <p class="total">
+         <span class="label"><span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>{{ 'cart.label.total' | t }}</span>:</span>
+         <span class="price">{{cart.total_price | money}}</span>
+       </p>
+     </div>
+     <div class="actions">
+       <button class="btn" onclick="window.location='/checkout'" {% if settings.enable_multilang %}data-translate="cart.general.checkout"{% endif %}>{{ 'cart.general.checkout' | t }}</button>
+     </div>
+     <p class="text-cart"><a href="/cart" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>{{ 'cart.general.view_cart' | t }}</a></p>
+   </div>
+  </div>
+
+</ul>
+
+</div>
+</div>

@@ -1,4 +1,6 @@
-{% comment %}
+<div class="row">
+  <div class="col-xs-12 col-sm-8" style="padding: 40px;">
+    {% comment %}
   This is your /cart template. If you are using the Ajaxify Cart plugin,
   your form (with action="/cart") layout will be used in the drawer/modal.
 
@@ -55,7 +57,7 @@
               {{ item.title | split: '|' | first }}
               {% endif %}
             </a>
-            <p class="size">  
+            <p class="size">
               {% if item.product.variants.size != 0 %}
               {% unless item.variant.title contains 'Default' %}
               <small>{{ item.variant.title }}</small>
@@ -102,7 +104,7 @@
             <div class="quantity">
               <label {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}>{{ 'cart.label.quantity' | t }}</label>
               <input class="qty" type="number" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" min="0" data-id="{{ item.id }}">
-              
+
               {% comment %}
                 To remove an item from the cart, reload the page with the following parameters.
                 Added data-id for the ajax cart implementation only.
@@ -149,9 +151,7 @@
       {% comment %}
         Paypal and Google checkout buttons
       {% endcomment %}
-      {% if additional_checkout_buttons %}
-      <p>{{ content_for_additional_checkout_buttons }}</p>
-      {% endif %}
+
 
       {% unless cart.item_count == 0 %}
       {% include 'shipping-rates-calculator' %}
@@ -164,3 +164,8 @@
 <p {% if settings.enable_multilang %}data-translate="cart.general.empty"{%endif%}>{{ 'cart.general.empty' | t }}</p>
 <p {% if settings.enable_multilang %}data-translate="cart.general.continue_browsing_html"{%endif%}>{{ 'cart.general.continue_browsing_html' | t }}</p>
 {% endif %}
+</div>
+<div class="col-xs-12 col-sm-4" style="background: #eee; padding: 30px;">
+  {% include 'cart-points' %}
+</div>
+</div>

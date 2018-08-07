@@ -1,0 +1,220 @@
+{% if settings.display_three_banner_bottom_footer %}
+<section class="banner-home-bottom">
+  {% if settings.banner_home_bottom_title != blank %}
+  <div class="widget-title wow fadeIn">
+    {% if settings.enable_multilang %}
+	<fieldset class="box-title lang1">
+      <legend align="center">{{ settings.banner_home_bottom_title_footer | split: '|' | first }}</legend>
+    </fieldset>
+	<fieldset class="box-title lang2">
+      <legend align="center">{{ settings.banner_home_bottom_title_footer | split: '|' | last }}</legend>
+    </fieldset>
+    {% else %}
+	<fieldset class="box-title">
+      <legend align="center">{{ settings.banner_home_bottom_title_footer | split: '|' | first }}</legend>
+    </fieldset>
+    {% endif %}
+  </div>
+  {% endif %}
+  <ul class="row">
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
+      <a href="{{ settings.three_banner_bottom_link_4 }}" >
+        <img src="{{ 'banner-home-bottom-4.jpg' | asset_url }}">
+      </a>
+      <div class="des">
+        {% if settings.display_banner_title_4 and settings.three_banner_bottom_title_4 != blank %}
+        <h4 style="{% if settings.three_banner_bottom_title_color_4 != blank %}
+                   color: {{ settings.three_banner_bottom_title_color_4 }};
+                   {% elsif settings.three_banner_bottom_title_color != blank %}
+                   color: {{ settings.three_banner_bottom_title_color }};
+                   {% endif %}
+                   {% if settings.three_banner_bottom_title_size_4 != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size_4 }}px;
+                   {% elsif settings.three_banner_bottom_title_size != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size }}px;
+                   {% endif %} "
+            >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_title_4 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_title_4 | split: '|' | last }}</span>
+          {% else %}
+          <span>{{ settings.three_banner_bottom_title_4 | split: '|' | first }}</span>
+          {% endif %}
+        </h4>
+        {% endif %}
+
+        {% if settings.display_banner_description_4 and settings.three_banner_bottom_description_4 != blank %}
+        <p style="{% if settings.three_banner_bottom_description_color_4 != blank %}
+                  color: {{ settings.three_banner_bottom_description_color_4 }};
+                  {% elsif settings.three_banner_bottom_description_color != blank %}
+                  color: {{ settings.three_banner_bottom_description_color }};
+                  {% endif %}
+                  {% if settings.three_banner_bottom_description_size_4 != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size_4 }}px;
+                  {% elsif settings.three_banner_bottom_description_size != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size }}px;
+                  {% endif %} "
+           >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_description_4 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_description_4 | split: '|' | last }}</span>
+          {% else %}
+          {{ settings.three_banner_bottom_description_4 | split: '|' | first }}
+          {% endif %}
+        </p>
+        {% endif %}
+
+        {% if settings.display_banner_button_4 and settings.three_banner_bottom_button_text_4 != blank %}
+          {% if settings.enable_multilang %}
+          <a href="{{ settings.three_banner_bottom_link_4 }}" title="{{ settings.three_banner_bottom_button_text_4 | split: '|' | first }}" class="btn lang1">
+            {{ settings.three_banner_bottom_button_text_4 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          <a href="{{ settings.three_banner_bottom_link_4 }}" title="{{ settings.three_banner_bottom_button_text_4 | split: '|' | last }}" class="btn lang2">
+            {{ settings.three_banner_bottom_button_text_4 | split: '|' | last }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% else %}
+          <a href="{{ settings.three_banner_bottom_link_4 }}" title="{{ settings.three_banner_bottom_button_text_4 | split: '|' | first }}" class="btn">
+            {{ settings.three_banner_bottom_button_text_4 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </li>
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
+      <a href="{{ settings.three_banner_bottom_link_5 }}">
+      <img src="{{ 'banner-home-bottom-5.jpg' | asset_url }}">
+      </a>
+      <div class="des">
+        {% if settings.display_banner_title_5 and settings.three_banner_bottom_title_5 != blank %}
+        <h4 style="{% if settings.three_banner_bottom_title_color_5 != blank %}
+                   color: {{ settings.three_banner_bottom_title_color_5 }};
+                   {% elsif settings.three_banner_bottom_title_color != blank %}
+                   color: {{ settings.three_banner_bottom_title_color }};
+                   {% endif %}
+                   {% if settings.three_banner_bottom_title_size_5 != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size_5 }}px;
+                   {% elsif settings.three_banner_bottom_title_size != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size }}px;
+                   {% endif %} "
+            >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_title_5 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_title_5 | split: '|' | last }}</span>
+          {% else %}
+          <span>{{ settings.three_banner_bottom_title_5 | split: '|' | first }}</span>
+          {% endif %}
+        </h4>
+        {% endif %}
+
+        {% if settings.display_banner_description_5 and settings.three_banner_bottom_description_5 != blank %}
+        <p style="{% if settings.three_banner_bottom_description_color_5 != blank %}
+                  color: {{ settings.three_banner_bottom_description_color_5 }};
+                  {% elsif settings.three_banner_bottom_description_color != blank %}
+                  color: {{ settings.three_banner_bottom_description_color }};
+                  {% endif %}
+                  {% if settings.three_banner_bottom_description_size_5 != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size_5 }}px;
+                  {% elsif settings.three_banner_bottom_description_size != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size }}px;
+                  {% endif %} "
+           >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_description_5 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_description_5 | split: '|' | last }}</span>
+          {% else %}
+          {{ settings.three_banner_bottom_description_5 | split: '|' | first }}
+          {% endif %}
+        </p>
+        {% endif %}
+
+        {% if settings.display_banner_button_5 and settings.three_banner_bottom_button_text_5 != blank %}
+          {% if settings.enable_multilang %}
+          <a href="{{ settings.three_banner_bottom_link_5 }}" title="{{ settings.three_banner_bottom_button_text_5 | split: '|' | first }}" class="btn lang1">
+            {{ settings.three_banner_bottom_button_text_5 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          <a href="{{ settings.three_banner_bottom_link_5 }}" title="{{ settings.three_banner_bottom_button_text_5 | split: '|' | last }}" class="btn lang2">
+            {{ settings.three_banner_bottom_button_text_5 | split: '|' | last }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% else %}
+          <a href="{{ settings.three_banner_bottom_link_5 }}" title="{{ settings.three_banner_bottom_button_text_5 | split: '|' | first }}" class="btn">
+            {{ settings.three_banner_bottom_button_text_5 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% endif %}
+        {% endif %}
+      </div>
+	</li>
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+      <a href="{{ settings.three_banner_bottom_link_6 }}">
+      <img src="{{ 'banner-home-bottom-6.jpg' | asset_url }}">
+      </a>
+      <div class="des">
+        {% if settings.display_banner_title_6 and settings.three_banner_bottom_title_6 != blank %}
+        <h4 style="{% if settings.three_banner_bottom_title_color_6 != blank %}
+                   color: {{ settings.three_banner_bottom_title_color_6 }};
+                   {% elsif settings.three_banner_bottom_title_color != blank %}
+                   color: {{ settings.three_banner_bottom_title_color }};
+                   {% endif %}
+                   {% if settings.three_banner_bottom_title_size_6 != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size_6 }}px;
+                   {% elsif settings.three_banner_bottom_title_size != blank %}
+                   font-size: {{ settings.three_banner_bottom_title_size }}px;
+                   {% endif %} "
+            >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_title_6 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_title_6 | split: '|' | last }}</span>
+          {% else %}
+          <span>{{ settings.three_banner_bottom_title_6 | split: '|' | first }}</span>
+          {% endif %}
+        </h4>
+        {% endif %}
+
+        {% if settings.display_banner_description_6 and settings.three_banner_bottom_description_6 != blank %}
+        <p style="{% if settings.three_banner_bottom_description_color_6 != blank %}
+                  color: {{ settings.three_banner_bottom_description_color_6 }};
+                  {% elsif settings.three_banner_bottom_description_color != blank %}
+                  color: {{ settings.three_banner_bottom_description_color }};
+                  {% endif %}
+                  {% if settings.three_banner_bottom_description_size_6 != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size_6 }}px;
+                  {% elsif settings.three_banner_bottom_description_size != blank %}
+                  font-size: {{ settings.three_banner_bottom_description_size }}px;
+                  {% endif %} "
+           >
+          {% if settings.enable_multilang %}
+          <span class="lang1">{{ settings.three_banner_bottom_description_6 | split: '|' | first }}</span>
+          <span class="lang2">{{ settings.three_banner_bottom_description_6 | split: '|' | last }}</span>
+          {% else %}
+          {{ settings.three_banner_bottom_description_6 | split: '|' | first }}
+          {% endif %}
+        </p>
+        {% endif %}
+
+        {% if settings.display_banner_button_6 and settings.three_banner_bottom_button_text_6 != blank %}
+          {% if settings.enable_multilang %}
+          <a href="{{ settings.three_banner_bottom_link_6 }}" title="{{ settings.three_banner_bottom_button_text_6 | split: '|' | first }}" class="btn lang1">
+            {{ settings.three_banner_bottom_button_text_6 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          <a href="{{ settings.three_banner_bottom_link_6 }}" title="{{ settings.three_banner_bottom_button_text_6 | split: '|' | last }}" class="btn lang2">
+            {{ settings.three_banner_bottom_button_text_6 | split: '|' | last }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% else %}
+          <a href="{{ settings.three_banner_bottom_link_6 }}" title="{{ settings.three_banner_bottom_button_text_6 | split: '|' | first }}" class="btn">
+            {{ settings.three_banner_bottom_button_text_6 | split: '|' | first }}
+            <span class="arrow">arrow</span>
+          </a>
+          {% endif %}
+        {% endif %}
+      </div>
+	</li>
+  </ul>
+</section>
+{% endif %}

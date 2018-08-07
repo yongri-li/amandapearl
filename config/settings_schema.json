@@ -2084,8 +2084,8 @@
         "type": "image",
         "id": "top-banner-home-1.jpg",
         "label": "Banner Image 1",
-        "max-width": 380,
-        "info": "Width: 380px recommended"
+        "max-width": 3800,
+        "info": "Width: 3800 recommended"
       },
       {
         "type": "checkbox",
@@ -2122,8 +2122,8 @@
         "type": "image",
         "id": "top-banner-home-2.jpg",
         "label": "Banner Image 2",
-        "max-width": 380,
-        "info": "Width: 380px recommended"
+        "max-width": 3800,
+        "info": "Width: 3800 recommended"
       },
       {
         "type": "checkbox",
@@ -2160,8 +2160,8 @@
         "type": "image",
         "id": "top-banner-home-3.jpg",
         "label": "Banner Image 3",
-        "max-width": 380,
-        "info": "Width: 380px recommended"
+        "max-width": 3800,
+        "info": "Width: 3800 recommended"
       },
       {
         "type": "checkbox",

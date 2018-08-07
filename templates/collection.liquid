@@ -1,25 +1,8 @@
 {% include 'breadcrumb' %}
 
-{% if settings.collection_results_per_page != blank %}
-  {% assign product_per_page = settings.collection_results_per_page %}
-{% else %}
-  {% assign product_per_page = 8 %}
-{% endif %}
-
-<div class="row">
-  {% include 'collection-sidebar' %}
-  <div class="block-row col-xs-9 col-main">    
-    {% paginate collection.products by product_per_page %}
-
-    {% include 'collection-header' %}
-        
-    {% comment %}
-      Use class grid-uniform to have evenly sized columns clear
-      each other properly at each breakpoint.
-    {% endcomment %}
-    
+{% comment %}
     <div class="products-grid row">
-      {% if collection.products.size > 0 %}      
+      {% if collection.products.size > 0 %}
         {% if settings.collection_results_per_row != blank and settings.collection_results_per_row != '5' %}
           {% assign product_grid = 12 | divided_by: settings.collection_results_per_row %}
           {% assign columns = true %}
@@ -34,17 +17,20 @@
       <p class="text-center" {% if settings.enable_multilang %}data-translate="collections.general.no_matches"{% endif %}>{{ 'collections.general.no_matches' | t }}</p>
       {% endif %}
     </div>
-    
+
     {% if paginate.pages > 1 %}
     <div class="padding">
       {% include 'pagination-page' %}
     </div>
     {% endif %}
-    
-    {% endpaginate %}    
+
+    {% endpaginate %}
   </div>
 </div>
+{% endcomment %}
 
-{% if settings.display_recently_viewed_products %} 
+{% include 'searchanise-navigation' %}
+
+{% if settings.display_recently_viewed_products %}
 {% include 'recently-viewed-products' %}
 {% endif %}

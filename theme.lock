@@ -188,7 +188,7 @@ assets/jquery.currencies.min.js:
 assets/jquery.cycle.all.js:
   development: 2018-08-07T12:43:19-04:00   bc7c09ca1c59bcddb875e3138d81dfa6
 assets/jquery.elevateZoom-3.0.8.min.js:
-  development: 2018-08-07T12:43:19-04:00   7d62e8e92b7c9cabb8121f25c54e0b81
+  development: 2018-08-07T13:13:33-04:00   60219cd5024dea42e9502dbf3e016a70
 assets/jquery.fakecrop.js:
   development: 2018-08-07T12:43:19-04:00   470f868020eeab5c1b3f5e696041659a
 assets/jquery.fancybox.css:
@@ -276,7 +276,7 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-08-07T12:43:24-04:00   9ee4bf2828322af72bfa17f47e71328e
+  development: 2018-08-07T13:16:46-04:00   f1ff3fe25cbd48ea45ed1de43c81f548
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
@@ -298,7 +298,7 @@ assets/wow.min.js:
 config/settings_data.json:
   development: 2018-08-07T12:43:32-04:00   fe4fd8caf156e3d1e0426b182e0b8504
 config/settings_schema.json:
-  development: 2018-08-07T12:43:32-04:00   692c8885dd2222c5be07e0a49a671e7a
+  development: 2018-08-07T13:10:51-04:00   c89ab562f2c5decf6a408e04b80586f8
 layout/theme.liquid:
   development: 2018-08-07T12:43:26-04:00   8fd41aeca24c79c2ce02188b50cee725
 locales/de.json:
@@ -370,7 +370,7 @@ snippets/homepage-block-newsletter.liquid:
 snippets/homepage-block-three-banner-bottom.liquid:
   development: 2018-08-07T12:43:28-04:00   004b7c2b738cc052eea3cdea6b245080
 snippets/homepage-block-three-banner.liquid:
-  development: 2018-08-07T12:43:28-04:00   ec877b0ac3cb4ece4305ce20f77d4307
+  development: 2018-08-07T13:10:36-04:00   8e0d7d37ada3e2fcfa08192ac2e6e1f9
 snippets/homepage-block-trending.liquid:
   development: 2018-08-07T12:43:28-04:00   af553d8c1c93429c31743a1b3b14e478
 snippets/homepage-flexslider.liquid:
@@ -429,6 +429,8 @@ snippets/search-result-grid.liquid:
   development: 2018-08-07T12:43:29-04:00   2e02e89f12a7b35cf59b2b80ced1a6a0
 snippets/search-result.liquid:
   development: 2018-08-07T12:43:29-04:00   840fb766198d2d21935fb6bf5996a2fa
+snippets/searchanise-navigation.liquid:
+  development: 2018-08-07T12:55:03-04:00   bcac4a01178020ed1b41a7aa6fe0b98b
 snippets/share.liquid:
   development: 2018-08-07T12:43:29-04:00   c765e6fda39f9e2574158e3659ba0bb2
 snippets/shipping-rates-calculator.liquid:
@@ -436,7 +438,7 @@ snippets/shipping-rates-calculator.liquid:
 snippets/site-nav-mobile.liquid:
   development: 2018-08-07T12:43:29-04:00   2e773c33fefc7918e8799d464eefc9e7
 snippets/site-nav.liquid:
-  development: 2018-08-07T12:43:30-04:00   a3ca31ef75a714ad50c0a70020ef0f45
+  development: 2018-08-07T12:48:16-04:00   4f727421b9221c6947a64f909e0e8650
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/swatch.liquid:
@@ -486,7 +488,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-08-07T12:43:31-04:00   95227a1c75b1d4f26d6cb3bf37db0b5a
 templates/collection.liquid:
-  development: 2018-08-07T12:43:31-04:00   d94473d213d436aff00e042b59f5cd0b
+  development: 2018-08-07T12:55:34-04:00   f3b9c840950d1dd6352545654ade705e
 templates/collection.list.liquid:
   development: 2018-08-07T12:43:31-04:00   3514baa77c129aa6a6c276371d9f96a5
 templates/collection.list12.liquid:
@@ -526,6 +528,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-08-07T12:43:32-04:00   d88e2dc863b27c8cef46c2105b4c4acc
+  development: 2018-08-07T13:12:57-04:00   000de7b4093e1ab6720be6a210a5658b
 templates/search.liquid:
   development: 2018-08-07T12:43:32-04:00   db4010bd560de940943f5b6a17fcb82f

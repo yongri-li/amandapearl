@@ -1,3 +1,4 @@
+<br>
 {% comment %}
   Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 {% endcomment %}
@@ -6,7 +7,7 @@
 
 {% if swatch == blank %}
 <div class="swatch error">
-  <p>You must include the snippet swatch.liquid with the name of a product option.</p> 
+  <p>You must include the snippet swatch.liquid with the name of a product option.</p>
   <p>Use: <code>{% raw %}{% include 'swatch' with 'name of your product option here' %}{% endraw %}</code></p>
   <p>Example: <code>{% raw %}{% include 'swatch' with 'Color' %}{% endraw %}</code></p>
 </div>
@@ -22,11 +23,10 @@
     {% assign option_index = forloop.index0 %}
     <style>
       label[for="product-select-option-{{ option_index }}"] { display: none; }
-      #add-to-cart-form .selector-wrapper {display:none}
       #product-select-option-{{ option_index }} { display: none; }
       #product-select-option-{{ option_index }} + .custom-style-select-box { display: none !important; }
     </style>
-<script>//jQuery(window).load(function() { jQuery('.product-shop .selector-wrapper:eq({{ option_index }})').hide(); });</script>
+    <script>$(window).load(function() { $('.selector-wrapper:eq({{ option_index }})').hide(); });</script>
     {% assign downcased_option = swatch | downcase %}
     {% if downcased_option contains 'color' or downcased_option contains 'colour' %}
       {% assign is_color = true %}
@@ -42,14 +42,19 @@
   <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
 </div>
 {% else %}
+
+<div class="row">
+<div class="col-xs-12 col-sm-12">
 <div class="swatch clearfix" data-option-index="{{ option_index }}">
-  <div class="header">{{ swatch }}</div>
+  <div class="header hidden-xs"><center>{{ swatch }}</center></div>
+  <div class="m_swatch">
+  <div class="header visible-xs">{{ swatch }}</div>
   {% assign values = '' %}
   {% for variant in product.variants %}
     {% assign value = variant.options[option_index] %}
     {% unless values contains value %}
-      {% assign values = values | join: ',' %}	
-      {% assign values = values | append: ',' | append: value %} 
+      {% assign values = values | join: ',' %}
+      {% assign values = values | append: ',' | append: value %}
       {% assign values = values | split: ',' %}
       <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
@@ -75,7 +80,19 @@
     {% endif %}
   {% endfor %}
 </div>
-
+</div>
+</div>
+</div>
 {% endunless %}
 
 {% endif %}
+<style>
+.product-variants, .product-title, .prices , .quan { text-align: center!important; }
+.swatch { margin-top: 0px!important }
+
+.m_swatch { align-content: center; }
+
+.swatch { float: center!important; display: inline; text-align: center!important; align-content: center!important;}
+.swatch input { float: center!important; display: inline; text-align: center!important; align-content: center!important; }
+.swatch .swatch-element { float: center!important; display: inline; text-align: center!important; align-content: center!important; }
+</style>

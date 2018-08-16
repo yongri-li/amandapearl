@@ -619,9 +619,9 @@ html[xmlns] .slides {display: block;}
 
 .slider-brand-wrapper { overflow: hidden; clear: both; }
 .slide_brand { position: relative; border-top: 0px solid #000; padding: 30px 0 30px; }
-.slide_brand .slides li {width: 200px !important;}
-.slide_brand .owl-controls .owl-buttons div.owl-prev { background-position: 13px -441px; left:-12px; top:44px; }
-.slide_brand .owl-controls .owl-buttons div.owl-next { background-position: 16px -507px; right:-12px; top:44px; }
+.slide_brand .slides li {width: 200px !important; padding: 5px; }
+.slide_brand .owl-controls .owl-buttons div.owl-prev { background-position: 13px -441px; left:-12px; top:125px; }
+.slide_brand .owl-controls .owl-buttons div.owl-next { background-position: 16px -507px; right:-12px; top:125px; }
 .slide_brand.owl-theme .owl-controls .owl-buttons div:hover { background-color: transparent!important; }
 
 #instafeed .owl-item { padding: 0 10px; }
@@ -946,7 +946,7 @@ html[xmlns] .slides {display: block;}
 label[for="quantity"] {display: block; font-weight: 500; margin-bottom: 5px; }
 
 .quick-view .product-shop .btn,
-.product-shop #add-to-cart-form .btn { margin: 0 60px 30px 0; height: 48px; min-width: 320px; float: left; clear: both; }
+.product-shop #add-to-cart-form .btn { margin: 0 60px 30px 0; height: 48px; min-width: 100%; float: left; clear: both; }
 .product-shop .tags { margin-bottom: 20px; clear: both; }
 .product-shop .tags a { padding-right: 7px;}
 .product-shop .tags .icon-tags { text-transform: uppercase; padding-right: 7px; }
@@ -981,8 +981,8 @@ label[for="quantity"] {display: block; font-weight: 500; margin-bottom: 5px; }
 .more-view-wrapper .owl-theme .owl-controls .owl-buttons div.owl-next:hover { background-color: transparent !important; }
 
 /* Vertical Moreview */
-.product-img-box.has-jcarousel .product-photo-container { float: left; width: 90%; }
-.product-img-box.has-jcarousel .more-view-wrapper { float: right; margin: 0; }
+.product-img-box.has-jcarousel .product-photo-container { float: right; width: 85%; }
+.product-img-box.has-jcarousel .more-view-wrapper { float: left; margin: 0; }
 .product-img-box.has-jcarousel .product-photo-thumbs li { margin: 0 0 15px; }
 
 .more-view-wrapper ul { padding: 0; list-style: none; }
@@ -1080,7 +1080,7 @@ label[for="productSelect"] {margin-bottom: 10px;}
 [class^="spr-icon-"]:before, [class*=" spr-icon-"]:before {font-size: 100% !important;}
 
 /* related product */
-.related-products { border-top: 1px solid #000; margin-top: 30px; }
+.related-products { border-top: 0px solid #000; margin-top: 30px; }
 .related-products h2 { font-size: 14px; padding: 27px 0; }
 .related-products .products-grid .grid-item { margin-bottom: 0; }
 .related-products .owl-theme .owl-controls .owl-buttons div.owl-prev { left: 0; opacity: 0; filter:alpha(opacity=0); }
@@ -1234,24 +1234,41 @@ label[for="productSelect"] {margin-bottom: 10px;}
 #back-top { background: url(icons_new14.png ) 13px -1553px no-repeat #302861; border-radius: 100px; z-index:99; font-size: 0;  height: 52px;  position: fixed;  right: 10px;  bottom: 10;  width: 52px; cursor: pointer; margin:0; }
 
 /* Swatches Styles */
-.swatch { margin: 0 0 11px; }
+.swatch {
+  border:0;
+  padding-top:0;
+  position:relative;
+  background-color:#fff;
+  margin-bottom:15px;
+}
+.swatch input{
+  overflow:hidden;
+  position:absolute;
+  height:0px;
+  width:0px;
+   opacity:0;
+}
+
 /* Label */
-.swatch .header { margin: 0; border: none; padding: 0 0 5px; font-weight: 500; color: #000; }
+.swatch .header { margin: 0; border: none; padding: 0 0px 5px; font-weight: 700; color: #000; }
 /* Hide radio buttons.*/
 .swatch input { display:none; }
-.swatch label { border: 1px solid #cbcbcb; float: left; font-weight: 400; font-size: 11px; min-width: 34px!important; height: 34px!important; line-height: 32px; margin: 0; text-align: center; text-transform: uppercase; white-space: nowrap; cursor: pointer; }
+.swatch label { border: 1px solid #cbcbcb; border-radius: 100px; float: center!important; font-weight: 400; font-size: 11px; min-width: 34px!important; height: 34px!important; line-height: 32px; margin: 0; text-align: center; text-transform: uppercase; white-space: nowrap; cursor: pointer; }
 .swatch-element label { padding:0 5px; }
 .color.swatch-element label { padding:0; }
 /* Styling selected swatch */
 /* Slightly raised */
 .swatch input:checked + label ,
-.swatch label:hover { border-color: #000; border-width: 3px; line-height: 28px; }
+.swatch label:hover { border-color: #000; border-width: 3px!important; line-height: 28px; background: #fafafa; }
 .swatch .swatch-element {
-  float:left;
+  width: xpx;
+ margin: 0 auto;
+ display: inline-block!important;
+  float:center!important;
   -webkit-transform:translateZ(0); /* webkit flicker fix */
   -webkit-font-smoothing:antialiased; /* webkit text rendering fix */
   /* Spacing between buttons */
-  margin: 0 15px 15px 0;
+  margin: 0 3px 8px 5px;
   /* To position the sold out graphic and tooltip */
   position:relative;
 }
@@ -1268,8 +1285,9 @@ label[for="productSelect"] {margin-bottom: 10px;}
 /* Tooltips */
 .swatch .tooltip {
   text-align:center;
-  background:gray;
+  background:#000;
   color:#fff;
+  text-transform: capitalize;
   bottom:100%;
   padding: 10px;
   display:block;
@@ -1306,7 +1324,7 @@ label[for="productSelect"] {margin-bottom: 10px;}
 }
 .swatch .tooltip:before { bottom:-20px; content:" "; display:block; height:20px; left:0; position:absolute; width:100%; }
 /* CSS triangle */
-.swatch .tooltip:after { border-left:solid transparent 10px; border-right: solid transparent 10px; border-top:solid gray 10px; bottom:-10px; content:" "; height:0; left:50%; margin-left:-13px; position:absolute; width:0; }
+.swatch .tooltip:after { border-left:solid transparent 10px; border-right: solid transparent 10px; border-top:solid black 10px; bottom:-10px; content:" "; height:0; left:50%; margin-left:-13px; position:absolute; width:0; }
 .swatch .swatch-element:hover .tooltip { filter:alpha(opacity=100); opacity:1; visibility:visible; -webkit-transform:translateY(0px); -moz-transform:translateY(0px); -ms-transform:translateY(0px); -o-transform:translateY(0px); transform:translateY(0px); }
 .swatch.error { background-color:#E8D2D2!important; color:#333!important; padding:1em; border-radius:5px; }
 .swatch.error p { margin:0.7em 0; }

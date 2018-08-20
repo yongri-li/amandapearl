@@ -124,7 +124,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-08-07T12:43:15-04:00   a8eeacc75b8dfcc681befefe82acf2f0
+  development: 2018-08-20T17:47:31-04:00   b3d83ad36b696427a67740e9c68ee03a
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -286,11 +286,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-08-16T12:59:52-04:00   84cc1537eb1368801d1f4a65b96174ba
+  development: 2018-08-20T17:33:17-04:00   6d1ce6746ce8c63b98e16f774a23f755
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
-  development: 2018-08-20T12:39:09-04:00   99126a8cebebc26c1394cebb81b4385f
+  development: 2018-08-20T17:45:31-04:00   9f2a2899d5d2a7c2a3fd62a161466528
 assets/top-banner-home-1.jpg:
   development: 2018-08-07T13:11:30-04:00   4909e288757e9417d5a1e7c382154830
 assets/top-banner-home-2.jpg:
@@ -394,7 +394,7 @@ snippets/homepage-flexslider.liquid:
 snippets/homepage-instagram.liquid:
   development: 2018-08-07T12:43:28-04:00   584382ce77a7ade4f7cb5e5fecd4307d
 snippets/item-swatch.liquid:
-  development: 2018-08-07T12:43:28-04:00   e7c59fb463253daa002415b952d91c6b
+  development: 2018-08-20T18:00:42-04:00   2525f81dc0de4bb88835f1b6a47548fa
 snippets/linklists.liquid:
   development: 2018-08-07T12:43:28-04:00   92122bba4745dea5ea0fed17f76c82ef
 snippets/mega-menu-featured-product.liquid:
@@ -422,13 +422,13 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-08-07T12:43:29-04:00   e8a2a25e9c40fcd244d6c10f1797e45a
 snippets/product-grid-item.liquid:
-  development: 2018-08-07T12:43:29-04:00   19efd1bf086370fc60a59b9ebe29904b
+  development: 2018-08-20T18:01:05-04:00   76ab46f5ea96c16208fa8e5069897109
 snippets/product-list-item.liquid:
   development: 2018-08-07T12:43:29-04:00   b32cb0e13cea9fdae784bb358370dc88
 snippets/product-sidebar.liquid:
   development: 2018-08-07T12:43:29-04:00   b35f3fb77318f2be1761c99741a8f427
 snippets/quick-view-template.liquid:
-  development: 2018-08-07T12:43:29-04:00   9b3c4a2f31dfe360a9b3863119caea87
+  development: 2018-08-20T17:51:09-04:00   701b365bd57a60432e0b5fc4f0e47f59
 snippets/recently-viewed-products.liquid:
   development: 2018-08-07T12:43:29-04:00   f9f258b21a33593688ec0314ac2093b9
 snippets/related-products-by-tags.liquid:
@@ -504,7 +504,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-08-07T12:43:31-04:00   95227a1c75b1d4f26d6cb3bf37db0b5a
 templates/collection.liquid:
-  development: 2018-08-07T12:55:34-04:00   f3b9c840950d1dd6352545654ade705e
+  development: 2018-08-20T17:28:42-04:00   35c38f669c5a1069e074e3d50650fd2d
 templates/collection.list.liquid:
   development: 2018-08-07T12:43:31-04:00   3514baa77c129aa6a6c276371d9f96a5
 templates/collection.list12.liquid:
@@ -544,6 +544,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-08-16T13:00:07-04:00   ac79863b62d87217a1ec3d65128bba84
+  development: 2018-08-20T17:56:14-04:00   d12ec2c28ef7f3b569f20fd5d127835d
 templates/search.liquid:
   development: 2018-08-07T12:43:32-04:00   db4010bd560de940943f5b6a17fcb82f

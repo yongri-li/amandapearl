@@ -177,8 +177,18 @@
               </div>
 
               {% if product.available %}
-              <div style="display:none">
-              <label for="quantity" {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}>{{ 'cart.label.quantity' | t }}: </label>
+
+
+              {% if settings.display_subtotal and product.available %}
+              <div class="total-price">
+                <label><b {% if settings.enable_multilang %}data-translate="cart.general.subtotal"{%endif%}>{{ 'cart.general.subtotal' | t }}</b>:</label><span>{{ product.price | money }}</span>
+              </div>
+              {% endif %}
+
+              <br><br>
+              <div class="col-xs-12">
+              <div style="max-width: 122px;margin: 0 auto !important;float: none !important; text-align: center;">
+              <label for="quantity" {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}><b>{{ 'cart.label.quantity' | t }}: </b></label>
               <div class="dec button">-</div>
               <input type="text" id="quantity" name="quantity" value="1">
               <div class="inc button">+</div>
@@ -199,18 +209,12 @@
                   {% endif %}
                 });
               </script>
-            </div>
-
-              {% if settings.display_subtotal and product.available %}
-              <div class="total-price">
-                <label><b {% if settings.enable_multilang %}data-translate="cart.general.subtotal"{%endif%}>{{ 'cart.general.subtotal' | t }}</b>:</label><span>{{ product.price | money }}</span>
               </div>
-              {% endif %}
-
-              <br><br>
-
+              </div>
+              <div class="col-xs-12">
               <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}">
-              {% else %}
+            </div>
+            {% else %}
               <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}">
               {% endif %}
             </form>

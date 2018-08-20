@@ -11,25 +11,15 @@
 {% assign productIndex = forloop.index | minus:1 %}
 {% assign delayTime = settings.time_lazy_load | times : productIndex %}
 
-<div class="inner {% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} wow fadeIn" data-wow-delay="{{delayTime}}ms" id="product-{{ product.id }}">
-  <div class="inner-top">
+<div class="inner height_fix{% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} wow fadeIn" data-wow-delay="{{delayTime}}ms" id="product-{{ product.id }}">
+  <div class="inner-top" style="border: 1px solid #fff;">
     <div class="product-top">
       <div class="product-image">
         <a href="{{ product.url | within: collection }}" class="product-grid-image">
-          <img src="{{ product.featured_image | product_img_url: 'large' }}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: 'large' }}'" onmouseout="src='{{ product.featured_image | product_img_url: 'large' }}'" {% endif %} alt="{{product.title}}">
+          <img src="{{ product.featured_image | product_img_url: '400x' }}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: '400x' }}'" onmouseout="src='{{ product.featured_image | product_img_url: 'large' }}'" {% endif %} alt="{{product.title}}">
         </a>
       </div>
 
-      {% if on_sale or sold_out %}
-      <div class="product-label">
-        {% if on_sale %}
-        <strong class="label" {% if settings.enable_multilang %}data-translate="products.product.sale"{% endif %}>{{ 'products.product.sale' | t }}</strong>
-        {% endif %}
-        {% if sold_out %}
-        <strong class="sold-out-label" {% if settings.enable_multilang %}data-translate="products.product.sold_out"{% endif %}>{{ 'products.product.sold_out' | t }}</strong>
-        {% endif %}
-      </div>
-      {% endif %}
 
       <div class="product-des">
 
@@ -41,13 +31,13 @@
       </div>
     </div>
 
-    <div class="product-bottom">
+    <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">
         {% if settings.enable_multilang %}
         <span class="lang1">{{ product.title | split: '|' | first }}</span>
         <span class="lang2">{{ product.title | split: '|' | last }}</span>
         {% else %}
-        {{ product.title | split: '|' | first }}
+        <b>{{ product.title | split: '|' | first }}</b>
         {% endif %}
       </a>
 
@@ -59,7 +49,7 @@
         {% if on_sale %}
         <p class="sale">
           <span class="old-price">{{ product.compare_at_price_min | money }}</span>
-          <span class="special-price">{% if product.price_varies %}{% include 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+          <span class="special-price">{% if product.price_varies %}{% include 'varies_from' %}{% endif %}{{ product.price_min | money }} {% if product.compare_at_price_max > product.price %} ({{ product.compare_at_price_max | minus: product.price | times: 100.0 | divided_by: product.compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}% off){% endif %}</span>
         </p>
         {% else %}
         <p class="regular-product">
@@ -67,8 +57,8 @@
         </p>
         {% endif %}
       </div>
+      {% include 'item-swatch' %}
     </div>
   </div>
-  
-  {% include 'item-swatch' %}
+
 </div>

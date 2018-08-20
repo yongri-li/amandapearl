@@ -463,12 +463,12 @@
 
             //replace refined
             $(".refined-widgets").replaceWith($(data).find(".refined-widgets"));
-            
+
             //replace tags
             $(".sidebar-block").replaceWith($(data).find(".sidebar-block"));
-          
+
             ella.initColorSwatchGrid();
-          
+
             //product review
             if ($(".spr-badge").length > 0) {
                 return window.SPR.registerCallbacks(), window.SPR.initRatingHandler(), window.SPR.initDomEls(), window.SPR.loadProducts(), window.SPR.loadBadges();
@@ -526,7 +526,7 @@
         },
         sidebarParams: function() {
             Shopify.queryParams = {};
-            //get after ?...=> Object {q: "Acme"} 
+            //get after ?...=> Object {q: "Acme"}
             if (location.search.length) {
                 for (var aKeyValue, i = 0, aCouples = location.search.substr(1).split('&'); i < aCouples.length; i++) {
                     aKeyValue = aCouples[i].split('=');
@@ -731,10 +731,10 @@
                 });
             });
         },
-        initColorSwatchGrid: function() { 
+        initColorSwatchGrid: function() {
           jQuery('.item-swatch li label').hover(function(){
             var newImage = jQuery(this).parent().find('.hidden a').attr('href');
-            jQuery(this).parents('.grid-item').find('.product-grid-image img').attr({ src: newImage }); 
+            jQuery(this).parents('.grid-item').find('.product-grid-image img').attr({ src: newImage });
             return false;
           });
         },
@@ -802,13 +802,13 @@
                                 showMoreButton.hide();
                                 showMoreButton.next().show();
                             }
-                          
+
                           	//currency
                             if (window.show_multiple_currencies && window.shop_currency != jQuery("#currencies").val())
                             {
                                 Currency.convertAll(window.shop_currency, jQuery("#currencies").val(), "span.money", "money_format")
                             }
-                          
+
                             //product review
                             if ($(".spr-badge").length > 0) {
                                 return window.SPR.registerCallbacks(), window.SPR.initRatingHandler(), window.SPR.initDomEls(), window.SPR.loadProducts(), window.SPR.loadBadges();
@@ -879,7 +879,7 @@
                 $('#dropdown-cart .no-items').hide();
                 $('#dropdown-cart .has-items').show();
             } else {
-                //No item in dropdown cart                
+                //No item in dropdown cart
                 $('#dropdown-cart .has-items').hide();
                 $('#dropdown-cart .no-items').show();
             }
@@ -896,7 +896,7 @@
         },
         initDropDownCart: function() {
             if (window.dropdowncart_type == "click") {
-                //click type  
+                //click type
                 $('#cartToggle').click(function() {
                     if ($('#dropdown-cart').is(':visible')) {
                         $("#dropdown-cart").slideUp('fast');
@@ -1136,7 +1136,7 @@
                     }
                     if (quickview.find('.product-inventory span').length > 0) {
                       var variant = product.variants[0];
-                      var inventoryInfo = quickview.find('.product-inventory span');                      
+                      var inventoryInfo = quickview.find('.product-inventory span');
                       if (variant.available) {
                         if (variant.inventory_management!=null) {
                           inventoryInfo.text(variant.inventory_quantity + " " + window.inventory_text.in_stock);
@@ -1166,7 +1166,7 @@
                             description = descList[translator.current_lang - 1];
                           }
                         }
-                        description = description.split(" ").splice(0, 20).join(" ") + "...";
+                        description = description.split(" ").splice(0, 120).join(" ") + "...";
                         quickview.find('.product-description').text(description);
                     } else {
                         quickview.find('.product-description').remove();
@@ -1221,7 +1221,7 @@
 
                     ella.loadQuickViewSlider(product, quickview);
                     ella.initQuickviewAddToCart();
-                    ella.translateBlock(".quick-view");                    
+                    ella.translateBlock(".quick-view");
 
                     $('.quick-view').fadeIn(500);
                     if ($('.quick-view .total-price').length > 0) {
@@ -1254,10 +1254,10 @@
                 var totalPrice = unitPrice * quantity;
 
                 var totalPriceText = Shopify.formatMoney(totalPrice, window.money_format);
-                regex = /([0-9]+[.|,][0-9]+[.|,][0-9]+)/g;     
+                regex = /([0-9]+[.|,][0-9]+[.|,][0-9]+)/g;
                 if (!totalPriceText.match(regex)) {
                    regex = /([0-9]+[.|,][0-9]+)/g;
-                } 
+                }
                 totalPriceText = totalPriceText.match(regex)[0];
 
                 var regInput = new RegExp(unitPriceText, "g");
@@ -1508,7 +1508,7 @@
             if (translator.isLang2())
               return textArr[1];
             return textArr[0];
-          }          
+          }
         },
       translateBlock: function(blockSelector) {
           if (window.multi_lang && translator.isLang2()) {

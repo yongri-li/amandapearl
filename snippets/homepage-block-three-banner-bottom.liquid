@@ -1,5 +1,5 @@
 {% if settings.display_three_banner_bottom %}
-<section class="banner-home-bottom">
+<section class="banner-home-bottom container">
   {% if settings.banner_home_bottom_title != blank %}
   <div class="widget-title wow fadeIn">
     {% if settings.enable_multilang %}
@@ -17,11 +17,15 @@
   </div>
   {% endif %}
   <ul class="row">
-    <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
       <a href="{{ settings.three_banner_bottom_link_1 }}" >
         <img src="{{ 'banner-home-bottom-1.jpg' | asset_url }}">
       </a>
-      <div class="des">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+      <div class="des" style="text-align: left; float: left">
         {% if settings.display_banner_title_1 and settings.three_banner_bottom_title_1 != blank %}
         <h4 style="{% if settings.three_banner_bottom_title_color_1 != blank %}
                    color: {{ settings.three_banner_bottom_title_color_1 }};
@@ -82,12 +86,14 @@
           {% endif %}
         {% endif %}
       </div>
+        </div>
+      </div>
     </li>
-    <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
-      <a href="{{ settings.three_banner_bottom_link_2 }}">
-      <img src="{{ 'banner-home-bottom-2.jpg' | asset_url }}">
-      </a>
-      <div class="des">
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
+      <div class="row">
+
+        <div class="col-xs-12 col-sm-6">
+      <div class="des" style="text-align: right; float: right">
         {% if settings.display_banner_title_2 and settings.three_banner_bottom_title_2 != blank %}
         <h4 style="{% if settings.three_banner_bottom_title_color_2 != blank %}
                    color: {{ settings.three_banner_bottom_title_color_2 }};
@@ -148,12 +154,23 @@
           {% endif %}
         {% endif %}
       </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+      <a href="{{ settings.three_banner_bottom_link_2 }}" >
+        <img src="{{ 'banner-home-bottom-2.jpg' | asset_url }}">
+      </a>
+        </div>
+      </div>
 	</li>
-    <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+    <li class="col-xs-12 col-sm-12 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6">
       <a href="{{ settings.three_banner_bottom_link_3 }}">
       <img src="{{ 'banner-home-bottom-3.jpg' | asset_url }}">
       </a>
-      <div class="des">
+        </div>
+        <div class="col-xs-12 col-sm-6">
+      <div class="des" style="text-align: left; float: left">
         {% if settings.display_banner_title_3 and settings.three_banner_bottom_title_3 != blank %}
         <h4 style="{% if settings.three_banner_bottom_title_color_3 != blank %}
                    color: {{ settings.three_banner_bottom_title_color_3 }};
@@ -213,6 +230,8 @@
           </a>
           {% endif %}
         {% endif %}
+      </div>
+        </div>
       </div>
 	</li>
   </ul>

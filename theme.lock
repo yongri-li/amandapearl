@@ -290,7 +290,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
-  development: 2018-08-16T12:43:15-04:00   f9f247f8608a7b86956085a603b97cce
+  development: 2018-08-20T12:39:09-04:00   99126a8cebebc26c1394cebb81b4385f
 assets/top-banner-home-1.jpg:
   development: 2018-08-07T13:11:30-04:00   4909e288757e9417d5a1e7c382154830
 assets/top-banner-home-2.jpg:
@@ -378,19 +378,19 @@ snippets/header-mobile.liquid:
 snippets/header.liquid:
   development: 2018-08-07T12:43:27-04:00   70707469e0681dba8a56719c19049296
 snippets/homepage-block-banner.liquid:
-  development: 2018-08-07T12:43:27-04:00   6425b1d114c807d22656cd38163395a8
+  development: 2018-08-20T12:35:40-04:00   a96a913cf6ef8c77c8e3ba951e7bb3c4
 snippets/homepage-block-new-arrivals.liquid:
   development: 2018-08-07T12:43:27-04:00   d44ef0227d53a6d9de65bbe334365d38
 snippets/homepage-block-newsletter.liquid:
   development: 2018-08-07T12:43:27-04:00   53a11847e2955d9089ff939bcd2bcf5d
 snippets/homepage-block-three-banner-bottom.liquid:
-  development: 2018-08-07T13:33:12-04:00   27184f4b8baa951411172deae28916cd
+  development: 2018-08-20T12:36:25-04:00   44be9c77208ed935d9a3a72b7fb77392
 snippets/homepage-block-three-banner.liquid:
   development: 2018-08-07T13:41:44-04:00   8e0d7d37ada3e2fcfa08192ac2e6e1f9
 snippets/homepage-block-trending.liquid:
   development: 2018-08-07T12:43:28-04:00   af553d8c1c93429c31743a1b3b14e478
 snippets/homepage-flexslider.liquid:
-  development: 2018-08-07T12:43:28-04:00   f18cb3049b4cfa60578e89c5489b544b
+  development: 2018-08-20T12:35:02-04:00   0ab57228a994489e8e5500bfbfb6251f
 snippets/homepage-instagram.liquid:
   development: 2018-08-07T12:43:28-04:00   584382ce77a7ade4f7cb5e5fecd4307d
 snippets/item-swatch.liquid:
@@ -532,7 +532,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2018-08-07T12:43:33-04:00   b01bce4d6b8a5b4620b34ef67c99071c
 templates/index.liquid:
-  development: 2018-08-16T12:43:55-04:00   f209ac3e32f1ab071b31ea4a406ac971
+  development: 2018-08-20T12:37:40-04:00   6b4fa9f95e076530e40a31d7e72cfe73
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.contact.liquid:

@@ -44,25 +44,25 @@ assets/bootstrap.min.js:
 assets/box-shadow-mobile.png:
   development: 2018-08-07T12:43:10-04:00   e0ff704eba2bc0223e292cae59fb555f
 assets/brand1.png:
-  development: 2018-08-07T12:43:10-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand2.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand3.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand4.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand5.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand6.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand7.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand8.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand9.png:
-  development: 2018-08-07T12:43:11-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:15-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/brand10.png:
-  development: 2018-08-07T12:43:10-04:00   198c9047cbabf1e0e5d3a772f4e6d9ba
+  development: 2018-08-16T11:53:15-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
 assets/btn-cart01.png:
   development: 2018-08-07T12:43:11-04:00   3155d5dd3d0a51298e50cb8c3b55572f
 assets/btn-product.png:
@@ -107,8 +107,12 @@ assets/component.css:
   development: 2018-08-07T12:43:13-04:00   710282682c930bb220521f4059e8af02
 assets/custom_size_chart_content.jpg:
   development: 2018-08-07T12:43:13-04:00   6d54963e53e5736b9d6d5ee7f6c4f633
+assets/dropdown_1_menu_image_1.jpg:
+  development: 2018-08-16T12:03:08-04:00   ccdbe1267c8031f63603c015ef854304
 assets/dropdown_1_menu_image_2.jpg:
-  development: 2018-08-07T12:43:13-04:00   bb05ca3d6e0f5525d8bd8a2324867fdc
+  development: 2018-08-16T12:03:09-04:00   ccdbe1267c8031f63603c015ef854304
+assets/dropdown_1_menu_image_3.jpg:
+  development: 2018-08-16T12:03:09-04:00   cff03a0f61b2bcd4357ecec3c41f8cbf
 assets/dropdown_2_menu_image_1.jpg:
   development: 2018-08-07T12:43:14-04:00   5420de69dc9d69af946fcad48e923021
 assets/dropdown_2_menu_image_2.jpg:
@@ -302,7 +306,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-08-07T13:49:42-04:00   8ff09c1bb92cc357a6788ca8bc37017f
+  development: 2018-08-16T12:45:15-04:00   dbde6353560136fa40982dea314b3076
 config/settings_schema.json:
   development: 2018-08-07T13:47:36-04:00   fe0f221f0cfda8c0920e5e85ba7e37e5
 layout/theme.liquid:
@@ -310,7 +314,7 @@ layout/theme.liquid:
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
-  development: 2018-08-07T12:43:26-04:00   6283343d678d67516705d1299583371e
+  development: 2018-08-16T11:57:39-04:00   210e6b0ba4f7354f9bad801f6e851482
 locales/es.json:
   development: 2018-08-07T12:43:26-04:00   6e08dbc43de99427917884b4cad1bd56
 locales/fr.json:

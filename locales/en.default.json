@@ -12,7 +12,7 @@
     },
     "breadcrumbs": {
       "home": "Home",
-      "cart": "Shopping cart",
+      "cart": "Shopping bag",
       "home_link_title": "Back to the frontpage"
     },
     "newsletter_form": {
@@ -62,19 +62,19 @@
   },
   "cart": {
     "general": {
-      "title": "My Cart",
+      "title": "My Bag",
       "remove": "Remove",
       "note": "Special instructions for seller",
       "subtotal": "Subtotal",
       "shipping_at_checkout": "Shipping & taxes calculated at checkout",
-      "update": "Update Cart",
+      "update": "Update Bag",
       "checkout": "Check Out",
       "button_checkout": "Proceed to Checkout",
-      "empty": "Your cart is currently empty.",
+      "empty": "Your bag is currently empty.",
       "continue_browsing_html": "Continue browsing <a href=\"\/collections\/all\">here<\/a>.",
-      "view_cart": "Or View Cart",
-      "close_cart": "Close Cart",
-      "shopping_cart": "Shopping Cart",
+      "view_cart": "Or View Bag",
+      "close_cart": "Close Bag",
+      "shopping_cart": "Shopping Bag",
       "label": "Note",
       "label_text": "Additional comments",
       "shipping_calculator_button": "Calculate Shipping",
@@ -98,7 +98,7 @@
     },
     "ajax_cart": {
       "continue_shopping": "Continue Shopping",
-      "go_to_cart": "Go to cart",
+      "go_to_cart": "Go to bag",
       "success_text": "is added to your shopping cart.",
       "error": "Error",
       "loading": "Loading",
@@ -291,7 +291,7 @@
   },
   "layout": {
     "cart": {
-      "title": "Cart",
+      "title": "Shopping Bag",
       "items_count": {
         "one": "item",
         "other": "items"
@@ -324,7 +324,7 @@
       "unavailable": "Unavailable",
       "compare_at": "Compare at",
       "quantity": "Quantity",
-      "add_to_cart": "Add to Cart",
+      "add_to_cart": "Add to Bag",
       "select_options": "Select options",
       "quick_view": "Quick View",
       "in_stock": "In stock",
@@ -367,6 +367,22 @@
     "ajax_wishlist": {
       "go_to_wishlist": "Go To Wishlist",
       "success_text": "is added to your wish list."
+    }
+  },
+  "shopify": {
+    "checkout": {
+      "general": {
+        "cart": "Bag",
+        "back_to_cart": "Return to Bag"
+      },
+      "stock": {
+        "removed_from_cart_notice": "Remove from Bag",
+        "remove_from_cart_button_label": "Remove from Bag",
+        "go_back_to_cart_button_label": "Go back to my shopping bag"
+      },
+      "order_summary": {
+        "shopping_cart_label": "Shopping Bag"
+      }
     }
   }
 }

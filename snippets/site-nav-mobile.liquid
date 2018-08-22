@@ -1,3 +1,4 @@
+
 {% comment %}
   List out your main-menu linklist (default)
   More info on linklists:
@@ -9,16 +10,12 @@
 {% endif %}
 
 <div class="row">
+
+<div style="height: 60px;" class="visible-xs"></div>
 <div class="col-xs-12 col-sm-5">
-<ul class="site-nav" style="text-align: left!important;">
+<ul class="site-nav">
 
-  <div style="padding: 20px 40px 20px">
-  <center>
-    <a href="/">{{ 'logo.png' | asset_url | img_tag: shop.name }}</a>
-  </center>
-  </div>
-
-  {% for link in linklists.main-menu.links %}
+  {% for link in linklists.menu-left.links %}
   	{% assign i = forloop.index | downcase %}
     {% assign cat = link.title | downcase %}
     <li {% if linklists[link.handle] != empty %}class="dropdown {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
@@ -102,9 +99,9 @@
 </div>
 <div class="col-xs-0 col-sm-2 hidden-xs"></div>
 <div class="col-xs-12 col-sm-5">
-<ul class="site-nav" style="text-align: left!important;">
+<ul class="site-nav">
 
-  {% for link in linklists.main-menu-2.links %}
+  {% for link in linklists.menu-right.links %}
   	{% assign i = forloop.index | downcase %}
     {% assign cat = link.title | downcase %}
     <li {% if linklists[link.handle] != empty %}class="dropdown {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
@@ -186,10 +183,11 @@
 
   <li>
     <a href="/cart" style="text-decoration:none!important;">
-    <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>CART  <i class="fa fa-shopping-cart fa-lg hidden-xs" aria-hidden="true"></i></span>
+    <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>BAG <i class="fa fa-shopping-bag fa-lg hidden-xs" aria-hidden="true"></i></span>
     <span id="cartCount" style="position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
     </a>
   </li>
+
 
 </ul>
 

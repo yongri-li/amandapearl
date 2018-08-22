@@ -212,7 +212,7 @@
               </div>
               </div>
               <div class="col-xs-12">
-              <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}">
+              <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}" onClick="window.location = 'javascript:void(0)'; window.location.reload(true);">
             </div>
             {% else %}
               <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}">
@@ -447,7 +447,7 @@
 
     <center>
       <h3><b>See It Styled</b></h3>
-      <p>FourSixty Widget Goes Here!</p>
+      <script src="//foursixty.com/media/scripts/fs.slider.v2.5.js" data-feed-id="amanda-pearl" data-theme="slider_v2_5" data-cell-size="20%"></script><style>.fs-has-links::after {  padding: 5px 7.5px; background-color: #fff; color: rgba(0,0,0,0.8); content: "SHOP IT";  }.fs-wrapper { height: auto } .fs-entry-container { height: 0 !important; width: 20% !important; padding-top: 20% !important; }.fs-wrapper div.fs-text-container .fs-entry-title, div.fs-detail-title{font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:italic;font-weight:normal;}div.fs-text-container .fs-entry-date, div.fs-detail-container .fs-post-info, div.fs-wrapper div.fs-has-links::after, .fs-text-product, .fs-overlink-text{font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:normal;font-weight:bold;}.fs-wrapper div.fs-text-container * {color:#fff}.fs-wrapper div.fs-text-container {background-color:rgba(0,0,0,0.8); margin: 0px}div.fs-entry-date{display:none}div.fs-entry-title{display:none}.fs-wrapper div.fs-timeline-entry{ margin: 1px }</style>
     </center>
 
     {% if settings.show_tab == 'horizontal' %}

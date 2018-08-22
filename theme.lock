@@ -10,11 +10,11 @@ assets/backgrouns.jpg:
 assets/backhround-header.jpg:
   development: 2018-08-07T12:43:08-04:00   f11dfa7399d9ede99131ecd63245844e
 assets/banner-home-bottom-1.jpg:
-  development: 2018-08-07T13:34:16-04:00   4909e288757e9417d5a1e7c382154830
+  development: 2018-08-21T16:04:22-04:00   57468be325b92b3433942fff510c227a
 assets/banner-home-bottom-2.jpg:
-  development: 2018-08-07T13:34:16-04:00   4909e288757e9417d5a1e7c382154830
+  development: 2018-08-21T16:04:22-04:00   39db6cf8df72bf80f9182a17d345c258
 assets/banner-home-bottom-3.jpg:
-  development: 2018-08-07T13:34:16-04:00   4909e288757e9417d5a1e7c382154830
+  development: 2018-08-21T16:04:22-04:00   239d7512105294dc0461837ff6490955
 assets/banner-home-bottom-4.jpg:
   development: 2018-08-07T13:49:42-04:00   00b55eb44079d975bc40994a58bdc477
 assets/banner-home-bottom-5.jpg:
@@ -24,7 +24,9 @@ assets/banner-home-bottom-6.jpg:
 assets/banner-sidebar.jpg:
   development: 2018-08-07T12:43:09-04:00   b19d729fe1e9c3ff67e0ae0d7a964062
 assets/banner.jpg:
-  development: 2018-08-07T12:43:09-04:00   4ad82076d6b1edd0b0d0717cc225e166
+  development: 2018-08-21T15:32:38-04:00   38daf6f4ae27b5df63cdc7a72f29c59a
+assets/bg-body.png:
+  development: 2018-08-21T16:52:13-04:00   6c491a8d999edf1a0d42960d0b063b6b
 assets/bg-footer.png:
   development: 2018-08-07T12:43:09-04:00   4aface74816099ce62ddcba8a4ab8a1c
 assets/bg-footer1.png:
@@ -44,25 +46,25 @@ assets/bootstrap.min.js:
 assets/box-shadow-mobile.png:
   development: 2018-08-07T12:43:10-04:00   e0ff704eba2bc0223e292cae59fb555f
 assets/brand1.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:10:35-04:00   374a6ec84c71e8943435bfca7030dbf3
 assets/brand2.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:10:35-04:00   c2b768556eeadc42cc14d121a96fa37c
 assets/brand3.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:10:35-04:00   78863b346aaeaaa20c6db5579fd0bbaf
 assets/brand4.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:14:03-04:00   fc8faf284e88c48330532c55c9888784
 assets/brand5.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:10:35-04:00   59fdb7131c720bb6ae3054c65e788135
 assets/brand6.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:14:03-04:00   13f7d74482e458a4be74479a7edb1fc8
 assets/brand7.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:14:03-04:00   ee26685fc8cda2acb8c7d17b2ad382e6
 assets/brand8.png:
-  development: 2018-08-16T11:53:14-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:17:55-04:00   2d1a3f9dccc8cb16768a5dbbde9c4b0c
 assets/brand9.png:
-  development: 2018-08-16T11:53:15-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:17:55-04:00   97cb7c29794b1725b12957bfecb9a5e5
 assets/brand10.png:
-  development: 2018-08-16T11:53:15-04:00   6d0a54c264f2d1e36c57bf3bddf0da41
+  development: 2018-08-21T17:17:55-04:00   092521a477e820619c055845b65bf8d8
 assets/btn-cart01.png:
   development: 2018-08-07T12:43:11-04:00   3155d5dd3d0a51298e50cb8c3b55572f
 assets/btn-product.png:
@@ -262,11 +264,11 @@ assets/selectize.min.js:
 assets/share_email_image.png:
   development: 2018-08-07T12:43:23-04:00   55b8d7e54a87ef26d7b5fb6beb096a63
 assets/slideshow_1.jpg:
-  development: 2018-08-07T12:43:23-04:00   c522b321d655a3722fd2d71b04696c40
+  development: 2018-08-21T16:52:14-04:00   e2d57cae5d5d840f8bbeb04ce7c18398
 assets/slideshow_2.jpg:
-  development: 2018-08-07T12:43:23-04:00   2f7a802f41b6b47f65632c7ffb7711e1
+  development: 2018-08-21T16:52:14-04:00   672e87edca50ffe115a0e6914677a82b
 assets/slideshow_3.jpg:
-  development: 2018-08-07T12:43:23-04:00   aa40c2a0a66efcb41801dad0ae6e7146
+  development: 2018-08-21T16:52:14-04:00   0b26eba825fb02e3d87d55f0ae73bab5
 assets/social.png:
   development: 2018-08-07T12:43:23-04:00   ddcf77b292c7cfa6e12ffef67812407e
 assets/social_icon_1.png:
@@ -292,7 +294,7 @@ assets/theme-styles-setting.css.liquid:
 assets/theme-styles.css.liquid:
   development: 2018-08-21T13:13:18-04:00   99f94ae6b5befb9624ec92b083876301
 assets/top-banner-home-1.jpg:
-  development: 2018-08-07T13:11:30-04:00   4909e288757e9417d5a1e7c382154830
+  development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
   development: 2018-08-07T13:11:30-04:00   4909e288757e9417d5a1e7c382154830
 assets/top-banner-home-3.jpg:
@@ -306,7 +308,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-08-20T17:52:16-04:00   7bb1747b627391f748b5594cc95f6a1c
+  development: 2018-08-21T16:52:14-04:00   b948a62624afb63b3881f8fbd11415fb
 config/settings_schema.json:
   development: 2018-08-07T13:47:36-04:00   fe0f221f0cfda8c0920e5e85ba7e37e5
 layout/theme.liquid:

@@ -515,6 +515,82 @@
         "label": "Banner Link 3"
       },
       {
+        "type": "image",
+        "id": "banner-home-bottom-7.jpg",
+        "label": "Banner Image 4",
+        "max-width": 3000,
+        "info": "Width: 3000 recommended"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_banner_title_7",
+        "label": "Display Banner Title 3?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_title_7",
+        "label": "Banner Title 3",
+        "default": "Comos De Milano"
+      },
+      {
+        "type": "color",
+        "id": "three_banner_bottom_title_color_7",
+        "label": "Banner Title Color 3",
+        "default": "#000",
+        "info": "Default Value: #000"
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_title_size_7",
+        "label": "Banner Title Size 3",
+        "default": "20",
+        "info": "Default Value: 20"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_banner_description_7",
+        "label": "Display Banner Description 3?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_description_7",
+        "label": "Banner Description 3",
+        "default": "Nullam aliquet vestibulum augue non varius. Cras nec congue elitos. Duis tristique del ante nec aliquam. Praesent urna tellus laoreet an tellus ullamcorper fermentum facilisis eratum."
+      },
+      {
+        "type": "color",
+        "id": "three_banner_bottom_description_color_7",
+        "label": "Banner Description Color 3",
+        "default": "#2d2d2d",
+        "info": "Default Value: #2d2d2d"
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_description_size_7",
+        "label": "Banner Description Size 3",
+        "default": "12",
+        "info": "Default Value: 12"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_banner_button_7",
+        "label": "Display Banner Button 3?",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_button_text_7",
+        "label": "Banner Button Text 3",
+        "default": "Shop Now"
+      },
+      {
+        "type": "text",
+        "id": "three_banner_bottom_link_7",
+        "label": "Banner Link 3"
+      },
+      {
         "type": "header",
         "content": "Background Footer"
       },

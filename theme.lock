@@ -310,7 +310,7 @@ assets/wow.min.js:
 config/settings_data.json:
   development: 2018-08-23T14:42:50-04:00   42a2004c3d9fbf685bebe44f19039933
 config/settings_schema.json:
-  development: 2018-08-07T13:47:36-04:00   fe0f221f0cfda8c0920e5e85ba7e37e5
+  development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
   development: 2018-08-22T11:52:39-04:00   fcb9322b8a1fdedf34038231397fd34b
 locales/de.json:
@@ -334,7 +334,7 @@ snippets/brands.liquid:
 snippets/breadcrumb.liquid:
   development: 2018-08-07T12:43:26-04:00   235323195a63d6d8928f7cfd2c08f042
 snippets/cart-points.liquid:
-  development: 2018-08-07T13:51:06-04:00   a456dc26f92d4ab18b07ca7e69c637a2
+  development: 2018-08-23T16:00:21-04:00   f85afbf5b7bbee4696e2f20fb0cea52c
 snippets/collection-grid-item.liquid:
   development: 2018-08-07T12:43:26-04:00   25071b7ac76372a4dc061ceda8e5db70
 snippets/collection-header.liquid:
@@ -358,11 +358,11 @@ snippets/comment.liquid:
 snippets/customer_links.liquid:
   development: 2018-08-07T12:43:27-04:00   ab31c8f86f32bb2116f651ed130bc2e5
 snippets/dev.liquid:
-  development: 2018-08-07T13:47:18-04:00   3426cb216ebc144390fbf4293bc3826b
+  development: 2018-08-23T16:01:17-04:00   98e07471e03863abd834cf3f9f8bc68d
 snippets/fb-open-graph-tags.liquid:
   development: 2018-08-07T12:43:27-04:00   ceeb688908d12511d61380a5d126f59f
 snippets/footer-points.liquid:
-  development: 2018-08-07T13:53:05-04:00   516ba087453353465b89ce8bacaf47a9
+  development: 2018-08-23T15:58:28-04:00   f1736351bab81030d48008486a0e64d8
 snippets/footer.liquid:
   development: 2018-08-16T12:44:10-04:00   96b36aec7f3b96c402d5cff93e55a5f7
 snippets/footer_scripts.liquid:
@@ -386,13 +386,13 @@ snippets/homepage-block-new-arrivals.liquid:
 snippets/homepage-block-newsletter.liquid:
   development: 2018-08-07T12:43:27-04:00   53a11847e2955d9089ff939bcd2bcf5d
 snippets/homepage-block-three-banner-bottom.liquid:
-  development: 2018-08-20T12:36:25-04:00   44be9c77208ed935d9a3a72b7fb77392
+  development: 2018-08-23T15:59:31-04:00   44be9c77208ed935d9a3a72b7fb77392
 snippets/homepage-block-three-banner.liquid:
   development: 2018-08-07T13:41:44-04:00   8e0d7d37ada3e2fcfa08192ac2e6e1f9
 snippets/homepage-block-trending.liquid:
   development: 2018-08-07T12:43:28-04:00   af553d8c1c93429c31743a1b3b14e478
 snippets/homepage-flexslider.liquid:
-  development: 2018-08-20T12:35:02-04:00   0ab57228a994489e8e5500bfbfb6251f
+  development: 2018-08-23T15:55:28-04:00   7449e54edb4169175f22c2aea27528c0
 snippets/homepage-instagram.liquid:
   development: 2018-08-23T15:50:11-04:00   d3f99c6be733cc388823c5566197e4ed
 snippets/item-swatch.liquid:

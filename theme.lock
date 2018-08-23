@@ -394,7 +394,7 @@ snippets/homepage-block-trending.liquid:
 snippets/homepage-flexslider.liquid:
   development: 2018-08-20T12:35:02-04:00   0ab57228a994489e8e5500bfbfb6251f
 snippets/homepage-instagram.liquid:
-  development: 2018-08-22T11:55:55-04:00   67133d052c32c9024f1a59475d4446a9
+  development: 2018-08-23T15:50:11-04:00   d3f99c6be733cc388823c5566197e4ed
 snippets/item-swatch.liquid:
   development: 2018-08-20T18:00:42-04:00   2525f81dc0de4bb88835f1b6a47548fa
 snippets/linklists.liquid:

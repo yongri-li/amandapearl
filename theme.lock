@@ -14,17 +14,17 @@ assets/banner-home-bottom-1.jpg:
 assets/banner-home-bottom-2.jpg:
   development: 2018-08-21T16:04:22-04:00   39db6cf8df72bf80f9182a17d345c258
 assets/banner-home-bottom-3.jpg:
-  development: 2018-08-21T16:04:22-04:00   239d7512105294dc0461837ff6490955
+  development: 2018-08-23T11:11:17-04:00   3692a4fe3c5e4276c00335e1f36867ea
 assets/banner-home-bottom-4.jpg:
-  development: 2018-08-07T13:49:42-04:00   00b55eb44079d975bc40994a58bdc477
+  development: 2018-08-22T13:22:29-04:00   6fdcd375c5a8d56d71c590d973d2ba74
 assets/banner-home-bottom-5.jpg:
-  development: 2018-08-07T13:49:42-04:00   00b55eb44079d975bc40994a58bdc477
+  development: 2018-08-22T13:20:47-04:00   03cc6f0ad7045e72aed52fc59dc0e687
 assets/banner-home-bottom-6.jpg:
-  development: 2018-08-07T13:49:42-04:00   00b55eb44079d975bc40994a58bdc477
+  development: 2018-08-22T13:20:48-04:00   95fdec113794ecbf53b1cabaf0b0f392
 assets/banner-sidebar.jpg:
   development: 2018-08-07T12:43:09-04:00   b19d729fe1e9c3ff67e0ae0d7a964062
 assets/banner.jpg:
-  development: 2018-08-21T15:32:38-04:00   38daf6f4ae27b5df63cdc7a72f29c59a
+  development: 2018-08-23T11:28:07-04:00   2754dbf8d92499c5274a28ae8035a75b
 assets/bg-body.png:
   development: 2018-08-21T16:52:13-04:00   6c491a8d999edf1a0d42960d0b063b6b
 assets/bg-footer.png:
@@ -32,7 +32,7 @@ assets/bg-footer.png:
 assets/bg-footer1.png:
   development: 2018-08-07T12:43:09-04:00   4aface74816099ce62ddcba8a4ab8a1c
 assets/bg_newsletter.jpg:
-  development: 2018-08-07T12:43:09-04:00   4b9ead623cac1508287184d37b702869
+  development: 2018-08-22T13:20:51-04:00   5131afed5ec2083b6f2d3bd1013a89ae
 assets/bkg-newsletter.jpg:
   development: 2018-08-07T12:43:10-04:00   e9e2485e7d184ce5d0c5f28b0a077947
 assets/blank.gif:
@@ -264,11 +264,11 @@ assets/selectize.min.js:
 assets/share_email_image.png:
   development: 2018-08-07T12:43:23-04:00   55b8d7e54a87ef26d7b5fb6beb096a63
 assets/slideshow_1.jpg:
-  development: 2018-08-21T16:52:14-04:00   e2d57cae5d5d840f8bbeb04ce7c18398
+  development: 2018-08-22T15:00:25-04:00   b9833586f9c77d9099a26307492c5308
 assets/slideshow_2.jpg:
-  development: 2018-08-21T16:52:14-04:00   672e87edca50ffe115a0e6914677a82b
+  development: 2018-08-22T15:00:26-04:00   1652a2be80b8aacd629c17064a5efd04
 assets/slideshow_3.jpg:
-  development: 2018-08-21T16:52:14-04:00   0b26eba825fb02e3d87d55f0ae73bab5
+  development: 2018-08-23T11:11:19-04:00   805f5ba83a4a906f49a59c0e79f29399
 assets/social.png:
   development: 2018-08-07T12:43:23-04:00   ddcf77b292c7cfa6e12ffef67812407e
 assets/social_icon_1.png:
@@ -308,7 +308,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-08-21T16:52:14-04:00   b948a62624afb63b3881f8fbd11415fb
+  development: 2018-08-23T14:42:50-04:00   42a2004c3d9fbf685bebe44f19039933
 config/settings_schema.json:
   development: 2018-08-07T13:47:36-04:00   fe0f221f0cfda8c0920e5e85ba7e37e5
 layout/theme.liquid:

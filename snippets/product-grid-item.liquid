@@ -11,7 +11,7 @@
 {% assign productIndex = forloop.index | minus:1 %}
 {% assign delayTime = settings.time_lazy_load | times : productIndex %}
 
-<div class="inner height_fix{% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} wow fadeIn" data-wow-delay="{{delayTime}}ms" id="product-{{ product.id }}">
+<div class="inner height_fix {% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} wow fadeIn" data-wow-delay="{{delayTime}}ms" id="product-{{ product.id }}">
   <div class="inner-top" style="border: 1px solid #fff;">
     <div class="product-top">
       <div class="product-image">

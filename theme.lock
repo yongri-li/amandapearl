@@ -426,7 +426,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-08-07T12:43:29-04:00   e8a2a25e9c40fcd244d6c10f1797e45a
 snippets/product-grid-item.liquid:
-  development: 2018-08-20T18:01:05-04:00   76ab46f5ea96c16208fa8e5069897109
+  development: 2018-08-28T13:25:21-04:00   6fe46361381fc10020baf91e1d9eecc9
 snippets/product-list-item.liquid:
   development: 2018-08-07T12:43:29-04:00   b32cb0e13cea9fdae784bb358370dc88
 snippets/product-sidebar.liquid:
@@ -548,6 +548,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-08-22T12:11:17-04:00   8222cca5ddef639752998979a745b410
+  development: 2018-08-28T13:24:39-04:00   edf56c5094d4948ddbb9f50d039d44a8
 templates/search.liquid:
   development: 2018-08-07T12:43:32-04:00   db4010bd560de940943f5b6a17fcb82f

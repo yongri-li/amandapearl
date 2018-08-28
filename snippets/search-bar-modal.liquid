@@ -15,5 +15,5 @@
 <a class="icon-search" href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="general.search.submit"{% endif %}>{{ 'general.search.submit' | t }}</a>
 <form action="/search" method="get" class="input-group search-bar" role="search">
   <input type="hidden" name="type" value="product">
-  <input style="width:520px; text-align: center; background: transparent; color: #000; font-size: 24px; border: 0px solid #000" type="text" name="q" value="{{ search.terms | escape }}" {% if settings.enable_multilang %}data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} placeholder="search our store..." class="input-group-field" aria-label="Search Site" autocomplete="off">
+  <input style="width:520px; text-align: center; background: transparent; color: #000; font-size: 24px; border: 0; border-bottom: 1px solid #000" type="text" name="q" value="{{ search.terms | escape }}" {% if settings.enable_multilang %}data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} placeholder="search our store..." class="input-group-field" aria-label="Search Site" autocomplete="off">
 </form>

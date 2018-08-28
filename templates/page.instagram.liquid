@@ -1,0 +1,24 @@
+<div style="max-width: 800px;margin: 0 auto !important;float: none !important;">
+{% include 'breadcrumb' %}
+<header class="page-header">
+  {% if settings.enable_multilang %}
+  <h2 class="lang1">{{ page.title | split: '|' | first }}</h2>
+  <h2 class="lang2">{{ page.title | split: '|' | last }}</h2>
+  {% else %}
+  <h2>{{ page.title | split: '|' | first }}</h2>
+  {% endif %}
+</header>
+
+{% comment %}
+  Regular page content goes here.
+{% endcomment %}
+
+{% if settings.enable_multilang %}
+<div class="rte lang1">{{ page.content | split: '[lang2]' | first }}</div>
+<div class="rte lang2">{{ page.content | split: '[lang2]' | last }}</div>
+{% else %}
+<div class="rte">{{ page.content | split: '[lang2]' | first }}</div>
+{% endif %}
+</div>
+
+<script src="//foursixty.com/media/scripts/fs.embed.v2.5.js" data-feed-id="amanda-pearl" data-open-links-in-same-page="false" data-theme="lookbook_v2_5"></script><style>.fs-has-links::after {  padding: 5px 7.5px; background-color: #fff; color: rgba(0,0,0,0.8); content: "SHOP IT";  }.fs-wrapper div.fs-text-container .fs-entry-title, div.fs-detail-title{font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:italic;font-weight:normal;}div.fs-text-container .fs-entry-date, div.fs-detail-container .fs-post-info, div.fs-wrapper div.fs-has-links::after, .fs-text-product, .fs-overlink-text{font-family:Helvetica Neue, Helvetica, Arial, sans-serif;font-style:normal;font-weight:bold;}.fs-wrapper div.fs-text-container * {color:#fff}.fs-wrapper div.fs-text-container {background-color:rgba(0,0,0,0.8); margin: 0px}div.fs-entry-date{display:none}div.fs-entry-title{display:none}.fs-wrapper div.fs-timeline-entry{ margin: 1px }</style>

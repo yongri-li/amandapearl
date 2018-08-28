@@ -14,6 +14,8 @@
 <div class="col-xs-12 col-sm-5">
 <ul class="site-nav">
 
+  <li class="hidden-xs"><a href="#" data-reveal-id="myModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+
   {% for link in linklists.menu-left.links %}
   	{% assign i = forloop.index | downcase %}
     {% assign cat = link.title | downcase %}

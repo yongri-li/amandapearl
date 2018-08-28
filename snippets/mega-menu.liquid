@@ -12,13 +12,6 @@
         {% else %}
         {{ l.title | split: '|' | first }}
         {% endif %}
-        {% if settings[style_dropdown_mega_menu] == "style_3" %}
-        {% for collection in collections %}
-          {% if collection.handle ==  l.handle %}
-            {{ collection.image.src | collection_img_url: 'medium' | img_tag: collection_title }}
-          {% endif %}
-        {% endfor %}
-        {% endif %}
       </a>
       {% if  linklists[l.handle] != empty %}
       <ul class="dropdown">
@@ -40,7 +33,7 @@
     </div>
     {% endfor %}
   </div>
-  
+
   {% unless settings[style_dropdown_mega_menu] == "style_3" %}
   <div class="col-2">
     {% if settings[style_dropdown_mega_menu] == "style_1" or settings[style_dropdown_mega_menu] == "style_2" %}
@@ -53,7 +46,7 @@
         <a href="{{ settings[dropdown_menu_link_image] }}">
           <img src="{{ dropdown_menu_image | asset_url }}" alt=""/>
         </a>
-      
+
         {% capture dropdown_menu_image_2 %}dropdown_{{ i }}_menu_image_2.jpg{% endcapture %}
         {% capture dropdown_menu_link_image_2 %}dropdown_{{ i }}_menu_link_image_2{% endcapture %}
         <a href="{{ settings[dropdown_menu_link_image_2] }}">
@@ -62,7 +55,7 @@
       {% endif %}
     </div>
     {% endif %}
-  
+
     <div class="col-right">
       {% capture dropdown_menu_image_3 %}dropdown_{{ i }}_menu_image_3.jpg{% endcapture %}
       {% capture dropdown_menu_link_image_3 %}dropdown_{{ i }}_menu_link_image_3{% endcapture %}

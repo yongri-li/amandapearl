@@ -366,7 +366,7 @@ snippets/fb-open-graph-tags.liquid:
 snippets/footer-points.liquid:
   development: 2018-08-23T15:58:28-04:00   f1736351bab81030d48008486a0e64d8
 snippets/footer.liquid:
-  development: 2018-08-16T12:44:10-04:00   96b36aec7f3b96c402d5cff93e55a5f7
+  development: 2018-08-30T15:35:51-04:00   8dbef97f26d76e1f5a3ea96da5a068b4
 snippets/footer_scripts.liquid:
   development: 2018-08-07T12:43:27-04:00   d883c149091371afccc55c3117e255a7
 snippets/form-errors-custom.liquid:
@@ -536,11 +536,13 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2018-08-07T12:43:33-04:00   b01bce4d6b8a5b4620b34ef67c99071c
 templates/index.liquid:
-  development: 2018-08-20T12:41:34-04:00   6bf5e6b11a56981a1b43c8da259c44c1
+  development: 2018-08-30T15:35:58-04:00   a99b5548645b9119e40beb7b6c2d6a21
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
+templates/page.full-width.liquid:
+  development: 2018-08-30T15:41:34-04:00   41e6a3643389622df0b5236e3c8ddd47
 templates/page.instagram.liquid:
   development: 2018-08-28T14:44:30-04:00   a591922c22a1bd7c5ce981d854e00177
 templates/page.liquid:

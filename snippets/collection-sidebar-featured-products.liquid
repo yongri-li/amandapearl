@@ -25,6 +25,7 @@
 		This collection is created by default, but you must add products to it.
 	  {% endcomment %}
       {% for product in collections.[settings.featured_product_list_collection].products limit:settings.featured_product_limit_all %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
       {% include 'product-grid-item-sidebar' %}	  
   	  {% endfor %}
     </div> 

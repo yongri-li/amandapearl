@@ -27,6 +27,7 @@
       {% endif %}        
 
       {% for product in collections[settings.show_slider_trending_collection].products limit:settings.slider_trending_limit_all %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
         <div class="{% if settings.product_image_border %}grid-item-border{% endif %}{% if settings.product_image_crop %} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 {% if product_grid == 3 %}col-md-3{% endif %} {% if columns %}col-lg-{{product_grid}}{% else %}col{% endif %}">
         {% include 'product-grid-item' %}
         </div>

@@ -23,6 +23,7 @@
   {% assign current_product = product %}
   {% assign current_product_found = false %}
   {% for product in collection.products limit: number_of_related_products %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
     {% if product.handle == current_product.handle %}
        {% assign current_product_found = true %}
     {% else %}

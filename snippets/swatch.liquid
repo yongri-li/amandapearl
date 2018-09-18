@@ -51,7 +51,8 @@
   <div class="header visible-xs">{{ swatch }}</div>
   {% assign values = '' %}
   {% for variant in product.variants %}
-    {% assign value = variant.options[option_index] %}
+{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
+    {% assign value = variant.options[option_index] | remove: csp_flag_string %}
     {% unless values contains value %}
       {% assign values = values | join: ',' %}
       {% assign values = values | append: ',' | append: value %}

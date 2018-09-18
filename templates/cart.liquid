@@ -1,3 +1,4 @@
+{%- include 'bold-cart' -%}
 <div class="row">
   <div class="col-xs-12 col-sm-8" style="padding: 40px;">
     {% comment %}
@@ -73,7 +74,8 @@
 
             {% if item.properties.size > 0 %}
             <p>
-              {% for p in item.properties %}
+              <span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_properties" style="display:none !important;"></span>{% for p in item.properties %}
+				{%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
               {% unless p.last == blank %}
               {{ p.first }}:
 
@@ -92,10 +94,10 @@
             {% endif %}
 
             {% comment %}
-            <p class="price">{{ item.price | money }}</p>
+            <p class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" style="display:none !important;"></span>{{ item.price | money }}</p>
             {% endcomment %}
 
-            <p class="price">{{ item.line_price | money }}</p>
+            <p class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" style="display:none !important;"></span>{{ item.line_price | money }}</p>
 
             {% comment %}
               Added data-id for the ajax cart implementation only.
@@ -120,7 +122,7 @@
     <div class="cart-row col-xs-12 col-sm-4 col-md-3">
       <div class="total-price">
       	<h3 {% if settings.enable_multilang %}data-translate="cart.general.subtotal"{%endif%}>{{ 'cart.general.subtotal' | t }}</h3>
-        <p class="price">{{ cart.total_price | money }}</p>
+        <p class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{ cart.total_price | money }}</p>
       </div>
 
       {% comment %}

@@ -11,7 +11,7 @@
   Check if the product is on sale and set a variable to be used below.
 {% endcomment %}
 {% assign on_sale = false %}
-{% if product.compare_at_price_min > product.price_min %}
+{% if bold_compare_at_price_min > bold_price_min %}
   {% assign on_sale = true %}
 {% endif %}
 
@@ -96,8 +96,8 @@
     <div class="price-box">
       {% if on_sale %}
       <p class="sale">
-        <span class="old-price"> {{ product.compare_at_price_min | money }}</span>
-        <span class="special-price">{% if product.price_varies %}{% include 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+        <span class="old-price"> {{ bold_compare_at_price_min | money }}</span>
+        <span class="special-price">{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
       </p>
       {% else %}
       <p class="regular-product">
@@ -105,13 +105,13 @@
           You can show a leading 'from' or 'up to' by checking 'product.price_varies'
           if your variants have different prices.
         {% endcomment %}
-        <span>{% if product.price_varies %}{% include 'varies_from' %}{% endif %}{{ product.price_min | money }}</span>
+        <span>{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
       </p>
       {% endif %}
     </div>
     
     <div class="action">
-      {% assign variantCount = product.variants | size %}
+      {% assign variantCount = bold_variants_size %}
       <form action="/cart/add" method="post" class="variants" id="product-actions-{{ product.id }}" enctype="multipart/form-data" style="padding:0px;">    
         {% if sold_out %}
         <input class="btn add-to-cart-btn" type="submit" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{% endif %} value="{{ 'products.product.unavailable' | t }}" disabled="disabled"/>
@@ -119,11 +119,17 @@
         {% if variantCount > 1 %}    
         <input class="btn" type="button" onclick="window.location.href='{{product.url}}'" {% if settings.enable_multilang %}data-translate="products.product.select_options"{% endif %} value="{{ 'products.product.select_options' | t }}"/>
         {% else %}
-        <input type="hidden" name="id" value="{{ product.variants[0].id }}" />      
+        <input type="hidden" name="id" value="{{ bold_selected_or_first_available_variant.id }}" />      
         <input class="btn add-to-cart-btn" type="submit" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %} value="{{ 'products.product.add_to_cart' | t }}"/>
         {% endif %}
         {% endif %}
-      </form>         
+      </form>
+
+{%- unless bundle_loaded == 'true' -%}
+{%- include 'shappify-bdl-load-bundle' -%}
+{%- assign bundle_loaded = 'true' -%}
+{%- endunless -%} 
+         
     </div>
     {% include 'wishlist-product' %}
   </div> 

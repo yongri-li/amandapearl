@@ -43,6 +43,8 @@
 
   <!-- Header hook for plugins ================================================== -->
   {{ content_for_header }}
+{%- include 'bold-product' with product, hide_action: 'header' -%}
+{%- include 'bold-common' -%}
 
   <!--[if lt IE 9]>
   {{ '//html5shiv.googlecode.com/svn/trunk/html5.js' | script_tag }}

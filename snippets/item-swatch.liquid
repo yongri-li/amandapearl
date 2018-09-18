@@ -6,6 +6,7 @@
     {% assign colorlist = '' %}
     {% assign color = '' %}
     {% for variant in product.variants %}
+{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
       {% capture color %}
         {{ variant.options[index] }}
       {% endcapture %}

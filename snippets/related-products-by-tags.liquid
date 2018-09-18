@@ -10,6 +10,7 @@
 
 {% paginate collections.all.products by 1000 %}
 {% for product in collections.all.products %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
   {% unless product.handle == current_product.handle %}
     {% for tag in product.tags %}
       {% if current_product_tags contains tag and tag != 'Made in USA' %}

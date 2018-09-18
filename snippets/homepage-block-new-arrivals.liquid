@@ -32,6 +32,7 @@
         {% endif %}
         
         {% for product in collections[settings.product_list_collection].products limit:settings.product_list_limit_all %}
+{%- include 'bold-product' with product, hide_action: 'skip' -%}
           <div class="{% if settings.product_image_border %}grid-item-border{% endif %}{% if settings.product_image_crop %} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 {% if product_grid == 3 %}col-md-3{% endif %} {% if columns %}col-lg-{{product_grid}}{% else %}col{% endif %}" {% if settings.display_infinite_scrolling_homepage and forloop.index > product_limitation %} style="display:none" {% endif %}>
           {% include 'product-grid-item' %}
           </div>

@@ -130,7 +130,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-08-20T17:47:31-04:00   b3d83ad36b696427a67740e9c68ee03a
+  development: 2018-09-18T14:53:39-04:00   b3d83ad36b696427a67740e9c68ee03a
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -292,11 +292,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-08-28T14:37:22-04:00   9980ee58ce232b3456db722a247d7907
+  development: 2018-09-18T14:25:21-04:00   0683f0f6852681464e750dfc745b178c
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
-  development: 2018-08-21T13:13:18-04:00   99f94ae6b5befb9624ec92b083876301
+  development: 2018-09-18T14:49:02-04:00   8b34cba096544c47610ebb033bc0a735
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -556,7 +556,7 @@ templates/list-collections.liquid:
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:
-  development: 2018-08-30T15:41:34-04:00   41e6a3643389622df0b5236e3c8ddd47
+  development: 2018-09-18T14:24:01-04:00   90a89a12ca32775f826c764c066e2760
 templates/page.instagram.liquid:
   development: 2018-08-28T14:44:30-04:00   a591922c22a1bd7c5ce981d854e00177
 templates/page.liquid:
@@ -566,6 +566,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-09-18T14:08:52-04:00   020ce53e8efe78b01162d328773e8e45
+  development: 2018-09-18T15:05:48-04:00   408382b33f6578f5ef8cc256e5a0d585
 templates/search.liquid:
   development: 2018-09-18T14:08:56-04:00   14e15bd841f2f34ece167f16501ce134

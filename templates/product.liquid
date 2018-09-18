@@ -1,3 +1,4 @@
+{% assign my_description = product.description | split: '<!-- split -->'  %}
 {%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
 {% include 'breadcrumb' %}
 <div class="row">
@@ -224,7 +225,7 @@
 {%- unless bundle_loaded == 'true' -%}
 {%- include 'shappify-bdl-load-bundle' -%}
 {%- assign bundle_loaded = 'true' -%}
-{%- endunless -%} 
+{%- endunless -%}
 
           </div>
 
@@ -287,7 +288,7 @@
                 <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{{ product.description | split: '[lang2]' | first }}</div>
+                <div class="short-description">{{ my_description[0] }}</div>
                 {% endif %}
                 {% endif %}
               {% endif %}
@@ -336,22 +337,23 @@
           {% endif %}
 
           {% if settings.show_tab == 'vertical' %}
+          <hr>
           <div class="panel-group" id="accordion">
             {% if settings.display_product_detail_description %}
             <div class="panel product-description rte wow fadeInUp">
               <div class="panel-heading">
-                <h4 class="panel-title active">
+                <h4 class="panel-title">
                   <a data-toggle="collapse" data-parent="#accordion" href="#collapse-tab1">
                     {% if settings.enable_multilang %}
                     <span class="lang1">{{ settings.product_description_title | split: '|' | first }}</span>
                     <span class="lang2">{{ settings.product_description_title | split: '|' | last }}</span>
                     {% else %}
-                    <span>{{ settings.product_description_title | split: '|' | first }}</span>
+                    <span><b>{{ settings.product_description_title | split: '|' | first }}</b></span>
                     {% endif %}
                   </a>
                 </h4>
               </div>
-              <div id="collapse-tab1" class="panel-collapse collapse in">
+              <div id="collapse-tab1" class="panel-collapse collapse">
                 <div class="panel-body" itemprop="description">
                 {% if product.description contains '[countdown]' %}
                 {% assign des = product.description | split:'[/countdown]</p>' | last %}
@@ -366,7 +368,7 @@
                   <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
                   <div class="lang2">{{ product.description | split: '[lang2]' | last }}</div>
                   {% else %}
-                  <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
+                  <div class="lang1">{{ my_description[1] }}</div>
                   {% endif %}
                 {% endif %}
                 </div>

@@ -1,10 +1,11 @@
-{% comment %}
-Refined tags
-{% endcomment %}
+
+
+
+
 {% if current_tags == blank %}
 {% assign has_refined = false %}
 {% else %}
-{% assign has_refined = true %} 
+{% assign has_refined = true %}
 {% endif %}
 <div class="refined-widgets">
   <span {% if settings.enable_multilang %}data-translate="collections.sidebar.refined_by"{% endif %}>{{ 'collections.sidebar.refined_by' | t}}</span>
@@ -12,7 +13,7 @@ Refined tags
     {{ 'collections.sidebar.clear_all' | t }}
   </a>
   {% comment %}
-  <ul>    
+  <ul>
   {% if collection.handle != 'all' %}
     <li><a href="javascript:void(0)" class="selected-collection">{{collection.title}}<span>X</span></a></li>
   {% endif %}
@@ -23,6 +24,8 @@ Refined tags
   {% endfor %}
   </ul>{% endcomment %}
 </div>
+
+
 
 <div class="sidebar-block">
 {% if settings.enable_shop_by_tags_1 %}
@@ -46,10 +49,10 @@ Refined tags
       {% for i in (1..20) %}
         {% capture shop_by_color_text %}shop_by_color_text_{{ i }}{% endcapture %}
         {% capture color %}color-{{ i }}.png{% endcapture %}
-      
+
         {% if settings[shop_by_color_text] != blank %}
-          {% assign tag = settings[shop_by_color_text] | strip %} 
-          {% if collection.tags contains tag %} 
+          {% assign tag = settings[shop_by_color_text] | strip %}
+          {% if collection.tags contains tag %}
             <li>
               {% assign tag_value = tag | handleize %}
               <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %}/>
@@ -58,7 +61,7 @@ Refined tags
               </a>
             </li>
         {% endif %}
-        {% endif %}      
+        {% endif %}
       {% endfor %}
     </ul>
   </div>
@@ -85,7 +88,7 @@ Refined tags
     <ul>
       {% for t in tags %}
       {% assign tag = t | strip %}
-      {% assign tag_value = tag | handleize %}      
+      {% assign tag_value = tag | handleize %}
       {% if current_tags contains tag %}
       <li>
         {% if settings.enable_multilang %}
@@ -99,7 +102,7 @@ Refined tags
         {% endif %}
       </li>
       {% else %}
-        {% if collection.tags contains tag %} 
+        {% if collection.tags contains tag %}
           <li>
           {% if settings.enable_multilang %}
             <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}"/>
@@ -139,7 +142,7 @@ Refined tags
     <ul>
       {% for t in tags %}
       {% assign tag = t | strip %}
-      {% assign tag_value = tag | handleize %}      
+      {% assign tag_value = tag | handleize %}
       {% if current_tags contains tag %}
       <li>
         {% if settings.enable_multilang %}
@@ -153,7 +156,7 @@ Refined tags
         {% endif %}
       </li>
       {% else %}
-        {% if collection.tags contains tag %} 
+        {% if collection.tags contains tag %}
           <li>
           {% if settings.enable_multilang %}
             <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}"/>
@@ -193,7 +196,7 @@ Refined tags
     <ul>
       {% for t in tags %}
       {% assign tag = t | strip %}
-      {% assign tag_value = tag | handleize %}      
+      {% assign tag_value = tag | handleize %}
       {% if current_tags contains tag %}
       <li>
         {% if settings.enable_multilang %}
@@ -206,8 +209,8 @@ Refined tags
           <label>{{ tag | split: '|' | first }}</label>
         {% endif %}
       </li>
-      {% else %}      	
-        {% if collection.tags contains tag %} 
+      {% else %}
+        {% if collection.tags contains tag %}
           <li>
           {% if settings.enable_multilang %}
             <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}"/>
@@ -218,7 +221,7 @@ Refined tags
             <input type="checkbox" value="{{ tag_value | split: '|' | first }}"/>
             <label>{{ tag | split: '|' | first }}</label>
           {% endif %}
-          </li> 
+          </li>
       	{% endif %}
       {% endif %}
       {% endfor %}

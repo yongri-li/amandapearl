@@ -111,7 +111,14 @@
           {% else %}
           	<h3>{{ settings.footer_column_4_title | split: '|' | first }}</h3>
           {% endif %}
+          <div class="row">
+            <div class="col-xs-12 col-sm-7">
           {% include 'social' %}
+        </div>
+        <div class="col-xs-12 col-sm-5 hidden-xs">
+          <img src="{{ 'ft_logo.png' | asset_url }}" width="100px" style="margin-top: -40px">
+        </div>
+      </div>
           {% include 'homepage-block-newsletter' %}
         </div>
       </div>

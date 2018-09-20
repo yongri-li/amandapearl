@@ -141,6 +141,10 @@ assets/favicon.ico:
   development: 2018-08-07T12:43:16-04:00   61f75be125cbb27b3d5e92882a506fb1
 assets/favicon.png:
   development: 2018-08-07T12:44:09-04:00   1e191482add584775cd5e492b89e46dd
+assets/ft_logo.jpg:
+  development: 2018-09-20T13:45:16-04:00   92425af2f47e3170c2fec975229b514d
+assets/ft_logo.png:
+  development: 2018-09-20T13:46:56-04:00   5039c15a07acb05eaaea543db998efeb
 assets/green.png:
   development: 2018-08-07T12:43:16-04:00   89bc35dc41a6c5321450dc871dbf3627
 assets/handlebars.min.js:
@@ -360,9 +364,9 @@ snippets/collection-sidebar-custom-cms-block.liquid:
 snippets/collection-sidebar-featured-products.liquid:
   development: 2018-09-18T14:08:55-04:00   a43cf269cf0dc7a430fa2334c3f24ea0
 snippets/collection-sidebar-shop-by-blocks.liquid:
-  development: 2018-08-07T12:43:27-04:00   a6d24c93a875e4286c2d2e300088b857
+  development: 2018-09-20T13:35:55-04:00   0c93deb3c1211a8eee3e82b543ede0f7
 snippets/collection-sidebar.liquid:
-  development: 2018-08-07T12:43:27-04:00   28813948189b373d9455c86ada195825
+  development: 2018-09-20T13:39:26-04:00   3b3947dd2d163b8c6a601106d48f0cd3
 snippets/collection-sort.liquid:
   development: 2018-08-07T12:43:27-04:00   b6d0fe6b3f06898033a61be5f08202f7
 snippets/collection-tags.liquid:
@@ -378,7 +382,7 @@ snippets/fb-open-graph-tags.liquid:
 snippets/footer-points.liquid:
   development: 2018-08-23T15:58:28-04:00   f1736351bab81030d48008486a0e64d8
 snippets/footer.liquid:
-  development: 2018-08-30T15:35:51-04:00   8dbef97f26d76e1f5a3ea96da5a068b4
+  development: 2018-09-20T13:48:44-04:00   362c4e42aa13a6d031b3001295547f41
 snippets/footer_scripts.liquid:
   development: 2018-08-07T12:43:27-04:00   d883c149091371afccc55c3117e255a7
 snippets/form-errors-custom.liquid:
@@ -470,7 +474,7 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2018-08-22T11:58:50-04:00   363e4b1fb61592058e6d908c31a9a5d0
+  development: 2018-09-20T13:29:20-04:00   744c587cee9d2c5512acb374b5c1529d
 snippets/site-nav.liquid:
   development: 2018-08-28T14:38:35-04:00   11f7bf87c5e220007ff3458bf957efe0
 snippets/social.liquid:
@@ -566,6 +570,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-09-18T15:05:48-04:00   408382b33f6578f5ef8cc256e5a0d585
+  development: 2018-09-20T13:56:49-04:00   965361c422c05b1a293ae968699cd3f1
 templates/search.liquid:
   development: 2018-09-18T14:08:56-04:00   14e15bd841f2f34ece167f16501ce134

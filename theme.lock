@@ -296,11 +296,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-09-18T14:25:21-04:00   0683f0f6852681464e750dfc745b178c
+  development: 2018-10-04T21:11:37-04:00   a718c76012577457a5af496dd41d5acb
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
-  development: 2018-09-18T14:49:02-04:00   8b34cba096544c47610ebb033bc0a735
+  development: 2018-10-04T21:03:00-04:00   24db9cf49a63fc54834eaa988e049310
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -316,7 +316,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-09-18T15:04:02-04:00   e4d9fc4b3e56d20ccab0918aedebeb41
+  development: 2018-10-04T20:11:18-04:00   e4d9fc4b3e56d20ccab0918aedebeb41
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
@@ -364,11 +364,11 @@ snippets/collection-sidebar-custom-cms-block.liquid:
 snippets/collection-sidebar-featured-products.liquid:
   development: 2018-09-18T14:08:55-04:00   a43cf269cf0dc7a430fa2334c3f24ea0
 snippets/collection-sidebar-shop-by-blocks.liquid:
-  development: 2018-09-20T13:35:55-04:00   0c93deb3c1211a8eee3e82b543ede0f7
+  development: 2018-10-04T21:10:38-04:00   db01ed237a51a1e4dd358cf338d25e1a
 snippets/collection-sidebar.liquid:
-  development: 2018-09-20T13:39:26-04:00   3b3947dd2d163b8c6a601106d48f0cd3
+  development: 2018-10-04T21:17:30-04:00   01a3f57ef270fc30624ff27ca7aca9cd
 snippets/collection-sort.liquid:
-  development: 2018-08-07T12:43:27-04:00   b6d0fe6b3f06898033a61be5f08202f7
+  development: 2018-10-04T21:10:14-04:00   97a3371f82e98a988988d8a7accb9101
 snippets/collection-tags.liquid:
   development: 2018-08-07T12:43:27-04:00   fb083360c9aa35b105afc41892f26ee3
 snippets/comment.liquid:
@@ -526,7 +526,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.liquid:
-  development: 2018-09-18T14:08:55-04:00   51c1682007b30b7582c5f45645ba8649
+  development: 2018-10-04T20:47:37-04:00   c027cf639215c48931101182e59ecfe6
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

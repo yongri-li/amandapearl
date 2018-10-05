@@ -1,84 +1,216 @@
-<div class="col-xs-3 sidebar collection-sidebar">
+<div class="col-xs-12  collection-sidebar">
   {% comment %}
   Refined tags
   {% endcomment %}
-<div class="widget sidebar-links">
-  <div class="widget-title">
-    <h3>
-        <span>Shop For</span>
-    </h3>
-  </div>
-
+<div class="row">
+<div class="col-xs-12 col-sm-3">
+<div style="border: 1px solid #eee">
+<button class="accordion2">SHOP FOR</button>
+<div class="panel" style="border: 1px solid #eee; padding-top: 10px;">
+<div style="border: 0;">
   {% for link in linklists.shop.links %}
     <button class="accordion">{{ link.title }}</button>
-    <div class="panel">
+    <div class="panel" style="border-color: #fff;">
       {% capture mm_vend %}{{ link.title | handleize }}{% endcapture %}
       {% for link in linklists.[mm_vend].links %}
-        {{ link.title }}<br>
+        <a href="{{ link.url }}">{{ link.title }}</a><br>
       {% endfor %}
     </div>
   {% endfor %}
-  <br><hr>
 </div>
+</div>
+</div>
+</div>
+
+<div class="col-xs-12 col-sm-6">
+  <div style="border: 1px solid #eee">
+  <button class="accordion2">FILTER FOR</button>
+    <div class="panel2" style="border: 1px solid #eee">
+  {% include 'collection-sidebar-shop-by-blocks' %}
+</div>
+</div>
+</div>
+
+  {% if settings.display_sidebar_categories %}
+  <div class="col-xs-12 col-sm-3">
+    <div style="border: 1px solid #eee;">
+  <button class="accordion2">SORY BY</button>
+    <div class="panel2" style="border: 1px solid #eee; padding-top: 10px;">
+  <div class="widget sidebar-links">
+    {% include 'collection-sort' %}
+  </div>
+</div>
+</div>
+</div>
+  {% endif %}
+
+
+
+</div>
+</div>
+
+
+
+
+
+
+<style>
+  @media (min-width: 767px) {
+  button.accordion {
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      padding: 0px;
+      width: 100%;
+      border: none;
+      text-align: center;
+      outline: none;
+      line-height: 2;
+      text-transform: uppercase;
+      font-weight: 400;
+      transition: 0.4s;
+      width: 100%;
+      font-size: 12px;
+      display: inline-block;
+  }
+
+
+  button.accordion.active, button.accordion:hover {
+      background-color: #fff;
+  }
+
+
+  button.accordion.active::after {
+    content: " -";
+  }
+
+  button.accordion::after {
+    content: " +";
+  }
+
+  div.panel {
+      padding: 0 0px;
+      display: none;
+      border: none;
+      line-height: 2!important;;
+      background-color: #fff;
+      text-align: center;
+      width: 100%!important;
+      text-transform: uppercase;
+      float:center!important;
+      font-size: 12px;
+  }
+
+  div.panel.show {
+      display: block;
+  }
+}
+
+@media (max-width: 766px) {
+button.accordion {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    transition: 0.4s;
+    width: 100%;
+    font-size: 14px;
+    display: inline-block;
+}
+
+
+
+button.accordion.active, button.accordion:hover {
+    background-color: #fff;
+}
+
+
+  button.accordion.active::after {
+    content: " -";
+  }
+
+  button.accordion::after {
+    content: " +";
+  }
+
+div.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    text-align: center;
+    text-transform: uppercase;
+    float:center!important;
+    font-size: 12px;
+}
+
+div.panel.show {
+    display: block;
+}
+}
+  </style>
 
   <style>
     @media (min-width: 767px) {
-    button.accordion {
+    button.accordion2 {
         background-color: #fff;
         color: #000;
         cursor: pointer;
         padding: 0px;
         width: 100%;
         border: none;
-        text-align: left;
+        text-align: center;
         outline: none;
         line-height: 2;
-        font-weight: 700;
+        font-weight: 400;
         transition: 0.4s;
         width: 100%;
-        font-size: 12px;
+        font-size: 14px;
         display: inline-block;
     }
 
 
-    button.accordion.active, button.accordion:hover {
+    button.accordion2.active, button.accordion:hover {
         background-color: #fff;
     }
 
 
-    button.accordion.active::after {
+    button.accordion2.active::after {
       content: " -";
     }
 
-    button.accordion::after {
+    button.accordion2::after {
       content: " +";
     }
 
-    div.panel {
+    div.panel2 {
         padding: 0 0px;
         display: none;
         line-height: 2;
-        background-color: white;
+        background-color: #fff;
         text-align: left;
         width: 100%!important;
         float:left!important;
         font-size: 12px;
     }
 
-    div.panel.show {
+    div.panel2.show {
         display: block;
     }
   }
 
   @media (max-width: 766px) {
-  button.accordion {
+  button.accordion2 {
       background-color: #fff;
       color: #000;
       cursor: pointer;
       padding: 18px;
       width: 100%;
       border: none;
-      text-align: left;
+      text-align: center;
       outline: none;
       transition: 0.4s;
       width: 100%;
@@ -93,66 +225,49 @@
   }
 
 
-    button.accordion.active::after {
+    button.accordion2.active::after {
       content: " -";
     }
 
-    button.accordion::after {
+    button.accordion2::after {
       content: " +";
     }
 
-  div.panel {
+  div.panel2 {
       padding: 0 18px;
       display: none;
       background-color: white;
-      text-align: left;
+      text-align: center;
       float:left!important;
       font-size: 14px;
   }
 
-  div.panel.show {
+  div.panel2.show {
       display: block;
   }
   }
     </style>
 
-    <script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+  <script>
+  var acc = document.getElementsByClassName("accordion");
+  var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].onclick = function(){
-            this.classList.toggle("active");
-            this.nextElementSibling.classList.toggle("show");
-      }
+  for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
     }
-    </script>
+  }
+  </script>
 
+  <script>
+  var acc = document.getElementsByClassName("accordion2");
+  var i;
 
-  {% if settings.display_sidebar_categories %}
-  <div class="widget sidebar-links">
-    <div class="widget-title">
-      <h3>
-          <span>Sort By</span>
-      </h3>
-    </div>
-    {% include 'collection-sort' %}
-  </div>
-  {% endif %}
-
-
-  {% include 'collection-sidebar-shop-by-blocks' %}
-
-  {% if settings.show_featured_product %}
-  {% include 'collection-sidebar-featured-products' %}
-  {% endif %}
-
-  {% if settings.display_banner_sidebar %}
-  {% include 'collection-sidebar-banner-block' %}
-  {% endif %}
-
-  {% if settings.display_sidebar_custom %}
-  {% include 'collection-sidebar-custom-cms-block' %}
-  {% endif %}
-
-</div>
+  for (i = 0; i < acc.length; i++) {
+      acc[i].onclick = function(){
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
+    }
+  }
+  </script>

@@ -8,10 +8,7 @@
 {% assign has_refined = true %}
 {% endif %}
 <div class="refined-widgets">
-  <span {% if settings.enable_multilang %}data-translate="collections.sidebar.refined_by"{% endif %}>{{ 'collections.sidebar.refined_by' | t}}</span>
-  <a href="javascript:void(0)" class="clear-all" {% if has_refined == false %}style="display:none"{% endif %} {% if settings.enable_multilang %}data-translate="collections.sidebar.clear_all"{% endif %}>
-    {{ 'collections.sidebar.clear_all' | t }}
-  </a>
+
   {% comment %}
   <ul>
   {% if collection.handle != 'all' %}
@@ -29,6 +26,7 @@
 
 <div class="sidebar-block">
 {% if settings.enable_shop_by_tags_1 %}
+<div class="col-xs-12 col-sm-4">
 <div class="sidebar-custom sidebar-tag color">
   {% assign tags = settings.shop_by_tags_1_list_tags | split: ',' %}
   <div class="widget-title">
@@ -66,9 +64,11 @@
     </ul>
   </div>
 </div>
+</div>
 {% endif %}
 
 {% if settings.enable_shop_by_tags_2 %}
+<div class="col-xs-12 col-sm-4">
 <div class="sidebar-custom sidebar-tag size">
   {% assign tags = settings.shop_by_tags_2_list_tags | split: ',' %}
   <div class="widget-title">
@@ -120,9 +120,11 @@
     </ul>
   </div>
 </div>
+</div>
 {% endif %}
 
 {% if settings.enable_shop_by_tags_3 %}
+<div class="col-xs-12 col-sm-4">
 <div class="sidebar-custom sidebar-tag">
   {% assign tags = settings.shop_by_tags_3_list_tags | split: ',' %}
   <div class="widget-title">
@@ -174,9 +176,11 @@
     </ul>
   </div>
 </div>
+</div>
 {% endif %}
 
 {% if settings.enable_shop_by_tags_4 %}
+<div class="col-xs-12 col-sm-4">
 <div class="sidebar-custom sidebar-tag">
   {% assign tags = settings.shop_by_tags_4_list_tags | split: ',' %}
   <div class="widget-title">
@@ -227,6 +231,7 @@
       {% endfor %}
     </ul>
   </div>
+</div>
 </div>
 {% endif %}
 </div>

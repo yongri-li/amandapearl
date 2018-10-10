@@ -130,7 +130,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-09-18T14:53:39-04:00   b3d83ad36b696427a67740e9c68ee03a
+  development: 2018-10-10T17:37:22-04:00   cd6f19e167c123f51d055912709f719d
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -300,7 +300,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
-  development: 2018-10-04T21:03:00-04:00   24db9cf49a63fc54834eaa988e049310
+  development: 2018-10-10T17:42:06-04:00   8cba90937c8ed77599d511c6f2faa625
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -424,7 +424,7 @@ snippets/mega-menu-product-grid.liquid:
 snippets/mega-menu.liquid:
   development: 2018-08-28T14:34:11-04:00   647c1c554ef23103b2f4a4514aff52ce
 snippets/message-modal.liquid:
-  development: 2018-08-07T12:43:28-04:00   15104d3d959ff2f686f65620a623fdf0
+  development: 2018-10-10T17:41:23-04:00   90acd4de268b5be8cb4a44d86aa857a6
 snippets/new-currency-picker.liquid:
   development: 2018-08-07T12:43:28-04:00   3524006aeab3c047d6f82a0bf6d11dfa
 snippets/new-currency.liquid:

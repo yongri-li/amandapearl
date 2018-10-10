@@ -670,7 +670,7 @@
                         $('.ajax-error-message').text($.parseJSON(xhr.responseText).description);
                         ella.showModal('.ajax-error-modal');
                     }
-                });
+                }); 
             });
         },
         initProductWishlist: function() {

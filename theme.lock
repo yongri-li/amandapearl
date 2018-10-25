@@ -77,6 +77,8 @@ assets/btn-remove01.png:
   development: 2018-08-07T12:43:11-04:00   163ba8e6026050c121fd7150dc4c1ba5
 assets/btn-sidebar.png:
   development: 2018-08-07T12:43:12-04:00   be8ab0fdc419d3dcdd4b050a3bacad67
+assets/cart.png:
+  development: 2018-10-25T14:13:10-04:00   ecf1bb5c132337fa1497cb102e3aebd8
 assets/check-box-checked.png:
   development: 2018-08-07T12:43:12-04:00   ec430fd9573909bd28aa8ea52ae849c7
 assets/check-box.png:
@@ -188,7 +190,7 @@ assets/icon-share01.png:
 assets/icons_new14.png:
   development: 2018-08-07T12:43:18-04:00   827a32366a0ecf742739200fb0fd0905
 assets/icons_new15.png:
-  development: 2018-08-07T12:43:18-04:00   57c99169732d33876df893edd80e7bbd
+  development: 2018-10-25T14:21:07-04:00   da317c36ef2472804eced3d70dd61ecd
 assets/img_cat.jpg:
   development: 2018-08-07T12:43:18-04:00   3e7293096d7a9db36ebb92c9e35cf7dd
 assets/instafeed.min.js:
@@ -296,7 +298,7 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-10-04T21:11:37-04:00   a718c76012577457a5af496dd41d5acb
+  development: 2018-10-25T14:17:19-04:00   923b4f72a9e68ee09befda9c230a3e0d
 assets/theme-styles-setting.css.liquid:
   development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
 assets/theme-styles.css.liquid:
@@ -316,7 +318,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-10-10T15:20:32-04:00   1ccc61580611afd5890497745f0c824d
+  development: 2018-10-17T15:35:23-04:00   a0678dfdaf9befab9184fb7ba92ed599
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
@@ -396,7 +398,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-08-22T11:58:39-04:00   1ec3b3c5943beb02aa05feb1c1f2f76a
+  development: 2018-10-25T14:13:46-04:00   e02b956f46ee32927048bf319323d074
 snippets/homepage-block-banner.liquid:
   development: 2018-08-20T12:35:40-04:00   a96a913cf6ef8c77c8e3ba951e7bb3c4
 snippets/homepage-block-new-arrivals.liquid:
@@ -476,7 +478,7 @@ snippets/shipping-rates-calculator.liquid:
 snippets/site-nav-mobile.liquid:
   development: 2018-09-20T13:29:20-04:00   744c587cee9d2c5512acb374b5c1529d
 snippets/site-nav.liquid:
-  development: 2018-08-28T14:38:35-04:00   11f7bf87c5e220007ff3458bf957efe0
+  development: 2018-10-25T14:16:38-04:00   a65f637b48adeea9ae2687269faa95de
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/swatch.liquid:

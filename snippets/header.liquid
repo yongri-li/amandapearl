@@ -50,7 +50,7 @@
           <div class="wrapper-top-cart">
             <p class="top-cart">
               <a href="/cart">
-                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><i class="fa fa-shopping-bag hidden-xs" aria-hidden="true"></i></span>
+                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px"></span>
                 <span>( {{ cart.item_count }} )</span>
               </a>
             </p>

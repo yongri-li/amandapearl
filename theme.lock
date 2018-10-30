@@ -444,7 +444,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-09-18T14:08:53-04:00   4f100c835f858fa2e25287576981a9a5
+  development: 2018-10-30T15:00:46-04:00   7cd46e2cf3aea41bf5fbd0fad131893d
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:
@@ -503,6 +503,8 @@ snippets/translator.liquid:
   development: 2018-08-07T12:43:30-04:00   00228de5804f0c0612f6e577475e2fd7
 snippets/twitter-card.liquid:
   development: 2018-08-07T12:43:30-04:00   6584fb23660371fdc402f1d25a33e6db
+snippets/variant-grid-item.liquid:
+  development: 2018-10-30T15:48:38-04:00   c4cf4ce0d95907ccc64bfa25d1618d82
 snippets/varies_from.liquid:
   development: 2018-08-07T12:43:30-04:00   dd72ff5f676334d6efd059674faa58cc
 snippets/widget_article.liquid:
@@ -528,7 +530,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.liquid:
-  development: 2018-10-04T20:47:37-04:00   c027cf639215c48931101182e59ecfe6
+  development: 2018-10-30T16:59:25-04:00   797dd11eeedc43ca6f1367f075495dc7
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

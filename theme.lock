@@ -530,7 +530,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.liquid:
-  development: 2018-11-06T16:36:07-05:00   95c355972f09078cd7606a9f9d057a2f
+  development: 2018-11-06T16:48:20-05:00   95c355972f09078cd7606a9f9d057a2f
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

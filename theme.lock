@@ -504,7 +504,7 @@ snippets/translator.liquid:
 snippets/twitter-card.liquid:
   development: 2018-08-07T12:43:30-04:00   6584fb23660371fdc402f1d25a33e6db
 snippets/variant-grid-item.liquid:
-  development: 2018-10-30T15:48:38-04:00   c4cf4ce0d95907ccc64bfa25d1618d82
+  development: 2018-11-06T16:20:13-05:00   996c4f990d1f4b7db2d8fae79e603499
 snippets/varies_from.liquid:
   development: 2018-08-07T12:43:30-04:00   dd72ff5f676334d6efd059674faa58cc
 snippets/widget_article.liquid:
@@ -530,7 +530,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.liquid:
-  development: 2018-10-30T16:59:25-04:00   797dd11eeedc43ca6f1367f075495dc7
+  development: 2018-11-06T16:36:07-05:00   95c355972f09078cd7606a9f9d057a2f
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

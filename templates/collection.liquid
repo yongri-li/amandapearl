@@ -24,10 +24,9 @@
 
         {% for product in collection.products %}
 
-        {% if product.options.first contains 'Material' %}
+        {% if product.options.first contains 'Material' or product.options.first contains 'Metal' %}
 
         {% for variant in product.variants %}
-        {% if variant contains 'Pearl' or 'Stone' %}
 
         {%- include 'bold-product' with product, hide_action: 'skip' -%}
         {% if product.object_type == 'product' and product.type == 'SHOPSTORM_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
@@ -36,7 +35,6 @@
             {% include 'variant-grid-item' %}
           </div>
 
-        {% endif %}
         {% endfor %}
 
         {% else %}

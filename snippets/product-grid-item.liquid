@@ -16,7 +16,7 @@
     <div class="product-top">
       <div class="product-image">
         <a href="{{ product.url | within: collection }}" class="product-grid-image">
-          <img src="{{ product.featured_image | product_img_url: '400x' }}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: '400x' }}'" onmouseout="src='{{ product.featured_image | product_img_url: 'large' }}'" {% endif %} alt="{{product.title}}">
+          <img src="{{ product.featured_image | product_img_url: '400x' }}" alt="{{product.title}}">
         </a>
       </div>
 
@@ -30,7 +30,7 @@
         {% endif %}
       </div>
     </div>
-
+{% include 'item-swatch' %}
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">
         {% if settings.enable_multilang %}
@@ -57,7 +57,7 @@
         </p>
         {% endif %}
       </div>
-      {% comment %}{% include 'item-swatch' %}{% endcomment %}
+
     </div>
   </div>
 

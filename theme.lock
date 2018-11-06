@@ -416,7 +416,7 @@ snippets/homepage-flexslider.liquid:
 snippets/homepage-instagram.liquid:
   development: 2018-08-23T15:50:11-04:00   d3f99c6be733cc388823c5566197e4ed
 snippets/item-swatch.liquid:
-  development: 2018-09-18T14:08:55-04:00   d88ab19d9ba223fb3f2cd6c743ce4eb7
+  development: 2018-11-06T17:27:16-05:00   52be1a19779adec7430c7c2e5654f23a
 snippets/linklists.liquid:
   development: 2018-08-07T12:43:28-04:00   92122bba4745dea5ea0fed17f76c82ef
 snippets/mega-menu-featured-product.liquid:
@@ -444,7 +444,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-10-30T15:00:46-04:00   7cd46e2cf3aea41bf5fbd0fad131893d
+  development: 2018-11-06T17:23:33-05:00   909ad5ebfb72726489bf070bc10b344b
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:
@@ -530,7 +530,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.liquid:
-  development: 2018-11-06T16:48:20-05:00   95c355972f09078cd7606a9f9d057a2f
+  development: 2018-11-06T17:19:17-05:00   bf6c2777af80de96056385d3a12c5ba0
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

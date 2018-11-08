@@ -4,7 +4,7 @@
 {% else %}
 <section class="widget-trending-product container">
   {% if settings.slider_trending_title != blank %}
-  <div class="widget-title wow fadeIn">   
+  <div class="widget-title wow fadeIn">
     {% if settings.enable_multilang %}
 	<fieldset class="box-title lang1">
       <legend align="center">{{ settings.slider_trending_title | split: '|' | first }}</legend>
@@ -24,7 +24,7 @@
       {% if settings.trending_collection_results_per_row != blank and settings.trending_collection_results_per_row != '5' %}
         {% assign product_grid = 12 | divided_by: settings.trending_collection_results_per_row %}
         {% assign columns = true %}
-      {% endif %}        
+      {% endif %}
 
       {% for product in collections[settings.show_slider_trending_collection].products limit:settings.slider_trending_limit_all %}
 {%- include 'bold-product' with product, hide_action: 'skip' -%}
@@ -42,7 +42,8 @@ jQuery(document).ready(function() {
     navigation : true,
     items : {{ settings.trending_collection_results_per_row }},
     itemsTablet: [767,3],
-    itemsTabletSmall: [721,2]
+    itemsTabletSmall: [721,2],
+    itemsMobile: [450,2],
   });
 });
 </script>

@@ -6,11 +6,11 @@
 <div class="col-xs-12 col-sm-3">
 <div style="border: 1px solid #eee">
 <button class="accordion2">SHOP FOR</button>
-<div class="panel" style="border: 1px solid #eee; padding-top: 10px;">
+<div class="panel" style="border: 1px solid #eee; padding: 10px;">
 <div style="border: 0;">
   {% for link in linklists.shop.links %}
-    <button class="accordion">{{ link.title }}</button>
-    <div class="panel" style="border-color: #fff;">
+    <button class="accordion" style="text-align: left!important">{{ link.title }}</button>
+    <div class="panel" style="border-color: #fff; text-align: left!important">
       {% capture mm_vend %}{{ link.title | handleize }}{% endcapture %}
       {% for link in linklists.[mm_vend].links %}
         <a href="{{ link.url }}">{{ link.title }}</a><br>

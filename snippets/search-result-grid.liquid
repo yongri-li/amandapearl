@@ -8,30 +8,53 @@
   in search.liquid to true.
 {% endcomment %}
 
-<div class="grid-item search-result">
-  {% if item.featured_image %}
-  <a href="{{ item.url }}" title="{{ item.title | escape }}">
-    {{ item.featured_image.src | product_img_url: 'medium' | img_tag: item.featured_image.alt }}
-  </a>
-  {% endif %}
-  
+<div class="grid-item search-result height_fix">
+  <div class="product-top">
+      <div class="product-image">
+        <a href="{{ item.url | within: collection }}" class="product-grid-image">
+          <img src="{{ item.featured_image.src | product_img_url: 'large' }}" alt="{{ item.title }} {{ item.vendor }}" style="height: 250px; overflow: hidden">
+          <div class="hover"></div>
+        </a>
+      </div>
+
+      {% if on_sale or sold_out %}
+      <div class="product-label">
+        {% if on_sale %}
+        <strong class="label">Sale</strong>
+        {% endif %}
+        {% if sold_out %}
+        <strong class="sold-out-label">Sold Out</strong>
+        {% endif %}
+      </div>
+      {% endif %}
+
+      <div class="product-des">
+
+        <div class="quickview-button">
+          <a href="javascript:void(0)" id="{{ item.handle }}" title="Quick View">Quick view</a>
+        </div>
+
+      </div>
+
+    </div>
+
   <h5>{{ item.title | link_to: item.url }}</h5>
-  
+
   <h6>
-    {% if bold_compare_at_price > bold_price %}
+    {% if item.compare_at_price > item.price %}
     <span class="on-sale" itemprop="price">
-      {{ bold_price | money }}
+      {{ item.price | money }}
     </span>
     <small>
-      <span {% if settings.enable_multilang %}data-translate="products.product.compare_at"{% endif %}>
-        {{ 'products.product.compare_at' | t }}
-      </span>
-      {{ bold_compare_at_price_max | money }}
+      Compare at:
+      {{ item.compare_at_price_max | money }}
     </small>
     {% else %}
     <span itemprop="price">
-      {{ bold_price | money }}
+      {{ item.price | money }}
     </span>
     {% endif %}
   </h6>
+
+
 </div>

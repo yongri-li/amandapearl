@@ -23,7 +23,7 @@
             </a>
           </div>
           {% if product.images.size > 1 %}
-          <div class="more-view-wrapper hidden-xs {% if settings.style_moreview == 'vertical' %}more-view-wrapper-jcarousel{% else %} more-view-wrapper-owlslider {% endif %}">
+          <div class="more-view-wrapper {% if settings.style_moreview == 'vertical' %}more-view-wrapper-jcarousel{% else %} more-view-wrapper-owlslider {% endif %}">
             <ul id="more-view-carousel" class="product-photo-thumbs {% if settings.style_moreview == 'vertical' %} jcarousel-skin-tango{% else %} owl-carousel{% endif %}">
               {% for image in product.images %}
               <li class="grid-item">

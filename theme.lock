@@ -322,7 +322,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-10-17T15:35:23-04:00   a0678dfdaf9befab9184fb7ba92ed599
+  development: 2018-11-12T15:33:41-05:00   dc58a8b108c315fe18e9f68221df733e
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
@@ -372,7 +372,7 @@ snippets/collection-sidebar-featured-products.liquid:
 snippets/collection-sidebar-shop-by-blocks.liquid:
   development: 2018-10-04T21:10:38-04:00   db01ed237a51a1e4dd358cf338d25e1a
 snippets/collection-sidebar.liquid:
-  development: 2018-11-08T16:13:16-05:00   b5e9fb29ba1973b5e175883ca2227b8b
+  development: 2018-11-12T15:38:19-05:00   1992eb32920644fa9be2f8bf309fd3b7
 snippets/collection-sort.liquid:
   development: 2018-10-04T21:10:14-04:00   97a3371f82e98a988988d8a7accb9101
 snippets/collection-tags.liquid:
@@ -578,6 +578,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-11-08T17:01:40-05:00   b0703e60790ba81002dbbfd6d1c8e37b
+  development: 2018-11-12T15:35:24-05:00   bd2c6d0d74898e5763522c886129376b
 templates/search.liquid:
   development: 2018-11-08T16:28:51-05:00   bc1ca98d0bca1075c4696f45c8dba770

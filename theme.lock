@@ -136,7 +136,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-10-10T17:37:22-04:00   cd6f19e167c123f51d055912709f719d
+  development: 2018-11-12T22:19:14-05:00   a9fd809c3a4c737dc4689f5cef8a14cf
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -302,11 +302,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-11-08T16:36:58-05:00   dc8ffbc93cc1b82acc2206e16456f16c
+  development: 2018-11-12T22:32:35-05:00   c86759e81f46515ac3beca859d723cd0
 assets/theme-styles-setting.css.liquid:
-  development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
+  development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-11-08T16:58:55-05:00   cea7f3052160b6cd255d9d4d009dd5ec
+  development: 2018-11-12T22:34:56-05:00   cea7f3052160b6cd255d9d4d009dd5ec
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -402,7 +402,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-10-25T14:13:46-04:00   e02b956f46ee32927048bf319323d074
+  development: 2018-11-12T22:41:12-05:00   f47ab1e03049abb15bfdef662603afc8
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:
@@ -456,11 +456,11 @@ snippets/product-sidebar.liquid:
 snippets/quick-view-template.liquid:
   development: 2018-08-20T17:51:09-04:00   701b365bd57a60432e0b5fc4f0e47f59
 snippets/recently-viewed-products.liquid:
-  development: 2018-08-07T12:43:29-04:00   f9f258b21a33593688ec0314ac2093b9
+  development: 2018-11-12T22:15:16-05:00   0fa3c53ed0abcc2644cd69d17d68219f
 snippets/related-products-by-tags.liquid:
   development: 2018-09-18T14:08:54-04:00   acbe58fa757233bf151984f0158fc090
 snippets/related-products.liquid:
-  development: 2018-09-18T14:08:54-04:00   2b8ea55d39197c49596cf2582d326166
+  development: 2018-11-12T22:14:59-05:00   225b2f95fcc95fe3bd02b6a1e4e301a3
 snippets/search-bar-modal.liquid:
   development: 2018-08-28T14:39:34-04:00   aaf90aec48e76d7bb4e3dc6af962a5e0
 snippets/search-bar.liquid:
@@ -480,7 +480,7 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2018-09-20T13:29:20-04:00   744c587cee9d2c5512acb374b5c1529d
+  development: 2018-11-12T22:26:05-05:00   744c587cee9d2c5512acb374b5c1529d
 snippets/site-nav.liquid:
   development: 2018-11-08T16:21:11-05:00   c77cff9808a1ea148d6906a8ebdc2dcb
 snippets/social.liquid:

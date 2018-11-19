@@ -41,17 +41,17 @@
   <h5>{{ item.title | link_to: item.url }}</h5>
 
   <h6>
-    {% if item.compare_at_price > item.price %}
+    {% if bold_compare_at_price > bold_price %}
     <span class="on-sale" itemprop="price">
-      {{ item.price | money }}
+      {{ bold_price | money }}
     </span>
     <small>
       Compare at:
-      {{ item.compare_at_price_max | money }}
+      {{ bold_compare_at_price_max | money }}
     </small>
     {% else %}
     <span itemprop="price">
-      {{ item.price | money }}
+      {{ bold_price | money }}
     </span>
     {% endif %}
   </h6>

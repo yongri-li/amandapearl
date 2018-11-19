@@ -1,6 +1,6 @@
 {%- comment -%}
 BOLD-PRODUCT.LIQUID
-Last updated: 2018-Aug-30
+Last updated: 2018-Oct-16
 
 Sets all the appropriate liquid variables for Bold Apps that affect the product.
 Creates an updated JSON object that takes all appropriate apps into account. Can mimic all three types of product objects that Shopify uses.
@@ -35,9 +35,19 @@ ASSIGN LIQUID VARIABLES
 ============================================================================================================
 {%- endcomment -%}
 
+{%- assign bold_product = bold-product | default: product -%}
+{%- assign bold_price = bold_product.price -%}
+{%- assign bold_price_min = bold_product.price_min -%}
+{%- assign bold_price_max = bold_product.price_max -%}
+{%- assign bold_price_varies = bold_product.price_varies -%}
+{%- assign bold_compare_at_price = bold_product.compare_at_price -%}
+{%- assign bold_compare_at_price_min = bold_product.compare_at_price_min -%}
+{%- assign bold_compare_at_price_max = bold_product.compare_at_price_max -%}
+{%- assign bold_compare_at_price_varies = bold_product.compare_at_price_varies -%}
+{%- assign bold_selected_or_first_available_variant = bold_product.selected_or_first_available_variant | default: bold_product.variants.first | default: bold_product.variants[0] -%}
+
 {%- if product or bold-product -%}
     {%- assign bold_apps_installed = shop | map: 'metafields' | map: 'bold_apps_installed' | first -%}
-    {%- assign bold_product = bold-product | default: product -%}
 
     {%- comment -%}Assign flags to their default values if not set {%- endcomment -%}
     {%- assign escape_output = escape | default: false -%}
@@ -51,7 +61,6 @@ ASSIGN LIQUID VARIABLES
     {%- assign bold_product_quick_price = quick_price | default: false -%}
 
     {%- if bold_product_hide_action == 'skip' and output == blank -%}
-        {%- assign bold_product_output = 'none' -%}
         {%- assign product_metafield_check = bold_product.variants | map: 'metafields' | map: 'shappify_csp' | map: 'csp_tag' | uniq -%}
         {%- if product_metafield_check.size > 1 or product_metafield_check.first != blank -%}
             {%- assign has_csp = true -%}
@@ -439,7 +448,7 @@ ASSIGN LIQUID VARIABLES
     {%- endif -%}
     {%- endcapture -%}
 
-    {%- unless bold_product_output == 'json' or bold_product_output == 'none' -%}
+    {%- unless bold_product_output == 'json' or bold_product_output == 'none'-%}
         <script>
           var currentScript = document.currentScript || document.scripts[document.scripts.length - 1];
           var boldVariantIds = {{- bold_variant_ids | json -}};
@@ -486,7 +495,12 @@ ASSIGN LIQUID VARIABLES
             element.style.display = 'none';
             element.id = 'variant_html_' + boldVariantIds[boldIndex];
             element.innerHTML = pricingHTML[boldIndex];
-            document.body.prepend(element);
+
+            if (document.body) {
+              document.body.prepend(element);
+            } else if (document.head) {
+              document.head.prepend(element);
+            }
           }
           {%- endif -%}
 

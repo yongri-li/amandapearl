@@ -18,11 +18,11 @@ assets/banner-home-bottom-3.jpg:
 assets/banner-home-bottom-4.jpg:
   development: 2018-10-09T14:20:11-04:00   87470e820bee62d052ac5a24de406637
 assets/banner-home-bottom-5.jpg:
-  development: 2018-08-22T13:20:47-04:00   03cc6f0ad7045e72aed52fc59dc0e687
+  development: 2018-11-18T19:31:38-05:00   bb3652a5e20267ea7d91863e17632db9
 assets/banner-home-bottom-6.jpg:
-  development: 2018-08-22T13:20:48-04:00   95fdec113794ecbf53b1cabaf0b0f392
+  development: 2018-11-18T19:31:38-05:00   f3f4268cdf0390804515abc9bf868e9d
 assets/banner-home-bottom-7.jpg:
-  development: 2018-08-23T22:49:59-04:00   d2abf2512ed7673f046522e00923b677
+  development: 2018-11-18T19:31:38-05:00   d7496c48975a56c4532559e3bb49a1f8
 assets/banner-sidebar.jpg:
   development: 2018-08-07T12:43:09-04:00   b19d729fe1e9c3ff67e0ae0d7a964062
 assets/banner.jpg:
@@ -42,7 +42,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-09-18T14:08:34-04:00   3f9f5ca7426ca9796f69c86fa6387b13
+  development: 2018-11-18T14:49:03-05:00   6abcc272456e3cb93ba8f11870b70cbd
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -136,7 +136,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-10-10T17:37:22-04:00   cd6f19e167c123f51d055912709f719d
+  development: 2018-11-12T22:19:14-05:00   a9fd809c3a4c737dc4689f5cef8a14cf
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -302,11 +302,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-11-08T16:36:58-05:00   dc8ffbc93cc1b82acc2206e16456f16c
+  development: 2018-11-12T22:32:35-05:00   c86759e81f46515ac3beca859d723cd0
 assets/theme-styles-setting.css.liquid:
-  development: 2018-08-07T12:43:24-04:00   d8522265229318340c3bff12b65bbf06
+  development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-11-08T16:58:55-05:00   cea7f3052160b6cd255d9d4d009dd5ec
+  development: 2018-11-12T22:34:56-05:00   cea7f3052160b6cd255d9d4d009dd5ec
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -322,11 +322,11 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-11-12T15:33:41-05:00   dc58a8b108c315fe18e9f68221df733e
+  development: 2018-11-19T11:18:47-05:00   34b13757b79cf13086678a74fe2355e9
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
-  development: 2018-09-18T14:08:51-04:00   f41c7009b003d1b06a7612215c70f5ae
+  development: 2018-11-19T13:44:31-05:00   f41c7009b003d1b06a7612215c70f5ae
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
@@ -348,11 +348,13 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-09-18T14:09:01-04:00   44b298df84fc39f15c165c7371071636
+  development: 2018-11-19T11:45:31-05:00   5a0eedf5adc5041547ba8e16a440d4f3
+snippets/bold-pb-custom.liquid:
+  development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
-  development: 2018-09-18T14:09:00-04:00   3c5ed5f8e10c7ba731dade47e0b1ade0
+  development: 2018-11-19T11:44:26-05:00   9123b689dcd5f9d4b203840da2ca3898
 snippets/bold-variant.liquid:
-  development: 2018-09-18T14:09:02-04:00   69753ae27530f29318c4ece293b36599
+  development: 2018-11-19T11:44:27-05:00   992b7f33d59e504fd6b9e67f5dc5d203
 snippets/brands.liquid:
   development: 2018-11-08T16:36:28-05:00   8bc25c56f4141cc172111ee357560806
 snippets/breadcrumb.liquid:
@@ -402,7 +404,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-10-25T14:13:46-04:00   e02b956f46ee32927048bf319323d074
+  development: 2018-11-12T22:41:12-05:00   f47ab1e03049abb15bfdef662603afc8
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:
@@ -456,11 +458,11 @@ snippets/product-sidebar.liquid:
 snippets/quick-view-template.liquid:
   development: 2018-08-20T17:51:09-04:00   701b365bd57a60432e0b5fc4f0e47f59
 snippets/recently-viewed-products.liquid:
-  development: 2018-08-07T12:43:29-04:00   f9f258b21a33593688ec0314ac2093b9
+  development: 2018-11-12T22:15:16-05:00   0fa3c53ed0abcc2644cd69d17d68219f
 snippets/related-products-by-tags.liquid:
   development: 2018-09-18T14:08:54-04:00   acbe58fa757233bf151984f0158fc090
 snippets/related-products.liquid:
-  development: 2018-09-18T14:08:54-04:00   2b8ea55d39197c49596cf2582d326166
+  development: 2018-11-12T22:14:59-05:00   225b2f95fcc95fe3bd02b6a1e4e301a3
 snippets/search-bar-modal.liquid:
   development: 2018-08-28T14:39:34-04:00   aaf90aec48e76d7bb4e3dc6af962a5e0
 snippets/search-bar.liquid:
@@ -468,7 +470,7 @@ snippets/search-bar.liquid:
 snippets/search-mobile.liquid:
   development: 2018-08-07T12:43:29-04:00   a53dca63f7652ad041fccbd4b1691b8f
 snippets/search-result-grid.liquid:
-  development: 2018-11-08T16:30:40-05:00   529341605e33d6010ba51698873b89a5
+  development: 2018-11-19T11:44:25-05:00   1f389fd22503fbb60039406cfb59c688
 snippets/search-result.liquid:
   development: 2018-09-18T14:08:59-04:00   115a8d2db4650b582f83f8d879a7f628
 snippets/searchanise-navigation.liquid:
@@ -480,7 +482,7 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2018-09-20T13:29:20-04:00   744c587cee9d2c5512acb374b5c1529d
+  development: 2018-11-12T22:26:05-05:00   744c587cee9d2c5512acb374b5c1529d
 snippets/site-nav.liquid:
   development: 2018-11-08T16:21:11-05:00   c77cff9808a1ea148d6906a8ebdc2dcb
 snippets/social.liquid:
@@ -533,6 +535,8 @@ templates/collection.32.liquid:
   development: 2018-09-18T14:08:56-04:00   86c32656b053a9efca78f67f860d0c5a
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
+templates/collection.bundles.liquid:
+  development: 2018-11-18T14:10:35-05:00   bf6c2777af80de96056385d3a12c5ba0
 templates/collection.liquid:
   development: 2018-11-06T17:19:17-05:00   bf6c2777af80de96056385d3a12c5ba0
 templates/collection.list.liquid:
@@ -578,6 +582,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-11-12T15:35:24-05:00   bd2c6d0d74898e5763522c886129376b
+  development: 2018-11-19T12:06:25-05:00   1b09d87e472d20d288bc6de844cbed82
 templates/search.liquid:
-  development: 2018-11-08T16:28:51-05:00   bc1ca98d0bca1075c4696f45c8dba770
+  development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

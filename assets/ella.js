@@ -670,7 +670,7 @@
                         $('.ajax-error-message').text($.parseJSON(xhr.responseText).description);
                         ella.showModal('.ajax-error-modal');
                     }
-                }); 
+                });
             });
         },
         initProductWishlist: function() {
@@ -1294,6 +1294,7 @@
             var template = '<li class="item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-details"><a href="javascript:void(0)" title="Remove This Item" class="btn-remove">X</a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral">{QUANTITY} x <span class="price">{PRICE}</span></div></div></li>';
 
             $('#cartCount').text(cart.item_count);
+            $('#cartCountm').text(cart.item_count);
             /*Total price*/
             $('#dropdown-cart .summary .price').html(Shopify.formatMoney(cart.total_price, window.money_format));
             /*Clear cart*/

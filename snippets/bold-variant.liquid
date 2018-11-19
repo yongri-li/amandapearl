@@ -1,6 +1,6 @@
 {%- comment -%}
 BOLD-VARIANT.LIQUID
-Last updated: 2018-August-13
+Last updated: 2018-November-6
 
 Sets all appropriate liquid variables for Bold Apps that affect the variant.
 Creates an updated JSON object that includes key information relating to our apps.
@@ -84,6 +84,8 @@ FLAGS:
 
 {%- endif -%}
 
+{%- assign bold_variant_available = bold_variant.available -%}
+
 {% if bold_apps_installed contains 'Quantity Breaks' or bold_apps_installed contains 'Customer Pricing' or bold_apps_installed contains 'Product Bundles' %}
   {%- comment -%} Find the base variant and base variant's inventory {%- endcomment -%}
   {%- assign bold_base_variant_id = bold_variant.metafields.shappify_csp['csp_base'] | default: bold_variant.metafields.shappify_qb['qb_parent'] | default: bold_variant.metafields.shappify_bundle['bundle_parent'] | default: bold_variant.id -%}
@@ -122,8 +124,6 @@ FLAGS:
   {%- comment -%} Now that we've established quantity, re-evaluate the variant's availablility {%- endcomment -%}
   {%- if bold_variant_remaining_quantity <= 0 and bold_variant_inventory_policy == 'deny' and bold_variant_inventory_management != blank -%}
     {%- assign bold_variant_available = false -%}
-  {%- else -%}
-    {%- assign bold_variant_available = bold_variant.available -%}
   {%- endif -%}
 
 
@@ -158,9 +158,6 @@ FLAGS:
     {%- assign bold_hidden_variant = false -%}
   {%- endif -%}
 
-  {%- assign option1_clean_name = variant.option1 | remove: csp_flag_string -%}
-  {%- assign option2_clean_name = variant.option2 | remove: csp_flag_string -%}
-  {%- assign option3_clean_name = variant.option3 | remove: csp_flag_string -%}
 
   {%- comment -%} Check for presence of our apps {%- endcomment -%}
   {%- if bold_variant.metafields.bold_measurement.formula -%}{%- assign variant_has_btm = true -%}{%- else -%}{%- assign variant_has_btm = false -%}{%- endif -%}
@@ -173,6 +170,10 @@ FLAGS:
 
   {%- if bold_variant_hide_action == 'skip' and bold_hidden_variant -%}{%- continue -%}{%- endif -%}
 {% endif %}
+
+{%- assign option1_clean_name = variant.option1 | remove: csp_flag_string -%}
+{%- assign option2_clean_name = variant.option2 | remove: csp_flag_string -%}
+{%- assign option3_clean_name = variant.option3 | remove: csp_flag_string -%}
 
 {%- comment -%}
 ============================================================================================================
@@ -201,7 +202,9 @@ FLAGS:
     "position":{{- bold_variant.featured_image.position | json -}},
     "product_id":{{- bold_variant.featured_image.product_id | json -}},
     "src":{{- bold_variant.featured_image.src | json -}},
-    "updated_at":{%- capture updated_at -%}{{- bold_variant.featured_image.updated_at | date: "%F" -}}T{{- bold_variant.featured_image.updated_at | date: "%T" -}}{%- endcapture -%}{{- shop.timezone -}}{{- updated_at | json -}}
+    "updated_at":{%- capture updated_at -%}{{- bold_variant.featured_image.updated_at | date: "%F" -}}T{{- bold_variant.featured_image.updated_at | date: "%T" -}}{%- endcapture -%}{{- shop.timezone -}}{{- updated_at | json -}},
+    "width":{{- bold_variant.featured_image.width -}},
+    "height":{{- bold_variant.featured_image.height -}}
     },
   {%- endif -%}
 

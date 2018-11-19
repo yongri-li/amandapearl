@@ -51,7 +51,7 @@
             <p class="top-cart">
               <a href="/cart">
                 <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px"></span>
-                <span>( {{ cart.item_count }} )</span>
+
               </a>
             </p>
           </div>
@@ -113,3 +113,4 @@
   translator.doTranslate(".site-header");
 </script>
 {% endif %}
+<span class="visible-xs" id="cartCountm" style="position: fixed; background: transparent; border-radius: 100%; right: 23px; top: 10px; width: 20px; text-align: center; z-index: 999999999999999999; padding: 3px; color: #000!important">{{ cart.item_count }}</span>

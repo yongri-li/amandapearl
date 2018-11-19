@@ -229,10 +229,7 @@
               {% endif %}
             </form>
 
-{%- unless bundle_loaded == 'true' -%}
-{%- include 'shappify-bdl-load-bundle' -%}
-{%- assign bundle_loaded = 'true' -%}
-{%- endunless -%}
+
 
           </div>
 
@@ -464,7 +461,10 @@
         </div>
       </div>
     </div>
-
+{%- unless bundle_loaded == 'true' -%}
+{%- include 'shappify-bdl-load-bundle' -%}
+{%- assign bundle_loaded = 'true' -%}
+{%- endunless -%}
     {% if settings.show_tab == 'horizontal' %}
     <div class="panel-group">
       <ul class="nav nav-tabs" id="myTab">

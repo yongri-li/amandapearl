@@ -42,7 +42,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-11-18T14:49:03-05:00   6abcc272456e3cb93ba8f11870b70cbd
+  development: 2018-11-21T14:24:03-05:00   e029cc116bcd086b036368d1b4bb82ee
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -322,7 +322,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-11-19T11:18:47-05:00   34b13757b79cf13086678a74fe2355e9
+  development: 2018-11-21T17:25:00-05:00   2f255fa4298e2156b8424908fe67b9f0
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:

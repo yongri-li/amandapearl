@@ -462,3 +462,15 @@ select.bold-bundles-widget-item__variants option[disabled] {
 }
 
 
+.basic-bundle .bold-bundles-widget__footer {
+    text-align: center;
+}
+
+.bold-bundles-widget-item__info {
+    text-transform: uppercase;
+    
+}
+
+select.bold-bundles-widget-item__variants {
+    text-transform: uppercase;
+}

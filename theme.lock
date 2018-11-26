@@ -302,11 +302,11 @@ assets/soldout.png:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-11-12T22:32:35-05:00   c86759e81f46515ac3beca859d723cd0
+  development: 2018-11-26T13:20:23-05:00   48732f34e43dd70b73164a1d2bd9115b
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-11-12T22:34:56-05:00   cea7f3052160b6cd255d9d4d009dd5ec
+  development: 2018-11-26T13:24:18-05:00   144ce9a6749ae1f9f5d82fe8dc064a4b
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -356,7 +356,7 @@ snippets/bold-product.liquid:
 snippets/bold-variant.liquid:
   development: 2018-11-19T11:44:27-05:00   992b7f33d59e504fd6b9e67f5dc5d203
 snippets/brands.liquid:
-  development: 2018-11-08T16:36:28-05:00   8bc25c56f4141cc172111ee357560806
+  development: 2018-11-26T13:18:38-05:00   8bc25c56f4141cc172111ee357560806
 snippets/breadcrumb.liquid:
   development: 2018-08-07T12:43:26-04:00   235323195a63d6d8928f7cfd2c08f042
 snippets/cart-points.liquid:
@@ -404,7 +404,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-11-12T22:41:12-05:00   f47ab1e03049abb15bfdef662603afc8
+  development: 2018-11-26T13:22:19-05:00   f6e543face88305bcaf4604d8e8b8466
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:

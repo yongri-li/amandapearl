@@ -526,7 +526,7 @@ templates/404.liquid:
 templates/article.liquid:
   development: 2018-08-16T12:52:10-04:00   5c2f6ce8dd87a205a462bf30c7c4ac3b
 templates/blog.liquid:
-  development: 2018-08-16T12:51:49-04:00   e19dd6e9ac3d7c6e06be7b0f699bc8fd
+  development: 2018-11-28T11:45:04-05:00   af1a38365dd0d38d7c5b31ab5a7da63e
 templates/cart.liquid:
   development: 2018-11-08T16:10:16-05:00   51e9e8170c4ea3cfbf7be156c0a6525e
 templates/collection.16.liquid:

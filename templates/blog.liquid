@@ -20,11 +20,18 @@
 </header>
 
 <div class="row">
+  <div style="background: #fafafa; border: 1px solid #eee; padding: 10px; text-align: center; float: center; margin: 10px 0 20px;">
+  {% for link in linklists.blog-categories.links %}
+  <a href="{{ link.url }}" style="padding: 0 10px 0; font-weight: 400; text-transform: uppercase;">{{ link.title }}</a>
+  {% endfor %}
+  </div>
+
   <!-- Begin sidebar -->
   {% include 'blog_sidebar' %}
   <!-- End sidebar -->
 
   <div class="col-xs-9 col-main">
+
 
     <div class="content-blog">
       {% comment %}

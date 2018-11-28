@@ -514,7 +514,7 @@ snippets/site-nav.liquid:
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/swatch.liquid:
-  development: 2018-11-28T15:54:23-05:00   0c650a20a724aa399b2502764a2904e0
+  development: 2018-11-28T17:56:28-05:00   521e0790962716e2c1f50bd8397d5f7f
 snippets/swatch_scripts.liquid:
   development: 2018-08-07T12:43:30-04:00   165c736f88f421df154a6e3181673426
 snippets/sweettooth-tab-widget.liquid:

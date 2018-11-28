@@ -450,7 +450,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-11-06T17:23:33-05:00   909ad5ebfb72726489bf070bc10b344b
+  development: 2018-11-28T12:38:04-05:00   b45c40267197ff8167afd812f40fb1a9
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:

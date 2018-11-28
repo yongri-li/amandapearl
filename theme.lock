@@ -110,7 +110,7 @@ assets/checkout_logo.png:
 assets/classie.js:
   development: 2018-08-07T12:43:12-04:00   723c75fde6dc7bb3ef0f7f12584655a0
 assets/clear-stone.jpg:
-  development: 2018-11-28T15:40:43-05:00   6816aa4fe66a6effee51bb0fec71fad7
+  development: 2018-11-28T17:27:44-05:00   7db3864912435588033c54933011543e
 assets/color-1.png:
   development: 2018-08-07T12:43:12-04:00   e8d1e02a2ca6bd1365546606bb6efcb6
 assets/color-2.png:
@@ -328,7 +328,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-11-26T13:24:18-05:00   144ce9a6749ae1f9f5d82fe8dc064a4b
+  development: 2018-11-28T17:28:52-05:00   d348352947047baa60028b439987ff68
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -336,7 +336,7 @@ assets/top-banner-home-2.jpg:
 assets/top-banner-home-3.jpg:
   development: 2018-08-07T13:11:30-04:00   4909e288757e9417d5a1e7c382154830
 assets/white-diamond.jpg:
-  development: 2018-11-28T15:40:46-05:00   c6a4d89c0fbb10157138fa62d60f80f9
+  development: 2018-11-28T17:27:45-05:00   7db3864912435588033c54933011543e
 assets/white-pearl.jpg:
   development: 2018-11-28T15:40:46-05:00   f1df57b8507d2e536ff1cc57f7b0ccfe
 assets/wizard-2.png:

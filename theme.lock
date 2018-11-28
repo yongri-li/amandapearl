@@ -448,7 +448,7 @@ snippets/homepage-flexslider.liquid:
 snippets/homepage-instagram.liquid:
   development: 2018-08-23T15:50:11-04:00   d3f99c6be733cc388823c5566197e4ed
 snippets/item-swatch.liquid:
-  development: 2018-11-08T16:45:58-05:00   aeefb9fd8df9e75c15521dc3b99c46c7
+  development: 2018-11-28T15:55:11-05:00   e6068a25f34fdb5c9891ae7f4ffdcc77
 snippets/linklists.liquid:
   development: 2018-08-07T12:43:28-04:00   92122bba4745dea5ea0fed17f76c82ef
 snippets/mega-menu-featured-product.liquid:
@@ -514,7 +514,7 @@ snippets/site-nav.liquid:
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/swatch.liquid:
-  development: 2018-11-28T15:43:00-05:00   143e2a0575d9dbfacbdea3f189061738
+  development: 2018-11-28T15:54:23-05:00   0c650a20a724aa399b2502764a2904e0
 snippets/swatch_scripts.liquid:
   development: 2018-08-07T12:43:30-04:00   165c736f88f421df154a6e3181673426
 snippets/sweettooth-tab-widget.liquid:

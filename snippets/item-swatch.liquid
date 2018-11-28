@@ -1,12 +1,11 @@
 {% if settings.display_color_variant %}
 <ul class="item-swatch">
 {% for option in product.options %}
-  {% if option == 'Material'  %}
+  {% if option == 'GEM' or option == 'METAL' %}
     {% assign index = forloop.index0 %}
     {% assign colorlist = '' %}
     {% assign color = '' %}
     {% for variant in product.variants %}
-{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
       {% capture color %}
         {{ variant.options[index] }}
       {% endcapture %}
@@ -15,7 +14,7 @@
       {% assign text = color | handleize %}
 
       <li>
-        <label style="border:1px solid #eee; height: 30px; width: 30px; background-color: {{ variant | img_url: '50x' }}; background-image: url(http:{{ variant | img_url: '50x' }}); background-position: center center;"></label>
+        <label style="{% if text == 'white' %}border: 1px solid #cbcbcb; {% endif %}background-color: {{ color | split: ' ' | last | handle }}; background-image: url({{ text | append: '.jpg' | asset_url }}); background-position: center center; width: 30px; height: 30px; background-size: cover;"></label>
 
         {% if variant.image != null %}
         <div class="hidden">

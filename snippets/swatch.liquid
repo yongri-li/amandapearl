@@ -1,9 +1,8 @@
-<br>
 {% comment %}
   Set the extension of your color files below. Use 'png', 'jpeg', 'jpg' or 'gif'.
 {% endcomment %}
 
-{% assign file_extension = 'png' %}
+{% assign file_extension = 'jpg' %}
 
 {% if swatch == blank %}
 <div class="swatch error">
@@ -42,17 +41,11 @@
   <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
 </div>
 {% else %}
-
-<div class="row">
-<div class="col-xs-12 col-sm-12">
 <div class="swatch clearfix" data-option-index="{{ option_index }}">
-  <div class="header hidden-xs"><center>{{ swatch }}</center></div>
-  <div class="m_swatch">
-  <div class="header visible-xs">{{ swatch }}</div>
+  <div class="header">{{ swatch }}</div>
   {% assign values = '' %}
   {% for variant in product.variants %}
-{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
-    {% assign value = variant.options[option_index] | remove: csp_flag_string %}
+    {% assign value = variant.options[option_index] %}
     {% unless values contains value %}
       {% assign values = values | join: ',' %}
       {% assign values = values | append: ',' | append: value %}
@@ -63,7 +56,7 @@
         {% endif %}
         <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} {% unless variant.available %}disabled{% endunless %} />
         {% if is_color %}
-        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | file_url }})">
+        <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | asset_url }})">
           <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
         </label>
         {% else %}
@@ -81,19 +74,7 @@
     {% endif %}
   {% endfor %}
 </div>
-</div>
-</div>
-</div>
+
 {% endunless %}
 
 {% endif %}
-<style>
-.product-variants, .product-title, .prices , .quan { text-align: center!important; }
-.swatch { margin-top: 0px!important }
-
-.m_swatch { align-content: center; }
-
-.swatch { float: center!important; display: inline; text-align: center!important; align-content: center!important;}
-.swatch input { float: center!important; display: inline; text-align: center!important; align-content: center!important; }
-.swatch .swatch-element { float: center!important; display: inline; text-align: center!important; align-content: center!important; }
-</style>

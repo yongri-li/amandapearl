@@ -348,7 +348,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-11-21T17:25:00-05:00   2f255fa4298e2156b8424908fe67b9f0
+  development: 2018-11-29T16:32:20-05:00   5315b3b2f43f8cdd7db835111ea893d7
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:

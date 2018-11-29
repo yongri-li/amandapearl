@@ -41,8 +41,9 @@
   <p><strong>This is case-sensitive!</strong> Do not put in <code>'color'</code> if your product option name is <code>'Color'</code>.</p>
 </div>
 {% else %}
+
 <div class="swatch clearfix" data-option-index="{{ option_index }}">
-  <div class="header">{{ swatch }}</div>
+  <center><div class="header">{{ swatch }}</div></center>
   {% assign values = '' %}
   {% for variant in product.variants %}
     {% assign value = variant.options[option_index] %}
@@ -50,6 +51,7 @@
       {% assign values = values | join: ',' %}
       {% assign values = values | append: ',' | append: value %}
       {% assign values = values | split: ',' %}
+
       <div data-value="{{ value | escape }}" class="swatch-element {% if is_color %}color {% endif %}{{ value | handle }} {% if variant.available %}available{% else %}soldout{% endif %}">
         {% if is_color %}
         <div class="tooltip">{{ value }}</div>
@@ -66,6 +68,7 @@
         </label>
         {% endif %}
       </div>
+
     {% endunless %}
     {% if variant.available %}
     <script>
@@ -78,3 +81,6 @@
 {% endunless %}
 
 {% endif %}
+<style>
+.swatch{ display: table; margin: auto}
+</style>

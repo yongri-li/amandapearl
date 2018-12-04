@@ -328,7 +328,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-11-29T11:48:41-05:00   8f006117d17523bcb8b38cd13b77fc3b
+  development: 2018-12-04T10:24:11-05:00   e596e013b110994d22b02d06c523435f
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -414,7 +414,7 @@ snippets/dev.liquid:
 snippets/fb-open-graph-tags.liquid:
   development: 2018-08-07T12:43:27-04:00   ceeb688908d12511d61380a5d126f59f
 snippets/footer-points.liquid:
-  development: 2018-11-08T16:32:22-05:00   edea7d39144a062d928f18a1caa84345
+  development: 2018-12-04T10:17:48-05:00   edea7d39144a062d928f18a1caa84345
 snippets/footer.liquid:
   development: 2018-11-08T16:42:30-05:00   d2d09f8753b65030754e27df14ac1aee
 snippets/footer_scripts.liquid:
@@ -592,7 +592,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   development: 2018-08-07T12:43:33-04:00   b01bce4d6b8a5b4620b34ef67c99071c
 templates/index.liquid:
-  development: 2018-11-08T16:37:37-05:00   d4a427095ebd835a01ba179cf750f3cc
+  development: 2018-12-04T10:17:29-05:00   0d0ff4275308c6fa806f007a359c22cc
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.contact.liquid:
@@ -608,6 +608,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-03T10:21:00-05:00   b2b144fdf59f652eb2ec5bef0dd46825
+  development: 2018-12-04T10:21:56-05:00   bb078bf722c31d2cac532e272aa940f4
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

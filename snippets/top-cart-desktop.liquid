@@ -22,7 +22,7 @@
                <p class="text-continue"><a href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %}>{{ 'cart.ajax_cart.continue_shopping' | t }}</a></p>
              </div>
              <div class="has-items" style="padding-top:70px">
-               <h2 style="text-align: center; text-transform: uppercase;">Your Cart</h2>
+               <h2 style="text-align: center; text-transform: uppercase;">Your Bag</h2>
                <ol class="mini-products-list">
                  {% for item in cart.items %}
                  <li class="item" id="cart-item-{{item.id}}">

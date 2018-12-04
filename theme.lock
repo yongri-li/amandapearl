@@ -348,7 +348,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-11-29T16:32:20-05:00   5315b3b2f43f8cdd7db835111ea893d7
+  development: 2018-12-02T20:45:58-05:00   5dbfcfd569bba3b6c83786ea036df26f
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:
@@ -374,7 +374,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-11-19T11:45:31-05:00   5a0eedf5adc5041547ba8e16a440d4f3
+  development: 2018-11-29T17:03:24-05:00   65ccf3d0cba660c3b715f3400741d632
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -528,7 +528,7 @@ snippets/toolbar-list.liquid:
 snippets/toolbar.liquid:
   development: 2018-08-07T12:43:30-04:00   2210fe729524b914d8bca98aeec9771a
 snippets/top-cart-desktop.liquid:
-  development: 2018-08-07T12:43:30-04:00   6c8e12bcf9b114819a549ecfb7c3a7e4
+  development: 2018-12-02T17:09:46-05:00   89b5ea9f21821a70c60ee5327b1018c4
 snippets/top-cart.liquid:
   development: 2018-08-07T12:43:30-04:00   3840989e38710c0de84c5e5f11f8b0de
 snippets/translator.liquid:
@@ -552,7 +552,7 @@ templates/404.liquid:
 templates/article.liquid:
   development: 2018-08-16T12:52:10-04:00   5c2f6ce8dd87a205a462bf30c7c4ac3b
 templates/blog.liquid:
-  development: 2018-11-28T11:45:04-05:00   af1a38365dd0d38d7c5b31ab5a7da63e
+  development: 2018-11-29T19:02:17-05:00   3f32a5508742d3508e87cd9b326d8159
 templates/cart.liquid:
   development: 2018-11-29T16:52:11-05:00   51e9e8170c4ea3cfbf7be156c0a6525e
 templates/collection.16.liquid:
@@ -562,7 +562,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.bundles.liquid:
-  development: 2018-11-18T14:10:35-05:00   bf6c2777af80de96056385d3a12c5ba0
+  development: 2018-12-02T17:39:57-05:00   babab3be93dac176c2f8f8d832e0b646
 templates/collection.liquid:
   development: 2018-11-06T17:19:17-05:00   bf6c2777af80de96056385d3a12c5ba0
 templates/collection.list.liquid:
@@ -608,6 +608,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-11-19T12:06:25-05:00   1b09d87e472d20d288bc6de844cbed82
+  development: 2018-12-03T10:21:00-05:00   b2b144fdf59f652eb2ec5bef0dd46825
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

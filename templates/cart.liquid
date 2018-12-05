@@ -179,7 +179,12 @@
   </div>
 </div>
 <br><br>
+<div class="hidden-xs">
 <img src="{{ 'cart-points.png' | asset_url }}" width="100%">
+</div>
+<div class="visible-xs">
+  <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
+</div>
 {% if settings.display_recently_viewed_products %}
 {% include 'recently-viewed-products' %}
 {% endif %}

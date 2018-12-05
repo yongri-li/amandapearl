@@ -30,7 +30,7 @@ assets/banner-home-bottom-5.jpg:
 assets/banner-home-bottom-6.jpg:
   development: 2018-11-18T19:31:38-05:00   f3f4268cdf0390804515abc9bf868e9d
 assets/banner-home-bottom-7.jpg:
-  development: 2018-11-18T19:31:38-05:00   d7496c48975a56c4532559e3bb49a1f8
+  development: 2018-12-05T12:28:00-05:00   8b91d161e6110b1268c10c7405a8b2ea
 assets/banner-sidebar.jpg:
   development: 2018-08-07T12:43:09-04:00   b19d729fe1e9c3ff67e0ae0d7a964062
 assets/banner.jpg:
@@ -348,7 +348,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-12-02T20:45:58-05:00   5dbfcfd569bba3b6c83786ea036df26f
+  development: 2018-12-05T12:28:00-05:00   f1d2a3e6102f6993ee98f06f501ad6e6
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/theme.liquid:

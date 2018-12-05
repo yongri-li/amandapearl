@@ -1,18 +1,49 @@
-<a name="the-customer"></a>
+<div class="avbout" style="max-width: 1000px;margin: 0 auto !important;float: none !important;">
+{% include 'breadcrumb' %}
+<header class="page-header">
+  {% if settings.enable_multilang %}
+  <h2 class="lang1">{{ page.title | split: '|' | first }}</h2>
+  <h2 class="lang2">{{ page.title | split: '|' | last }}</h2>
+  {% else %}
+  <h2>{{ page.title | split: '|' | first }}</h2>
+  {% endif %}
+</header>
+
+
+<div style="background: #fafafa; border: 1px solid #eee; padding: 10px; text-align: center; float: center; margin: 10px 0 20px;">
+{% for link in linklists.about-page-link-list.links %}
+<a href="{{ link.url }}" style="padding: 0 10px 0; font-weight: 400; text-transform: uppercase;">{{ link.title }}</a>
+{% endfor %}
+</div>
+
+<br><br>
+{% comment %}
+  Regular page content goes here.
+{% endcomment %}
+
+{% if settings.enable_multilang %}
+<div class="rte lang1">{{ page.content | split: '[lang2]' | first }}</div>
+<div class="rte lang2">{{ page.content | split: '[lang2]' | last }}</div>
+{% else %}
+<div class="rte">{{ page.content | split: '[lang2]' | first }}</div>
+{% endif %}
+
+<a class="anchor" name="the-customer"></a>
 <h3 style="text-align: center;"><strong>THE CUSTOMER</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-customer.jpg?9332890570894201107" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align ">
 <p>The AMANDA PEARL customer sees jewelry not just as an item to adorn, but as an opportunity to communicate strength - both overtly, as well as in a more subtle, talismanic way. Our customer sees the idea of jewelry as armor - not necessarily in a defensive way, but in a way that makes them feel protected and reminds them of their inherent, personal strength. Due to its sculptural and organic nature it makes them that the jewelry is a natural extension of one’s form that highlights and enhances.</p>
 </div>
 </div>
 
-<a name="the-company"></a>
+<hr>
+<a class="anchor" name="the-company"></a>
 <h3 style="text-align: center;"><strong>THE COMPANY</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6 left_align">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-7 left_align">
   <meta charset="utf-8" />
   <meta charset="utf-8" />
   <p>AMANDA PEARL is a New York City based accessories company known for striking, sculptural, and empowering jewelry and meticulously handmade-in-Italy clutches.</p>
@@ -21,19 +52,19 @@
   <p>Amanda’s designs have been seen on women of influence such as Lupita Nyong’o, Meryl Streep, Gal Gadot, Jane Fonda, and Karlie Kloss, and in publications such as Vogue, Bazaar, InStyle and WWD.</p>
   <p>AMANDA PEARL aims to bring beauty to the world beyond the realm of fashion. Always with eyes on the environment, the company produces as sustainably as possible, working with small artisanal producers, above ground diamonds, and cultured pearls - a natural resource that helps also to maintain and improve water ecology. The company also supports causes that promote education, the arts, child welfare, and conservation.</p>
 </div>
-<div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-company.jpg?9876309301618339574" width="100%">
 </div>
 </div>
 
-
-<a name="the-people"></a>
+<hr>
+<a class="anchor" name="the-people"></a>
 <h3 style="text-align: center;"><strong>THE PEOPLE</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-people-amanda-brotman.jpg?4718195441679626677" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <meta charset="utf-8" />
   <p><strong>AMANDA BROTMAN: Founder / Creative Director</strong></p>
   <p>New York based Amanda Pearl Brotman is the founder and designer of AMANDA PEARL, a luxury accessories brand whose aesthetic is a study in dualities, creating a truly modern sensibility and approach to fashion.</p>
@@ -42,11 +73,11 @@
   <p>Amanda is settled in NYC with her husband and boys, but still considers the Pacific Northwest ‘home’ – drawing upon its stunning natural beauty and innovative spirit as inspiration for her work.</p>
 </div>
 </div>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-people-kelly-kratus-nelson.jpg?6265663991381572" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <meta charset="utf-8" />
   <p><strong>Kelly Kratus Nelson: Director of Operations</strong></p>
   <p>Born and raised in Cleveland, OH, Kelly has called New York City home for almost a decade. In 2014 she joined the AMANDA PEARL team first as an intern while completing her degree in Strategic Design and Management from Parsons, and later as the Operations Coordinator.</p>
@@ -57,61 +88,60 @@
 </div>
 </div>
 
-
-<a name="the-product"></a>
+<hr>
+<a class="anchor" name="the-product"></a>
 <h3 style="text-align: center;"><strong>THE PRODUCT</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6 left_align">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-7 left_align">
 <p>To create jewelry that empowers the wearer, making her feel naturally beautiful and strong. Since the natural world is our home and central to our inspiration, we are constantly improving our practices to be as green as possible, including moving to use "above ground", un-mined diamonds. To further enhance the strength and empowerment of our customer, we are introducing her a new cause or organization each quarter, informing her about the issue and work, and donating a portion of proceeds.</p>
 </div>
-<div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-product.jpg?11154814195540969707" width="100%">
 </div>
 </div>
 
 
 
-
-<a name="materials"></a>
+<hr>
+<a class="anchor" name="materials"></a>
 <h3 style="text-align: center;"><strong>MATERIALS & CARE</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-materials-and-care-14k-gold.jpg?14712898969328226684" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <p>
 <meta charset="utf-8" /><strong><span style="text-decoration: underline;">14k Gold:</span><span> </span></strong><br /><span>This precious metal is a favorite at AMANDA PEARL for it’s ability to stand up to the rigors of everyday life. Whether in yellow, white, or rose, 14k is more scratch resistant than it’s 18k counterpart. While gold is tarnish resistant, it can get dirty like anything else. To care for your AMANDA PEARL fine jewelry, we recommend cleaning it with a mild detergent or ammonia solution. You can use a soft brush, but avoid using an abrasive material as it can scratch the gold. Be sure to rinse and wipe clean. </span>
 </p>
 </div>
 </div>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-materials-and-care-plated-brass.jpg?3411605846094230649" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <p>
     <meta charset="utf-8" />
-    <div><strong><span style="text-decoration: underline;">Plated Brass:</span><span> </span></strong><br />AMANDA PEARL brass jewelry is plated in either 18k yellow gold, 18k rose gold, rhodium (silver), or dark ruthenium (gunmetal). To ensure the life of brass jewelry, do not expose it to water. Please remove your jewelry while exercising, bathing, swimming, or engaging in hand to hand combat. We recommend keeping it on for political protests and executive meetings. Also to avoid: contact with perfumes, lotions, potions, or other personal products.</div>
-    <div></div>
-    <div>AMANDA PEARL recommends cleaning your plated jewelry using a damp, soft cloth. Make sure to fully dry the piece before wearing it. Do not use harsh chemicals, jewelry cleaners, or polishing cloths especially, as this will affect the finish. We suggest storing your brass jewelry somewhere soft and protected - the pouch that we provide is a good spot. Please remember that as this is not fine jewelry and needs to be treated accordingly - we highly recommend that you follow these instructions carefully to be able to enjoy your AMANDA PEARL jewelry for years to come.</div>
+    <p><strong><span style="text-decoration: underline;">Plated Brass:</span><span> </span></strong><br />AMANDA PEARL brass jewelry is plated in either 18k yellow gold, 18k rose gold, rhodium (silver), or dark ruthenium (gunmetal). To ensure the life of brass jewelry, do not expose it to water. Please remove your jewelry while exercising, bathing, swimming, or engaging in hand to hand combat. We recommend keeping it on for political protests and executive meetings. Also to avoid: contact with perfumes, lotions, potions, or other personal products.</p>
+    <p>AMANDA PEARL recommends cleaning your plated jewelry using a damp, soft cloth. Make sure to fully dry the piece before wearing it. Do not use harsh chemicals, jewelry cleaners, or polishing cloths especially, as this will affect the finish. We suggest storing your brass jewelry somewhere soft and protected - the pouch that we provide is a good spot. Please remember that as this is not fine jewelry and needs to be treated accordingly - we highly recommend that you follow these instructions carefully to be able to enjoy your AMANDA PEARL jewelry for years to come.</p>
   </p>
 </div>
 </div>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-materials-and-care-diamonds-and-precious-stones.jpg?3339963478020145265" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <p>
     <meta charset="utf-8" /><span style="text-decoration: underline;"><strong>Diamonds &amp; Precious Gemstones:</strong></span><span> </span><br /><span>AMANDA PEARL Fine Jewelry uses white and black diamonds, rubies, amethysts, emeralds, and sapphires. Though highly valued for their longevity and beauty, they can still suffer chips and fractures from a precise hit. We recommend cleaning it with a mild detergent and a soft brush. Be sure to rinse and wipe clean.</span>
   </p>
 </div>
 </div>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-the-materials-and-care-pearls-and-semi-precious-gemstones.jpg?3040496446274400939" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 right_align">
   <p>
 <meta charset="utf-8" /><span style="text-decoration: underline;"><strong>Pearls &amp; Semi-Precious Gemstones:</strong><span> </span></span><br /><span>AMANDA PEARL uses white cultured pearls, Tahitian pearls, and a variety of semi-precious stones. Extra care should be taken with these semi precious stones. Cosmetics, hair sprays, and perfume should be applied before putting on jewelry. Extra care can be taken by wiping the stone carefully with a soft cloth to remove any traces of these substances when you take off the jewelry. You can also wash your pearl with mild soap and water. Do not clean these stones with any chemicals, abrasives or solvents.</span>
   </p>
@@ -120,34 +150,98 @@
 
 
 
-
-<a name="manufacturing"></a>
+<hr>
+<a class="anchor" name="manufacturing"></a>
 <h3 style="text-align: center;"><strong>MANUFACTURING</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5 va">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-manufacturing.jpg?3714760629966338493" width="100%">
 </div>
-<div class="col-xs-12 col-sm-6 right_align">
+<div class="col-xs-12 col-sm-7 va right_align">
   <p>
     <meta charset="utf-8" />
-    <div>In a world full of a mass production, AMANDA PEARL targets the discriminating customer who still embraces the art and luxury of detailed hand-made goods--work that will survive the test of time and fleeting fashions.</div>
-    <div></div>
-    <div><span style="text-decoration: underline;">AMANDA PEARL Jewelry</span><span> </span>is designed in our NYC studio and made by artisans in the city’s Diamond District. We proudly work with local family businesses and small makers – the best in their fields to create jewelry that meets our exacting standards. We are proud to help keep our local industry alive and thriving.</div>
-    <div></div>
-    <div><span style="text-decoration: underline;">AMANDA PEARL Handbags</span><span> </span>are produced by family operated artisanal factories in Italy that produce the finest handbags for some of the world’s most well known luxury purveyors. Each handbag is meticulously assembled by hand, by artisans whose trade has been passed down from one generation to the next. Many of the details and much of the work that goes into the production are not visible to the eye in the finished product. The cylindrical frame of the Roll Clutch, for example, which was developed from scratch from Amanda's sketches, is made of gold plated brass from one factory specializing solely in metalwork for accessories. Once the plated and polished frame is sent to the finishing factory, an artisan dedicated to AMANDA PEARL covers and finishes the bag with the chosen silks, brocades and gemstones. The process is so painstaking, output averages only two Roll Clutches per day. This level of attention to detail is applied to every style in the collection.</div>
+    <p>In a world full of a mass production, AMANDA PEARL targets the discriminating customer who still embraces the art and luxury of detailed hand-made goods--work that will survive the test of time and fleeting fashions.</p>
+    <p><span style="text-decoration: underline;">AMANDA PEARL Jewelry</span><span> </span>is designed in our NYC studio and made by artisans in the city’s Diamond District. We proudly work with local family businesses and small makers – the best in their fields to create jewelry that meets our exacting standards. We are proud to help keep our local industry alive and thriving.</p>
+    <p><span style="text-decoration: underline;">AMANDA PEARL Handbags</span><span> </span>are produced by family operated artisanal factories in Italy that produce the finest handbags for some of the world’s most well known luxury purveyors. Each handbag is meticulously assembled by hand, by artisans whose trade has been passed down from one generation to the next. Many of the details and much of the work that goes into the production are not visible to the eye in the finished product. The cylindrical frame of the Roll Clutch, for example, which was developed from scratch from Amanda's sketches, is made of gold plated brass from one factory specializing solely in metalwork for accessories. Once the plated and polished frame is sent to the finishing factory, an artisan dedicated to AMANDA PEARL covers and finishes the bag with the chosen silks, brocades and gemstones. The process is so painstaking, output averages only two Roll Clutches per day. This level of attention to detail is applied to every style in the collection.</p>
   </p>
 </div>
 </div>
 
-<a name="giving"></a>
+<hr>
+<a class="anchor" name="giving"></a>
 <h3 style="text-align: center;"><strong>GIVING BACK</strong></h3>
-<div class="row">
-<div class="col-xs-12 col-sm-6 left_align">
+<div class="row fix_height_page">
+<div class="col-xs-12 col-sm-5 va left_align">
   <p>
     We like to stay involved, shed light, learn about issues, and take action. We want you to join us. 10% of SALES will go to the cause, which will change quarterly. Get ready to #MakeWAVES. We’d love to hear what causes you care about. Please contact us to let us know about your favorite organizations.
   </p>
 </div>
-<div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-7 va">
 <img src="https://cdn.shopify.com/s/files/1/0240/3953/files/about-giving-back.jpg?13774617393109966189" width="100%">
 </div>
 </div>
+
+</div>
+
+
+<script>
+
+@@ -0,0 +1,40 @@
+/*
+ * SMOOTH SCROLLING FOR ANCHOR LINKS
+*/
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '')
+      &&
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[class="anchor" name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 500, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+  </script>
+
+  <style>
+
+  /* @group ANCHOR TAGS */
+
+/* https://stackoverflow.com/questions/10732690/offsetting-an-html-anchor-to-adjust-for-fixed-header */
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+/* @end */
+
+</style>

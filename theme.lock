@@ -467,6 +467,8 @@ snippets/newsletter-form.liquid:
   development: 2018-08-07T12:43:28-04:00   9fd53cb805dc769a31a9526260221caa
 snippets/newsletter.liquid:
   development: 2018-08-07T12:43:28-04:00   0a5451759d3eefdf5c20bf26865f1380
+snippets/original-about.liquid:
+  development: 2018-12-05T15:50:20-05:00   206662c90de5bbf3d4737177d9e4e2a1
 snippets/pagination-page.liquid:
   development: 2018-08-07T12:43:28-04:00   b7bd996f63b562f0d15bf91039469e29
 snippets/pagination.liquid:

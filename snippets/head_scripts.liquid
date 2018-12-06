@@ -8,7 +8,7 @@
   window.money_format = "{{shop.money_with_currency_format}}";
   window.shop_currency = "{{ shop.currency }}";
   window.show_multiple_currencies = {{settings.enable_multiple_currencies}};
-  window.loading_url = "{{ 'loading.gif' | asset_url}}"; 
+  window.loading_url = "{{ 'loading.gif' | asset_url}}";
   window.use_color_swatch = {{ settings.use_color_swatch }};
   window.product_image_resize = {{settings.product_image_resize}};
   window.enable_sidebar_multiple_choice = {{ settings.enable_sidebar_multiple_choice}};
@@ -28,7 +28,7 @@
     sold_out: "{{ 'products.product.sold_out' | t }}",
     unavailable: "{{ 'products.product.unavailable' | t }}"
   };
-          
+
   window.multi_lang = {{settings.enable_multilang}};
 </script>
 
@@ -36,5 +36,4 @@
     {% include 'translator' %}
 {% endif %}
 
-{{ 'jquery.min.js' | asset_url | script_tag }}
 {{ 'jquery.reveal.js' | asset_url | script_tag }}

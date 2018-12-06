@@ -67,11 +67,11 @@
         {{if compare_at_price_min > price_min}}
           <p class="sale">
             <span class="old-price"> {{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}</span>
-            <span class="special-price">{{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+            <span class="special-price">{{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money)}}</span>
             </p>
         {{else}}
           <p class="regular-product">
-            <span >{{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money_format)}}</span>
+            <span >{{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money)}}</span>
           </p>
         {{/if}}
         </div>

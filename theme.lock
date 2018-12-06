@@ -150,7 +150,7 @@ assets/dropdown_3_menu_image_3.jpg:
 assets/dropdown_5_menu_image_3.jpg:
   development: 2018-08-07T12:43:14-04:00   2ca6fecab8fa002449aef7b584d87b1d
 assets/ella.js:
-  development: 2018-11-12T22:19:14-05:00   a9fd809c3a4c737dc4689f5cef8a14cf
+  development: 2018-12-06T10:54:02-05:00   c6c8c5b63a6219f30c83385ce3a877b3
 assets/emerald.jpg:
   development: 2018-11-28T15:40:42-05:00   55aa5d01b797af87a544c6682d83df33
 assets/fancybox_loading.gif:
@@ -384,7 +384,7 @@ snippets/bold-product.liquid:
 snippets/bold-variant.liquid:
   development: 2018-11-19T11:44:27-05:00   992b7f33d59e504fd6b9e67f5dc5d203
 snippets/brands.liquid:
-  development: 2018-11-26T13:18:38-05:00   8bc25c56f4141cc172111ee357560806
+  development: 2018-12-06T10:41:00-05:00   64d21a30f5239bdab7209d654144316a
 snippets/breadcrumb.liquid:
   development: 2018-08-07T12:43:26-04:00   235323195a63d6d8928f7cfd2c08f042
 snippets/cart-points.liquid:
@@ -426,7 +426,7 @@ snippets/form-errors-custom.liquid:
 snippets/head_fonts.liquid:
   development: 2018-08-07T12:43:27-04:00   df58cb54d954154f6867549732259fcd
 snippets/head_scripts.liquid:
-  development: 2018-08-07T12:43:27-04:00   b43c18856700138529c6e7c1453759b1
+  development: 2018-12-06T10:49:27-05:00   e8aef12bb8546922c64ec65f98d54414
 snippets/head_styles.liquid:
   development: 2018-08-07T12:43:27-04:00   e23d4c2da964942ea3f4dffaaa8b9587
 snippets/header-mobile.liquid:
@@ -488,11 +488,11 @@ snippets/product-sidebar.liquid:
 snippets/quick-view-template.liquid:
   development: 2018-08-20T17:51:09-04:00   701b365bd57a60432e0b5fc4f0e47f59
 snippets/recently-viewed-products.liquid:
-  development: 2018-11-12T22:15:16-05:00   0fa3c53ed0abcc2644cd69d17d68219f
+  development: 2018-12-06T10:44:45-05:00   5ab179f7bc5275b514abefcfd8975af6
 snippets/related-products-by-tags.liquid:
-  development: 2018-09-18T14:08:54-04:00   acbe58fa757233bf151984f0158fc090
+  development: 2018-12-06T10:43:54-05:00   6a3756f3066dcfac21a7491b45d11116
 snippets/related-products.liquid:
-  development: 2018-11-12T22:14:59-05:00   225b2f95fcc95fe3bd02b6a1e4e301a3
+  development: 2018-12-06T10:43:58-05:00   0430ab100d442dac3bfa122d287cb4b2
 snippets/search-bar-modal.liquid:
   development: 2018-08-28T14:39:34-04:00   aaf90aec48e76d7bb4e3dc6af962a5e0
 snippets/search-bar.liquid:
@@ -568,7 +568,7 @@ templates/collection.all.liquid:
 templates/collection.bundles.liquid:
   development: 2018-12-02T17:39:57-05:00   babab3be93dac176c2f8f8d832e0b646
 templates/collection.liquid:
-  development: 2018-11-06T17:19:17-05:00   bf6c2777af80de96056385d3a12c5ba0
+  development: 2018-12-06T10:52:32-05:00   bf6c2777af80de96056385d3a12c5ba0
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:
@@ -600,7 +600,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2018-12-05T17:16:36-05:00   9417f1d93242d1e3b6dc218c3252b495
+  development: 2018-12-06T10:42:20-05:00   8b26ce4aa85d579b18a05b0bc9b111a0
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:

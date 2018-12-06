@@ -558,7 +558,7 @@ templates/article.liquid:
 templates/blog.liquid:
   development: 2018-11-29T19:02:17-05:00   3f32a5508742d3508e87cd9b326d8159
 templates/cart.liquid:
-  development: 2018-12-05T15:52:59-05:00   24d8f568e83e37b79a84ad9a408e3209
+  development: 2018-12-06T12:06:54-05:00   c98a755f3f367ab05c65f1028b7dfc7d
 templates/collection.16.liquid:
   development: 2018-09-18T14:08:56-04:00   a3bee72ffc81fbae839c6241f9be72c5
 templates/collection.32.liquid:

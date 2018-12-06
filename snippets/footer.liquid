@@ -39,13 +39,14 @@
 
     <div class="footer-top">
       <div class="row">
+        <div class="col-xs-12 col-sm-8">
         {% if settings.footer_column_1_title != blank %}
-        <div class="col-1 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
+        <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
           {% if settings.enable_multilang %}
             <h3 class="lang1">{{ settings.footer_column_1_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_1_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_1_title | split: '|' | first }}</h3>
+          	<h3>{{ settings.footer_column_1_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
           {% endif %}
 
           <ul>
@@ -63,12 +64,12 @@
         {% endif %}
 
         {% if settings.footer_column_2_title != blank %}
-        <div class="col-2 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
+        <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
           {% if settings.enable_multilang %}
             <h3 class="lang1">{{ settings.footer_column_2_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_2_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_2_title | split: '|' | first }}</h3>
+          	<h3>{{ settings.footer_column_2_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
           {% endif %}
           <ul>
             {% assign footerCol2 = settings.footer_column_2_title | handleize %}
@@ -84,12 +85,12 @@
         </div>
         {% endif %}
         {% if settings.footer_column_3_title != blank %}
-        <div class="col-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+        <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
           {% if settings.enable_multilang %}
             <h3 class="lang1">{{ settings.footer_column_3_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_3_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_3_title | split: '|' | first }}</h3>
+          	<h3>{{ settings.footer_column_3_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
           {% endif %}
           <ul>
             {% assign footerCol3 = settings.footer_column_3_title | handleize %}
@@ -104,7 +105,19 @@
           </ul>
         </div>
         {% endif %}
-        <div class="col-4 wow fadeInUp last" data-wow-delay="{{ settings.time_lazy_load | times: 4 }}ms">
+        <div class="col-xs-12 col-sm-3 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
+
+          	<h3>Legal</h3>
+          <ul>
+            {% for link in linklists.footer.links %}
+              	<li>{{ link.title | split: '|' | first | link_to: link.url }}</li>
+              {% endfor %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-4">
+
+        <div class="col-xs-12 wow fadeInUp last" data-wow-delay="{{ settings.time_lazy_load | times: 4 }}ms">
           {% if settings.enable_multilang %}
             <h3 class="lang1">{{ settings.footer_column_4_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_4_title | split: '|' | last }}</h3>
@@ -124,6 +137,7 @@
       </div>
           {% include 'homepage-block-newsletter' %}
         </div>
+      </div>
       </div>
     </div>
     <div class="footer-bottom  wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 5 }}ms">

@@ -600,7 +600,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2018-12-06T10:42:20-05:00   8b26ce4aa85d579b18a05b0bc9b111a0
+  development: 2018-12-06T12:04:24-05:00   bdc70ed82723af841927cc9a22fb0b12
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:

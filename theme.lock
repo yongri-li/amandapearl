@@ -600,7 +600,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2018-12-05T17:01:47-05:00   b273340ef1cfac0b01dbe6b19686ccfb
+  development: 2018-12-05T17:16:36-05:00   9417f1d93242d1e3b6dc218c3252b495
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:
@@ -614,6 +614,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-05T15:53:16-05:00   f953be796e37651b3abdb54c018aa40c
+  development: 2018-12-06T10:27:56-05:00   e1d53e88c937c540f57c2a861fecb27c
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

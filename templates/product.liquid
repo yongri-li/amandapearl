@@ -298,10 +298,7 @@
               {% endif %}
               <b>More Questions?</b> <a href="/pages/contact">Chat with us</a>
           </div>
-{%- unless bundle_loaded == 'true' -%}
-{%- include 'shappify-bdl-load-bundle' -%}
-{%- assign bundle_loaded = 'true' -%}
-{%- endunless -%}
+
           {% if settings.display_product_detail_tag %}
           <div class="tags">
             <i class="icon-tags" {% if settings.enable_multilang %}data-translate="blogs.article.tags"{%endif%}>{{ 'blogs.article.tags' | t }}</i>
@@ -464,7 +461,26 @@
         </div>
       </div>
     </div>
+{%- unless bundle_loaded == 'true' -%}
+{%- include 'shappify-bdl-load-bundle' -%}
+{%- assign bundle_loaded = 'true' -%}
+{%- endunless -%}
+    
+    <style>
+      @media screen and (min-width: 650px){
+        span.bold-bundles-widget-item-separator {    
+            top: -80px !important;
+        }
+        img.bold-bundles-widget-item__image {
+            width: 200px;
+            height: 200px;
+        }
 
+        .bold-bundles-widget-item__thumbnail {
+            text-align: center;
+        }
+      }
+    </style>
     {% if settings.show_tab == 'horizontal' %}
     <div class="panel-group">
       <ul class="nav nav-tabs" id="myTab">

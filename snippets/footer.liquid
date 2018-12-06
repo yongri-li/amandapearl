@@ -46,7 +46,7 @@
             <h3 class="lang1">{{ settings.footer_column_1_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_1_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_1_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
+          	<h3>{{ settings.footer_column_1_title | split: '|' | first | remove: "LINKLIST -" }}</h3>
           {% endif %}
 
           <ul>
@@ -69,7 +69,7 @@
             <h3 class="lang1">{{ settings.footer_column_2_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_2_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_2_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
+          	<h3>{{ settings.footer_column_2_title | split: '|' | first | remove: "LINKLIST -" }}</h3>
           {% endif %}
           <ul>
             {% assign footerCol2 = settings.footer_column_2_title | handleize %}
@@ -90,7 +90,7 @@
             <h3 class="lang1">{{ settings.footer_column_3_title | split: '|' | first }}</h3>
             <h3 class="lang2">{{ settings.footer_column_3_title | split: '|' | last }}</h3>
           {% else %}
-          	<h3>{{ settings.footer_column_3_title | split: '|' | first | remove: "- LINKLIST" }}</h3>
+          	<h3>{{ settings.footer_column_3_title | split: '|' | first | remove: "LINKLIST -" }}</h3>
           {% endif %}
           <ul>
             {% assign footerCol3 = settings.footer_column_3_title | handleize %}

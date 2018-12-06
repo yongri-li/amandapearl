@@ -418,7 +418,7 @@ snippets/fb-open-graph-tags.liquid:
 snippets/footer-points.liquid:
   development: 2018-12-04T10:17:48-05:00   edea7d39144a062d928f18a1caa84345
 snippets/footer.liquid:
-  development: 2018-12-06T11:38:04-05:00   67cdc10b71ab3cf46d5e15574128d26d
+  development: 2018-12-06T12:02:25-05:00   187ce65dea014ba515f50085b155bd6d
 snippets/footer_scripts.liquid:
   development: 2018-08-07T12:43:27-04:00   d883c149091371afccc55c3117e255a7
 snippets/form-errors-custom.liquid:

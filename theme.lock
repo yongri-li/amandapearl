@@ -356,7 +356,7 @@ config/settings_schema.json:
 layout/SWYM_BACKUP_theme.liquid:
   development: 2018-12-06T15:16:44-05:00   f41c7009b003d1b06a7612215c70f5ae
 layout/theme.liquid:
-  development: 2018-12-06T15:16:45-05:00   3ae21e3cf58d50361af8ed85b04c3029
+  development: 2018-12-06T20:12:29-05:00   13a5df15b80340ad4683ecd2db16931d
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:

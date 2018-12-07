@@ -79,7 +79,7 @@
     <div class="quick-view"></div>
 
     <div class="canvas-container">
-    
+
     <main class="main-content {% if template contains 'index' or template contains 'contact' or template contains 'cart' %}{% else %}container{% endif %}" role="main">
       {{ content_for_layout }}
     </main>
@@ -121,6 +121,44 @@
 
 
 {% include 'swymSnippet' %}
+
+<!-- http://static.secure-afterpay.com.au/shopify-afterpay-javascript.html -->
+
+<!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
+<script type="text/javascript">
+// Editable fields:
+var afterpay_min = 0.04;            // As per your Afterpay contract.
+var afterpay_max = 1000.00;         // As per your Afterpay contract.
+var afterpay_logo_theme = 'colour'; // Can be 'colour', 'black' or 'white'.
+
+// Overrides (jQuery CSS Selectors)
+// var afterpay_product_selector = '#CoolPrice';
+// var afterpay_cart_integration_enabled = true;
+var afterpay_cart_static_selector = '#basket-right h4';
+// var afterpay_variable_price_fallback_selector = '#ProductPrice';
+// var afterpay_variable_price_fallback = true; // Requires afterpay_product_selector
+
+// Non-editable fields:
+var afterpay_shop_currency = {{ shop.currency | json }};
+var afterpay_shop_money_format = {{ shop.money_format | json }};
+var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+var afterpay_theme_name = {{ theme.name | json }};
+var afterpay_product = {{ product | json }};
+var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+var afterpay_cart_total_price = {{ cart.total_price | json }};
+var afterpay_js_snippet_version = '1.0.1';
+</script>
+<script type="text/javascript" src="https://static.secure-afterpay.com.au/shopify-afterpay-javascript.js"></script>
+<!-- End Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
+
+<style>
+
+  p.afterpay-paragraph > img {
+    width: 100px !important;
+    height: 21px !important;
+}
+
+</style>
 
 </body>
 </html>

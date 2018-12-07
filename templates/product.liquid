@@ -89,7 +89,7 @@
                 </center>
                 </div>
 
-                <hr>
+
 
             {% if settings.display_sample_vendor %}
             <p class="sample-vendor"><span>{{ product.vendor }}</span></p>
@@ -163,7 +163,7 @@
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
             <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form">
-
+             <hr>
               <div id="product-variants">
                 {% assign variantCount = bold_variants_size %}
                 {% if product.available %}
@@ -465,10 +465,10 @@
 {%- include 'shappify-bdl-load-bundle' -%}
 {%- assign bundle_loaded = 'true' -%}
 {%- endunless -%}
-    
+
     <style>
       @media screen and (min-width: 650px){
-        span.bold-bundles-widget-item-separator {    
+        span.bold-bundles-widget-item-separator {
             top: -80px !important;
         }
         img.bold-bundles-widget-item__image {

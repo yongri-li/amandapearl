@@ -412,7 +412,7 @@ snippets/collection-tags.liquid:
 snippets/comment.liquid:
   development: 2018-08-07T12:43:27-04:00   1396f3f7dacab95e2a03196d28f5d592
 snippets/customer_links.liquid:
-  development: 2018-08-07T12:43:27-04:00   ab31c8f86f32bb2116f651ed130bc2e5
+  development: 2018-12-07T13:26:26-05:00   a6597b7d000b27e4802906b5a952b27e
 snippets/dev.liquid:
   development: 2018-08-23T16:01:17-04:00   98e07471e03863abd834cf3f9f8bc68d
 snippets/fb-open-graph-tags.liquid:
@@ -434,7 +434,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-11-26T13:22:19-05:00   f6e543face88305bcaf4604d8e8b8466
+  development: 2018-12-07T13:28:50-05:00   bcefb41741f5fe403f057a4809d22118
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:
@@ -586,7 +586,7 @@ templates/collection.list32.liquid:
 templates/collection.listall.liquid:
   development: 2018-09-18T14:08:58-04:00   98d1fa7de17a8b7a7bc9bc9329375f7f
 templates/customers/account.liquid:
-  development: 2018-08-07T12:43:31-04:00   74fcbfe001f9be022a366e86a98e88a9
+  development: 2018-12-07T13:25:44-05:00   6a16c4a49c86e2169f4ba8f026b8a65c
 templates/customers/activate_account.liquid:
   development: 2018-08-07T12:43:31-04:00   5ac41490c6ce943e93e7e5ca16f837b7
 templates/customers/addresses.liquid:

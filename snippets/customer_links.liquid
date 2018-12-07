@@ -3,7 +3,7 @@
 <ul class="customer-links hidden-xs">
   <li class="hidden-xs wishlist" ><a href="#" data-reveal-id="myModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
   {% if settings.enable_wishlist %}
-  <li class="wishlist"><a href="/pages/wish-list" {% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}><span class="icon">&nbsp;</span></a></li>
+  <li class="wishlist"><a href="#swym-wishlist" {% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}><span class="icon">&nbsp;</span></a></li>
   {% endif %}
   <li>
     <a href="/account" {% if settings.enable_multilang %}data-translate="customer.account.title"{% endif %}><i class="fa fa-user-circle-o" aria-hidden="true"></i></a>
@@ -15,7 +15,7 @@
   {% if settings.enable_wishlist %}
   <li class="wishlist">
 
-    <a href="/pages/wish-list" {% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}><span class="icon">&nbsp;</span></a>
+    <a href="#swym-wishlist" {% if settings.enable_multilang %}data-translate="wishlist.general.my_wishlist"{% endif %}><span class="icon">&nbsp;</span></a>
   </li>
   {% endif %}
   <li>

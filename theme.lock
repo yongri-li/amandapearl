@@ -519,6 +519,12 @@ snippets/site-nav.liquid:
   development: 2018-11-29T17:04:29-05:00   ba3d35285c10fbf46b4cf554ef955984
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
+snippets/spurit_po-cart-snippet.liquid:
+  development: 2018-12-07T14:58:54-05:00   3111f70b84668794264167174e08f172
+snippets/spurit_po-collection-snippet.liquid:
+  development: 2018-12-07T14:59:09-05:00   a2b6168dc87fffaa142cdf37b758459e
+snippets/spurit_po-product-snippet.liquid:
+  development: 2018-12-07T14:59:31-05:00   13fb0f9dd145fc5261e20854e9c4648b
 snippets/swatch.liquid:
   development: 2018-11-29T12:05:33-05:00   e56c28d6a9695787c56736dfbae4b8cd
 snippets/swatch_scripts.liquid:
@@ -564,7 +570,7 @@ templates/article.liquid:
 templates/blog.liquid:
   development: 2018-11-29T19:02:17-05:00   3f32a5508742d3508e87cd9b326d8159
 templates/cart.liquid:
-  development: 2018-12-06T12:06:54-05:00   c98a755f3f367ab05c65f1028b7dfc7d
+  development: 2018-12-07T15:01:02-05:00   05d95c715de7e0b39fdc6b8263517cb9
 templates/collection.16.liquid:
   development: 2018-09-18T14:08:56-04:00   a3bee72ffc81fbae839c6241f9be72c5
 templates/collection.32.liquid:
@@ -574,7 +580,7 @@ templates/collection.all.liquid:
 templates/collection.bundles.liquid:
   development: 2018-12-02T17:39:57-05:00   babab3be93dac176c2f8f8d832e0b646
 templates/collection.liquid:
-  development: 2018-12-06T10:52:32-05:00   bf6c2777af80de96056385d3a12c5ba0
+  development: 2018-12-07T15:00:46-05:00   715fca11c5daf31a5b785f067b1b3895
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:
@@ -620,6 +626,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-06T20:14:04-05:00   a874bef4e2e52c274810e988c81deb17
+  development: 2018-12-07T15:00:32-05:00   ad9b20eb5b3abeeb1d21e5d31bf7b1a3
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

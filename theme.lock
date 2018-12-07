@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-11-21T14:24:03-05:00   e029cc116bcd086b036368d1b4bb82ee
+  development: 2018-12-06T16:47:37-05:00   6cc63a47f7177743fdffcd46834cc025
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -162,7 +162,7 @@ assets/fancybox_sprite.png:
 assets/favicon.ico:
   development: 2018-08-07T12:43:16-04:00   61f75be125cbb27b3d5e92882a506fb1
 assets/favicon.png:
-  development: 2018-08-07T12:44:09-04:00   1e191482add584775cd5e492b89e46dd
+  development: 2018-12-06T16:20:08-05:00   866754b5ac5492d5d17b42198b3f8262
 assets/ft_logo.jpg:
   development: 2018-09-20T13:45:16-04:00   92425af2f47e3170c2fec975229b514d
 assets/ft_logo.png:
@@ -353,8 +353,10 @@ config/settings_data.json:
   development: 2018-12-06T11:34:43-05:00   4cc4bcf7f8c4575762f8ffa22027f6f9
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
+layout/SWYM_BACKUP_theme.liquid:
+  development: 2018-12-06T15:16:44-05:00   f41c7009b003d1b06a7612215c70f5ae
 layout/theme.liquid:
-  development: 2018-11-19T13:44:31-05:00   f41c7009b003d1b06a7612215c70f5ae
+  development: 2018-12-06T15:16:45-05:00   3ae21e3cf58d50361af8ed85b04c3029
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
@@ -376,7 +378,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-11-29T17:03:24-05:00   65ccf3d0cba660c3b715f3400741d632
+  development: 2018-12-06T16:49:39-05:00   c378384c69b444986b57170e480ce28e
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -525,6 +527,10 @@ snippets/sweettooth-tab-widget.liquid:
   development: 2018-08-07T12:43:30-04:00   45c64f5bd8c87838fb1091a78a2c44e0
 snippets/sweettooth-widgets.liquid:
   development: 2018-08-07T12:43:30-04:00   895c223d2368414d57a3ce9b05bcaea5
+snippets/swym-product-view.liquid:
+  development: 2018-12-06T15:16:44-05:00   663b26ad7e7cb8e45e83ebce3ad4d762
+snippets/swymSnippet.liquid:
+  development: 2018-12-06T15:16:44-05:00   e251b25a1b227e1f38d3ace198b21ffc
 snippets/tags-article.liquid:
   development: 2018-08-07T12:43:30-04:00   37d5bbd00533ac168de20610a919d970
 snippets/toolbar-list.liquid:
@@ -614,6 +620,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-06T10:27:56-05:00   e1d53e88c937c540f57c2a861fecb27c
+  development: 2018-12-06T14:53:14-05:00   02aabf714cb543b6532b8e0068824ae6
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

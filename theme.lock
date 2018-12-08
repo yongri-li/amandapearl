@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-12-06T16:47:37-05:00   6cc63a47f7177743fdffcd46834cc025
+  development: 2018-12-07T16:12:47-05:00   76898b94b3336103b1cbccab43e03a76
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -626,6 +626,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-07T15:52:22-05:00   ad9b20eb5b3abeeb1d21e5d31bf7b1a3
+  development: 2018-12-07T16:27:02-05:00   33de5d470c97cd9f2b8f5b5cec82d753
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

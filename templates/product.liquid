@@ -22,14 +22,14 @@
           </div>
           {% else %}
           <div class="product-photo-container">
-            {% assign featured_image = bold_selected_or_first_available_variant.featured_image | default: product.featured_image %}
+            {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
             <a href="{{ featured_image | img_url: 'original' }}" >
-              <img id="product-featured-image" src="{{ featured_image | img_url: 'original' }}" alt="{{ featured_image.alt | escape }}" data-zoom-image="{{ featured_image.src | img_url: 'original' }}"/>
+              <img id="product-featured-image" src="{{ featured_image | img_url: 'grande' }}" alt="{{ featured_image.alt | escape }}" data-zoom-image="{{ featured_image.src | img_url: 'original' }}"/>
             </a>
           </div>
           {% if product.images.size > 1 %}
           <div class="more-view-wrapper {% if settings.style_moreview == 'vertical' %}more-view-wrapper-jcarousel{% else %} more-view-wrapper-owlslider {% endif %}">
-            <ul id="more-view-carousel" class="product-photo-thumbs {% if settings.style_moreview == 'vertical' %} jcarousel-skin-tango{% else %} owl-carousel{% endif %}">
+            <ul id="more-view-carousel" class="product-photo-thumbs{% if settings.style_moreview == 'vertical' %} jcarousel-skin-tango{% else %} owl-carousel{% endif %}">
               {% for image in product.images %}
               <li class="grid-item">
                 <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'grande' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
@@ -42,21 +42,15 @@
           {% endif %}
           {% endif %}
 
-          <style>
-          .picture img{
-    cursor: -moz-zoom-in;
-    cursor: -webkit-zoom-in;
-    cursor: zoom-in;
-}
-</style>
-<center>
-  <div class="hidden-xs">
-<img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
-<p>For every purchase made, AMANDA PEARL donates 10% to the featured cause.<p>
-  <p><a href="/blogs/amanda-pearl/community-for-cause">Click here</a> to learn more about what we're supporting right now.</p>
-</div>
-</center>
+          <center>
+            <div class="hidden-xs">
+          <img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
+          <p>For every purchase made, AMANDA PEARL donates 10% to the featured cause.<p>
+            <p><a href="/blogs/amanda-pearl/community-for-cause">Click here</a> to learn more about what we're supporting right now.</p>
+          </div>
+          </center>
         </div>
+
 
 
 
@@ -668,10 +662,7 @@
       var totalPrice = unitPrice * quantity;
 
       var totalPriceText = Shopify.formatMoney(totalPrice, window.money_format);
-      regex = /([0-9]+[.|,][0-9]+[.|,][0-9]+)/g;
-      if (!totalPriceText.match(regex)) {
-        regex = /([0-9]+[.|,][0-9]+)/g;
-      }
+
       totalPriceText = totalPriceText.match(regex)[0];
 
       var regInput = new RegExp(unitPriceText, "g");
@@ -680,7 +671,6 @@
       jQuery('.product .total-price span').html(totalPriceHtml);
     }
   }
-
   jQuery('#quantity').on('change', updatePricing);
   {% endif %}
 
@@ -693,11 +683,11 @@ var selectCallback = function(variant, selector) {
   if (variant) {
     if (variant.available) {
       // We have a valid product variant, so enable the submit button
-      addToCart.removeClass('disabled').removeAttr('disabled').val(window.inventory_text.add_to_cart);
+      addToCart.removeClass('disabled').removeAttr('disabled').val('Add to Cart');
 
     } else {
       // Variant is sold out, disable the submit button
-      addToCart.val(window.inventory_text.sold_out).addClass('disabled').attr('disabled', 'disabled');
+      addToCart.val('Sold Out').addClass('disabled').attr('disabled', 'disabled');
     }
 
     // Regardless of stock, update the product price
@@ -725,9 +715,9 @@ var selectCallback = function(variant, selector) {
      // END SWATCHES
      {% endif %}
 
-    {% if settings.display_subtotal and product.available %}
+  	{% if settings.display_subtotal and product.available %}
      updatePricing();
-     {% endif %}
+  	 {% endif %}
 
     {% if settings.enable_multiple_currencies %}
     Currency.convertAll('{{ shop.currency }}', jQuery('#currencies').val(), 'span.money', 'money_format');
@@ -735,54 +725,54 @@ var selectCallback = function(variant, selector) {
 
   } else {
     // The variant doesn't exist. Just a safeguard for errors, but disable the submit button anyway
-    addToCart.val(window.inventory_text.unavailable).addClass('disabled').attr('disabled', 'disabled');
+    addToCart.val('Unavailable').addClass('disabled').attr('disabled', 'disabled');
   }
 
   //update variant inventory
   {% if settings.display_availability %}
   if (variant.available) {
     if (variant.inventory_management!=null) {
-      jQuery(".product-inventory span").text(variant.inventory_quantity + " " + window.inventory_text.in_stock);
+      jQuery(".product-inventory span").text(variant.inventory_quantity + " in stock");
     } else {
-      jQuery(".product-inventory span").text(window.inventory_text.many_in_stock);
+      jQuery(".product-inventory span").text("Many in stock");
     }
   } else {
-    jQuery(".product-inventory span").text(window.inventory_text.out_of_stock);
+    jQuery(".product-inventory span").text("Out of stock");
   }
   {% endif %}
 
-  /*begin variant image*/
-  if (variant && variant.featured_image) {
-      var originalImage = jQuery("#product-featured-image");
-      var newImage = variant.featured_image;
-      var element = originalImage[0];
-      Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
-        jQuery('#more-view-carousel img').each(function() {
-          var grandSize = jQuery(this).attr('src');
-          grandSize = grandSize.replace('compact','grande');
-          if (grandSize == newImageSizedSrc) {
-            jQuery(this).parent().trigger('click');
-            return false;
-          }
+    /*begin variant image*/
+    if (variant && variant.featured_image) {
+        var originalImage = jQuery("#product-featured-image");
+        var newImage = variant.featured_image;
+        var element = originalImage[0];
+        Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+          jQuery('#more-view-carousel img').each(function() {
+            var grandSize = jQuery(this).attr('src');
+            grandSize = grandSize.replace('compact','grande');
+            if (grandSize == newImageSizedSrc) {
+              jQuery(this).parent().trigger('click');
+              return false;
+            }
+          });
         });
-      });
-  }
-  /*end of variant image*/
+    }
+    /*end of variant image*/
 };
 
 jQuery(function($) {
-  {% if product.available and bold_variants_size > 1 %}
+  {% if product.available and product.variants.size > 1 %}
     new Shopify.OptionSelectors('product-selectors', {
-      product: {%- include 'bold-product', output: 'json' -%},
+      product: {{ product | json }},
       onVariantSelected: selectCallback,
-    enableHistoryState: true
+	  enableHistoryState: true
     });
 
      {% comment %}
      Use color swatch and linked options (copyright by @carolineschnapp)
      {% endcomment %}
      {% if settings.use_color_swatch and product.available and product.options.size > 1 %}
-     Shopify.linkOptionSelectors({%- include 'bold-product', output: 'json' -%});
+     Shopify.linkOptionSelectors({{ product | json }});
      {% endif %}
 
      {% if settings.use_color_swatch != true %}
@@ -798,14 +788,13 @@ jQuery(function($) {
   {% endif %}
 
   // Hide selectors if we only have 1 variant and its title contains 'Default'.
-  {% if bold_variants_size == 1 and bold_selected_or_first_available_variant.title contains 'Default' %}
+  {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
     $('.selector-wrapper').hide();
   {% endif %}
 
   // Auto-select first available variant on page load. Otherwise the product looks sold out.
   {% assign found_one_in_stock = false %}
   {% for variant in product.variants %}
-{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
     {% if variant.available and found_one_in_stock == false %}
       {% assign found_one_in_stock = true %}
       {% for option in product.options %}
@@ -817,7 +806,7 @@ jQuery(function($) {
   {% if settings.display_product_reviews %}
     var reviewsTimeout = setInterval(function() {
       if (jQuery(".spr-badge-caption").length>0) {
-    jQuery(".spr-badge-caption").on('click', function() {
+		jQuery(".spr-badge-caption").on('click', function() {
           jQuery('html,body').animate({
             scrollTop: jQuery(".panel:last").offset().top},
               '400');
@@ -830,4 +819,13 @@ jQuery(function($) {
   {% endif %}
 
 });
+
+
+</script>
+<script>
+  jQuery(document).ready(function(){
+  if (jQuery(".product-infor .product-inventory > span").html() == 'Many in stock'){
+    jQuery(".product-infor").addClass("ManyStock");
+  }
+  });
 </script>

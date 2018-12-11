@@ -13,15 +13,11 @@
 {% endcomment %}
 
 <a class="icon-search hidden-xs" href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="general.search.submit"{% endif %}>{{ 'general.search.submit' | t }}</a>
-<form action="/search" method="get" class="input-group search-bar" role="search">
+<form action="/search" method="get" class="visible-xs input-group search-bar" role="search" style="margin-top: 60px; margin-bottom: -30px; padding: 0 15px 0;">
   {% comment %}
     Uncomment the following hidden input to only show products in your search results
   {% endcomment %}
-  {% comment %}<input type="hidden" name="type" value="product">{% endcomment %}
-  
-  <input type="text" name="q" value="{{ search.terms | escape }}" {% if settings.enable_multilang %}data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} placeholder="{{ 'general.search.placeholder' | t }}" class="input-group-field" aria-label="Search Site" autocomplete="off">
-  
-  <span class="input-group-btn">
-    <input type="submit" class="btn" style="font-size: 10px;" {% if settings.enable_multilang %}data-translate="general.search.submit"{% endif %} value="{{ 'general.search.submit' | t }}">
-  </span>
+  <input type="hidden" name="type" value="product">
+  <input style="width:100%!important" type="text" name="q" value="{{ search.terms | escape }}" {% if settings.enable_multilang %}data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} placeholder="{{ 'general.search.placeholder' | t }}" class="input-group-field" aria-label="Search Site" autocomplete="off">
+
 </form>

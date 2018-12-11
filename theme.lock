@@ -496,7 +496,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-08-07T12:43:27-04:00   363762ec59385c208a525fa7b2f0183a
 snippets/header.liquid:
-  development: 2018-12-07T13:28:50-05:00   bcefb41741f5fe403f057a4809d22118
+  development: 2018-12-11T11:55:38-05:00   d1ed028ef998f391bbb6928192237ad4
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:
@@ -562,7 +562,7 @@ snippets/search-bar-modal.liquid:
 snippets/search-bar.liquid:
   development: 2018-08-07T12:43:29-04:00   98ebad34c8e08b8b9d6c1b70a6983344
 snippets/search-mobile.liquid:
-  development: 2018-08-07T12:43:29-04:00   a53dca63f7652ad041fccbd4b1691b8f
+  development: 2018-12-11T11:55:23-05:00   d75ccc6897b450919939cc10af9d3e47
 snippets/search-result-grid.liquid:
   development: 2018-11-19T11:44:25-05:00   1f389fd22503fbb60039406cfb59c688
 snippets/search-result.liquid:

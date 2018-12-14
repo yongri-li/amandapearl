@@ -73,7 +73,7 @@
           {% endif %}
           <ul>
             {% assign footerCol2 = settings.footer_column_2_title | handleize %}
-            {% for link in linklists.[footerCol2].links %}
+            {% for link in linklists.about.links %}
               {% if settings.enable_multilang %}
                 <li class="lang1">{{ link.title | split: '|' | first | link_to: link.url }}</li>
                 <li class="lang2">{{ link.title | split: '|' | last | link_to: link.url }}</li>

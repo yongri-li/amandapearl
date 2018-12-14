@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-12-07T16:12:47-05:00   76898b94b3336103b1cbccab43e03a76
+  development: 2018-12-13T16:54:51-05:00   e9a78f0450d88c711880c3e6242b4e72
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -440,7 +440,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-12-06T16:49:39-05:00   c378384c69b444986b57170e480ce28e
+  development: 2018-12-13T18:17:43-05:00   17a1b9163dde98b26a55244c303e1c2a
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:

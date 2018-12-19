@@ -187,6 +187,11 @@
     </a>
   </li>
 
+  <li><form action="/search" method="get" class="input-group search-bar visible-xs" role="search">
+    <input type="hidden" name="type" value="product">
+    <input style="width:100%; text-align: left; background: transparent; color: #000; font-size: 14px; line-height: 2; border: 0px solid #000; padding: 20px; text-transform: uppercase; border-bottom: 1px solid #eee;" type="text" name="q" value="{{ search.terms | escape }}" {% if settings.enable_multilang %}data-translate="general.search.placeholder" translate-item="placeholder"{% endif %} placeholder="SEARCH" class="input-group-field" aria-label="Search Site" autocomplete="off">
+  </form></li>
+
 
 </ul>
 

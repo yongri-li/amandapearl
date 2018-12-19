@@ -7,12 +7,10 @@
 {% endif %}
 
 {% paginate collection.products by 1000 %} 
-<div class="bold-bundle" data-product-id=""&gt ></div>
 {% for product in collection.products %}
- <div class="bold-bundle" data-product-id="{{ product.id }}"&gt ></div>
+<div class="bold-bundle" data-product-id="{{ product.id }}"&gt ></div>
 {% endfor %}
 {% endpaginate %}
-
 
 <style>
  .bold-bundle{

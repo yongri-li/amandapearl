@@ -690,6 +690,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-11T11:07:44-05:00   97eca7309d73c07cc004b0658fc823ae
+  development: 2018-12-19T10:41:48-05:00   3f7fe119dbc12b9d050f1a9c58277530
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

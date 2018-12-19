@@ -388,7 +388,7 @@ assets/tahitian-pearl.jpg:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-12-19T10:44:37-05:00   89e3ff16ccc525faed791b5edafa2af8
+  development: 2018-12-19T11:01:49-05:00   12c89d9252722b43e119d5d84acb68c2
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
@@ -676,7 +676,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2018-12-07T21:43:47-05:00   da1069f395c1954cbde7e1384b53e590
+  development: 2018-12-19T11:01:32-05:00   2f67e6ed7052218974f27d39ad15b470
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:
@@ -690,6 +690,6 @@ templates/page.lookbook.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2018-12-19T10:41:48-05:00   3f7fe119dbc12b9d050f1a9c58277530
+  development: 2018-12-19T11:04:04-05:00   0a5dc8114706c0042ad00a43b04b1476
 templates/search.liquid:
   development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95

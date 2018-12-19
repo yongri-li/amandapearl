@@ -572,7 +572,7 @@
     "social_title_6": "Instagram",
     "social_link_6": "#",
     "show_tab": "vertical",
-    "display_product_detail_description": true,
+    "display_product_detail_description": false,
     "product_description_title": "Inspiration <i class=\"fa fa-caret-down\" aria-hidden=\"true\"><\/i>",
     "display_custom_tab": false,
     "custom_tab_title": "Inspiration",

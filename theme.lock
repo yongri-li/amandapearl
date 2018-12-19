@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2018-12-18T16:34:55-05:00   7b83ee80f24c678303b5bc8a9c4cb00d
+  development: 2018-12-19T11:04:46-05:00   e65d5d08ff270b376c3c76f0b3cce17a
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -412,7 +412,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-12-18T15:04:49-05:00   5eb789c7cc2f9825036982483812b6e1
+  development: 2018-12-19T10:42:33-05:00   80e61dba9ad124cc866595952806cdfb
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/SWYM_BACKUP_theme.liquid:
@@ -440,7 +440,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-12-18T17:03:25-05:00   bf1f30a120d0d990bfcf64d550d7b48d
+  development: 2018-12-19T11:07:12-05:00   e5a93babeb982ab5a509a63144bf67f9
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -676,7 +676,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2018-12-19T11:01:32-05:00   2f67e6ed7052218974f27d39ad15b470
+  development: 2018-12-19T13:14:20-05:00   fc896919d0cf30acb06ac8a5b7f7a6c3
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:

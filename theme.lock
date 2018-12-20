@@ -392,7 +392,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-12-19T10:47:20-05:00   2307230b6af274a2213aebf35118a7ef
+  development: 2018-12-20T14:35:04-05:00   cc4ab33303806e6f67e3d1d6b3123946
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -544,13 +544,13 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-12-15T08:42:14-05:00   b45c40267197ff8167afd812f40fb1a9
+  development: 2018-12-20T14:33:57-05:00   526d5dda4609576f53b0dc6115ab7ea1
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:
   development: 2018-08-07T12:43:29-04:00   b35f3fb77318f2be1761c99741a8f427
 snippets/quick-view-template.liquid:
-  development: 2018-08-20T17:51:09-04:00   701b365bd57a60432e0b5fc4f0e47f59
+  development: 2018-12-20T14:23:18-05:00   013c346b47fd9301fd3823c13bbde84b
 snippets/recently-viewed-products.liquid:
   development: 2018-12-06T10:44:45-05:00   5ab179f7bc5275b514abefcfd8975af6
 snippets/related-products-by-tags.liquid:

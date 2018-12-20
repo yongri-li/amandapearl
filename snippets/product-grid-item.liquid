@@ -29,8 +29,10 @@
         </div>
         {% endif %}
       </div>
+      {% include 'item-swatch' %}
+      {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" style="position: absolute; top: 10%; right: 10%; z-index: 9;"></button>
     </div>
-{% include 'item-swatch' %}
+
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">
         {% if settings.enable_multilang %}

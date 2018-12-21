@@ -30,7 +30,9 @@
         {% endif %}
       </div>
       {% include 'item-swatch' %}
+      {% comment %}
       {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" style="position: absolute; top: 10%; right: 10%; z-index: 9;"></button>
+      {% endcomment %}
     </div>
 
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
@@ -56,6 +58,7 @@
         {% else %}
         <p class="regular-product">
           <span>{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
+          {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}"></button>
         </p>
         {% endif %}
       </div>

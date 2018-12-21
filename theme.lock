@@ -392,7 +392,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-12-20T14:35:04-05:00   cc4ab33303806e6f67e3d1d6b3123946
+  development: 2018-12-21T12:52:34-05:00   897f63989d75820b4025b0b3a78c7b4d
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -544,7 +544,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-12-20T14:33:57-05:00   526d5dda4609576f53b0dc6115ab7ea1
+  development: 2018-12-21T12:52:10-05:00   fbc3d05d5a3abdb9c8622fc51fb0f6e4
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:
@@ -640,7 +640,7 @@ templates/collection.32.liquid:
 templates/collection.all.liquid:
   development: 2018-09-18T14:08:57-04:00   68bed979b0511c6bfeccf7d6869330f4
 templates/collection.bundles.liquid:
-  development: 2018-12-17T16:03:30-05:00   788bcd1158080b43d252f5c4f25712c7
+  development: 2018-12-20T17:01:33-05:00   788bcd1158080b43d252f5c4f25712c7
 templates/collection.liquid:
   development: 2018-12-07T15:00:46-05:00   715fca11c5daf31a5b785f067b1b3895
 templates/collection.list.liquid:

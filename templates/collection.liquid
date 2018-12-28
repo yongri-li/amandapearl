@@ -12,14 +12,14 @@
 {% endif %}
 
 <div class="row">
-
-  <div class="block-row col-xs-12">
-    {% paginate collection.products by product_per_page %}
-
-    {% include 'collection-header' %}
+  {% include 'collection-header' %}
 
 {% include 'collection-sidebar' %}
 <hr><br><br>
+  <div class="block-row col-xs-12 col-main">
+    {% paginate collection.products by product_per_page %}
+
+
     <div class="products-grid row">
       {% if collection.products.size > 0 %}
         {% if settings.collection_results_per_row != blank and settings.collection_results_per_row != '5' %}

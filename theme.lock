@@ -394,7 +394,7 @@ assets/theme-styles-responsive.css.liquid:
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
-  development: 2018-12-21T14:10:51-05:00   9d67d73ff83d7e90c7fbb58c5f1aa936
+  development: 2018-12-28T15:56:53-05:00   75168601fa25b69374fb44daab974c10
 assets/top-banner-home-1.jpg:
   development: 2018-08-21T16:04:21-04:00   7289fbf08f418ce084cff674ac295beb
 assets/top-banner-home-2.jpg:
@@ -644,7 +644,7 @@ templates/collection.all.liquid:
 templates/collection.bundles.liquid:
   development: 2018-12-20T17:01:33-05:00   788bcd1158080b43d252f5c4f25712c7
 templates/collection.liquid:
-  development: 2018-12-07T15:00:46-05:00   715fca11c5daf31a5b785f067b1b3895
+  development: 2018-12-28T15:55:50-05:00   aff45c3b39b051aaa557636a2db06f1e
 templates/collection.list.liquid:
   development: 2018-09-18T14:08:57-04:00   ade4da62d5324e530470075221fd73eb
 templates/collection.list12.liquid:

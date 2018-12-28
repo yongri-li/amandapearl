@@ -178,7 +178,7 @@ assets/evm-lookbook-2018-03-07-Katrina-Law-amanda-pearl-quill-bypass-ring.jpg:
 assets/evm-lookbook-2018-03-10-Miss-USA-Kara-McCullough-Amanda-Pearl-Ivory-Octo-Clutch.jpg:
   development: 2018-12-09T16:39:43-05:00   596ad455bbf9320a87bb8efa961de4bd
 assets/evm-lookbook-2018-03-11-Madelaine-Petsch-Amanda-Pearl-quad-quill-ring.jpg:
-  development: 2018-12-09T16:39:45-05:00   4469826520c2c8609629f2c38380022c
+  development: 2018-12-28T14:50:08-05:00   7e19f02299ba33af3fd2a5799a35cd88
 assets/evm-lookbook-2018-04-5-Afiya-Bennett-amanda-pearl-Black-Octo-Clutch.jpg:
   development: 2018-12-09T16:39:46-05:00   9b4955f1b8288929147027cec7d1b082
 assets/evm-lookbook-2018-04-19-Bellamy-Young-AMANDA-PEARL-Quill-Spike-Earring-Actors-Fund-Benefit-Table-Read.jpg:
@@ -188,7 +188,7 @@ assets/evm-lookbook-2018-04-20-Angela-Rye-amanda-pearl-stone-spiked-urchin-jewel
 assets/evm-lookbook-2018-06-01-Torrey-Devitto-amanda-pearl-quill-bypass-ring-floating-pearl-and-stone-ring-jewelry.jpg:
   development: 2018-12-09T16:39:49-05:00   df85c2f0d9b705f20e3b2231eaab4868
 assets/evm-lookbook-2018-06-26-Afiya-Bennett-amanda-pearl-octo-clutch.jpg:
-  development: 2018-12-09T16:39:51-05:00   940a47064664cf75f2e6f1d58553e010
+  development: 2018-12-28T14:03:02-05:00   e2b5b69bf6614bd25243a38b8560ab47
 assets/evm-lookbook-2018-06-27-WWD-Afiya-Bennett-amanda-pearl-octo-clutch.jpg:
   development: 2018-12-09T16:39:51-05:00   867868cdb986bc17b99512dc72e9b74e
 assets/evm-lookbook-2018-06-28-Lela-Loren-amanda-pearl-quill-cuff-gold-jewelry.jpg:
@@ -198,15 +198,17 @@ assets/evm-lookbook-2018-07-12-Daily-Front-Row-Emily-Didonato-amanda-pearl-quill
 assets/evm-lookbook-2018-07-16-Amandla-Stenberg-amanda-pearl-quill-bypass-ring-gold.jpg:
   development: 2018-12-09T16:39:57-05:00   71b952cc181e5df996596b64df6f5241
 assets/evm-lookbook-2018-07-18-Angela-Rye-Amanda-Pearl-gold-quill-bracelet-ring-jewelry.jpg:
-  development: 2018-12-09T16:39:57-05:00   54cdd3a12bef602bacca61df96dcd317
+  development: 2018-12-28T14:03:01-05:00   00665aec748ed646400898ea40047d58
 assets/evm-lookbook-2018-08-20-Sarah-Drew-amanda-pearl-quad-quill-ring-with-pearls-gunmetal.jpg:
   development: 2018-12-09T16:39:59-05:00   18dc94652b6b6761d316c7c9bce71451
 assets/evm-lookbook-2018-09-04-Taissa-Farmiga-amanda-pearl-octo-clutch.jpg:
   development: 2018-12-09T16:39:59-05:00   f197fe026a87096e7a4c30dee8aa2b13
 assets/evm-lookbook-2018-09-05-Juana-Burga-Amanda-Pearl-Octo-Clutch.jpg:
   development: 2018-12-09T16:40:01-05:00   8de067e9c1c82c67b3b4a41787d8e9a4
+assets/evm-lookbook-2018-09-08-WWD-Queen-Latifah-Amanda-Pearl-roll-clutch.jpg:
+  development: 2018-12-28T14:03:06-05:00   a69435ca885bb7d4d18155f8616d0435
 assets/evm-lookbook-2018-10-25-Financial-Times-Amanda-Pearl-Green-Roll-Clutch.jpg:
-  development: 2018-12-09T16:40:01-05:00   9a309d9dfda0563bfa21333bbdb8abbd
+  development: 2018-12-28T14:03:04-05:00   0a964289758f0ea0f039248c8c8a579f
 assets/evm-lookbook-2018-11-5-Us-Weekly-Tatiana-Maslandy.jpg:
   development: 2018-12-09T16:40:05-05:00   ab14e7b40a48140d2279f46c05e2133a
 assets/evm-lookbook-2018-11-Harpers-Bazaar-Saudi-Arabia-2.jpg:
@@ -412,13 +414,13 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-12-19T10:42:33-05:00   80e61dba9ad124cc866595952806cdfb
+  development: 2018-12-24T18:23:43-05:00   f0cfa34a2a7fd455745780963a52c4cb
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/SWYM_BACKUP_theme.liquid:
   development: 2018-12-06T15:16:44-05:00   f41c7009b003d1b06a7612215c70f5ae
 layout/theme.liquid:
-  development: 2018-12-19T10:48:40-05:00   1a1eda6abff93a8b5350ab4a5b7e7fe3
+  development: 2018-12-28T15:49:33-05:00   734f31f4d26458bd74d363b617daacaf
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
@@ -440,7 +442,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2018-12-19T11:07:12-05:00   e5a93babeb982ab5a509a63144bf67f9
+  development: 2018-12-24T07:04:31-05:00   e7a84992036936c19e825282a413731d
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -496,7 +498,7 @@ snippets/head_styles.liquid:
 snippets/header-mobile.liquid:
   development: 2018-12-14T01:48:00-05:00   c72c90fc5b9450c922385ef5709fe95f
 snippets/header.liquid:
-  development: 2018-12-19T10:47:33-05:00   dfd389050af6c215b3b843c54e2e73d3
+  development: 2018-12-28T15:48:39-05:00   dfefc7a280f5820abeec274a5823756c
 snippets/homepage-block-banner.liquid:
   development: 2018-11-08T16:35:34-05:00   8c73aea1ef468553edc1e3aff2861f28
 snippets/homepage-block-new-arrivals.liquid:

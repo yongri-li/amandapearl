@@ -160,5 +160,19 @@ var afterpay_js_snippet_version = '1.0.1';
 
 </style>
 
+<script>
+$(function() {
+  $('#ChangeToggle').click(function() {
+    $('#navbar-hamburger').toggleClass('hidden');
+    $('#navbar-close').toggleClass('hidden');
+  });
+});
+</script>
+
+<style>
+.navbar-toggle { max-height: 40px; position: absolute; top: -7px; left: 20px; }
+.header-mobile #showLeftPush { background: #fff!important }
+</style>
+
 </body>
 </html>

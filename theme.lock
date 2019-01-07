@@ -390,7 +390,7 @@ assets/tahitian-pearl.jpg:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2018-12-21T14:27:24-05:00   5729711b325918a05d772af052d860e4
+  development: 2019-01-07T12:42:53-05:00   7c6102a2900ad44eea5c6d909bc29168
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
@@ -414,7 +414,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2018-12-24T18:23:43-05:00   f0cfa34a2a7fd455745780963a52c4cb
+  development: 2018-12-28T16:37:30-05:00   54cf79d9962f7f4a34686615282b1ef4
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/SWYM_BACKUP_theme.liquid:

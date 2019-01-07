@@ -512,7 +512,7 @@
     "shop_by_tags_2_list_tags": "5,6,7,8,9",
     "enable_shop_by_tags_3": true,
     "shop_by_tags_3_title": "Price",
-    "shop_by_tags_3_list_tags": "Under $100, $100 - $250, $250 - $500, $500 - $750, $750 - $900, $900 - $1050, $1050 - $3000, $3000 - $8000",
+    "shop_by_tags_3_list_tags": "UNDER $250, $250 - $500, $500 - $1000, $1000 -$2500, OVER $2500",
     "enable_shop_by_tags_4": false,
     "shop_by_tags_4_title": "Brand | Marke",
     "shop_by_tags_4_list_tags": "Chanel, Dior, Gap, Lucci, Louis, Hermes",

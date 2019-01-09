@@ -424,7 +424,7 @@ layout/theme.liquid:
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
-  development: 2018-08-16T11:57:39-04:00   210e6b0ba4f7354f9bad801f6e851482
+  development: 2019-01-08T16:59:27-05:00   88faa502d43fbf414a683f2bf16560c2
 locales/es.json:
   development: 2018-08-07T12:43:26-04:00   6e08dbc43de99427917884b4cad1bd56
 locales/fr.json:

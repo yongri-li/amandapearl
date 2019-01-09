@@ -14,7 +14,7 @@
   <a href="{{ product.url | within: collection }}" class="product-grid-image">
     <img src="{{ product.featured_image.src | product_img_url: 'compact' }}" alt="{{ product.featured_image.alt | escape }}">
   </a>
-    
+
   {% if on_sale or sold_out %}
   <div class="product-label">
     {% if on_sale %}
@@ -29,7 +29,7 @@
     {% endif %}
   </div>
   {% endif %}
-  
+
   <div class="details">
     <a class="product-title" href="{{ product.url | within: collection }}">
       {% if settings.enable_multilang %}
@@ -58,14 +58,14 @@
     </div>
     <div class="action">
       {% assign variantCount = bold_variants_size %}
-      <form action="/cart/add" method="post" class="variants" id="product-actions-{{ product.id }}" enctype="multipart/form-data" style="padding:0px;">    
+      <form action="/cart/add" method="post" class="variants" id="product-actions-{{ product.id }}" enctype="multipart/form-data" style="padding:0px;">
         {% if sold_out %}
         <input class="btn add-to-cart-btn" type="submit" value="{{ 'products.product.unavailable' | t }}" disabled="disabled" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{% endif %}/>
         {% else %}
-        {% if variantCount > 1 %}    
+        {% if variantCount > 1 %}
         <input class="btn" type="button" onclick="window.location.href='{{product.url}}'" value="{{ 'products.product.select_options' | t }}" {% if settings.enable_multilang %}data-translate="products.product.select_options"{% endif %}/>
         {% else %}
-        <input type="hidden" name="id" value="{{ bold_selected_or_first_available_variant.id }}" />      
+        <input type="hidden" name="id" value="{{ bold_selected_or_first_available_variant.id }}" />
         <input class="btn add-to-cart-btn" type="submit" value="{{ 'products.product.add_to_cart' | t }}" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{% endif %}/>
         {% endif %}
         {% endif %}
@@ -74,7 +74,7 @@
 {%- unless bundle_loaded == 'true' -%}
 {%- include 'shappify-bdl-load-bundle' -%}
 {%- assign bundle_loaded = 'true' -%}
-{%- endunless -%} 
+{%- endunless -%}
 
     </div>
   </div>

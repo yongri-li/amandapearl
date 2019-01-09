@@ -155,10 +155,10 @@
   },
   "contact": {
     "form": {
-      "name": "Your Name",
-      "email": "Your Email",
-      "phone": "Your Phone",
-      "message": " Your Comment",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Comment",
       "placeholder_message": "Please leave your comment here",
       "send": "Send",
       "submit_contact": "Submit Contact",

@@ -554,7 +554,7 @@ snippets/product-sidebar.liquid:
 snippets/quick-view-template.liquid:
   development: 2018-12-20T14:23:18-05:00   013c346b47fd9301fd3823c13bbde84b
 snippets/recently-viewed-products.liquid:
-  development: 2018-12-06T10:44:45-05:00   5ab179f7bc5275b514abefcfd8975af6
+  development: 2019-01-09T15:07:10-05:00   06b3ee0f1b010e34be9bf6aafe24feb6
 snippets/related-products-by-tags.liquid:
   development: 2018-12-06T10:43:54-05:00   6a3756f3066dcfac21a7491b45d11116
 snippets/related-products.liquid:
@@ -696,4 +696,4 @@ templates/page.wish-list.liquid:
 templates/product.liquid:
   development: 2019-01-08T14:23:37-05:00   e8981ab1decb99a896a18f8149e2dadc
 templates/search.liquid:
-  development: 2018-11-19T11:44:25-05:00   d4231b16734d17f12a020afd39f8eb95
+  development: 2019-01-09T15:10:28-05:00   972780643804706edc282965d73c9ea5

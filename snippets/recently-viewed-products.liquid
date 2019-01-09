@@ -28,6 +28,8 @@
 {% raw %}
 <script id="recently-viewed-product-grid-template"  type="text/x-jquery-tmpl">
 {% endraw %}
+
+{% for tag in product.tags %}{% if tag contains 'visible' %}
 <div class="{% if settings.prouduct_item_no_hover%}product-item-no-hover{% endif %}{% if settings.product_image_border%} grid-item-border {% endif %} {% if settings.product_image_crop%} crop_image {% else %} no_crop_image {% endif %} grid-item product-item {% raw %} col-xs-6 col-sm-4 col">
   <div id="product-${id}" class="inner{{if !available}} sold-out {{/if}}{{if compare_at_price_min > price_min}} on-sale {{/if}}">
     <div class="inner-top">
@@ -80,6 +82,12 @@
     </div>
   </div>
 </div>
+{% endraw %}
+
+{% endif %}
+{% endfor %}
+
+{% raw %}
 </script>
 {% endraw %}
 

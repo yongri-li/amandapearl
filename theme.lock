@@ -390,7 +390,7 @@ assets/tahitian-pearl.jpg:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2019-01-07T12:42:53-05:00   7c6102a2900ad44eea5c6d909bc29168
+  development: 2019-01-10T14:40:18-05:00   bda11d2e722c0a8fc1b9ce8dc443c9ab
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
@@ -546,7 +546,7 @@ snippets/payment_methods.liquid:
 snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
-  development: 2018-12-21T12:52:10-05:00   fbc3d05d5a3abdb9c8622fc51fb0f6e4
+  development: 2019-01-10T14:41:46-05:00   3d37edf6202acc32047c298851befe8c
 snippets/product-list-item.liquid:
   development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-sidebar.liquid:

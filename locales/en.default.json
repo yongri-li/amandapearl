@@ -161,7 +161,7 @@
       "message": "Comment",
       "placeholder_message": "Please leave your comment here",
       "send": "Send",
-      "submit_contact": "Submit Contact",
+      "submit_contact": "Send",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
     }
   },

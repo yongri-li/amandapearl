@@ -30,7 +30,7 @@
   {% include 'blog_sidebar' %}
   <!-- End sidebar -->
 
-  <div class="col-xs-9 col-main">
+  <div class="col-xs-12 col-sm-9">
 
 
     <div class="content-blog">
@@ -44,7 +44,7 @@
       <ul class="list-blog">
         {% for article in blog.articles %}
         <div class="row" style="margin-bottom: 20px">
-          
+
           <!--             Code to enable featured image on blog archive page -->
             {% if article.image %}
               {% capture img_id %}ArticleImage-{{ article.image.id }}{% endcapture %}
@@ -72,7 +72,7 @@
               </noscript>
             {% endif %}
 <!--            End code to enable featured image on blog archive page -->
-          
+
         <div class="col-xs-12 col-sm-6">
         <li>
           <h3><a href="{{ article.url }}">{{ article.title }}</a></h3>

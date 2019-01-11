@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2019-01-10T13:27:13-05:00   4ff8f587e3775d2ed0a4153ddb151437
+  development: 2019-01-10T17:48:39-05:00   cf3534a4b190389f1bd8ee6323f8d73d
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -80,7 +80,7 @@ assets/brand8.png:
 assets/brand9.png:
   development: 2018-08-21T17:17:55-04:00   97cb7c29794b1725b12957bfecb9a5e5
 assets/brand10.png:
-  development: 2018-08-21T17:17:55-04:00   092521a477e820619c055845b65bf8d8
+  development: 2019-01-10T15:15:20-05:00   5002dd32052eb794491f1318789eb327
 assets/btn-cart01.png:
   development: 2018-08-07T12:43:11-04:00   3155d5dd3d0a51298e50cb8c3b55572f
 assets/btn-product.png:
@@ -414,13 +414,13 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2019-01-10T12:05:55-05:00   33afa7763866428b9c905d7ca5bb0dc2
+  development: 2019-01-10T15:16:03-05:00   31c46733598a622d278c0ba3ac3ed083
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/SWYM_BACKUP_theme.liquid:
   development: 2018-12-06T15:16:44-05:00   f41c7009b003d1b06a7612215c70f5ae
 layout/theme.liquid:
-  development: 2018-12-28T15:49:33-05:00   734f31f4d26458bd74d363b617daacaf
+  development: 2019-01-10T15:17:44-05:00   d144687e1eacac504c3ece8343537f21
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
@@ -437,12 +437,14 @@ locales/ur.json:
   development: 2018-08-07T12:43:26-04:00   99914b932bd37a50b983c5e7c90ae93b
 snippets/blog_sidebar.liquid:
   development: 2018-08-07T12:43:26-04:00   41b3247e371227681e66666d38a95e62
+snippets/blogstudio-wrapper.liquid:
+  development: 2019-01-10T15:57:12-05:00   bcb5be7db7676f1e52224f0d45b44870
 snippets/bold-cart-item.liquid:
   development: 2018-09-18T14:09:01-04:00   35e48cbf7e603ed4beaeb13574b5df36
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2019-01-10T13:31:10-05:00   d9d344c5da392452a848bc4b361ada56
+  development: 2019-01-10T18:02:13-05:00   77491084d0c26510dcc763b4b231373a
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -517,6 +519,8 @@ snippets/homepage-instagram.liquid:
   development: 2018-08-23T15:50:11-04:00   d3f99c6be733cc388823c5566197e4ed
 snippets/item-swatch.liquid:
   development: 2018-11-28T15:55:11-05:00   e6068a25f34fdb5c9891ae7f4ffdcc77
+snippets/limespot.liquid:
+  development: 2019-01-10T15:17:41-05:00   1c0e485ba9442b4edc5daadcb4b3e155
 snippets/linklists.liquid:
   development: 2018-08-07T12:43:28-04:00   92122bba4745dea5ea0fed17f76c82ef
 snippets/mega-menu-featured-product.liquid:
@@ -631,6 +635,8 @@ templates/404.liquid:
   development: 2018-08-07T12:43:31-04:00   419696c7a5539b2643355747df9a41ca
 templates/article.liquid:
   development: 2018-08-16T12:52:10-04:00   5c2f6ce8dd87a205a462bf30c7c4ac3b
+templates/article.studio-full.liquid:
+  development: 2019-01-10T15:57:11-05:00   857c58a4492d6a0acc7ef92fad59bfa0
 templates/blog.liquid:
   development: 2018-11-29T19:02:17-05:00   3f32a5508742d3508e87cd9b326d8159
 templates/cart.liquid:
@@ -694,6 +700,6 @@ templates/page.press.liquid:
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
 templates/product.liquid:
-  development: 2019-01-08T14:23:37-05:00   e8981ab1decb99a896a18f8149e2dadc
+  development: 2019-01-10T15:46:04-05:00   12b5a89474e97ed92a71431e9b4008d4
 templates/search.liquid:
   development: 2019-01-09T15:10:28-05:00   972780643804706edc282965d73c9ea5

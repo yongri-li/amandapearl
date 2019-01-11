@@ -5,6 +5,7 @@
 <!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
 <!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
 <head>
+{% include 'limespot' %}
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
 
@@ -82,6 +83,7 @@
 
     <main class="main-content {% if template contains 'index' or template contains 'contact' or template contains 'cart' %}{% else %}container{% endif %}" role="main">
       {{ content_for_layout }}
+<limespot></limespot>
     </main>
     </div>
 

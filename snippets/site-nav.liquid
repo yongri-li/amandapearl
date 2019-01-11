@@ -193,7 +193,7 @@
      <center><p>{{ 'cart.general.empty' | t }}</p></center>
      <p class="text-continue"><a href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %} style="text-align: center">{{ 'cart.ajax_cart.continue_shopping' | t }}</a></p>
    </div>
-   <div class="has-items" style="padding-top:70px">
+   <div class="has-items">
      <h2 style="text-align: center; text-transform: uppercase;">Your Cart</h2>
      <ol class="mini-products-list">
        {% for item in cart.items %}

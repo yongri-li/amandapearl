@@ -584,7 +584,7 @@ snippets/shipping-rates-calculator.liquid:
 snippets/site-nav-mobile.liquid:
   development: 2018-12-19T10:52:19-05:00   7a0d808a4d35b7265b5071580f2ce5f8
 snippets/site-nav.liquid:
-  development: 2018-11-29T17:04:29-05:00   ba3d35285c10fbf46b4cf554ef955984
+  development: 2019-01-11T11:22:25-05:00   7220177d0ac920ea924b6a5e0a7be696
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/spurit_po-cart-snippet.liquid:

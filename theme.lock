@@ -153,6 +153,10 @@ assets/ella.js:
   development: 2018-12-06T10:54:02-05:00   c6c8c5b63a6219f30c83385ce3a877b3
 assets/emerald.jpg:
   development: 2018-11-28T15:40:42-05:00   55aa5d01b797af87a544c6682d83df33
+assets/evm-lookbook-1.10.19-Amanda-Pearl-in-Fashion-Maniac.gif:
+  development: 2019-01-13T16:10:09-05:00   506fd234e52ed2b03ef3b18e8004b5ee
+assets/evm-lookbook-1.10.19-Amanda-Pearl-in-US.gif:
+  development: 2019-01-13T16:10:09-05:00   60159635ef20aaa271f3eb425018d140
 assets/evm-lookbook-2018-01-03-Angela-Rye-Octo-Clutch.jpg:
   development: 2018-12-09T18:27:31-05:00   8027a440ad108a25ba39c160b949b30d
 assets/evm-lookbook-2018-01-14-Katrina-Law-amanda-pearl-quill-rings-gunmetal.jpg:
@@ -217,6 +221,10 @@ assets/evm-lookbook-2018-11-Harpers-Bazaar-Saudi-Arabia-3.jpg:
   development: 2018-12-09T16:40:08-05:00   1064829f8c0b2d0ac3a21c6e6cac8619
 assets/evm-lookbook-2018-11-Harpers-Bazaar-Saudi-Arabia-4.jpg:
   development: 2018-12-09T16:40:08-05:00   368ff2fd8b36233997499bb6a53b678a
+assets/evm-lookbook-2018-12-06-Financial-Times-How-To-Spend-It-Six-Of-The-Best-Colourful-Evening-Clutches-AMANDA-PEARL.jpg:
+  development: 2019-01-13T15:55:43-05:00   3baec81a0367e18fc022c8613e78e66d
+assets/evm-lookbook-Amanda-Pearl-in-WWD-1.10.19.jpg:
+  development: 2019-01-13T15:53:20-05:00   e023decaa86b918a45e2aa540ca36cea
 assets/fancybox_loading.gif:
   development: 2018-08-07T12:43:15-04:00   328cc0f6c78211485058d460e80f4fa8
 assets/fancybox_overlay.png:
@@ -582,9 +590,9 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2018-12-19T10:52:19-05:00   7a0d808a4d35b7265b5071580f2ce5f8
+  development: 2019-01-14T12:38:02-05:00   404eaf93c0efd41ed38b0675d8df22ac
 snippets/site-nav.liquid:
-  development: 2019-01-11T11:22:25-05:00   7220177d0ac920ea924b6a5e0a7be696
+  development: 2019-01-14T12:35:47-05:00   908f7f5d47bf41074480030ee5e0c8fe
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/spurit_po-cart-snippet.liquid:
@@ -684,7 +692,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2019-01-08T16:52:29-05:00   795dbee84f7103bb1f3c1009f35fc250
+  development: 2019-01-14T12:44:27-05:00   d7976e962ff152649fe99585a929f98f
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:

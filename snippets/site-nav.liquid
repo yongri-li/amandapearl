@@ -41,7 +41,7 @@
 
       {% else %}
       {% comment %} normal menu {% endcomment %}
-      <ul class="site-nav-dropdown">
+      <ul class="site-nav-dropdown ">
         {% for childlink in linklists[link.handle].links %}
           <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
             <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">

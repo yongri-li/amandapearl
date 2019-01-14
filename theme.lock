@@ -590,7 +590,7 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2019-01-14T12:38:02-05:00   404eaf93c0efd41ed38b0675d8df22ac
+  development: 2019-01-14T14:13:32-05:00   49c4c711b48ef8e3784056346511cf26
 snippets/site-nav.liquid:
   development: 2019-01-14T12:35:47-05:00   908f7f5d47bf41074480030ee5e0c8fe
 snippets/social.liquid:

@@ -54,7 +54,7 @@ assets/blank.gif:
 assets/blank.png:
   development: 2018-08-07T12:43:10-04:00   947f17f65f8d60dc5f66235e1bb866f5
 assets/bold-bundles.css:
-  development: 2019-01-10T17:48:39-05:00   cf3534a4b190389f1bd8ee6323f8d73d
+  development: 2019-01-16T16:04:57-05:00   f761a36dfa864418b67cdefc656648ee
 assets/bootstrap.min.css:
   development: 2018-08-07T12:43:10-04:00   c89af0a309c8772d174ea4003d80b187
 assets/bootstrap.min.js:
@@ -223,6 +223,8 @@ assets/evm-lookbook-2018-11-Harpers-Bazaar-Saudi-Arabia-4.jpg:
   development: 2018-12-09T16:40:08-05:00   368ff2fd8b36233997499bb6a53b678a
 assets/evm-lookbook-2018-12-06-Financial-Times-How-To-Spend-It-Six-Of-The-Best-Colourful-Evening-Clutches-AMANDA-PEARL.jpg:
   development: 2019-01-13T15:55:43-05:00   3baec81a0367e18fc022c8613e78e66d
+assets/evm-lookbook-2018-12-Vogue.jpg:
+  development: 2019-01-17T16:08:47-05:00   6af67016746a80087c27ad784419e6df
 assets/evm-lookbook-Amanda-Pearl-in-WWD-1.10.19.jpg:
   development: 2019-01-13T15:53:20-05:00   e023decaa86b918a45e2aa540ca36cea
 assets/fancybox_loading.gif:
@@ -422,7 +424,7 @@ assets/wizard_2x.png:
 assets/wow.min.js:
   development: 2018-08-07T12:43:25-04:00   8ad2440610b7528e2d4e982686c4cd18
 config/settings_data.json:
-  development: 2019-01-10T15:16:03-05:00   31c46733598a622d278c0ba3ac3ed083
+  development: 2019-01-22T10:06:45-05:00   10e3399da26bcc8e6a1c732fe0512583
 config/settings_schema.json:
   development: 2018-08-23T16:01:21-04:00   68a8027f2c797a3cd97bac75df40f162
 layout/SWYM_BACKUP_theme.liquid:
@@ -452,7 +454,7 @@ snippets/bold-cart-item.liquid:
 snippets/bold-cart.liquid:
   development: 2018-09-18T14:09:00-04:00   abaf0ba5de31fb6383a1ed3f8d8b97fb
 snippets/bold-common.liquid:
-  development: 2019-01-10T18:02:13-05:00   77491084d0c26510dcc763b4b231373a
+  development: 2019-01-16T16:11:30-05:00   985cc61e5712e1c369b5cef68202dd4a
 snippets/bold-pb-custom.liquid:
   development: 2018-11-19T12:08:05-05:00   c761ca797ff45170cef1170e6eeb50cb
 snippets/bold-product.liquid:
@@ -536,7 +538,7 @@ snippets/mega-menu-featured-product.liquid:
 snippets/mega-menu-product-grid.liquid:
   development: 2018-09-18T14:08:52-04:00   15f979a9c8679c8b54ff25a52a1988bb
 snippets/mega-menu.liquid:
-  development: 2018-08-28T14:34:11-04:00   647c1c554ef23103b2f4a4514aff52ce
+  development: 2019-01-22T13:25:14-05:00   82731e021df1e14f81944390caf4235e
 snippets/message-modal.liquid:
   development: 2018-10-10T17:41:23-04:00   90acd4de268b5be8cb4a44d86aa857a6
 snippets/new-currency-picker.liquid:
@@ -692,7 +694,7 @@ templates/index.liquid:
 templates/list-collections.liquid:
   development: 2018-08-07T12:43:32-04:00   763a64bf3e61c811b15498d0f2e35373
 templates/page.about.liquid:
-  development: 2019-01-14T12:44:27-05:00   d7976e962ff152649fe99585a929f98f
+  development: 2019-01-22T12:52:00-05:00   190b775d28b2562f50677bfae824bced
 templates/page.contact.liquid:
   development: 2018-08-07T12:43:32-04:00   68c40bd3d403f38196568d0cb78a72df
 templates/page.full-width.liquid:

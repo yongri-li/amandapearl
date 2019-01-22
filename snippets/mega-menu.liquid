@@ -10,7 +10,7 @@
         <span class="lang1">{{ l.title | split: '|' | first }}</span>
         <span class="lang2">{{ l.title | split: '|' | last }}</span>
         {% else %}
-        {{ l.title | split: '|' | first }}
+        <b>{{ l.title | split: '|' | first }}</b>
         {% endif %}
       </a>
       {% if  linklists[l.handle] != empty %}

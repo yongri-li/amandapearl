@@ -404,7 +404,7 @@ assets/tahitian-pearl.jpg:
 assets/text-title.png:
   development: 2018-08-07T12:43:24-04:00   406f56e52b9ef84002ef9cf2f4b89898
 assets/theme-styles-responsive.css.liquid:
-  development: 2019-01-15T15:13:09-05:00   1f26b2435fa458ed7787c7a52c8b3651
+  development: 2019-01-24T11:05:14-05:00   96e840cc2153d9f2ddb58299bd433e7c
 assets/theme-styles-setting.css.liquid:
   development: 2018-11-12T22:34:26-05:00   40760adbdcd51aade0189b08852bf1ad
 assets/theme-styles.css.liquid:
@@ -434,7 +434,7 @@ config/settings_schema.json:
 layout/SWYM_BACKUP_theme.liquid:
   development: 2018-12-06T15:16:44-05:00   f41c7009b003d1b06a7612215c70f5ae
 layout/theme.liquid:
-  development: 2019-01-10T15:17:44-05:00   d144687e1eacac504c3ece8343537f21
+  development: 2019-01-24T11:10:04-05:00   0c57dd5719b149d057d3fc3017e58f98
 locales/de.json:
   development: 2018-08-07T12:43:26-04:00   8e902498fa748acb997bdb7e370795dd
 locales/en.default.json:
@@ -600,9 +600,9 @@ snippets/share.liquid:
 snippets/shipping-rates-calculator.liquid:
   development: 2018-08-07T12:43:29-04:00   5dc36a47e7ea4c3293801b2bd0af3473
 snippets/site-nav-mobile.liquid:
-  development: 2019-01-14T14:13:32-05:00   49c4c711b48ef8e3784056346511cf26
+  development: 2019-01-24T11:06:08-05:00   82308f6139e254437c0ea92707ff984b
 snippets/site-nav.liquid:
-  development: 2019-01-14T12:35:47-05:00   908f7f5d47bf41074480030ee5e0c8fe
+  development: 2019-01-24T11:09:34-05:00   07d55f89410550fd2aab0989fdf35abf
 snippets/social.liquid:
   development: 2018-08-07T12:43:30-04:00   a5b4d7e7a8a968745d2a449f42ca7759
 snippets/spurit_po-cart-snippet.liquid:

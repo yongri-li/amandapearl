@@ -165,7 +165,7 @@ var afterpay_js_snippet_version = '1.0.1';
 <script>
 $(function() {
   $('#ChangeToggle').click(function() {
-    $('#navbar-hamburger').toggleClass('hidden');
+    $('#navbar-hamburger').toggleClass('block');
     $('#navbar-close').toggleClass('hidden');
   });
 });
@@ -174,6 +174,7 @@ $(function() {
 <style>
 .navbar-toggle { max-height: 40px; position: absolute; top: -7px; left: 20px; }
 .header-mobile #showLeftPush { background: #fff!important }
+#navbar-close { position: absolute; z-index: 99; left: 700%; top: 50px; }
 </style>
 
 </body>

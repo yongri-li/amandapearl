@@ -85,10 +85,10 @@
         {% endif %}
       {% else %}
         {% if settings.enable_multilang %}
-        <span class="lang1"><div class="smart-tabs-wrapper">{% include 'bs-tabs' %}</div></span>
+        <span class="lang1">{{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}</span>
         <span class="lang2">{{ product.description | split: '|' | last | strip_html | truncatewords: 50 }}</span>
         {% else %}
-        <div class="smart-tabs-wrapper">{% include 'bs-tabs' %}</div>
+        {{ product.description | split: '|' | first | strip_html | truncatewords: 50 }}
         {% endif %}
       {% endif %}
     </div>

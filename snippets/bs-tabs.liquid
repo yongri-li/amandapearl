@@ -1,0 +1,287 @@
+<style> #ruler{visibility:hidden;white-space:nowrap}#shopify-product-reviews .spr-container{border:none!important}.tabs-hidden-content{display:none}.display-block{display:block!important}.display-none{display:none!important}#shopify-product-reviews{margin:0!important}p,ul.resp-tabs-list{margin:0;padding:0}.resp-tabs-list li{font-weight:600;font-size:13px;display:inline-block;padding:13px 15px;margin:0;list-style:none;cursor:pointer;float:left;position:relative}.resp-tabs-container{padding:0;background-color:#fff;clear:left}h2.resp-accordion{cursor:pointer;display:none;border-top:none!important}h2.resp-accordion.resp-tab-active:last-of-type{border-bottom:none!important}li.resp-tab-item{border-right:0}.resp-tab-content{display:none;padding:15px}.resp-tab-content div{width: auto !important;}.resp-accordion-active,.resp-content-active,.resp-easy-accordion h2.resp-accordion,.resp-tab-content-active{display:block}.resp-tab-content p{margin-bottom:10px}.resp-tab-active{border:1px solid #c1c1c1;padding:12px 14px 14px!important;border-bottom:none;background-color:#fff}.resp-tab-content,h2.resp-accordion{border:1px solid #c1c1c1}h2.resp-accordion{font-size:13px;margin:0;padding:10px 15px}h2.resp-tab-active{border-bottom:0 solid #c1c1c1!important;margin-bottom:0!important;padding:10px 15px!important}h2.resp-tab-title:last-child{border-bottom:12px solid #c1c1c1!important;background:#00f}.resp-vtabs ul.resp-tabs-list{float:left;width:30%}.resp-vtabs .resp-tabs-list li{display:block;padding:15px!important;margin:0;cursor:pointer;float:none}.resp-vtabs .resp-tabs-container{padding:0;background-color:#fff;border:1px solid #c1c1c1;float:left;width:68%;min-height:250px;border-radius:4px;clear:none}.resp-vtabs .resp-tab-content{border:none}.resp-vtabs li.resp-tab-active{border:1px solid #c1c1c1;border-right:none;background-color:#fff;position:relative;z-index:1;margin-right:-1px!important;padding:14px 15px 15px 14px!important}.resp-arrow{width:0;height:0;float:right;margin-top:3px;border-left:5px solid transparent;border-right:5px solid transparent;border-top:10px solid #c1c1c1}h2.resp-tab-active span.resp-arrow{border:none;border-left:5px solid transparent;border-right:5px solid transparent;border-bottom:10px solid #9B9797}.resp-jfit{width:100%;margin:0} .resp-tab-item, h2.resp-accordion { color: rgba(0,0,0,1) !important;; background-color: rgba(244,242,242,1) !important;; border: 1px solid rgba(219,218,218,1) !important;; border-radius: 1px !important;; height: auto !important;; font-style: normal !important; font-weight: normal !important; font-size: 12px !important; } li.resp-tab-item:last-of-type { border-right: 1px solid rgba(219,218,218,1) !important;; } .resp-tabs-list li { margin-bottom: -1px !important; } h2.resp-accordion:first-of-type { border-top: 1px solid rgba(219,218,218,1) !important; } h2.resp-accordion:last-of-type { border-bottom: 1px solid rgba(219,218,218,1)!important; } .resp-tab-active { color: rgba(0,0,0,1) !important; background-color: rgba(255,255,255,1) !important;; border-bottom: 1px solid rgba(255,255,255,1) !important;; } .resp-tab-content { color: rgba(0,0,0,1) !important;; background-color: rgba(255,255,255,1) !important;; border: 1px solid rgba(219,218,218,1) !important;; border-radius: 1px !important;; } .resp-tab-content p { color: rgba(0,0,0,1) !important;; } @media only screen and (max-width: 768px) { .resp-tab-content:last-child { border-bottom: 1px solid rgba(219,218,218,1) !important; } } } .resp-easy-accordion .resp-tab-content:last-child { border-bottom: 1 solid rgba(219,218,218,1) !important;} </style><script>window.jQuery || document.write("<scr" + "ipt type=\"text/javascript\" src=\"https://code.jquery.com/jquery-3.2.1.min.js\"></scr" + "ipt>");</script><div class="tabs-hidden-content">{{product.content}}</div><span id="ruler"></span><div class="horizontalTab"><ul class="resp-tabs-list"> {% assign exists = false %} {% for collection in product.collections %} {% assign userCollection = "Fine Jewelry,FINE JEWELRY: Ripples" %} {% assign collectionTitle = collection.title | replace: '"', '' %} {% if userCollection contains collectionTitle %} {% assign exists = true %} {% endif %} {% endfor %} {% if exists == true %} <li class="static-tab-nav">INSPIRATION</li> {% endif %} {% assign exists = false %} </ul> <div class="resp-tabs-container"> {% assign exists = false %} {% for collection in product.collections %} {% assign userCollection = "Fine Jewelry,FINE JEWELRY: Ripples" %} {% assign collectionTitle = collection.title | replace: '"', '' %} {% if userCollection contains collectionTitle %} {% assign exists = true %} {% endif %} {% endfor %} {% if exists == true %} <div class="static-tab-content"><div> Referencing the beauty, strength, and capacity of the sea, Amanda was inspired by the feminine and fluid shapes made on the ocean bottom by waves and ripples on the surface - outlines of energy and power. Wear our Ripples as a reminder of your own feminine strength and POWER.</div></div> {% endif %} {% assign exists = false %} </div></div>
+            <script>(function () {
+    'use strict';
+
+    window.nthTabWrapper = window.nthTabWrapper === undefined ? 0 : window.nthTabWrapper + 1;
+
+    var buzzTabs = function () {
+        var tagsCount = 0;
+
+        var generate = function (defaultTabEnabled, defaultTabName, hTag) {
+            var wrapper = $('.smart-tabs-wrapper:eq(' + window.nthTabWrapper + ')');
+            var tabNav = wrapper.find('.resp-tabs-list');
+            var staticTabNav = wrapper.find('.static-tab-nav').first();
+            var staticTabContent = wrapper.find('.static-tab-content').first();
+            var tabWrapper = wrapper.find('.resp-tabs-container');
+            var hiddenContent = wrapper.find('.tabs-hidden-content');
+
+            if (defaultTabName === "") {
+                defaultTabName = "Description";
+            }
+
+            var tags = hiddenContent.find(hTag);
+
+            if (tags.length === 0) {
+                if (!defaultTabEnabled) {
+                    wrapper.find('.horizontalTab').prepend(hiddenContent.html() + '<br><br>');
+                } else {
+                    if (staticTabNav.length > 0) {
+                        $('<li>' + defaultTabName + '</li>').insertBefore(staticTabNav);
+                    } else {
+                        tabNav.append('<li>' + defaultTabName + '</li>');
+                    }
+
+                    if (staticTabContent.length > 0) {
+                        $('<div>' + hiddenContent.html() + '</div>').insertBefore(staticTabContent);
+                    } else {
+                        tabWrapper.append('<div>' + hiddenContent.html() + '</div>');
+                    }
+                }
+            } else {
+                hiddenContent.contents().after().filter(function() {
+                    if(this.nodeType !== 3) return false;
+                    if(this.nodeValue == null) return false;
+
+                    return this.nodeValue.replace(/\s/g,'').length > 0;
+                }).wrap('<p></p>').end();
+            }
+
+            for (var i = 0; i < tags.length; i++) {
+                var tag = tags[i];
+                var nextTag = tags[i + 1];
+                var content = '';
+
+                if (defaultTabEnabled && tagsCount === 0) {
+                    $($(tag).prevAll().get().reverse()).each(function (key, element) {
+                        content += element.outerHTML;
+                    });
+                    if (content !== '') {
+                        staticTabNav.length > 0 ?
+                            $('<li>' + defaultTabName + '</li>').insertBefore(staticTabNav) :
+                            tabNav.append('<li>' + defaultTabName + '</li>');
+
+                        staticTabContent.length > 0 ?
+                            $('<div>' + content + '</div>').insertBefore(staticTabContent) :
+                            tabWrapper.append('<div>' + content + '</div>');
+                    }
+                } else if (tagsCount === 0) {
+                    $($(tag).prevAll().get().reverse()).each(function (key, element) {
+                        content += element.outerHTML;
+                    });
+                    $('<div>' + content + '<br><br></div>').insertAfter(hiddenContent);
+                }
+
+                tagsCount++;
+
+                if (staticTabNav.length > 0) {
+                    $('<li>' + tag.innerHTML + '</li>').insertBefore(staticTabNav);
+                } else {
+                    tabNav.append('<li>' + tag.innerHTML + '</li>');
+                }
+
+
+                if (nextTag !== undefined) {
+                    content = '';
+                    $(tag).nextUntil(nextTag.tagName.toLowerCase()).each(function (key, element) {
+                        content += element.outerHTML;
+                    });
+                } else {
+                    content = '';
+                    $(tag).nextAll().each(function (key, element) {
+                        content += element.outerHTML;
+                    });
+                }
+
+                if (tagsCount === 0) {
+                    $('#default-tab-content').html(content);
+                } else {
+                    staticTabContent.length > 0 ?
+                        $('<div>' + content + '</div>').insertBefore(staticTabContent) :
+                        tabWrapper.append('<div>' + content + '</div>');
+                }
+            }
+        };
+
+        var build = function (type) {
+            var hzTab = $('.smart-tabs-wrapper:eq(' + window.nthTabWrapper + ')').find('.horizontalTab');
+            var tabLength = 0;
+            var isAccordion = type === "accordion";
+
+            hzTab.easyResponsiveTabs({
+                type: "default",
+                width: "auto",
+                fit: false,
+                closed: "accordion",
+                tabWidth: tabLength,
+                tabContainer: hzTab,
+                activate: function (event) {
+                    var $tab = $(this);
+                    var $info = $("#tabInfo");
+                    var $name = $("span", $info);
+                    $name.text($tab.text());
+                    $info.show();
+                }
+            });
+
+            $(".resp-tab-item").each(function (key, tab) {
+                tabLength += $(tab).innerWidth() + 4;
+            });
+
+            type = (hzTab.width() < tabLength && isAccordion) ? "accordion" : "default";
+            changeType(hzTab, tabLength, type);
+
+            $(window).resize(function () {
+                type = (hzTab.width() < tabLength && isAccordion) ? "accordion" : "default";
+                changeType(hzTab, tabLength, type);
+            });
+        };
+
+        var changeType = function (hzTab, tabLength, type) {
+            if (hzTab.width() < tabLength && type === "accordion") {
+                hzTab.find("ul.resp-tabs-list").addClass("display-none");
+                hzTab.find("ul.resp-tabs-list").removeClass("display-block");
+                hzTab.find("h2.resp-accordion").addClass("display-block");
+                hzTab.find("h2.resp-accordion").removeClass("display-none");
+            } else {
+                hzTab.find("ul.resp-tabs-list").removeClass("display-none");
+                hzTab.find("ul.resp-tabs-list").addClass("display-block");
+                hzTab.find("h2.resp-accordion").removeClass("display-block");
+                hzTab.find("h2.resp-accordion").addClass("display-none");
+            }
+        };
+
+        return {
+            generate: generate,
+            build: build,
+        };
+    };
+
+
+    window.buzzTabs = buzzTabs;
+})();
+
+
+(function ($) {
+    $.fn.extend({
+        easyResponsiveTabs: function (options) {
+            var defaults = {
+                type: 'default',
+                width: 'auto',
+                fit: true,
+                closed: false,
+                tabWidth: 100,
+                tabContainer: $("#horizontalTab"),
+                activate: function () {
+                }
+            }
+            var options = $.extend(defaults, options);
+            var opt = options, jtype = opt.type, jfit = opt.fit, jwidth = opt.width, vtabs = 'vertical',
+                accord = 'accordion';
+
+            $(this).bind('tabactivate', function (e, currentTab) {
+                if (typeof options.activate === 'function') {
+                    options.activate.call(currentTab, e)
+                }
+            });
+
+            this.each(function () {
+                var $respTabs = $(this);
+                var $respTabsList = $respTabs.find('ul.resp-tabs-list');
+                $respTabs.find('ul.resp-tabs-list li').addClass('resp-tab-item');
+                $respTabs.css({
+                    'display': 'block',
+                    'width': jwidth
+                });
+
+                $respTabs.find('.resp-tabs-container > div').addClass('resp-tab-content');
+                jtab_options();
+                function jtab_options() {
+                    if (jtype == vtabs) {
+                        $respTabs.addClass('resp-vtabs');
+                    }
+                    if (jfit == true) {
+                        $respTabs.css({width: '100%', margin: '0px'});
+                    }
+                    if (jtype == accord) {
+                        $respTabs.addClass('resp-easy-accordion');
+                        $respTabs.find('.resp-tabs-list').css('display', 'none');
+                    }
+                }
+
+                var $tabItemh2;
+                $respTabs.find('.resp-tab-content').before("<h2 class='resp-accordion' role='tab'><span class='resp-arrow'></span></h2>");
+
+                var itemCount = 0;
+                $respTabs.find('.resp-accordion').each(function () {
+                    $tabItemh2 = $(this);
+                    var innertext = $respTabs.find('.resp-tab-item:eq(' + itemCount + ')').html();
+                    $respTabs.find('.resp-accordion:eq(' + itemCount + ')').append(innertext);
+                    $tabItemh2.attr('aria-controls', 'tab_item-' + (itemCount));
+                    itemCount++;
+                });
+
+                var count = 0,
+                    $tabContent;
+                $respTabs.find('.resp-tab-item').each(function () {
+                    $tabItem = $(this);
+                    $tabItem.attr('aria-controls', 'tab_item-' + (count));
+                    $tabItem.attr('role', 'tab');
+
+                    if (options.closed !== true && !(options.closed === 'accordion' && !$respTabsList.is(':visible')) && !(options.closed === 'tabs' && $respTabsList.is(':visible'))) {
+                        $respTabs.find('.resp-tab-item').first().addClass('resp-tab-active');
+                        $respTabs.find('.resp-accordion').first().addClass('resp-tab-active');
+                        $respTabs.find('.resp-tab-content').first().addClass('resp-tab-content-active').attr('style', 'display:block');
+                    }
+
+                    var tabcount = 0;
+                    $respTabs.find('.resp-tab-content').each(function () {
+                        $tabContent = $(this);
+                        $tabContent.attr('aria-labelledby', 'tab_item-' + (tabcount));
+                        tabcount++;
+                    });
+                    count++;
+                });
+
+                $respTabs.find("[role=tab]").each(function () {
+                    var $currentTab = $(this);
+                    $currentTab.click(function (e) {
+                        window.dispatchEvent(new Event('resize'));
+
+                        var $tabAria = $currentTab.attr('aria-controls');
+
+                        if ($currentTab.hasClass('resp-accordion') && $currentTab.hasClass('resp-tab-active')) {
+                            $respTabs.find('.resp-tab-content-active').slideUp('', function () {
+                                $(this).addClass('resp-accordion-closed');
+                            });
+                            $currentTab.removeClass('resp-tab-active');
+                            return false;
+                        }
+
+                        if (!$currentTab.hasClass('resp-tab-active') && $currentTab.hasClass('resp-accordion')) {
+                            $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
+                            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
+
+                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideDown().addClass('resp-tab-content-active');
+                            $respTabs.find('.resp-tab-content-active').not('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').slideUp().removeClass('resp-tab-content-active resp-accordion-closed');
+                        } else {
+                            $respTabs.find('.resp-tab-active').removeClass('resp-tab-active');
+                            $respTabs.find('.resp-tab-content-active').removeAttr('style').removeClass('resp-tab-content-active').removeClass('resp-accordion-closed');
+                            $respTabs.find("[aria-controls=" + $tabAria + "]").addClass('resp-tab-active');
+                            $respTabs.find('.resp-tab-content[aria-labelledby = ' + $tabAria + ']').addClass('resp-tab-content-active').attr('style', 'display:block');
+                        }
+                        $currentTab.trigger('tabactivate', $currentTab);
+                    });
+                    $(window).resize(function () {
+                        $respTabs.find('.resp-accordion-closed').removeAttr('style');
+                    });
+                });
+            });
+        }
+    });
+})(jQuery);
+</script>
+            <script>
+            buzzTabs().generate(1, "Description", "H5", "accordion");
+            buzzTabs().build("accordion");
+            </script>
+            

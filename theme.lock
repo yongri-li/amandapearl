@@ -225,6 +225,10 @@ assets/evm-lookbook-2018-12-06-Financial-Times-How-To-Spend-It-Six-Of-The-Best-C
   development: 2019-01-13T15:55:43-05:00   3baec81a0367e18fc022c8613e78e66d
 assets/evm-lookbook-2018-12-Vogue.jpg:
   development: 2019-01-17T16:08:47-05:00   6af67016746a80087c27ad784419e6df
+assets/evm-lookbook-2019-01-Ellements-Magazine-AMANDA-PEARL-pearls-1.jpg:
+  development: 2019-01-23T09:17:04-05:00   7096f04caf1d9e6bc24bc4bf0c24883a
+assets/evm-lookbook-2019-01-Ellements-Magazine-AMANDA-PEARL-pearls-2.jpg:
+  development: 2019-01-23T09:17:11-05:00   48147129747057132d2a0fa3c5c1bcad
 assets/evm-lookbook-Amanda-Pearl-in-WWD-1.10.19.jpg:
   development: 2019-01-13T15:53:20-05:00   e023decaa86b918a45e2aa540ca36cea
 assets/fancybox_loading.gif:
@@ -465,6 +469,8 @@ snippets/brands.liquid:
   development: 2018-12-06T10:41:00-05:00   64d21a30f5239bdab7209d654144316a
 snippets/breadcrumb.liquid:
   development: 2018-08-07T12:43:26-04:00   235323195a63d6d8928f7cfd2c08f042
+snippets/bs-tabs.liquid:
+  development: 2019-01-22T17:28:20-05:00   8c5bc16bc6ae7713393bef6503d45438
 snippets/cart-points.liquid:
   development: 2018-11-08T15:49:54-05:00   403467ea339a2a94516ebf8aac86004d
 snippets/collection-grid-item.liquid:
@@ -561,8 +567,10 @@ snippets/product-grid-item-sidebar.liquid:
   development: 2018-09-18T14:08:53-04:00   05ae2d98c7a8cb096524f93b697dcd8d
 snippets/product-grid-item.liquid:
   development: 2019-01-10T14:41:46-05:00   3d37edf6202acc32047c298851befe8c
+snippets/product-list-item-ss-backup.liquid:
+  development: 2019-01-22T16:16:53-05:00   b52741522beb9c47a78b671fcdf0bd1a
 snippets/product-list-item.liquid:
-  development: 2018-09-18T14:08:53-04:00   b52741522beb9c47a78b671fcdf0bd1a
+  development: 2019-01-22T16:16:54-05:00   8461e0a80bb61a44c8b4a8165a23f4cf
 snippets/product-sidebar.liquid:
   development: 2018-08-07T12:43:29-04:00   b35f3fb77318f2be1761c99741a8f427
 snippets/quick-view-template.liquid:
@@ -709,7 +717,9 @@ templates/page.press.liquid:
   development: 2019-01-08T16:49:29-05:00   3b22057a9e163d00e7ec3f741c6e832f
 templates/page.wish-list.liquid:
   development: 2018-08-07T12:43:32-04:00   e60d0cb9269ec5e3a2e92466d368332b
+templates/product-ss-backup.liquid:
+  development: 2019-01-22T16:16:57-05:00   12b5a89474e97ed92a71431e9b4008d4
 templates/product.liquid:
-  development: 2019-01-10T15:46:04-05:00   12b5a89474e97ed92a71431e9b4008d4
+  development: 2019-01-22T16:16:57-05:00   18bca883333a3f173ec219c373b3c44f
 templates/search.liquid:
   development: 2019-01-09T15:10:28-05:00   972780643804706edc282965d73c9ea5

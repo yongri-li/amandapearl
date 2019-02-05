@@ -31,12 +31,13 @@
 
 
   <div class="col-xs-12 col-sm-9 blog-detail">
+    <br><br>
     <header class="page-header">
       {% if settings.enable_multilang %}
       <h1 class="lang1">{{ article.title | split: '|' | first }}</h1>
       <h1 class="lang2">{{ article.title | split: '|' | last }}</h1>
       {% else %}
-      <h1 style="text-align:left!important">{{ article.title | split: '|' | first }}</h1>
+      <h1 style="text-align:left!important ; font-size: 25px!important;">{{ article.title | split: '|' | first }}</h1>
       {% endif %}
     </header>
 

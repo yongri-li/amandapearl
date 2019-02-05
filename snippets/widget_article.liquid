@@ -1,14 +1,15 @@
+<br><br>
 <div class="widget widget-recent-articles">
   <div class="widget-title">
-    <h3>
+    <h3><b>
       <span {% if settings.enable_multilang %}data-translate="blogs.sidebar.recent_articles"{% endif %}>
         {{ 'blogs.sidebar.recent_articles' | t }}
-      </span>
+      </span></b>
     </h3>
   </div>
   <div class="widget-content">
     <ul>
-      {% for article in blog.articles limit:3 %}
+      {% for article in blog.articles limit:5 %}
       <li class="article">
         <p>
           <a href="{{ article.url }}">
@@ -19,7 +20,28 @@
             {{ article.title | split: '|' | first }}
             {% endif %}
           </a>
-          <em>{{ article.published_at | date: "%B %d, %Y" }}</em>
+        </p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+
+<div class="widget widget-recent-articles">
+  <div class="widget-title">
+    <h3><b>
+      <span {% if settings.enable_multilang %}data-translate="blogs.sidebar.recent_articles"{% endif %}>
+        Categories
+      </span></b>
+    </h3>
+  </div>
+  <div class="widget-content">
+    <ul>
+      {% for link in linklists.blog-categories.links %}
+      <li class="article">
+        <p>
+          <a href="{{ link.url }}">{{ link.title }}</a>
         </p>
       </li>
       {% endfor %}

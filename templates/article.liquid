@@ -21,28 +21,14 @@
 {% endif %}
 
 {% include 'breadcrumb' %}
-<header class="page-header">
-  {% if current_tags %}
-    {% if settings.enable_multilang %}
-    <h2 class="lang1">{{ blog.title | split: '|' | first | link_to: blog.url }} &raquo; {{ current_tags.first }}</h2>
-    <h2 class="lang2">{{ blog.title | split: '|' | last | link_to: blog.url }} &raquo; {{ current_tags.first }}</h2>
-    {% else %}
-    <h2>{{ blog.title | split: '|' | first | link_to: blog.url }} &raquo; {{ current_tags.first }}</h2>
-    {% endif %}
-  {% else %}
-    {% if settings.enable_multilang %}
-    <h2 class="lang1">{{ blog.title | split: '|' | first }}</h2>
-    <h2 class="lang2">{{ blog.title | split: '|' | last }}</h2>
-  	{% else %}
-  	<h2>{{ blog.title | split: '|' | first }}</h2>
-    {% endif %}
-  {% endif %}
-</header>
 
 <div class="row">
-  <!-- Begin sidebar -->
-  {% include 'blog_sidebar' %}
-  <!-- End sidebar -->
+  <div style="background: #fafafa; border: 1px solid #eee; padding: 10px; text-align: center; float: center; margin: 10px 0 20px;">
+  {% for link in linklists.blog-categories.links %}
+  <a href="{{ link.url }}" style="padding: 0 10px 0; font-weight: 400; text-transform: uppercase;">{{ link.title }}</a>
+  {% endfor %}
+  </div>
+
 
   <div class="col-xs-12 col-sm-9 blog-detail">
     <header class="page-header">
@@ -50,7 +36,7 @@
       <h1 class="lang1">{{ article.title | split: '|' | first }}</h1>
       <h1 class="lang2">{{ article.title | split: '|' | last }}</h1>
       {% else %}
-      <h1>{{ article.title | split: '|' | first }}</h1>
+      <h1 style="text-align:left!important">{{ article.title | split: '|' | first }}</h1>
       {% endif %}
     </header>
 
@@ -206,4 +192,8 @@
     {% endpaginate %}
     {% endif %}
   </div>
+
+  <!-- Begin sidebar -->
+  {% include 'blog_sidebar' %}
+  <!-- End sidebar -->
 </div>

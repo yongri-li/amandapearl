@@ -291,7 +291,7 @@
                 <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{{ my_description[0] }}</div>
+                <div class="short-description">{{ product.description | split: '<!-- split -->' | first }}</div>
                 {% endif %}
                 {% endif %}
               {% endif %}

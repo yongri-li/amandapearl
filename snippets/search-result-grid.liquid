@@ -8,7 +8,7 @@
   in search.liquid to true.
 {% endcomment %}
 
-<div class="grid-item search-result height_fix">
+<div {% for tag in item.tags %}{% if tag contains 'visible' %}{% else %} style="display:none!important" {% endif %} class="grid-item search-result height_fix">
   <div class="product-top">
       <div class="product-image">
         <a href="{{ item.url | within: collection }}" class="product-grid-image">

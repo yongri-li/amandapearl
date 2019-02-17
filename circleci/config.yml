@@ -1,0 +1,11 @@
+version: 2
+jobs:
+  build:
+    docker:
+    working_directory:
+    environment:
+    steps:
+    
+    - deploy:
+          name: deploy to Shopify
+          command: theme watch

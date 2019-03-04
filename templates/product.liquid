@@ -268,30 +268,30 @@
                 <div class="short-description lang1">{{ des | split: '[lang2]' | first | strip_html | truncatewords: 50 }}</div>
                 <div class="short-description lang2">{{ des | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
                 {% else %}
-                <div class="short-description">{{ des | split: '[lang2]' | first | strip_html | truncatewords: 50 }}</div>
+                <div class="short-description">{% include 'product-description-tabs' %}</div>
                 {% endif %}
                 {% elsif settings.show_desc == 'full' %}
                 {% if settings.enable_multilang %}
                 <div class="short-description lang1">{{ des | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ des | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{{ des | split: '[lang2]' | first }}</div>
+                <div class="short-description">{% include 'product-description-tabs' %}</div>
                 {% endif %}
                 {% endif %}
               {% else %}
                 {% if settings.show_desc == 'short' %}
                 {% if settings.enable_multilang %}
-                <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'bs-tabs' %}</div></div>
+                <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'product-description-tabs' %}</div></div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
                 {% else %}
-                <div class="short-description"><div class="smart-tabs-wrapper">{% include 'bs-tabs' %}</div></div>
+                <div class="short-description"><div class="smart-tabs-wrapper">{% include 'product-description-tabs' %}</div></div>
                 {% endif %}
                 {% elsif settings.show_desc == 'full' %}
                 {% if settings.enable_multilang %}
                 <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{{ product.description | split: '<!-- split -->' | first }}</div>
+                <div class="short-description">{% if product.description contains '<!-- split -->' %}{% include 'product-description-tabs' %}{% else %}{% include 'product-description-tabs' %}{% endif %}</div>
                 {% endif %}
                 {% endif %}
               {% endif %}

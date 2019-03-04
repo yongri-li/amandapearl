@@ -340,11 +340,13 @@
           {% endif %}
 
           {% if settings.show_tab == 'vertical' %}
+          {% comment %}
           <hr>
           <button class="accordion">Inspiration</button>
           <div class="panel">
             {{ my_description[1] }}
           </div>
+          {% endcomment %}
 
           <div class="panel-group" id="accordion">
             {% if settings.display_product_detail_description %}

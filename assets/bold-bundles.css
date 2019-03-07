@@ -7,7 +7,7 @@ In order to edit custom CSS for Bold Product Bundles you should:
 - Go to Display Settings
 ------------------------------------  WARNING  ------------------------------------
 bold-bundles.css version 1
-Generated at 2019-02-05 02:16:43
+Generated at 2019-03-05 02:53:38
 */
 
 /* .bold-bundles-product component */
@@ -460,6 +460,14 @@ select.bold-bundles-widget-item__variants option[disabled] {
 .bold-bundles-widget-item__thumbnail-decorator.product-free {
   z-index: 1;
 }
+
+.bold-checkout{
+  pointer-events: none;
+}
+[name=checkout] > *, [href*='/checkout'] > * {
+  pointer-events: none;
+}
+
 .basic-bundle .bold-bundles-widget__footer {
     text-align: center;
 }

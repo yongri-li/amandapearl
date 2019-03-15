@@ -167,7 +167,7 @@
                 {% assign variantCount = bold_variants_size %}
                 {% if product.available %}
                 {% if variantCount > 1 %}
-                <select id="product-selectors" name="id" style="display:none">
+                <select id="product-selectors" name="id" style="display:none!important">
                   {% for variant in product.variants %}
 {%- include 'bold-variant' with variant, hide_action: 'skip' -%}
                   <option {% if variant == bold_selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ bold_variant_price | money }}</option>

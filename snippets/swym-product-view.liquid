@@ -1,4 +1,4 @@
-{% if product %}
+{%- if product -%}
 <script class="swym-product-view-snippet">
 ['SwymViewProducts', 'SwymWatchProducts', 'SwymProductVariants'].forEach(function(k){
   if(!window[k]) window[k] = {};
@@ -16,6 +16,7 @@
       empi:empi,epi:{{variant.id|json}},
       du:"{{ shop.url }}{{ product.url }}",
       dt:{{ product.title | json }},
+      ct: collections,
       iu: {{ variant.image.src | json}} || piu,
       stk: {{variant.inventory_quantity}},
       pr: {{ variant.price }}/100,
@@ -36,4 +37,4 @@
   })();
 
 </script>
-{% endif %}
+{%- endif -%}

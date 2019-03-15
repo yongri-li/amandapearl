@@ -28,7 +28,7 @@
        {% assign current_product_found = true %}
     {% else %}
        {% unless current_product_found == false and forloop.last %}
-          <div class="{% if settings.product_image_border %}grid-item-border{% endif %}{% if settings.product_image_crop %} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 {% if product_grid == 3 %}col-md-3{% endif %} col-lg-3" {% if product.tags contains 'visible' %}{% else %} style="display:none!important"{% endif %}>
+          <div class="{% if settings.product_image_border %}grid-item-border{% endif %}{% if settings.product_image_crop %} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 {% if product_grid == 3 %}col-md-3{% endif %} col-lg-3">
           {% include 'product-grid-item' %}
           </div>
        {% endunless %}

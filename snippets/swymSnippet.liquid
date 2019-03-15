@@ -28,7 +28,7 @@
     window.SwymProductVariants = window.SwymProductVariants || {};
     window.SwymHasCartItems = {{cart.item_count|json}} > 0;
     window.SwymPageData = {}, window.SwymProductInfo = {};
-    {% if product and template.name == 'product' %}
+    {%- if product and template.name == 'product' -%}
     var variants = [];
     window.SwymProductInfo.product = {{ product | json }};
     window.SwymProductInfo.variants = window.SwymProductInfo.product.variants;
@@ -37,8 +37,8 @@
     {% assign currentVariant = product.selected_or_first_available_variant%}
     {% else %}
     {% assign currentVariant = product.variants[0] %}
-    {% endif %}
-    {% for variant in product.variants %}
+    {%- endif -%}
+    {%- for variant in product.variants -%}
       {% if variant.selected %}
         {% assign currentVariant = variant %}
       {% endif %}
@@ -49,10 +49,11 @@
         iu: {{ variant.image.src | json}} || piu,
         stk: {{variant.inventory_quantity}},
         pr: {{variant.price}}/100,
+        ct: window.SwymProductInfo.product.type,
         {% if variant.compare_at_price %} op: {{variant.compare_at_price}}/100, {% endif %}
         variants: [{ {{ variant.title | json }} : {{variant.id|json}}}]
       };
-    {% endfor %}
+    {%- endfor -%}
     window.SwymProductInfo.currentVariant = {{currentVariant.id | json}};
     var product_data = {
       et: 1, empi: window.SwymProductInfo.product.id, epi: window.SwymProductInfo.currentVariant,

@@ -14,7 +14,6 @@
       <div class="product-item">
         <h2 class="product-title"><a>&nbsp;</a></h2>
 
-        {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" style="position: relative; z-index: 9999;"></button>
 
 
         {% if settings.display_quickview_availability or settings.display_quickview_product_type or settings.display_quickview_vendor %}
@@ -84,6 +83,7 @@
               <span class="compare-price"></span>
               <span class="price"></span>
             </div>
+              {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" style="position: relative; z-index: 9999;"></button>
             <label for="quantity" {% if settings.enable_multilang %}data-translate="cart.label.quantity"{% endif %}>{{ 'cart.label.quantity' | t }}:</label>
             <div class="dec button">-</div>
             <input type="text" name="quantity" value="1" class="quantity">

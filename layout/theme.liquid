@@ -177,11 +177,10 @@ $(function() {
 .header-mobile #showLeftPush { background: #fff!important }
 #navbar-close { position: absolute; z-index: 99; left: 750%; top: 80px; }
 </style>
-
+<script>
+if (afterpay_product && afterpay_product.price == 0) {
+ $('p.afterpay-paragraph').css({visibility: 'hidden', maxHeight: "0"});
+}
+</script>
 </body>
 </html>
-  <script>
-  if (afterpay_product && afterpay_product.price == 0) {
-   $('p.afterpay-paragraph').css({visibility: 'hidden', maxHeight: "0"});
-}
-  </script>

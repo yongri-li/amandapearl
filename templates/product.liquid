@@ -167,7 +167,7 @@
                 {% assign variantCount = bold_variants_size %}
                 {% if product.available %}
                 {% if variantCount > 1 %}
-                <select id="product-selectors" name="id" style="display:none!important">
+                <select id="product-selectors" name="id" style="display:none">
                   {% for variant in product.variants %}
 {%- include 'bold-variant' with variant, hide_action: 'skip' -%}
                   <option {% if variant == bold_selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ bold_variant_price | money }}</option>
@@ -261,6 +261,7 @@
               })
             </script>
             {% endif %}
+
             {% if product.description contains '[countdown]' %}
               {% assign des = product.description | split:'[/countdown]' | last %}
                 {% if settings.show_desc == 'short' %}
@@ -295,6 +296,7 @@
                 {% endif %}
                 {% endif %}
               {% endif %}
+
               <b>More Questions?</b> <a onclick="zE.activate();" href="#">Chat with us.</a>
           </div>
 

@@ -45,7 +45,7 @@
           <center>
             <div class="hidden-xs">
           <img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
-          <p>For every purchase made, AMANDA PEARL donates 10% to Artists For Progress.<p>
+          <p>For every purchase made, AMANDA PEARL donates 10% to Global Fund for Women.<p>
             <p><a href="/blogs/amanda-pearl/community-for-cause">Click here</a> to learn more!</p>
           </div>
           </center>
@@ -261,6 +261,7 @@
               })
             </script>
             {% endif %}
+
             {% if product.description contains '[countdown]' %}
               {% assign des = product.description | split:'[/countdown]' | last %}
                 {% if settings.show_desc == 'short' %}
@@ -268,33 +269,34 @@
                 <div class="short-description lang1">{{ des | split: '[lang2]' | first | strip_html | truncatewords: 50 }}</div>
                 <div class="short-description lang2">{{ des | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
                 {% else %}
-                <div class="short-description">{% include 'product-description-tabs' %}</div>
+                <div class="short-description">{% include 'product-description-slider' %}</div>
                 {% endif %}
                 {% elsif settings.show_desc == 'full' %}
                 {% if settings.enable_multilang %}
                 <div class="short-description lang1">{{ des | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ des | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{% include 'product-description-tabs' %}</div>
+                <div class="short-description">{% include 'product-description-slider' %}</div>
                 {% endif %}
                 {% endif %}
               {% else %}
                 {% if settings.show_desc == 'short' %}
                 {% if settings.enable_multilang %}
-                <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'product-description-tabs' %}</div></div>
+                <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
                 {% else %}
-                <div class="short-description"><div class="smart-tabs-wrapper">{% include 'product-description-tabs' %}</div></div>
+                <div class="short-description"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
                 {% endif %}
                 {% elsif settings.show_desc == 'full' %}
                 {% if settings.enable_multilang %}
                 <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{% if product.description contains '<!-- split -->' %}{% include 'product-description-tabs' %}{% else %}{% include 'product-description-tabs' %}{% endif %}</div>
+                <div class="short-description">{% if product.description contains '<!-- split -->' %}{% include 'product-description-slider' %}{% else %}{% include 'product-description-slider' %}{% endif %}</div>
                 {% endif %}
                 {% endif %}
               {% endif %}
+
               <b>More Questions?</b> <a onclick="zE.activate();" href="#">Chat with us.</a>
           </div>
 

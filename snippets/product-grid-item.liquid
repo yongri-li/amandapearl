@@ -16,7 +16,7 @@
     <div class="product-top">
       <div class="product-image">
         <a href="{{ product.url | within: collection }}" class="product-grid-image">
-          <img src="{{ product.featured_image | product_img_url: '400x' }}" alt="{{product.title}}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: 'large' }}'" onmouseout="src='{{ product.featured_image | product_img_url: 'large' }}'" {% endif %}>
+          <img src="{{ product.featured_image | product_img_url: '400x' }}" alt="{{product.title}}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: '400x' }}'" onmouseout="src='{{ product.featured_image | product_img_url: '400x' }}'" {% endif %}>
         </a>
       </div>
 

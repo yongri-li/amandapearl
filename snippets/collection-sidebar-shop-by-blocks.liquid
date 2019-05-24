@@ -1,7 +1,4 @@
 
-
-
-
 {% if current_tags == blank %}
 {% assign has_refined = false %}
 {% else %}
@@ -50,14 +47,16 @@
 
         {% if settings[shop_by_color_text] != blank %}
           {% assign tag = settings[shop_by_color_text] | strip %}
+          {% assign tag_value = tag | handleize %}
           {% if collection.tags contains tag %}
             <li>
-              {% assign tag_value = tag | handleize %}
-              <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag %}checked{% endif %} style="border-radius: 100%"/>
+              <input type="checkbox" value="{{ tag_value }}" {% if current_tags contains tag_value %}checked{% endif %} style="border-radius: 100%"/>
               <a href="javascript:void(0)"  {% if current_tags contains tag %} class="active" {% endif %} title="{{tag}}" style="border-radius: 100%">
                 <img src="{{ color | asset_url }}" alt="" style="border-radius: 100%"/>
               </a>
             </li>
+
+
         {% endif %}
         {% endif %}
       {% endfor %}

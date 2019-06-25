@@ -14,7 +14,7 @@
       {% assign text = color | handleize %}
 
       <li>
-        <label style="{% if text == 'white' %}border: 1px solid #cbcbcb; {% endif %}background-color: {{ color | split: ' ' | last | handle }}; background-image: url({{ text | append: '.jpg' | asset_url }}); background-position: center center; width: 30px; height: 30px; background-size: cover;"></label>
+        <label style="{% if text == 'white' %}border: 1px solid #cbcbcb; {% endif %}background-color: {{ color | split: ' ' | last | handle }}; background-image: url({{ text | append: '.jpg' | asset_img_url: '30x' }}); background-position: center center; width: 30px; height: 30px; background-size: cover;"></label>
 
         {% if variant.image != null %}
         <div class="hidden">

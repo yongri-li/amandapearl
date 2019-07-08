@@ -3,7 +3,7 @@
   <ul class="row">
     <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load }}ms">
       <a href="{{ settings.three_block_banner_link_1 }}">
-        {{ 'top-banner-home-1.jpg' | asset_url | img_tag }}
+        {{ 'top-banner-home-1.jpg' | asset_img_url: '500x' | img_tag }}
         {% if settings.display_banner_text_1 %}
           <h4>
             <span style="
@@ -33,7 +33,7 @@
 	</li>
     <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 2 }}ms">
       <a href="{{ settings.three_block_banner_link_2 }}">
-        {{ 'top-banner-home-2.jpg' | asset_url | img_tag }}
+        {{ 'top-banner-home-2.jpg' | asset_img_url: '500x' | img_tag }}
         {% if settings.display_banner_text_2 %}
           <h4>
             <span style="
@@ -63,7 +63,7 @@
 	</li>
     <li class="col-xs-12 col-sm-4 wow fadeInUp" data-wow-delay="{{ settings.time_lazy_load | times: 3 }}ms">
       <a href="{{ settings.three_block_banner_link_3 }}">
-        {{ 'top-banner-home-3.jpg' | asset_url | img_tag }}
+        {{ 'top-banner-home-3.jpg' | asset_img_url: '500x' | img_tag }}
         {% if settings.display_banner_text_3 %}
           <h4>
             <span style="

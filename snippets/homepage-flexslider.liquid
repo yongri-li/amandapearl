@@ -62,7 +62,8 @@
           {% if settings[display_slideshow] == 'video' %}
           {{ settings[video] }}
           {% else %}
-          <img src="{{ slide | asset_url }}" data-url="{{ settings[link] }}" class="slide-img" alt="{{ settings[alt] }}" />
+          <img src="{{ slide | asset_url }}" data-url="{{ settings[link] }}" class="slide-img hidden-xs" alt="{{ settings[alt] }}" />
+          <img src="{{ slide | asset_img_url: '900x' }}" data-url="{{ settings[link] }}" class="slide-img visible-xs" alt="{{ settings[alt] }}" />
           <div class="slide-des"
                {% if settings[text_align_slide] == 'center' %}
                style="max-width: 100%;"

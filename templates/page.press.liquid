@@ -154,10 +154,12 @@
 </style>
 
 
-<script type="text/javascript">
+<script type="text/javascript">// <![CDATA[
 setTimeout(function() {
         $(document).ready(function() {
+
             modalW = 85 / 100 * parseInt($(window).width());
+
             $(".press a").each(function() {
               if($(this).find('img').length) {
                 $(this).attr('href', $(this).find('img').attr('src')
@@ -166,6 +168,8 @@ setTimeout(function() {
                     .attr('title', $(this).text());
               }
             });
+
+
             setTimeout(function() {
                 $(".press a").fancybox({
                     'minWidth': modalW,
@@ -176,8 +180,12 @@ setTimeout(function() {
                     closeClick: true, // if true, fancyBox will be closed when user clicks on the overlay
                     //'content':'<img src="'+$(this).attr('data-fancyimage')+'">'
                     scrolling: 'no',
+
                 });
             }, 500);
+
+
+
             setTimeout(function() {
                 setInterval(function() {
                     $('.fancybox-nav span').css('top', 45 / 100 * parseInt($(window).height()));
@@ -197,4 +205,4 @@ setTimeout(function() {
 
         });
     }, 1000);
-</script>
+// ]]></script>

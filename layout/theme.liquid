@@ -183,7 +183,7 @@ if (afterpay_product && afterpay_product.price == 0) {
  $('p.afterpay-paragraph').css({visibility: 'hidden', maxHeight: "0"});
 }
 </script>
-
+{{ 'instant.js' | asset_url | script_tag }}
 
 </body>
 </html>

@@ -7,7 +7,7 @@ In order to edit custom CSS for Bold Product Bundles you should:
 - Go to Display Settings
 ------------------------------------  WARNING  ------------------------------------
 bold-bundles.css version 1
-Generated at 2019-05-17 01:30:18
+Generated at 2019-11-15 09:25:55
 */
 
 /* .bold-bundles-product component */
@@ -219,6 +219,11 @@ Generated at 2019-05-17 01:30:18
   width: 20px;
   display: none;
 }
+.bold-bundles-widget-item__thumbnail-decorator.product-discounted {
+  border-radius: 10px;
+  width: 80px;
+  display: none;
+}
 
 .bold-bundles-widget-item__thumbnail-decorator.product-free {
   padding-left: 5px;
@@ -232,6 +237,10 @@ Generated at 2019-05-17 01:30:18
 }
 
 .bold-bundles-widget-item--product.is_free .bold-bundles-widget-item__thumbnail-decorator.product-free{
+  display: block;
+}
+
+.bold-bundles-widget-item--product:not(.is_free) .bold-bundles-widget-item__thumbnail-decorator.product-discounted{
   display: block;
 }
 
@@ -467,6 +476,87 @@ select.bold-bundles-widget-item__variants option[disabled] {
 [name=checkout] > *, [href*='/checkout'] > * {
   pointer-events: none;
 }
+
+/* Bundles Widget Overlay CSS start */
+.bold-bundles-widget .overlay {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 2;
+  cursor: pointer;
+  text-align: center;
+}
+
+.bold-bundles-widget #overlay-wrapper{
+position: relative;
+}
+ 
+
+.bold-bundles-widget .modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 0 10px;
+  border: 1px solid #888;
+  width: 80%;
+  margin-top: 20%;
+}
+
+.bold-bundles-widget .close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+float: right;
+}
+
+.bold-bundles-widget .close:hover,
+.bold-bundles-widget .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+.bold-bundles-widget .modalText{
+margin-top:40px;
+}
+
+.bold-bundles-widget .buttonsContainer{
+margin-top:10px
+}
+.bold-bundles-widget .modal-button{
+    padding: 10px 30px;
+    margin: 20px;
+    background: #47708A;
+    border-radius: 2px;
+    color: #fff !important;
+    min-width: 110px;
+    display: inline-block;
+    text-align: center;
+    min-height: 45px
+}
+/* Bundles Widget Overlay CSS end */
+
+/* Bundles cart loader CSS start */
+.bold-cart.bold-loading::before {
+  z-index: 10;
+  content:  "Cart loading";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: 10rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('https://bundles.staging.boldapps.net/assets/imgs/loading-spinner.gif');
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  color: #FFF;
+}
+/* Bundles cart loader CSS end */
 
 .basic-bundle .bold-bundles-widget__footer {
     text-align: center;

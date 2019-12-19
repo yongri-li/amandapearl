@@ -52,13 +52,13 @@
 
       <div class="price-box">
         {% if on_sale %}
-        <p class="sale">
-          <span class="old-price">{{ bold_compare_at_price_min | money }}</span>
-          <span class="special-price">{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }} {% if bold_compare_at_price_max > bold_price %} ({{ bold_compare_at_price_max | minus: bold_price | times: 100.0 | divided_by: bold_compare_at_price_max | money_without_currency | times: 100 | remove: '.0'}}% off){% endif %}</span>
+        <p class="regular-product">
+          <span style="color:#555">Traditional Price: {{ bold_compare_at_price_min | money }}</span><br>
+          <span style="font-weight:700">Our Price: {% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
         </p>
         {% else %}
         <p class="regular-product">
-          <span>{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
+          <span style="font-weight:700">{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
           {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}"></button>
         </p>
         {% endif %}

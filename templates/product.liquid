@@ -80,14 +80,11 @@
             <div class="prices">
               <center>
                   {% if bold_compare_at_price > bold_price %}
-                  <span class="" style="font-size: 16px; color: #555; font-weight: 400;">Traditional Price: {{ product.compare_at_price | money }}</span><br>
-                  <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Our Price: {{ product.price | money }}</span><br><br>
+                  <div class="" style="font-size: 16px; color: #555; font-weight: 400; margin-bottom: -15px;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div><br>
+                  <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Our Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div><br><br>
                   {% else %}
                   <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">{{ product.price | money }}</span><br><br>
                   {% endif %}
-
-                  <span class="price" itemprop="price" style="display:none">Our Price: {{ product.price | money }}</span>
-
                 </center>
               </div>
 

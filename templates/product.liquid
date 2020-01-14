@@ -77,6 +77,13 @@
                 {% endif %}
               {% endif %}
             </header>
+            
+            <center>
+            <div class="yotpo bottomLine"
+          data-product-id="{{ product.id }}"
+          data-url="{{ shop.url }}{{ product.url }}">
+          </div>
+        </center>
 
             <div class="prices">
               <center>
@@ -88,6 +95,8 @@
                   {% endif %}
                 </center>
               </div>
+
+
 
 
 
@@ -901,3 +910,12 @@ jQuery(function($) {
     }
   }
   </script>
+<br><br><br>
+  <div class="widget-title wow fadeIn">
+  <fieldset class="box-title">
+      <legend align="center">Reviews</legend>
+    </fieldset>
+  </div>
+
+
+<div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>

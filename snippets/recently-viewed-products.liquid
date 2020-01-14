@@ -39,14 +39,6 @@
             <img src="${Shopify.Products.resizeImage(featured_image, "large")}" alt="${featured_image.alt}"/>
             <div class="hover"></div>
           </a>
-          <div class="product-label">
-            {{if compare_at_price_min > price_min}}
-              <strong class="label" {% endraw %}{% if settings.enable_multilang %}data-translate="products.product.sale"{% endif %}>{{ 'products.product.sale' | t }}{% raw %}</strong>
-            {{/if}}
-            {{if !available}}
-              <strong class="sold-out-label" {% endraw %}{% if settings.enable_multilang %}data-translate="products.product.sold_out"{% endif %}>{{ 'products.product.sold_out' | t }}{% raw %}</strong>
-            {{/if}}
-          </div>
         </div>
       </div>
 
@@ -68,8 +60,8 @@
         <div class="price-box">
         {{if compare_at_price_min > price_min}}
           <p class="sale">
-            <span class="old-price"> {{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}</span>
-            <span class="special-price">{{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money)}}</span>
+            <span class="old-price">Traditional Price: {{html Shopify.formatMoney(compare_at_price_min, window.money_format)}}</span><br>
+            <span class="special-price">Our Price: {{if price_varies}}{% endraw %}{% include 'varies_from' %}{% raw %}{{/if}}{{html Shopify.formatMoney(price_min, window.money)}}</span>
             </p>
         {{else}}
           <p class="regular-product">

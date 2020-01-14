@@ -1,4 +1,4 @@
-/*! instant.page v1.1.0 - (C) 2019 Alexandre Dieulot - https://instant.page/license */
+/*! instant.page v1.2.2 - (C) 2019 Alexandre Dieulot - https://instant.page/license */
 
 let urlToPreload
 let mouseoverTimer
@@ -21,8 +21,6 @@ if (isSupported) {
 }
 
 function touchstartListener(event) {
-  /* Chrome on Android calls mouseover before touchcancel so `lastTouchTimestamp`
-   * must be assigned on touchstart to be measured on mouseover. */
   lastTouchTimestamp = performance.now()
 
   const linkElement = event.target.closest('a')
@@ -118,7 +116,5 @@ function preload(url) {
 }
 
 function stopPreloading() {
-  /* The spec says an empty string should abort the prefetching
-  * but Firefox 64 interprets it as a relative URL to prefetch. */
   prefetcher.removeAttribute('href')
 }

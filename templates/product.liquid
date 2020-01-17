@@ -85,7 +85,7 @@
           </div>
         </center>
 
-            <div class="prices">
+          <div class="prices">
               <center>
                   {% if bold_compare_at_price > bold_price %}
                   <div class="" style="font-size: 16px; color: #555; font-weight: 400; margin-bottom: -15px;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div><br>
@@ -94,11 +94,9 @@
                   <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">{{ product.price | money }}</span><br><br>
                   {% endif %}
                 </center>
-              </div>
+            </div>
 
-
-
-
+            <p>{{ product.metafields.mm_dev.desc }}</p>
 
             {% if settings.display_sample_vendor %}
             <p class="sample-vendor"><span>{{ product.vendor }}</span></p>
@@ -302,7 +300,12 @@
                 <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
                 <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
                 {% else %}
-                <div class="short-description">{% if product.description contains '<!-- split -->' %}{% include 'product-description-slider' %}{% else %}{% include 'product-description-slider' %}{% endif %}</div>
+                <div class="short-description">{% if product.description contains '<!-- split -->' %}
+                  {% include 'product-description-slider' %}
+                  {% else %}
+                  {% include 'product-description-slider' %}
+                  {% endif %}
+                </div>
                 {% endif %}
                 {% endif %}
               {% endif %}
@@ -382,19 +385,19 @@
                 {% if product.description contains '[countdown]' %}
                 {% assign des = product.description | split:'[/countdown]</p>' | last %}
                   {% if settings.enable_multilang %}
-                  {% assign my_description = product.description | split: '<!-- split -->'  %}
-                  <div class="lang1">{{ my_description[1] }}</div>
+                  {% assign desc_bull = product.description | split: '<ul>'  %}
+                  <div class="lang1">{{ desc_bull[1] }}</div>
                   <div class="lang2">{{ des | split: '[lang2]' | last }}</div>
                   {% else %}
                   <div>{{ des | split: '|' | first }}</div>
                   {% endif %}
                 {% else %}
+                {% assign desc_bull = product.description | split: '<ul>'  %}
                   {% if settings.enable_multilang %}
                   <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
                   <div class="lang2">{{ product.description | split: '[lang2]' | last }}</div>
                   {% else %}
-
-                  <div class="lang1">{{ my_description[1] }}</div>
+                  <div class="lang1">{{ desc_bull[1] }}</div>
                   {% endif %}
                 {% endif %}
                 </div>

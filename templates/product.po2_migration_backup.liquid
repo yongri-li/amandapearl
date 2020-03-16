@@ -1,5 +1,7 @@
 <script>var SPOCustom ={}; SPOCustom.customVariantSelectors = true;</script>
-
+<!-- spurit_po-added -->
+{% include 'spurit_po-product-snippet' %}
+<!-- /spurit_po-added -->
 
 {% assign my_description = product.description | split: '<!-- split -->'  %}
 {%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}

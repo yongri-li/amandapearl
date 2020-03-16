@@ -1,5 +1,7 @@
 <script>var SPOCustom ={}; SPOCustom.customVariantSelectors = true;</script>
-
+<!-- spurit_po-added -->
+{% include 'spurit_po-product-snippet' %}
+<!-- /spurit_po-added -->
 
 {% assign my_description = product.description | split: '<!-- split -->'  %}
 {%- include 'bold-product' with product, hide_action: 'break', output: 'none' -%}
@@ -42,11 +44,10 @@
 
           <center>
             <div class="hidden-xs">
-              <img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
-              <p>From January 1st to April 1st, 2020, AMANDA PEARL will donate 10% of all sales to <br>The International Rescue Committee (IRC) to help people whose lives and livelihoods <br>are shattered by conflict and disaster to survive, recover, and gain control of their future.<br><br>(No portion of the purchase price is tax deductible.)<p>
-              <p><a href="/blogs/amanda-pearl/community-for-cause">Click here to learn more!</a>
-              </p>
-            </div>
+          <img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
+          <p>For every purchase made, AMANDA PEARL donates 10% to Global Fund for Women.<p>
+            <p><a href="/blogs/amanda-pearl/community-for-cause">Click here</a> to learn more!</p>
+          </div>
           </center>
         </div>
 
@@ -56,48 +57,37 @@
         <div class="col-xs-12 col-sm-5 product-shop">
           <div>
             <header class="product-title {% if collection.previous_product or collection.next_product and settings.display_prev_next_product and collection %}has-btn{% endif %}">
-              <center>
-                <h2 itemprop="name">
-                  {% if settings.enable_multilang %}
-                  <span class="lang1">{{ product.title | split: '|' | first }}</span>
-                  <span class="lang2">{{ product.title | split: '|' | last }}</span>
-                  {% else %}
-                  <span>{{ product.title | split: '|' | first }}</span>
-                  {% endif %}
-                </h2>
-              </center>
+<center>
+              <h2 itemprop="name">
+                {% if settings.enable_multilang %}
+                <span class="lang1">{{ product.title | split: '|' | first }}</span>
+                <span class="lang2">{{ product.title | split: '|' | last }}</span>
+                {% else %}
+                <span>{{ product.title | split: '|' | first }}</span>
+                {% endif %}
+              </h2>
+            </center>
               {% if settings.display_prev_next_product and collection %}
-              {% if collection.previous_product %}
-              <a class="prev btn" href="{{ collection.previous_product }}" {% if settings.enable_multilang %}data-translate="collections.toolbar.previous"{%endif%}>{{ 'collections.toolbar.previous' | t }}</a>
-              {% endif %}
-              {% if collection.next_product %}
-              <a class="next btn" href="{{ collection.next_product }}" {% if settings.enable_multilang %}data-translate="collections.toolbar.next"{%endif%}>{{ 'collections.toolbar.next' | t }}</a>
-              {% endif %}
+                {% if collection.previous_product %}
+                <a class="prev btn" href="{{ collection.previous_product }}" {% if settings.enable_multilang %}data-translate="collections.toolbar.previous"{%endif%}>{{ 'collections.toolbar.previous' | t }}</a>
+                {% endif %}
+                {% if collection.next_product %}
+                <a class="next btn" href="{{ collection.next_product }}" {% if settings.enable_multilang %}data-translate="collections.toolbar.next"{%endif%}>{{ 'collections.toolbar.next' | t }}</a>
+                {% endif %}
               {% endif %}
             </header>
 
-            <center>
-              <div class="yotpo bottomLine"
-                   data-product-id="{{ product.id }}"
-                   data-url="{{ shop.url }}{{ product.url }}">
-              </div>
-            </center>
-
-
-
-            <div class="prices" style="display:flex;flex-direction:column;">
+            <div class="prices">
               <center>
-                {% if bold_compare_at_price > bold_price %}
-                <div class="" style="font-size: 16px; color: #555; font-weight: 400; margin-bottom: -15px;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div><br>
-                <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Your Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div><br><br>
-                {% else %}
-                <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">{{ product.price | money }}</span>
-                {% endif %}
-              </center>
-             </div>
+                  {% if bold_compare_at_price > bold_price %}
+                  <span class="compare-price">{{ bold_compare_at_price_max | money }}</span>
+                  <span class="price on-sale" itemprop="price">{{ bold_price | money }}</span>
+                  {% else %}
+                  <span class="price" itemprop="price" style="font-size: 16px; color: #777; font-weight: 700;">{{ bold_price | money }}</span>
+                  {% endif %}
+                </center>
+                </div>
 
-
-            <p style="text-align:center">{{ product.metafields.mm_dev.desc }}</p>
 
 
             {% if settings.display_sample_vendor %}
@@ -123,16 +113,16 @@
                 {% endif %}
                 {% endif %}
                 <span>
-                  {% if bold_selected_or_first_available_variant.inventory_management %}
-                  {% assign first_inventory = bold_selected_or_first_available_variant.inventory_quantity %}
-                  {% if first_inventory > 0 %}
+                {% if bold_selected_or_first_available_variant.inventory_management %}
+                {% assign first_inventory = bold_selected_or_first_available_variant.inventory_quantity %}
+                {% if first_inventory > 0 %}
                   {{first_inventory}} {{ 'products.product.in_stock' | t }}
-                  {% else %}
+                {% else %}
                   {{ 'products.product.out_of_stock' | t }}
-                  {% endif %}
-                  {% else %}
+                {% endif %}
+                {% else %}
                   {{ 'products.product.many_in_stock' | t }}
-                  {% endif %}
+                {% endif %}
                 </span>
               </p>
               {% endif %}
@@ -172,14 +162,14 @@
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
             <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form">
-              <hr>
+             <hr>
               <div id="product-variants">
                 {% assign variantCount = bold_variants_size %}
                 {% if product.available %}
                 {% if variantCount > 1 %}
                 <select id="product-selectors" name="id" style="display:none">
                   {% for variant in product.variants %}
-                  {%- include 'bold-variant' with variant, hide_action: 'skip' -%}
+{%- include 'bold-variant' with variant, hide_action: 'skip' -%}
                   <option {% if variant == bold_selected_or_first_available_variant %} selected="selected" {% endif %} value="{{ variant.id }}">{{ variant.title }} - {{ bold_variant_price | money }}</option>
                   {% endfor %}
                 </select>
@@ -206,34 +196,34 @@
 
               <br><br>
               <div class="col-xs-12">
-                <div style="max-width: 122px;margin: 0 auto !important;float: none !important; text-align: center;">
-                  <label for="quantity" {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}><b>{{ 'cart.label.quantity' | t }}: </b></label>
-                  <div class="dec button">-</div>
-                  <input type="text" id="quantity" name="quantity" value="1">
-                  <div class="inc button">+</div>
-                  <script>
-                    jQuery(".button").on("click", function() {
-                      var oldValue = jQuery("#quantity").val(),
-                          newVal = 1;
+              <div style="max-width: 122px;margin: 0 auto !important;float: none !important; text-align: center;">
+              <label for="quantity" {% if settings.enable_multilang %}data-translate="cart.label.quantity"{%endif%}><b>{{ 'cart.label.quantity' | t }}: </b></label>
+              <div class="dec button">-</div>
+              <input type="text" id="quantity" name="quantity" value="1">
+              <div class="inc button">+</div>
+              <script>
+                jQuery(".button").on("click", function() {
+                  var oldValue = jQuery("#quantity").val(),
+                      newVal = 1;
 
-                      if (jQuery(this).text() == "+") {
-                        newVal = parseInt(oldValue) + 1;
-                      } else if (oldValue > 1) {
-                        newVal = parseInt(oldValue) - 1;
-                      }
+                  if (jQuery(this).text() == "+") {
+                      newVal = parseInt(oldValue) + 1;
+                    } else if (oldValue > 1) {
+                      newVal = parseInt(oldValue) - 1;
+                  }
 
-                      jQuery("#quantity").val(newVal);
-                      {% if settings.display_subtotal and product.available %}
-                      updatePricing();
-                      {% endif %}
-                    });
-                  </script>
-                </div>
+                  jQuery("#quantity").val(newVal);
+                  {% if settings.display_subtotal and product.available %}
+                  updatePricing();
+                  {% endif %}
+                });
+              </script>
+              </div>
               </div>
               <div class="col-xs-12">
-                <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}">
-              </div>
-              {% else %}
+              <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.add_to_cart"{%endif%} id="product-add-to-cart" value="{{ 'products.product.add_to_cart' | t }}">
+            </div>
+            {% else %}
               <input type="submit" name="add" class="btn" {% if settings.enable_multilang %}data-translate="products.product.unavailable"{%endif%} id="product-add-to-cart" disabled value="{{ 'products.product.unavailable' | t }}">
               {% endif %}
             </form>
@@ -243,9 +233,9 @@
           </div>
 
           <center>
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_share_toolbox"></div>
-          </center>
+                <!-- Go to www.addthis.com/dashboard to customize your tools -->
+                <div class="addthis_inline_share_toolbox"></div>
+              </center>
 
 
           {% include 'wishlist-product' %}<br><br>
@@ -266,53 +256,48 @@
             <script>
               $(document ).ready(function() {
                 $("#clock").countdown('{{ count_down_final }}', function(event) {
-                                      $(this).html(event.strftime('%Dd %H:%M:%S'));
-              });
+                  $(this).html(event.strftime('%Dd %H:%M:%S'));
+                });
               })
             </script>
             {% endif %}
 
             {% if product.description contains '[countdown]' %}
-            {% assign des = product.description | split:'[/countdown]' | last %}
-            {% if settings.show_desc == 'short' %}
-            {% if settings.enable_multilang %}
-            <div class="short-description lang1">{{ des | split: '[lang2]' | first | strip_html | truncatewords: 50 }}</div>
-            <div class="short-description lang2">{{ des | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
-            {% else %}
-            <div class="short-description">{% include 'product-description-slider' %}</div>
-            {% endif %}
-            {% elsif settings.show_desc == 'full' %}
-            {% if settings.enable_multilang %}
-            <div class="short-description lang1">{{ des | split: '[lang2]' | first }}</div>
-            <div class="short-description lang2">{{ des | split: '[lang2]' | last }}</div>
-            {% else %}
-            <div class="short-description">{% include 'product-description-slider' %}</div>
-            {% endif %}
-            {% endif %}
-            {% else %}
-            {% if settings.show_desc == 'short' %}
-            {% if settings.enable_multilang %}
-            <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
-            <div class="short-description lang2">{{ product.description | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
-            {% else %}
-            <div class="short-description"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
-            {% endif %}
-            {% elsif settings.show_desc == 'full' %}
-            {% if settings.enable_multilang %}
-            <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
-            <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
-            {% else %}
-            <div class="short-description">{% if product.description contains '<!-- split -->' %}
-              {% include 'product-description-slider' %}
+              {% assign des = product.description | split:'[/countdown]' | last %}
+                {% if settings.show_desc == 'short' %}
+                {% if settings.enable_multilang %}
+                <div class="short-description lang1">{{ des | split: '[lang2]' | first | strip_html | truncatewords: 50 }}</div>
+                <div class="short-description lang2">{{ des | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
+                {% else %}
+                <div class="short-description">{% include 'product-description-slider' %}</div>
+                {% endif %}
+                {% elsif settings.show_desc == 'full' %}
+                {% if settings.enable_multilang %}
+                <div class="short-description lang1">{{ des | split: '[lang2]' | first }}</div>
+                <div class="short-description lang2">{{ des | split: '[lang2]' | last }}</div>
+                {% else %}
+                <div class="short-description">{% include 'product-description-slider' %}</div>
+                {% endif %}
+                {% endif %}
               {% else %}
-              {% include 'product-description-slider' %}
+                {% if settings.show_desc == 'short' %}
+                {% if settings.enable_multilang %}
+                <div class="short-description lang1"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
+                <div class="short-description lang2">{{ product.description | split: '[lang2]' | last | strip_html | truncatewords: 50 }}</div>
+                {% else %}
+                <div class="short-description"><div class="smart-tabs-wrapper">{% include 'product-description-slider' %}</div></div>
+                {% endif %}
+                {% elsif settings.show_desc == 'full' %}
+                {% if settings.enable_multilang %}
+                <div class="short-description lang1">{{ product.description | split: '[lang2]' | first }}</div>
+                <div class="short-description lang2">{{ product.description | split: '[lang2]' | last }}</div>
+                {% else %}
+                <div class="short-description">{% if product.description contains '<!-- split -->' %}{% include 'product-description-slider' %}{% else %}{% include 'product-description-slider' %}{% endif %}</div>
+                {% endif %}
+                {% endif %}
               {% endif %}
-            </div>
-            {% endif %}
-            {% endif %}
-            {% endif %}
 
-            <b>More Questions?</b> <a onclick="zE.activate();" href="#">Chat with us.</a>
+              <b>More Questions?</b> <a onclick="zE.activate();" href="#">Chat with us.</a>
           </div>
 
           {% if settings.display_product_detail_tag %}
@@ -384,24 +369,24 @@
 
               <div id="collapse-tab1" class="panel-collapse collapse">
                 <div class="panel-body" itemprop="description">
-                  {% if product.description contains '[countdown]' %}
-                  {% assign des = product.description | split:'[/countdown]</p>' | last %}
+                {% if product.description contains '[countdown]' %}
+                {% assign des = product.description | split:'[/countdown]</p>' | last %}
                   {% if settings.enable_multilang %}
-                  {% assign desc_bull = product.description | split: '<ul>'  %}
-                  <div class="lang1">{{ desc_bull[1] }}</div>
+                  {% assign my_description = product.description | split: '<!-- split -->'  %}
+                  <div class="lang1">{{ my_description[1] }}</div>
                   <div class="lang2">{{ des | split: '[lang2]' | last }}</div>
                   {% else %}
                   <div>{{ des | split: '|' | first }}</div>
                   {% endif %}
-                  {% else %}
-                  {% assign desc_bull = product.description | split: '<ul>'  %}
+                {% else %}
                   {% if settings.enable_multilang %}
                   <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
                   <div class="lang2">{{ product.description | split: '[lang2]' | last }}</div>
                   {% else %}
-                  <div class="lang1">{{ desc_bull[1] }}</div>
+
+                  <div class="lang1">{{ my_description[1] }}</div>
                   {% endif %}
-                  {% endif %}
+                {% endif %}
                 </div>
               </div>
             </div>
@@ -486,31 +471,31 @@
         </div>
       </div>
     </div>
-    {%- unless bundle_loaded == 'true' -%}
-    {%- include 'shappify-bdl-load-bundle' -%}
-    {%- assign bundle_loaded = 'true' -%}
-    {%- endunless -%}
+{%- unless bundle_loaded == 'true' -%}
+{%- include 'shappify-bdl-load-bundle' -%}
+{%- assign bundle_loaded = 'true' -%}
+{%- endunless -%}
 
     <style>
       @media screen and (min-width: 650px){
         span.bold-bundles-widget-item-separator {
-          top: -80px !important;
+            top: -80px !important;
         }
         img.bold-bundles-widget-item__image {
-          width: 200px;
-          height: 200px;
+            width: 200px;
+            height: 200px;
         }
 
         .bold-bundles-widget-item__thumbnail {
-          text-align: center;
+            text-align: center;
         }
         .bold-bundles-widget-item__wrapper {
-          width:  200px;
-          margin:  auto;
+            width:  200px;
+            margin:  auto;
         }
 
         .bold-bundles-widget-item__info {
-          margin-top: 10px;
+            margin-top: 10px;
           width:  200px;
         }
 
@@ -576,26 +561,26 @@
 
       <div id="myTabContent" class="tab-content">
         {% if settings.display_product_detail_description %}
-        {% if product.description contains '[countdown]' %}
-        {% assign des = product.description | split:'[/countdown]</p>' | last %}
-        <div id="collapse-tab1" class="tab-pane fade in active">
-          {% if settings.enable_multilang %}
-          <div class="lang1">{{ des | split: '[lang2]' | first }}</div>
-          <div class="lang2">{{ des | split: '[lang2]' | last }}</div>
+          {% if product.description contains '[countdown]' %}
+          {% assign des = product.description | split:'[/countdown]</p>' | last %}
+          <div id="collapse-tab1" class="tab-pane fade in active">
+            {% if settings.enable_multilang %}
+            <div class="lang1">{{ des | split: '[lang2]' | first }}</div>
+            <div class="lang2">{{ des | split: '[lang2]' | last }}</div>
+            {% else %}
+            <div>{{ des | split: '[lang2]' | first }}</div>
+            {% endif %}
+          </div>
           {% else %}
-          <div>{{ des | split: '[lang2]' | first }}</div>
+          <div id="collapse-tab1" class="tab-pane fade in active">
+            {% if settings.enable_multilang %}
+            <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
+            <div class="lang2">{{ product.description | split: '[lang2]' | last }}</div>
+            {% else %}
+            <div>{{ product.description | split: '[lang2]' | first }}</div>
+            {% endif %}
+          </div>
           {% endif %}
-        </div>
-        {% else %}
-        <div id="collapse-tab1" class="tab-pane fade in active">
-          {% if settings.enable_multilang %}
-          <div class="lang1">{{ product.description | split: '[lang2]' | first }}</div>
-          <div class="lang2">{{ product.description | split: '[lang2]' | last }}</div>
-          {% else %}
-          <div>{{ product.description | split: '[lang2]' | first }}</div>
-          {% endif %}
-        </div>
-        {% endif %}
         {% endif %}
 
         {% if settings.display_custom_tab %}
@@ -618,8 +603,8 @@
         {% if settings.display_product_reviews %}
         <div id="collapse-tab4" class="tab-pane fade">
           {% comment %}
-          Add product review widget, must install Product Review App:
-          https://apps.shopify.com/product-reviews
+            Add product review widget, must install Product Review App:
+            https://apps.shopify.com/product-reviews
           {% endcomment %}
           <div id="shopify-product-reviews" data-id="{{product.id}}">{{ product.metafields.spr.reviews }}</div>
         </div>
@@ -627,17 +612,17 @@
       </div>
     </div>
     <script>
-      jQuery('#myTab a').click(function (e) {
-        e.preventDefault();
-        jQuery(this).tab('show');
-      })
+    jQuery('#myTab a').click(function (e) {
+      e.preventDefault();
+      jQuery(this).tab('show');
+    })
     </script>
     {% endif %}
 
     <br><br><br>
 
     <div class="widget-title wow fadeIn">
-      <fieldset class="box-title">
+  	<fieldset class="box-title">
         <legend align="center">You Might Also Like</legend>
       </fieldset>
     </div>
@@ -651,10 +636,10 @@
     {% endif %}
     <br><br><br>
     <div class="hidden-xs">
-      <img src="{{ 'cart-points.png' | asset_url }}" width="100%">
+    <img src="{{ 'cart-points.png' | asset_url }}" width="100%">
     </div>
     <div class="visible-xs">
-      <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
+    <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
     </div>
 
     {{ 'option_selection.js' | shopify_asset_url | script_tag }}
@@ -700,58 +685,58 @@
   jQuery('#quantity').on('change', updatePricing);
   {% endif %}
 
-  var selectCallback = function(variant, selector) {
+var selectCallback = function(variant, selector) {
 
-    var addToCart = jQuery('#product-add-to-cart'),
-        productPrice = jQuery('.product .price'),
-        comparePrice = jQuery('.product .compare-price');
+  var addToCart = jQuery('#product-add-to-cart'),
+      productPrice = jQuery('.product .price'),
+      comparePrice = jQuery('.product .compare-price');
 
-    if (variant) {
-      if (variant.available) {
-        // We have a valid product variant, so enable the submit button
-        addToCart.removeClass('disabled').removeAttr('disabled').val('Add to Cart');
+  if (variant) {
+    if (variant.available) {
+      // We have a valid product variant, so enable the submit button
+      addToCart.removeClass('disabled').removeAttr('disabled').val('Add to Cart');
 
-      } else {
-        // Variant is sold out, disable the submit button
-        addToCart.val('Sold Out').addClass('disabled').attr('disabled', 'disabled');
-      }
+    } else {
+      // Variant is sold out, disable the submit button
+      addToCart.val('Sold Out').addClass('disabled').attr('disabled', 'disabled');
+    }
 
-      // Regardless of stock, update the product price
-      productPrice.html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}"));
+    // Regardless of stock, update the product price
+    productPrice.html(Shopify.formatMoney(variant.price, "{{ shop.money_format }}"));
 
-                                            // Also update and show the product's compare price if necessary
-                                            if ( variant.compare_at_price > variant.price ) {
-                        productPrice.addClass("on-sale")
+    // Also update and show the product's compare price if necessary
+    if ( variant.compare_at_price > variant.price ) {
+      productPrice.addClass("on-sale")
       comparePrice
-      .html(Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}"))
-                                .show();
-            } else {
-            comparePrice.hide();
+        .html(Shopify.formatMoney(variant.compare_at_price, "{{ shop.money_format }}"))
+        .show();
+    } else {
+      comparePrice.hide();
       productPrice.removeClass("on-sale");
     }
     {% if settings.use_color_swatch %}
     // BEGIN SWATCHES
-    var form = jQuery('#' + selector.domIdPrefix).closest('form');
-    for (var i=0,length=variant.options.length; i<length; i++) {
-      var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] +'"]');
-      if (radioButton.size()) {
-        radioButton.get(0).checked = true;
+      var form = jQuery('#' + selector.domIdPrefix).closest('form');
+      for (var i=0,length=variant.options.length; i<length; i++) {
+        var radioButton = form.find('.swatch[data-option-index="' + i + '"] :radio[value="' + variant.options[i] +'"]');
+        if (radioButton.size()) {
+          radioButton.get(0).checked = true;
+        }
       }
-    }
-    // END SWATCHES
-    {% endif %}
+     // END SWATCHES
+     {% endif %}
 
-    {% if settings.display_subtotal and product.available %}
-    updatePricing();
-    {% endif %}
+  	{% if settings.display_subtotal and product.available %}
+     updatePricing();
+  	 {% endif %}
 
     {% if settings.enable_multiple_currencies %}
     Currency.convertAll('{{ shop.currency }}', jQuery('#currencies').val(), 'span.money', 'money_format');
-                        {% endif %}
+    {% endif %}
 
-                        } else {
-                        // The variant doesn't exist. Just a safeguard for errors, but disable the submit button anyway
-                        addToCart.val('Unavailable').addClass('disabled').attr('disabled', 'disabled');
+  } else {
+    // The variant doesn't exist. Just a safeguard for errors, but disable the submit button anyway
+    addToCart.val('Unavailable').addClass('disabled').attr('disabled', 'disabled');
   }
 
   //update variant inventory
@@ -767,116 +752,116 @@
   }
   {% endif %}
 
-  /*begin variant image*/
-  if (variant && variant.featured_image) {
-    var originalImage = jQuery("#product-featured-image");
-    var newImage = variant.featured_image;
-    var element = originalImage[0];
-    Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
-      jQuery('#more-view-carousel img').each(function() {
-        var grandSize = jQuery(this).attr('src');
-        grandSize = grandSize.replace('compact','grande');
-        if (grandSize == newImageSizedSrc) {
-          jQuery(this).parent().trigger('click');
-          return false;
-        }
-      });
-    });
-  }
-  /*end of variant image*/
-  };
+    /*begin variant image*/
+    if (variant && variant.featured_image) {
+        var originalImage = jQuery("#product-featured-image");
+        var newImage = variant.featured_image;
+        var element = originalImage[0];
+        Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
+          jQuery('#more-view-carousel img').each(function() {
+            var grandSize = jQuery(this).attr('src');
+            grandSize = grandSize.replace('compact','grande');
+            if (grandSize == newImageSizedSrc) {
+              jQuery(this).parent().trigger('click');
+              return false;
+            }
+          });
+        });
+    }
+    /*end of variant image*/
+};
 
-  jQuery(function($) {
-    {% if product.available and product.variants.size > 1 %}
+jQuery(function($) {
+  {% if product.available and product.variants.size > 1 %}
     new Shopify.OptionSelectors('product-selectors', {
       product: {{ product | json }},
       onVariantSelected: selectCallback,
-      enableHistoryState: false
+	  enableHistoryState: true
     });
 
-    {% comment %}
-    Use color swatch and linked options (copyright by @carolineschnapp)
-    {% endcomment %}
-    {% if settings.use_color_swatch and product.available and product.options.size > 1 %}
-    Shopify.linkOptionSelectors({{ product | json }});
-    {% endif %}
+     {% comment %}
+     Use color swatch and linked options (copyright by @carolineschnapp)
+     {% endcomment %}
+     {% if settings.use_color_swatch and product.available and product.options.size > 1 %}
+     Shopify.linkOptionSelectors({{ product | json }});
+     {% endif %}
 
-    {% if settings.use_color_swatch != true %}
-    jQuery('.single-option-selector').selectize();
-    jQuery('.selectize-input input').attr("disabled","disabled");
-    {% endif %}
+     {% if settings.use_color_swatch != true %}
+      jQuery('.single-option-selector').selectize();
+      jQuery('.selectize-input input').attr("disabled","disabled");
+     {% endif %}
 
-    {% endif %}
+   {% endif %}
 
-    // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
-    {% if product.options.size == 1 and product.options.first != 'Title' %}
+  // Add label if only one product option and it isn't 'Title'. Could be 'Size'.
+  {% if product.options.size == 1 and product.options.first != 'Title' %}
     $('.selector-wrapper:eq(0)').prepend('<label>{{ product.options.first }}</label>');
-                                         {% endif %}
+  {% endif %}
 
-                                         // Hide selectors if we only have 1 variant and its title contains 'Default'.
-                                         {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
-                                         $('.selector-wrapper').hide();
-    {% endif %}
+  // Hide selectors if we only have 1 variant and its title contains 'Default'.
+  {% if product.variants.size == 1 and product.variants.first.title contains 'Default' %}
+    $('.selector-wrapper').hide();
+  {% endif %}
 
-    // Auto-select first available variant on page load. Otherwise the product looks sold out.
-    {% assign found_one_in_stock = false %}
-    {% for variant in product.variants %}
+  // Auto-select first available variant on page load. Otherwise the product looks sold out.
+  {% assign found_one_in_stock = false %}
+  {% for variant in product.variants %}
     {% if variant.available and found_one_in_stock == false %}
-    {% assign found_one_in_stock = true %}
-    {% for option in product.options %}
-    $('.single-option-selector:eq({{ forloop.index0 }})').val({{ variant.options[forloop.index0] | json }}).trigger('change');
-    {% endfor %}
+      {% assign found_one_in_stock = true %}
+      {% for option in product.options %}
+      $('.single-option-selector:eq({{ forloop.index0 }})').val({{ variant.options[forloop.index0] | json }}).trigger('change');
+      {% endfor %}
     {% endif %}
-    {% endfor %}
+  {% endfor %}
 
-    {% if settings.display_product_reviews %}
+  {% if settings.display_product_reviews %}
     var reviewsTimeout = setInterval(function() {
       if (jQuery(".spr-badge-caption").length>0) {
-        jQuery(".spr-badge-caption").on('click', function() {
+		jQuery(".spr-badge-caption").on('click', function() {
           jQuery('html,body').animate({
             scrollTop: jQuery(".panel:last").offset().top},
-                                      '400');
+              '400');
           jQuery("#collapse-tab4").collapse('show');
         });
         clearInterval(reviewsTimeout);
       }
     },1000);
 
-    {% endif %}
+  {% endif %}
 
-  });
+});
 
 
 </script>
 <script>
   jQuery(document).ready(function(){
-    if (jQuery(".product-infor .product-inventory > span").html() == 'Many in stock'){
-      jQuery(".product-infor").addClass("ManyStock");
-    }
+  if (jQuery(".product-infor .product-inventory > span").html() == 'Many in stock'){
+    jQuery(".product-infor").addClass("ManyStock");
+  }
   });
 </script>
 
 
 <style>
   button.accordion {
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    padding: 10px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition: 0.4s;
-    width: 100%;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight:700;
-    display: inline-block;
+      background-color: #fff;
+      color: #000;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      transition: 0.4s;
+      width: 100%;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight:700;
+      display: inline-block;
   }
 
   button.accordion.active, button.accordion:hover {
-    background-color: #fff;
+      background-color: #fff;
   }
 
 
@@ -889,38 +874,29 @@
   }
 
   div.panel {
-    padding: 10px;
-    display: none;
-    background-color: white;
-    text-align: left;
-    line-height: 2;
-    float:center!important;
-    font-size: 13px;
+      padding: 10px;
+      display: none;
+      background-color: white;
+      text-align: left;
+      line-height: 2;
+      float:center!important;
+      font-size: 13px;
   }
 
   div.panel.show {
-    display: block;
+      display: block;
   }
 
-</style>
+  </style>
 
-<script>
+  <script>
   var acc = document.getElementsByClassName("accordion");
   var i;
 
   for (i = 0; i < acc.length; i++) {
-    acc[i].onclick = function(){
-      this.classList.toggle("active");
-      this.nextElementSibling.classList.toggle("show");
+      acc[i].onclick = function(){
+          this.classList.toggle("active");
+          this.nextElementSibling.classList.toggle("show");
     }
   }
-</script>
-<br><br><br>
-<div class="widget-title wow fadeIn">
-  <fieldset class="box-title">
-    <legend align="center">Reviews</legend>
-  </fieldset>
-</div>
-
-
-<div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+  </script>

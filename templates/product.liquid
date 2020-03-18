@@ -96,9 +96,17 @@
               </center>
              </div>
 
-
+            {% if product.metafields.mm_dev.desc != blank %}
             <p style="text-align:center">{{ product.metafields.mm_dev.desc }}</p>
-
+            {% else %}
+            <style>
+            .product-shop .prices {
+                display: block;
+                margin-bottom: 0px;
+                clear: both;
+            }
+            </style>
+            {% endif %}
 
             {% if settings.display_sample_vendor %}
             <p class="sample-vendor"><span>{{ product.vendor }}</span></p>

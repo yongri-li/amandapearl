@@ -12,7 +12,7 @@
       Spurit.Preorder2.snippet.products = {};
     }
     Spurit.Preorder2.snippet.shopHash = 'eb46d539aeff01c122b7020e136fa5a1';
-    Spurit.Preorder2.snippet.cacheTimestamp = 1584379950;
+    Spurit.Preorder2.snippet.cacheTimestamp = 1591273998;
 
     if(typeof(Spurit.globalSnippet) === 'undefined'){
         Spurit.globalSnippet = {
@@ -47,7 +47,7 @@
 body:not(.spo-loaded).template-product form[action="/cart/add"] [type=submit], 
 body:not(.spo-loaded).template-collection form[action="/cart/add"] [type=submit], 
 body:not(.spo-loaded).template-index form[action="/cart/add"] [type=submit], 
-body:not(.spo-loaded) form[action="/cart/add"] [type=submit] {opacity: 0; pointer-events: none}
+body:not(.spo-loaded) form[id^="product-actions-"] > div[class="actions"] > button[class="btn add-to-cart-btn"] {opacity: 0; pointer-events: none}
     body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) button, 
 body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) input[type="submit"], 
 body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) input[type="button"], 
@@ -61,7 +61,7 @@ body:not(.spo-loaded) [name="goto_amazon_payments"] {opacity: 0; pointer-events:
 body:not(.spo-loaded).template-product form[action="/cart/add"] [type=submit], 
 body:not(.spo-loaded).template-collection form[action="/cart/add"] [type=submit], 
 body:not(.spo-loaded).template-index form[action="/cart/add"] [type=submit], 
-body:not(.spo-loaded) form[action="/cart/add"] [type=submit] {opacity: 1; pointer-events: all}
+body:not(.spo-loaded) form[id^="product-actions-"] > div[class="actions"] > button[class="btn add-to-cart-btn"] {opacity: 1; pointer-events: all}
         body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) button, 
 body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) input[type="submit"], 
 body:not(.spo-loaded) form[action^="/cart"]:not([action^="/cart/add"]):not(#currency_form) input[type="button"], 
@@ -76,4 +76,4 @@ body:not(.spo-loaded) [name="goto_amazon_payments"] {opacity: 1; pointer-events:
   })();
 </script>
 
-    <script src="https://cdn-preorder.com/preorder2/common.js"></script>
+    <script src="https://amaicdn.com/preorder2/common.js"></script>

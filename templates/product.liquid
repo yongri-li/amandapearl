@@ -9,20 +9,20 @@
   <div class="col-xs-9 col-main">
     <div itemscope itemtype="http://schema.org/Product" class="product">
       <meta itemprop="url" content="{{ shop.url }}{{ product.url }}">
-      <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: 'grande' }}">
+      <meta itemprop="image" content="{{ product.featured_image.src | product_img_url: '1000x' }}">
 
       <div class="row">
 
         <div class="col-xs-12 col-sm-7 product-img-box {% if settings.product_image_border%} grid-item-border {% endif %}">
           {% if product.images.size == 0 %}
           <div class="product-photo-container">
-            <img src="{{ '' | product_img_url: 'grande' }}" alt="">
+            <img src="{{ '' | product_img_url: '1000x' }}" alt="">
           </div>
           {% else %}
           <div class="product-photo-container">
             {% assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
             <a href="{{ featured_image | img_url: 'original' }}" >
-              <img id="product-featured-image" src="{{ featured_image | img_url: 'grande' }}" alt="{{ featured_image.alt | escape }}" data-zoom-image="{{ featured_image.src | img_url: 'original' }}"/>
+              <img id="product-featured-image" src="{{ featured_image | img_url: '1000x' }}" alt="{{ featured_image.alt | escape }}" data-zoom-image="{{ featured_image.src | img_url: 'original' }}"/>
             </a>
           </div>
           {% if product.images.size > 1 %}
@@ -30,7 +30,7 @@
             <ul id="more-view-carousel" class="product-photo-thumbs{% if settings.style_moreview == 'vertical' %} jcarousel-skin-tango{% else %} owl-carousel{% endif %}">
               {% for image in product.images %}
               <li class="grid-item">
-                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: 'grande' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
+                <a href="javascript:void(0)" data-image="{{ image.src | product_img_url: '1000x' }}" data-zoom-image="{{ image.src | product_img_url: 'original' }}">
                   <img src="{{ image.src | product_img_url: 'compact' }}" alt="{{ image.alt | escape }}">
                 </a>
               </li>
@@ -355,7 +355,7 @@
               <li><a href="{{ settings.social_link_3 }}{{ canonical_url }}" target="_blank" title="{{ settings.social_title_3 }}">{{ 'social_icon_3.png' | asset_url | img_tag }}</a></li>
               {% endif %}
               {% if settings.social_title_4 != blank %}
-              <li><a href="{{ settings.social_link_4 }}{{ canonical_url }}&media=http:{{ featured_image | img_url: 'grande' }}&description={{product.title}}" target="_blank" title="{{ settings.social_title_4 }}">{{ 'social_icon_4.png' | asset_url | img_tag }}</a></li>
+              <li><a href="{{ settings.social_link_4 }}{{ canonical_url }}&media=http:{{ featured_image | img_url: '1000x' }}&description={{product.title}}" target="_blank" title="{{ settings.social_title_4 }}">{{ 'social_icon_4.png' | asset_url | img_tag }}</a></li>
               {% endif %}
               {% if settings.social_title_5 != blank %}
               <li><a href="{{ settings.social_link_5 }}{{ canonical_url }}" target="_blank" title="{{ settings.social_title_5 }}">{{ 'social_icon_5.png' | asset_url | img_tag }}</a></li>
@@ -675,7 +675,7 @@
 {% endif %}
 
 <script>
-  //Shopify.Image.preload({{ product.images | json }}, 'grande');
+  //Shopify.Image.preload({{ product.images | json }}, '1000x');
 
   {% if settings.display_subtotal and product.available %}
   //update price when changing quantity
@@ -783,7 +783,7 @@
     Shopify.Image.switchImage(newImage, element, function (newImageSizedSrc, newImage, element) {
       jQuery('#more-view-carousel img').each(function() {
         var grandSize = jQuery(this).attr('src');
-        grandSize = grandSize.replace('compact','grande');
+        grandSize = grandSize.replace('compact','1000x');
         if (grandSize == newImageSizedSrc) {
           jQuery(this).parent().trigger('click');
           return false;

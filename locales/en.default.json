@@ -382,6 +382,9 @@
       },
       "order_summary": {
         "shopping_cart_label": "Shopping Bag"
+      },
+      "alternative_payment_method_banner": {
+        "or": "Or check out using your credit card"
       }
     }
   }

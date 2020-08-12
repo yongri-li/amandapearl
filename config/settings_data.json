@@ -541,7 +541,7 @@
     "display_image_cat": false,
     "collection_results_per_page": "48",
     "collection_results_per_row": "3",
-    "collection_infinite_scrolling": true,
+    "collection_infinite_scrolling": false,
     "display_color_variant": true,
     "style_moreview": "horizontal",
     "display_prev_next_product": false,

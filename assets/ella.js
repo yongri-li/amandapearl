@@ -190,6 +190,14 @@
             t.initSortby()
         },
         initSortby: function() {
+          self = this
+          e('body').on('click', '.clear-all', function(e) {
+            e.preventDefault()
+          	delete Shopify.queryParams.constraint
+            delete Shopify.queryParams.q
+            self.sidebarAjaxClick()
+            return false
+          })
             if (Shopify.queryParams.sort_by) {
                 var i = Shopify.queryParams.sort_by,
                     t = e(".filter-sortby a[href='" + i + "']").text();
@@ -235,7 +243,7 @@
                     t.showLoading()
                 },
                 success: function(i) {
-                    t.sidebarMapData(i), t.sidebarMapPaging(), t.sidebarMapTagEvents(), t.sidebarInitToggle(), t.sidebarMapClear(), t.sidebarMapClearAll(), t.hideLoading(), t.initQuickView(), t.initAddToCart(), t.initWishlist()
+                    console.log(i),t.sidebarMapData(i), t.sidebarMapPaging(), t.sidebarMapTagEvents(), t.sidebarInitToggle(), t.sidebarMapClear(), t.sidebarMapClearAll(), t.hideLoading(), t.initQuickView(), t.initAddToCart(), t.initWishlist()
                 },
                 error: function(i) {
                     t.hideLoading(), e(".loading-modal").hide(), e(".ajax-error-message").text(e.parseJSON(i.responseText).description), t.showModal(".ajax-error-modal")

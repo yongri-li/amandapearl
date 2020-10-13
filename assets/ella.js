@@ -82,6 +82,9 @@
         },
         sidebarMapTagEvents: function() {
             e(".sidebar-tag a, .sidebar-tag label").click(function(i) {
+              if ($this).parents('.panel')) {
+               return true 
+              }
                 var a = [];
                 if (Shopify.queryParams.constraint && (a = Shopify.queryParams.constraint.split("+")), !window.enable_sidebar_multiple_choice && !e(this).prev().is(":checked")) {
                     var o = e(this).parents(".sidebar-tag").find("input:checked");

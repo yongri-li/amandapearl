@@ -16,8 +16,8 @@
     <div class="product-top">
       <div class="product-image">
         <a href="{{ item.url | within: collection }}" class="product-grid-image">
-          <img src="{{ item.featured_image.src | product_img_url: 'large' }}" alt="{{ item.title }} {{ item.vendor }}" style="height: 250px; overflow: hidden">
-          <div class="hover"></div>
+          <img src="{{ item.featured_image.src | product_img_url: 'large' }}" alt="{{ item.title }} {{ item.vendor }}" style="height: 250px; overflow: hidden" >
+          <div class="hover" {% if item.images.size > 1 %}style="background-image: url({{ item.images[1] | product_img_url: '400x' }})"{% endif %}></div>
         </a>
       </div>
 

@@ -82,7 +82,7 @@
         },
         sidebarMapTagEvents: function() {
             e(".sidebar-tag a, .sidebar-tag label").click(function(i) {
-              if (($this).parents('.panel')) {
+              if ($(this).parent().is('.panel')) {
                return true 
               }
                 var a = [];

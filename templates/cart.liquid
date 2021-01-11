@@ -142,6 +142,8 @@
       {% comment %}
         name="checkout" is required for the update button to work
       {% endcomment %}
+      
+        <div id="cloverly-container"></div>
       <input type="submit" name="checkout" class="btn" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{%endif%} value="{{ 'cart.general.button_checkout' | t }}">
 
       {% comment %}

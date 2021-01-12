@@ -338,7 +338,7 @@
     "slide_heading_size": "40",
     "slide_text_color": "#ffffff",
     "slide_text_size": "12",
-    "display_slideshow_1": "video",
+    "display_slideshow_1": "image",
     "video_1": "<video controls muted> <div style=\"padding:50% 0 0 0;position:relative;\"><iframe src=\"https:\/\/player.vimeo.com\/video\/365533418?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe><\/div><script src=\"https:\/\/player.vimeo.com\/api\/player.js\"><\/script> <\/video>",
     "image_1_link": "https:\/\/amandapearl.com\/collections\/all",
     "image_1_alt": "Rebelling against traditional retail",

@@ -78,7 +78,7 @@
         ellaTimeout: null,
         isSidebarAjaxClick: !1,
         init: function() {
-            this.initColorSwatchGrid(), this.initResizeImage(), this.initMobileMenu(), this.initSidebar(), this.initMobileSidebar(), this.initScrollTop(), this.initQuickView(), this.initCloudzoom(), this.initProductMoreview(), this.initAddToCart(), this.initModal(), this.initProductAddToCart(), this.initDropDownCart(), this.initDropdownSearch(), this.initToggleCollectionPanel(), this.initWishlist(), this.initProductWishlist(), this.initRemoveWishlist(), this.initInfiniteScrolling()
+            this.initColorSwatchGrid(), this.initResizeImage(), this.initMobileMenu(), this.initSidebar(), this.initMobileSidebar(), this.initScrollTop(), this.initQuickView(), this.initCloudzoom(), this.initProductMoreview(), this.initAddToCart(), this.initModal(), this.initProductAddToCart(), this.initDropDownCart(), this.updateDropdownCart(), this.initDropdownSearch(), this.initToggleCollectionPanel(), this.initWishlist(), this.initProductWishlist(), this.initRemoveWishlist(), this.initInfiniteScrolling()
         },
         sidebarMapTagEvents: function() {
             e(".sidebar-tag a, .sidebar-tag label").click(function(i) {

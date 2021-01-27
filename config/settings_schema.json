@@ -4892,13 +4892,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_21",
         "label": "Shop by color text 21"
       },
-
       {
         "type": "image",
         "id": "color-21.png",
@@ -4906,14 +4904,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_22",
         "label": "Shop by color text 22"
       },
-
-
       {
         "type": "image",
         "id": "color-22.png",
@@ -4921,13 +4916,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_23",
         "label": "Shop by color text 23"
       },
-
       {
         "type": "image",
         "id": "color-23.png",
@@ -4935,13 +4928,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_24",
         "label": "Shop by color text 24"
       },
-
       {
         "type": "image",
         "id": "color-24.png",
@@ -4949,14 +4940,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
-
       {
         "type": "text",
         "id": "shop_by_color_text_25",
         "label": "Shop by color text 25"
       },
-
       {
         "type": "image",
         "id": "color-25.png",
@@ -4964,13 +4952,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_26",
         "label": "Shop by color text 26"
       },
-
       {
         "type": "image",
         "id": "color-26.png",
@@ -4978,13 +4964,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_27",
         "label": "Shop by color text 27"
       },
-
       {
         "type": "image",
         "id": "color-27.png",
@@ -4992,13 +4976,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_28",
         "label": "Shop by color text 28"
       },
-
       {
         "type": "image",
         "id": "color-28.png",
@@ -5006,13 +4988,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_29",
         "label": "Shop by color text 29"
       },
-
       {
         "type": "image",
         "id": "color-29.png",
@@ -5020,13 +5000,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_30",
         "label": "Shop by color text 30"
       },
-
       {
         "type": "image",
         "id": "color-30.png",
@@ -5034,13 +5012,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_31",
         "label": "Shop by color text 31"
       },
-
       {
         "type": "image",
         "id": "color-31.png",
@@ -5048,13 +5024,11 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "text",
         "id": "shop_by_color_text_32",
         "label": "Shop by color text 32"
       },
-
       {
         "type": "image",
         "id": "color-32.png",
@@ -5062,7 +5036,6 @@
         "max-width": 200,
         "max-height": 200
       },
-
       {
         "type": "header",
         "content": "Shop by Size"

@@ -88,91 +88,13 @@
             <div class="prices" style="display:flex;flex-direction:column;">
               <center>
                 {% if bold_compare_at_price > bold_price %}
-                <div class="" style="font-size: 16px; color: #555; font-weight: 400; margin-bottom: -15px;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div><br>
-                <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Your Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div><br><br>
+                <div class="" style="font-size: 16px; color: #555; font-weight: 400;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div>
+                <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Your Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div>
                 {% else %}
-                <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700; ">{{ product.price | money }}</span><br><br><br>
+                <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700; ">{{ product.price | money }}</span>
                 {% endif %}
               </center>
              </div>
-
-            {% if product.metafields.mm_dev.desc != blank %}
-            <p style="text-align:center">{{ product.metafields.mm_dev.desc }}</p>
-            {% else %}
-            <style>
-            .product-shop .prices {
-                display: block;
-                margin-bottom: 0px;
-                clear: both;
-            }
-            </style>
-            {% endif %}
-
-            {% if settings.display_sample_vendor %}
-            <p class="sample-vendor"><span>{{ product.vendor }}</span></p>
-            {% endif %}
-
-            {% if settings.display_product_reviews %}
-            <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
-            {% endif %}
-
-
-
-            {% if settings.display_availability or settings.display_product_type or settings.display_vendor %}
-            <div class="product-infor">
-              {% if settings.display_availability %}
-              <p class="product-inventory">
-                {% if settings.text_availability != blank %}
-                {% if settings.enable_multilang %}
-                <label class="lang1">{{ settings.text_availability | split: '|' | first }}</label>
-                <label class="lang2">{{ settings.text_availability | split: '|' | last }}</label>
-                {% else %}
-                <label>{{ settings.text_availability | split: '|' | first }}</label>
-                {% endif %}
-                {% endif %}
-                <span>
-                  {% if bold_selected_or_first_available_variant.inventory_management %}
-                  {% assign first_inventory = bold_selected_or_first_available_variant.inventory_quantity %}
-                  {% if first_inventory > 0 %}
-                  {{first_inventory}} {{ 'products.product.in_stock' | t }}
-                  {% else %}
-                  {{ 'products.product.out_of_stock' | t }}
-                  {% endif %}
-                  {% else %}
-                  {{ 'products.product.many_in_stock' | t }}
-                  {% endif %}
-                </span>
-              </p>
-              {% endif %}
-              {% if settings.display_product_type %}
-              <p class="product-type">
-                {% if settings.text_product_type != blank %}
-                {% if settings.enable_multilang %}
-                <label class="lang1">{{ settings.text_product_type | split: '|' | first }}</label>
-                <label class="lang2">{{ settings.text_product_type | split: '|' | last }}</label>
-                {% else %}
-                <label>{{ settings.text_product_type | split: '|' | first }}</label>
-                {% endif %}
-                {% endif %}
-                <span>{{ product.type }}</span>
-              </p>
-              {% endif %}
-              {% if settings.display_vendor %}
-              <p class="product-vendor">
-                {% if settings.text_vendor != blank %}
-                {% if settings.enable_multilang %}
-                <label class="lang1">{{ settings.text_vendor | split: '|' | first }}</label>
-                <label class="lang2">{{ settings.text_vendor | split: '|' | last }}</label>
-                {% else %}
-                <label>{{ settings.text_vendor | split: '|' | first }}</label>
-                {% endif %}
-                {% endif %}
-                <span>{{ product.vendor }}</span>
-              </p>
-              {% endif %}
-            </div>
-            {% endif %}
-
           </div>
 
           <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
@@ -180,7 +102,87 @@
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
             <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form">
-              <hr>
+              <div class="text-center klara-wrapper">
+                <hr>
+              </div>
+
+              {% if product.metafields.mm_dev.desc != blank %}
+              <p style="text-align:center">{{ product.metafields.mm_dev.desc }}</p>
+              {% else %}
+              <style>
+              .product-shop .prices {
+                  display: block;
+                  margin-bottom: 0px;
+                  clear: both;
+              }
+              </style>
+              {% endif %}
+
+              {% if settings.display_sample_vendor %}
+              <p class="sample-vendor"><span>{{ product.vendor }}</span></p>
+              {% endif %}
+
+              {% if settings.display_product_reviews %}
+              <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+              {% endif %}
+
+
+
+              {% if settings.display_availability or settings.display_product_type or settings.display_vendor %}
+              <div class="product-infor">
+                {% if settings.display_availability %}
+                <p class="product-inventory">
+                  {% if settings.text_availability != blank %}
+                  {% if settings.enable_multilang %}
+                  <label class="lang1">{{ settings.text_availability | split: '|' | first }}</label>
+                  <label class="lang2">{{ settings.text_availability | split: '|' | last }}</label>
+                  {% else %}
+                  <label>{{ settings.text_availability | split: '|' | first }}</label>
+                  {% endif %}
+                  {% endif %}
+                  <span>
+                    {% if bold_selected_or_first_available_variant.inventory_management %}
+                    {% assign first_inventory = bold_selected_or_first_available_variant.inventory_quantity %}
+                    {% if first_inventory > 0 %}
+                    {{first_inventory}} {{ 'products.product.in_stock' | t }}
+                    {% else %}
+                    {{ 'products.product.out_of_stock' | t }}
+                    {% endif %}
+                    {% else %}
+                    {{ 'products.product.many_in_stock' | t }}
+                    {% endif %}
+                  </span>
+                </p>
+                {% endif %}
+                {% if settings.display_product_type %}
+                <p class="product-type">
+                  {% if settings.text_product_type != blank %}
+                  {% if settings.enable_multilang %}
+                  <label class="lang1">{{ settings.text_product_type | split: '|' | first }}</label>
+                  <label class="lang2">{{ settings.text_product_type | split: '|' | last }}</label>
+                  {% else %}
+                  <label>{{ settings.text_product_type | split: '|' | first }}</label>
+                  {% endif %}
+                  {% endif %}
+                  <span>{{ product.type }}</span>
+                </p>
+                {% endif %}
+                {% if settings.display_vendor %}
+                <p class="product-vendor">
+                  {% if settings.text_vendor != blank %}
+                  {% if settings.enable_multilang %}
+                  <label class="lang1">{{ settings.text_vendor | split: '|' | first }}</label>
+                  <label class="lang2">{{ settings.text_vendor | split: '|' | last }}</label>
+                  {% else %}
+                  <label>{{ settings.text_vendor | split: '|' | first }}</label>
+                  {% endif %}
+                  {% endif %}
+                  <span>{{ product.vendor }}</span>
+                </p>
+                {% endif %}
+              </div>
+              {% endif %}
+
               <div id="product-variants">
                 {% assign variantCount = bold_variants_size %}
                 {% if product.available %}

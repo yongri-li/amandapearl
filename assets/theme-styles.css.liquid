@@ -1626,8 +1626,10 @@ table.wishlist-product .a-center { text-align: center; }
 /**/
 .products-grid .grid-item .price-box { margin-bottom: 10px; }
 .item-swatch { list-style: none; padding: 0; margin: 0; line-height: 0; min-height: 30px; }
-.item-swatch li { display: inline-block; margin: 0 2px; }
+.item-swatch li { display: inline-block; padding: 2px; border: 1px solid transparent; border-radius: 100%; }
 .item-swatch li label { cursor:pointer; margin: 0; width: 15px; height: 15px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
+.item-swatch li.soldout { opacity: 0.5; }
+.item-swatch li.active { border-color: #000; }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,

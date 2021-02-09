@@ -13,7 +13,7 @@
 
       {% assign text = color | handleize %}
 
-      <li>
+      <li class="{% if current_variant == variant %}active{% endif %} {% unless variant.available %}soldout{% endunless %}">
         <label style="{% if text == 'white' %}border: 1px solid #cbcbcb; {% endif %}background-color: {{ color | split: ' ' | last | handle }}; background-image: url({{ text | append: '.jpg' | asset_img_url: '30x' }}); background-position: center center; width: 30px; height: 30px; background-size: cover;"></label>
 
         {% if variant.image != null %}

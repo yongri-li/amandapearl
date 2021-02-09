@@ -11,12 +11,14 @@
 {% assign productIndex = forloop.index | minus:1 %}
 {% assign delayTime = settings.time_lazy_load | times : productIndex %}
 
+{% assign image = current_variant.image | default: product.featured_image %}
+
 <div class="inner height_fix {% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} " id="product-{{ product.id }}">
   <div class="inner-top" style="border: 1px solid #fff;">
     <div class="product-top">
       <div class="product-image">
         <a href="{{ product.url | within: collection }}" class="product-grid-image">
-          <img src="{{ product.featured_image | product_img_url: '400x' }}" alt="{{product.title}}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: '400x' }}'" onmouseout="src='{{ product.featured_image | product_img_url: '400x' }}'" {% endif %}>
+          <img src="{{ image | product_img_url: '400x' }}" alt="{{product.title}}" {% if product.images.size > 1 %}   onmouseover="src='{{ product.images[1] | product_img_url: '400x' }}'" onmouseout="src='{{ image | product_img_url: '400x' }}'" {% endif %}>
         </a>
       </div>
 
@@ -34,7 +36,7 @@
       {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}" style="position: absolute; top: 10%; right: 10%; z-index: 9;"></button>
       {% endcomment %}
     </div>
-    {% include 'item-swatch' %}
+    {% include 'item-swatch' with current_variant: current_variant %}
 
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">

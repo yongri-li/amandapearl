@@ -8,6 +8,7 @@
   {% assign sold_out = false %}
 {% endif %}
 
+{% assign isCollection = isCollection | default: false %}
 {% assign productIndex = forloop.index | minus:1 %}
 {% assign delayTime = settings.time_lazy_load | times : productIndex %}
 
@@ -37,6 +38,10 @@
       {% endcomment %}
     </div>
     {% include 'item-swatch' with current_variant: current_variant %}
+
+    {% if isCollection and current_variant != blank %}
+      {% include 'item-earring-size' with current_variant: current_variant %}
+    {% endif %}
 
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">

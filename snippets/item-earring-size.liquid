@@ -1,0 +1,6 @@
+{% for option in product.options %}
+  {% if option == 'EARRING SIZE' %}
+    {% assign earringSize = current_variant.options[forloop.index0] %}
+    <span><strong>EARRING SIZE:</strong> {{ earringSize }}</span>
+  {% endif %}
+{% endfor %}

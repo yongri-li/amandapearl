@@ -1131,7 +1131,7 @@ label[for="productSelect"] {margin-bottom: 10px;}
 
 .cart-row h3 .money { font-size: 32px;font-style: normal;  text-align: right; font-weight: bold;}
 .cart-row .total-price { text-align: center; border-bottom: 1px solid #eaeaea; padding-bottom: 28px; margin-bottom: 14px; }
-.cart-row .total-price h3 { color:#797979; font-weight: 500; font-size:11px; text-transform: uppercase; background: #fafafa; border-bottom: 1px solid #eaeaea; padding: 12px 10px 8px; letter-spacing: 0.02em; line-height: 20px; margin-bottom: 10px; }
+.cart-row .total-price h3 { color:#797979; font-weight: 500; font-size:11px; text-transform: uppercase; background: #fafafa; border-bottom: 1px solid #eaeaea; padding: 12px 10px 8px; letter-spacing: 0.02em; line-height: 20px; margin-bottom: 30px; }
 .cart-row .total-price .price { font-size: 24px; font-weight: 500; }
 .cart-row .btn { width: 100%; height: 52px; margin-bottom: 20px; padding: 0 10px; }
 .cart-row .btn-secondary{ display: block; float: right; }
@@ -1626,10 +1626,8 @@ table.wishlist-product .a-center { text-align: center; }
 /**/
 .products-grid .grid-item .price-box { margin-bottom: 10px; }
 .item-swatch { list-style: none; padding: 0; margin: 0; line-height: 0; min-height: 30px; }
-.item-swatch li { display: inline-block; padding: 2px; border: 1px solid transparent; border-radius: 100%; }
+.item-swatch li { display: inline-block; margin: 0 2px; }
 .item-swatch li label { cursor:pointer; margin: 0; width: 15px; height: 15px; -webkit-border-radius: 100%; -moz-border-radius: 100%; border-radius: 100%; }
-.item-swatch li.soldout { opacity: 0.5; }
-.item-swatch li.active { border-color: #000; }
 
 /*! fancyBox v2.1.5 fancyapps.com | fancyapps.com/fancybox/#license */
 .fancybox-wrap,
@@ -1987,11 +1985,11 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
     }
  }
 
-.cloverly-content-wrapper { flex-wrap: wrap }
-.cloverly-check-wrapper { margin: 10px  auto 0 }
-.cloverly-check-wrapper p { order: 2 }
-.cloverly-checkmark { margin-top: 4px }
-.nested-cloverly-container {
+#cloverly-content-wrapper { flex-wrap: wrap; }
+#cloverly-check-wrapper { margin: 0 auto }
+#cloverly-check-wrapper p { order: 2 }
+.cloverly-checkmark { margin-top: 2px }
+#nested-cloverly-container {
  	border-bottom-left-radius: 0!important;
  	border-bottom-right-radius: 0!important 
 }

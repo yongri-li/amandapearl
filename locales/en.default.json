@@ -87,7 +87,8 @@
       },
       "shipping_calculator_success_one_rate": "There is one shipping rate available for",
       "shipping_calculator_success_no_rate": "There is no shipping rate available for this order and destination.",
-      "shipping_calculator_success_at": "at"
+      "shipping_calculator_success_at": "at",
+      "shipping_text": "Shipping, taxes, and discounts calculated at checkout."
     },
     "label": {
       "product": "Product",

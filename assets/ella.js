@@ -351,9 +351,7 @@
             })
         },
         initColorSwatchGrid: function() {
-          jQuery('.item-swatch li label').click(function(){
-            jQuery(this).parents('.item-swatch').find('li').removeClass('active');
-            jQuery(this).parent().addClass('active');
+          jQuery('.item-swatch li label').hover(function(){
             var newImage = jQuery(this).parent().find('.hidden a').attr('href');
             jQuery(this).parents('.grid-item').find('.product-grid-image img').attr({ src: newImage });
             return false;

@@ -87,8 +87,7 @@
       },
       "shipping_calculator_success_one_rate": "There is one shipping rate available for",
       "shipping_calculator_success_no_rate": "There is no shipping rate available for this order and destination.",
-      "shipping_calculator_success_at": "at",
-      "shipping_text": "Shipping, taxes, and discounts calculated at checkout."
+      "shipping_calculator_success_at": "at"
     },
     "label": {
       "product": "Product",
@@ -100,7 +99,7 @@
     "ajax_cart": {
       "continue_shopping": "Continue Shopping",
       "go_to_cart": "Go to bag",
-      "success_text": "is added to your shopping cart.",
+      "success_text": "is added to your shopping bag.",
       "error": "Error",
       "loading": "Loading",
       "close": "Close"
@@ -386,6 +385,9 @@
       },
       "alternative_payment_method_banner": {
         "or": "Or check out using your credit card"
+      },
+      "delivery_options": {
+        "pick_up": "Pickup generally available M\/W\/F from 10-6pm. Please contact us to schedule your pickup: aponline@amandapearl.com or (646) 666-0653."
       }
     }
   }

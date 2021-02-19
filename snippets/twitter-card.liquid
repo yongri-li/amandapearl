@@ -10,7 +10,7 @@
   More information:
    - https://dev.twitter.com/docs/cards/types/product-card
    - https://dev.twitter.com/docs/cards/types/summary-card
-
+ 
 {% endcomment %}
 
 {% comment %}
@@ -41,11 +41,11 @@
   <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncatewords: 140, '' | escape }}">
   {% comment %}
     Check if content contains an image to add to the card
-      - Source: http://blog.viralica.com/2013/09/twitter-product-cards-on-shopify/
+      - Source: https://blog.viralica.com/2013/09/twitter-product-cards-on-shopify/
   {% endcomment %}
   {% if article.content contains "<img" %}
     {% assign src = article.content | split: 'src="' %}
-    {% assign src = src[1] | split: '"' | first | replace: '//cdn', 'http://cdn' | replace: 'http:http://', 'http://' | remove: 'https:' %}
+    {% assign src = src[1] | split: '"' | first | replace: '//cdn', 'https://cdn' | replace: 'http:https://', 'https://' | remove: 'https:' %}
     {% if src %}
   <meta property="twitter:image" content="{{ src }}">
     {% endif %}

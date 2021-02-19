@@ -5,7 +5,7 @@
   and insert it in your site settings.
 
   MailChimp newsletter integration and requirement:
-   - http://docs.shopify.com/support/configuration/store-customization/where-do-i-get-my-mailchimp-form-action
+   - https://docs.shopify.com/support/configuration/store-customization/where-do-i-get-my-mailchimp-form-action
 
 {% endcomment %}
 <form action="{{ settings.mailing_list_form_action }}" method="post" name="mc-embedded-subscribe-form" target="_blank" class="input-group">
@@ -14,3 +14,4 @@
     <input type="submit" class="btn" value="{{ 'general.newsletter_form.submit' | t }}" name="subscribe" {% if settings.enable_multilang %}data-translate="general.newsletter_form.submit"{% endif %}>
   </span>
 </form>
+ 

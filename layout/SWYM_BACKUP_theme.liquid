@@ -17,6 +17,8 @@
   {{ page_title }}{% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}{% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}{% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
   </title>
 
+  <meta name="google-site-verification" content="kZ-GXJCQaQfJKuIqOVB94zh5NoBuJsTdK4oQ4tPFnx4" />
+
   {% if page_description %}
   <meta name="description" content="{{ page_description | escape }}">
   {% endif %}
@@ -24,6 +26,7 @@
   <!-- Product meta ================================================== -->
   {% include 'fb-open-graph-tags' %}
   {% include 'twitter-card' %}
+  {% include 'pinterest-tags' %}
 
   <!-- Helpers ================================================== -->
   <link rel="canonical" href="{{ canonical_url }}">
@@ -62,7 +65,18 @@
   <!-- Start of amandapearl Zendesk Widget script -->
 <script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=cf595fe0-7544-4054-b085-6e3ed779231f"> </script>
 <!-- End of amandapearl Zendesk Widget script -->
+  <!-- Global site tag (gtag.js) - Google Ads: 692642523 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-692642523"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'AW-692642523');
+</script>
+
+<script type="text/javascript">(function e(){var e=document.createElement("script");e.type="text/javascript",e.async=true,e.src="//staticw2.yotpo.com/NAiK0o77IEB0B4NwfkXC4pgQgEcJnReIba0a0FjS/widget.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t)})();</script>
+<script src="https://www.dwin1.com/19038.js" type="text/javascript" defer="defer"></script>
 </head>
 
 {% comment %}
@@ -120,10 +134,9 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5b75a6c71a0d387d"></script>
 
 
-
-
 {% include 'swymSnippet' %}
 
+  
 <!-- http://static.secure-afterpay.com.au/shopify-afterpay-javascript.html -->
 
 <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
@@ -153,6 +166,9 @@ var afterpay_js_snippet_version = '1.0.1';
 <script type="text/javascript" src="https://static.secure-afterpay.com.au/shopify-afterpay-javascript.js"></script>
 <!-- End Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
 
+
+
+
 <style>
        p.afterpay-paragraph {
           margin-top:  1% !important;
@@ -177,11 +193,15 @@ $(function() {
 .header-mobile #showLeftPush { background: #fff!important }
 #navbar-close { position: absolute; z-index: 99; left: 750%; top: 80px; }
 </style>
+<script>
+if (afterpay_product && afterpay_product.price == 0) {
+ $('p.afterpay-paragraph').css({visibility: 'hidden', maxHeight: "0"});
+}
+</script>
+{{ 'instant.js' | asset_url | script_tag }}
 
+<script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
+
+  {% render 'spurit_po2_theme_snippet' %}
 </body>
 </html>
-  <script>
-  if (afterpay_product && afterpay_product.price == 0) {
-   $('p.afterpay-paragraph').css({visibility: 'hidden', maxHeight: "0"});
-}
-  </script>

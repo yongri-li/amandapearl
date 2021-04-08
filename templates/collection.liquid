@@ -22,7 +22,7 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
     {% paginate collection.products by product_per_page %}
 
 
-    <div class="products-grid row">
+    <div class="products-grid row" id="AjaxinateLoop">
       {% if collection.products.size > 0 %}
         {% if settings.collection_results_per_row != blank and settings.collection_results_per_row != '5' %}
           {% assign product_grid = 12 | divided_by: settings.collection_results_per_row %}

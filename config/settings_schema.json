@@ -5310,6 +5310,12 @@
       },
       {
         "type": "checkbox",
+        "id": "collection_infinite_scrolling_endless",
+        "label": "Enable Infinite Scrolling (Endless Scroll)",
+        "default": true
+      },
+      {
+        "type": "checkbox",
         "id": "display_color_variant",
         "label": "Display Color Variant",
         "default": true

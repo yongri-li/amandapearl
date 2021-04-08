@@ -20,16 +20,24 @@
 
 {% endcomment %}
 
-{% if settings.collection_infinite_scrolling %}
-  {% if paginate.next %}    
-    <div class="infinite-scrolling">
-      <a href="{{ paginate.next.url }}" {% if settings.enable_multilang %}data-translate="collections.general.show_more"{% endif %}>
-        {{ 'collections.general.show_more' | t}}
-      </a>
-      <a href="javascript:void(0)" class="disabled" style="display:none" {% if settings.enable_multilang %}data-translate="collections.general.no_more_product"{% endif %}>
-        {{ 'collections.general.no_more_product' | t}} 
-      </a>  
+{% if settings.collection_infinite_scrolling %}  
+  {% if settings.collection_infinite_scrolling_endless %}
+    <div id="AjaxinatePagination" class="text-center">
+      {% if paginate.next %}
+        <a href="{{ paginate.next.url }}">Loading More</a>
+      {% endif %}
     </div>
+  {% else %}
+    {% if paginate.next %}
+      <div class="infinite-scrolling">
+        <a href="{{ paginate.next.url }}" {% if settings.enable_multilang %}data-translate="collections.general.show_more"{% endif %}>
+          {{ 'collections.general.show_more' | t}}
+        </a>
+        <a href="javascript:void(0)" class="disabled" style="display:none" {% if settings.enable_multilang %}data-translate="collections.general.no_more_product"{% endif %}>
+          {{ 'collections.general.no_more_product' | t}} 
+        </a>  
+      </div>
+    {% endif %}    
   {% endif %}
 {% else %}
 
@@ -75,3 +83,11 @@
   </ul>
 </div>
 {% endif %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    {% if settings.collection_infinite_scrolling and settings.collection_infinite_scrolling_endless %}
+      var endlessScroll = new Ajaxinate();
+    {% endif %}
+  })
+</script>

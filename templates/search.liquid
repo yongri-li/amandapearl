@@ -55,15 +55,50 @@
 
       <div class="products-grid row">
         {% for item in search.results %}
-        {% for tag in item.tags %}
-        {% if tag contains 'visible' %}
+          {% for tag in item.tags %}
+            {% if tag contains 'visible' %}
 
-        {%- include 'bold-product' with item, hide_action: 'skip' -%}
-        <div class="{% if settings.product_image_border%}grid-item-border{% endif %}{% if settings.product_image_crop%} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 {% if settings.display_sidebar_cat_page %}col-md-4{% else %}{% if product_grid == 3 %} col-md-3{% endif %}{% endif %} {% if columns %}col-lg-{{product_grid}}{% else %}col{% endif %}">
-        {% include 'search-result-grid' %}
-        </div>
-        {% endif %}
-        {% endfor %}
+              {%- include 'bold-product' with item, hide_action: 'skip' -%}
+              
+              {% assign color_index = -1 %}
+              {% if settings.display_color_variant %}
+                {% for option in item.options %}
+                  {% if option == 'GEM' or option == 'METAL' or option == 'Material' or option == 'EARRING SIZE' %}
+                    {% assign color_index = forloop.index0 %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+              
+              {% if color_index != -1 %}
+                {% assign _colorlist = '' %}
+                {% for _variant in item.variants %}
+                  {% capture _color %}
+                    {{ _variant.options[color_index] }}
+                  {% endcapture %}
+
+                  {% unless _colorlist contains _color %}
+                    {% capture tempList %}
+                      {{ _colorlist | append: _color | append: ' ' }}
+                    {% endcapture %}
+
+                    {% assign _colorlist = tempList %}
+
+                    <div class="{% if settings.product_image_border%}grid-item-border{% endif %}{% if settings.product_image_crop%} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4  col-xs-6 col-sm-4 col-md-4">
+                      {% include 'product-grid-item' with
+                        product: item,
+                        current_variant: _variant,
+                        isCollection: false,
+                      %}
+                    </div>
+                  {% endunless %}
+                {% endfor %}
+              {% else %}
+                <div class="{% if settings.product_image_border%}grid-item-border{% endif %}{% if settings.product_image_crop%} crop_image{% else %} no_crop_image{% endif %} grid-item product-item col-xs-6 col-sm-4 col-md-4">
+                  {% include 'product-grid-item' with product: item %}
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
         {% endfor %}
       </div>
       {% endif %}

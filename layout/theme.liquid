@@ -18,6 +18,7 @@
   </title>
 
   <meta name="google-site-verification" content="kZ-GXJCQaQfJKuIqOVB94zh5NoBuJsTdK4oQ4tPFnx4" />
+  <meta name="facebook-domain-verification" content="1npuksc9r4denwydiqyzaj5v05mgay" />
 
   {% if page_description %}
   <meta name="description" content="{{ page_description | escape }}">
@@ -117,7 +118,7 @@
   {{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
   {{ 'jquery.products.min.js' | asset_url | script_tag }}
   {% if template contains 'product' %}
-  <script> 
+  <script>
   Shopify.Products.recordRecentlyViewed();
   </script>
   {% endif %}

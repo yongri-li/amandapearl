@@ -39,15 +39,6 @@
           </div>
           {% endif %}
           {% endif %}
-
-          <center>
-            <div class="hidden-xs">
-              <img src="{{ 'cart-give.png' | asset_url }}" class="hidden-xs;" style="margin-top: 80px!important;" width="50%">
-              <p>This quarter, AMANDA PEARL will donate 10% of all sales The Trust for Public Land,<br>  ensuring healthy, livable communities for generations to come.<p>
-              <p><a href="/blogs/amanda-pearl/community-for-cause">Click here to learn more!</a>
-              </p>
-            </div>
-          </center>
         </div>
 
 
@@ -88,7 +79,7 @@
             <div class="prices" style="display:flex;flex-direction:column;">
               <center>
                 {% if bold_compare_at_price > bold_price %}
-                <div class="" style="font-size: 16px; color: #555; font-weight: 400;">Traditional Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div>
+                <div class="" style="font-size: 16px; color: #555; font-weight: 400;">Retail Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div>
                 <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Your Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div>
                 {% else %}
                 <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700; ">{{ product.price | money }}</span>
@@ -253,14 +244,12 @@
 
 
           </div>
+          <br>
+          {% if product.tags contains 'fine jewelry' %}
+            {% include 'fine-jewelry' %}
+          {% endif %}
 
-          <center>
-            <!-- Go to www.addthis.com/dashboard to customize your tools -->
-            <div class="addthis_inline_share_toolbox"></div>
-          </center>
-
-
-          {% include 'wishlist-product' %}<br><br>
+          {% include 'wishlist-product' %}
 
           <div class="row" style="padding: 20px">
             {% if product.description contains '[countdown]' %}
@@ -662,9 +651,7 @@
     {% endif %}
     {% endif %}
     <br><br><br>
-    <div class="hidden-xs">
-      <img src="{{ 'cart-points.png' | asset_url }}" width="100%">
-    </div>
+    
     <div class="visible-xs">
       <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
     </div>
@@ -674,9 +661,14 @@
   </div>
 </div>
 
-{% if settings.display_recently_viewed_products %}
-{% include 'recently-viewed-products' %}
-{% endif %}
+<div class="widget-title wow fadeIn">
+  <fieldset class="box-title">
+    <legend align="center">Reviews</legend>
+  </fieldset>
+</div>
+
+
+<div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
 
 <script>
   //Shopify.Image.preload({{ product.images | json }}, '1000x');
@@ -928,11 +920,6 @@
   }
 </script>
 <br><br><br>
-<div class="widget-title wow fadeIn">
-  <fieldset class="box-title">
-    <legend align="center">Reviews</legend>
-  </fieldset>
-</div>
-
-
-<div class="yotpo yotpo-main-widget" data-product-id="{{ product.id }}" data-name="{{ product.title | escape }}" data-url="{{ shop.url }}{{ product.url }}" data-image-url="{{ product.featured_image | product_img_url: "large" |replace: '?', '%3F' | replace: '&','%26'}}" data-description="{{ product.description | escape }}"></div>
+{% if settings.display_recently_viewed_products %}
+  {% include 'recently-viewed-products' %}
+{% endif %}

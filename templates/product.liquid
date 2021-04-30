@@ -651,10 +651,12 @@
     {% endif %}
     {% endif %}
     <br><br><br>
+    {%- comment -%}
+      <div class="visible-xs">
+        <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
+      </div>
+    {%- endcomment -%}
     
-    <div class="visible-xs">
-      <img src="{{ 'm_cart-points.png' | asset_url }}" width="100%">
-    </div>
 
     {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 

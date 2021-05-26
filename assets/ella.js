@@ -77,8 +77,26 @@
     var t = {
         ellaTimeout: null,
         isSidebarAjaxClick: !1,
+        autoLoading: true,
+        firstLoading: true,
         init: function() {
-            this.initColorSwatchGrid(), this.initResizeImage(), this.initMobileMenu(), this.initSidebar(), this.initMobileSidebar(), this.initScrollTop(), this.initQuickView(), this.initCloudzoom(), this.initProductMoreview(), this.initAddToCart(), this.initModal(), this.initProductAddToCart(), this.initDropDownCart(), this.updateDropdownCart(), this.initDropdownSearch(), this.initToggleCollectionPanel(), this.initWishlist(), this.initProductWishlist(), this.initRemoveWishlist(), this.initInfiniteScrolling()
+            this.initColorSwatchGrid(), this.initResizeImage(), this.initMobileMenu(), this.initSidebar(), this.initMobileSidebar(), this.initScrollTop(), this.initQuickView(), this.initCloudzoom(), this.initProductMoreview(), this.initAddToCart(), this.initModal(), this.initProductAddToCart(), this.initDropDownCart(), this.updateDropdownCart(), this.initDropdownSearch(), this.initToggleCollectionPanel(), this.initWishlist(), this.initProductWishlist(), this.initRemoveWishlist(), this.initInfiniteScrolling(false), this.scrollDownCollectionEvents()
+        },
+        scrollDownCollectionEvents: function () {
+            window.addEventListener('DOMContentLoaded', (event) => {
+                window.onscroll = function() {
+                    if (t.autoLoading) {
+                        var gridElement = $('#AjaxinateLoop');
+                        if (gridElement) {
+                            var height = gridElement[0].offsetHeight;
+                            if (height - window.pageYOffset < 1000) {
+                                t.autoLoading = false;
+                                t.initInfiniteScrolling(true);
+                            }
+                        }
+                    }
+                };
+            });
         },
         sidebarMapTagEvents: function() {
             e(".sidebar-tag a, .sidebar-tag label").click(function(i) {
@@ -366,10 +384,29 @@
                 ratioWrapper: window.images_size
             })
         },
-        initInfiniteScrolling: function() {
+        initInfiniteScrolling: function(firstLoading) {
+            var loading = false;
             e(".infinite-scrolling").length > 0 && e(".infinite-scrolling a").click(function(i) {
                 i.preventDefault(), e(this).hasClass("disabled") || t.doInfiniteScrolling()
             })
+            if (firstLoading) {
+                if ((".infinite-scrolling").length > 0) {
+                    var buttons = e(".infinite-scrolling a");
+                    buttons.each(function (index, button) {
+                        if (!$(this).hasClass('disabled')) {
+                            if ($(this).css('display') == 'none') {
+                                loading = false;
+                            }
+                            else {
+                                loading = true;
+                            }
+                        }
+                    });
+                    if (loading) {
+                        t.doInfiniteScrolling();
+                    }
+                }
+            }
         },
         doInfiniteScrolling: function() {
             var i = e(".block-row .products-grid");
@@ -383,6 +420,7 @@
                     },
                     success: function(o) {
                         t.hideLoading();
+                        t.autoLoading = true;
                         var n = e(o).find(".block-row .products-grid");
                         return n.length || (n = e(o).find(".block-row .product-list")), n.length && (n.hasClass("products-grid") && window.product_image_resize && n.children().find("img").fakecrop({
                             fill: window.images_size.is_crop,

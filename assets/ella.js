@@ -87,7 +87,7 @@
                 window.onscroll = function() {
                     if (t.autoLoading) {
                         var gridElement = $('#AjaxinateLoop');
-                        if (gridElement) {
+                        if (gridElement.length > 0) {
                             var height = gridElement[0].offsetHeight;
                             if (height - window.pageYOffset < 1000) {
                                 t.autoLoading = false;

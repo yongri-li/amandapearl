@@ -18,7 +18,7 @@
   </title>
 
   <meta name="google-site-verification" content="kZ-GXJCQaQfJKuIqOVB94zh5NoBuJsTdK4oQ4tPFnx4" />
-  <meta name="facebook-domain-verification" content="1npuksc9r4denwydiqyzaj5v05mgay" /> 
+  <meta name="facebook-domain-verification" content="0nwc43kfs2tm3xcxq6v1cdlymag7t3" /> 
 
   {% if page_description %}
   <meta name="description" content="{{ page_description | escape }}">
@@ -200,6 +200,8 @@ if (afterpay_product && afterpay_product.price == 0) {
 }
 </script>
 {{ 'instant.js' | asset_url | script_tag }}
+{{ 'slick.min.js' | asset_url | script_tag }}
+{{ 'product-slick.js' | asset_url | script_tag }}
 
 <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
 

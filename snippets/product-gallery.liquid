@@ -1,0 +1,22 @@
+{% if product.images.size == 0 %}
+  <div class="product-photo-container">
+    <img src="{{ '' | product_img_url: '1000x' }}" alt="">
+  </div>
+{% else %}
+  <div class="product-details__thumbnails">
+    <div class="thumbnails__container sticky">
+      {% for image in product.images %}
+        <a class="thumbnails__items" href='#product__img--{{ forloop.index0 }}'>
+          <img src="{{ image.src | product_img_url: 'medium' }}">
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- product-details__gallery -->
+  <div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
+    {% for image in product.images %}
+      <img class="product-gallery__item" id="product__img--{{ forloop.index0 }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
+    {% endfor %}
+  </div>
+{% endif %}

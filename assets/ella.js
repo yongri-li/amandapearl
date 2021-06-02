@@ -875,11 +875,11 @@ jQuery(function($) {
             arrows: false
         },
         productGallery: {
-            slidesToShow: 1.1,
+            slidesToShow: 1,
             slidesToScroll: 1,
-            dots: false,
+            dots: true,
             arrows: false,
-            adaptiveHeight: false,
+            adaptiveHeight: true,
             responsive: [ {
                 breakpoint: 768,
                 settings: "unslick"

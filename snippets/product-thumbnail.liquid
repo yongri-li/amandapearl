@@ -1,0 +1,9 @@
+<div class="product-details__thumbnails">
+  <div class="thumbnails__container sticky">
+    {% for image in product.images %}
+      <a class="thumbnails__items" href='#product__img--{{ forloop.index0 }}'>
+        <img src="{{ image.src | product_img_url: 'medium' }}">
+      </a>
+    {% endfor %}
+  </div>
+</div>

@@ -1,0 +1,36 @@
+<!-- product-details__gallery -->
+<div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
+  {% for image in product.images %}
+    <img class="product-gallery__item" id="product__img--{{ forloop.index0 }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
+  {% endfor %}
+</div>
+
+<style type="text/css">
+  .product-gallery .product-gallery__item {
+    width: 100%;
+  }
+
+  @media(min-width:  768px) {
+    .product-gallery .product-gallery__item {
+      width: 50%;
+    } 
+  }
+
+  .slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .slick-dots .dot {
+    width: 15px;
+    height: 15px;
+    color: #FFF;
+  }
+
+  .slick-dots .slick-active .dot {
+    color: #000;
+  }
+</style>

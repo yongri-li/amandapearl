@@ -117,7 +117,10 @@ jQuery(function($) {
                 $doc.trigger("slick-" + e.type, [ slick ]);
             });
         }
-        console.log('options', opts);
         $this.slick(opts);
+    });
+
+    $(window).resize('on', function () {
+        console.log("resize");
     });
 });

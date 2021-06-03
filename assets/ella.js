@@ -910,7 +910,35 @@ jQuery(function($) {
                 $doc.trigger("slick-" + e.type, [ slick ]);
             });
         }
-        console.log('options', opts);
         $this.slick(opts);
+    });
+
+    $(window).resize('on', function () {
+        var $doc = $(document);
+        $(INIT_SEL).each(function() {
+            var $this = $(this);
+            var customOpts = this.getAttribute(OPTS_ATT);
+            var slideType = customOpts;
+            var evts = this.getAttribute(EVTS_ATT);
+            var opts = DEFAULT_OPTS;
+            if (customOpts) {
+                if (OVERRIDE_OPTS[customOpts]) {
+                    customOpts = OVERRIDE_OPTS[customOpts];
+                } else {
+                    customOpts = JSON.parse(customOpts);
+                }
+                if (slideType == "carouselHomeSlide") {
+                    customOpts['speed'] = Number(this.getAttribute('slick-option-speed'));
+                    customOpts['pauseOnHover'] = this.getAttribute('slick-option-pauseonhover') == 'true';
+                }
+                opts = $.extend(true, {}, opts, customOpts);
+            }
+            if (evts) {
+                $this.on(evts, function(e, slick) {
+                    $doc.trigger("slick-" + e.type, [ slick ]);
+                });
+            }
+            $this.slick(opts);
+        });
     });
 });

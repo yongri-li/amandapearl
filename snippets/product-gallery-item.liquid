@@ -1,8 +1,7 @@
 <!-- product-details__gallery -->
 <div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
   {% if product.images.size > 0 %}
-    {% for i in (0..5) %}
-      {% assign image = product.images[i] %}
+    {% for image in product.images %}
       <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
     {% endfor %}
   {% else %}

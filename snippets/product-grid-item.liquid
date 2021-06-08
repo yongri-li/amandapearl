@@ -15,6 +15,7 @@
 {% assign image = current_variant.image | default: product.featured_image %}
 
 <div class="inner height_fix {% if sold_out %}sold-out{% endif %}{% if on_sale %} on-sale{% endif %} " id="product-{{ product.id }}">
+  {% include 'product-badge' %}
   <div class="inner-top" style="border: 1px solid #fff;">
     <div class="product-top">
       <div class="product-image">
@@ -76,3 +77,13 @@
   </div>
 
 </div>
+
+<style type="text/css">
+  .product-item .height_fix {
+    position: relative;
+  }
+
+  .product-item .product-top {
+    z-index: 10;
+  }
+</style>

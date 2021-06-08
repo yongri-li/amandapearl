@@ -1061,6 +1061,12 @@
         "info": "Default Value: #2d2d2d"
       },
       {
+        "type": "number",
+        "id": "product_low_quantity",
+        "label": "Product Low Quantity",
+        "default": 5
+      },
+      {
         "type": "header",
         "content": "Breadcrumb"
       },

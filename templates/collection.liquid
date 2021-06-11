@@ -85,3 +85,17 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
     {% endpaginate %}
   </div>
 </div>
+
+<style type="text/css">
+  .product-badge {
+    position: absolute;
+    right: 0;
+    top: 0;
+    {% if settings.product_badge_color != blank %}
+      background-color: {{ settings.product_badge_color }};
+    {% else %}
+      background-color: yellow;
+    {% endif %}
+    z-index: 99;
+  }
+</style>

@@ -1067,6 +1067,11 @@
         "default": 5
       },
       {
+        "type": "color",
+        "id": "product_badge_color",
+        "label": "Product Badge Color"
+      },
+      {
         "type": "header",
         "content": "Breadcrumb"
       },

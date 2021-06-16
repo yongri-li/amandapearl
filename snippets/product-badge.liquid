@@ -7,6 +7,10 @@
 		<h3 class="product-badge__title">Only a few left</h3>
 	{% endif %}
 
+	{% if product.tags contains 'bundle pricing' %}
+		<h3 class="product-badge__title">Bundle Pricing</h3>
+	{% endif %}
+
 	{% if product.tags contains 'sale' %}
 		<h3 class="product-badge__title">Sale</h3>
 	{% endif %}

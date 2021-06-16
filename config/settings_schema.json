@@ -1061,12 +1061,6 @@
         "info": "Default Value: #2d2d2d"
       },
       {
-        "type": "number",
-        "id": "product_low_quantity",
-        "label": "Product Low Quantity",
-        "default": 5
-      },
-      {
         "type": "color",
         "id": "product_badge_color",
         "label": "Product Badge Color"

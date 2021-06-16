@@ -3,19 +3,8 @@
 		<h3 class="product-badge__title">BEST SELLER</h3>
 	{% endif %}
 
-	{% if product.available %}
-		{% assign low_quantity_alert = settings.product_low_quantity %}
-
-		{% assign total_stock = 0 %}
-
-		{% for variant in product.variants %}
-			{% assign total_stock =  total_stock | plus: variant.inventory_quantity %}
-		{% endfor %}
-		
-		{% assign total_stock = total_stock | plus: 0 %}
-		{% if total_stock < low_quantity_alert %}
-			<h3 class="product-badge__title">Only a few left</h3>
-		{% endif %}
+	{% if product.tags contains 'only a few left' %}
+		<h3 class="product-badge__title">Only a few left</h3>
 	{% endif %}
 
 	{% if product.tags contains 'sale' %}
@@ -26,7 +15,7 @@
 		<h3 class="product-badge__title">Secret Sale</h3>
 	{% endif %}
 
-	{% if product.tags contains 'Sample sale' %}
+	{% if product.tags contains 'sample sale' %}
 		<h3 class="product-badge__title">Sample Sale</h3>
 	{% endif %}
 

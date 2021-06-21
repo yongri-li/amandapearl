@@ -1,0 +1,92 @@
+<div class="container">
+	<div class="featured-blogs">
+		{% if section.settings.title != blank %}
+			<h3 class="featured-blogs__title">
+				{{ section.settings.title }}
+			</h3>
+		{% endif %}
+		<div class="featured-blogs__container blog-swiper swiper-container">
+			<div class="swiper-wrapper">
+				{% if section.blocks.size > 0 %}
+					{% for block in section.blocks %}
+						{% assign article = articles[block.settings.article] %}
+						{% include 'article-card' with article: article %}
+					{% endfor %}
+				{% endif %}
+			</div>
+			<div class="swiper-button-next"></div>
+      		<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.featured-blogs {
+		position: relative;
+	}
+	.featured-blogs__title {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.article-content {
+		margin-top: 20px;
+	}
+	.article-image img {
+		width: 100%;
+		object-fit: cover;
+	}
+	.featured-blogs .article {
+		position: relative;
+	}
+	.article-content {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		padding: 10px;
+		background-color: #eee;
+	}
+</style>
+<script type="text/javascript">
+	var swiper = new Swiper(".blog-swiper", {
+        loop: false,
+        breakpoints: {
+        	768: {
+        		slidesPerView: 2,
+        		spaceBetween: 10
+        	},
+        	1024: {
+        		slidesPerView: 2,
+        		spaceBetween: 40
+        	}
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+	});
+</script>
+{% schema %}
+{
+	"name": "Featured Blogs",
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Featured Blogs"
+		}
+	],
+	"blocks": [
+		{
+			"name": "blog",
+			"type": "blog",
+			"settings": [
+				{
+					"type": "article",
+					"id": "article",
+					"label": "Article"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

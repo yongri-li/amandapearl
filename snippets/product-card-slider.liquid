@@ -1,0 +1,30 @@
+{% include 'bold-product' with product, hide_action: 'skip' %}
+{% assign on_sale = false %}
+{% if bold_compare_at_price_min > bold_price_min %}
+	{% assign on_sale = true %}
+{% endif %}
+
+<a href="{{ product.url }}" class="product-card-slider swiper-slide">
+	<div class="product-card-slider__image">
+		<img src="{{ product.featured_image | img_url: '500x' }}">
+	</div>
+	<div class="product-card-slider__content">
+		<div class="product-title">
+			{{ product.title }}
+		</div>
+		<div class="product-price">
+			{% if on_sale %}
+		        <p class="regular-product">
+		          <span style="color:#555">Retail Price: {{ bold_compare_at_price_min | money }}</span><br>
+		          <span style="font-weight:700">Your Price: {% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
+		          {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}"></button>
+		        </p>
+	        {% else %}
+		        <p class="regular-product">
+		          <span style="font-weight:700">{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
+		          {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}"></button>
+		        </p>
+	        {% endif %}
+		</div>
+	</div>
+</a>

@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 {% include 'homepage-flexslider' %}
 
 <div class="container">
@@ -13,8 +15,15 @@
 {% comment %} Block New Arrivals {% endcomment %}
 {% include 'homepage-block-new-arrivals' %}
 
-{% comment %} Block Banner Bootom {% endcomment %}
+{% comment %} Block Banner Bootom 
 {% include 'homepage-block-three-banner-bottom' %}
+{% endcomment %}
+
+{% section 'home-product-recommendations' %}
+
+{% section 'home-featured-blogs' %}
+
+{% section 'home-sliders' %}
 
 {% comment %} Block Trending Now {% endcomment %}
 {% include 'homepage-block-trending' %}

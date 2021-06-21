@@ -1,0 +1,96 @@
+<div class="container">
+	<div class="recommendation-products">
+		{% if section.settings.title != blank %}
+			<h3 class="recommendation-products__title">
+				{{ section.settings.title }}
+			</h3>
+		{% endif %}
+		<div class="recommendation-products__container swiper-container product-swiper">
+			<div class="swiper-wrapper">
+				{% if section.blocks.size > 0 %}
+					{% for block in section.blocks %}
+						{% assign product = all_products[block.settings.product] %}
+						{% include 'product-card-slider' with product: product %}
+					{% endfor %}
+				{% endif %}
+			</div>
+			<div class="swiper-button-next"></div>
+      		<div class="swiper-button-prev"></div>
+		</div>
+	</div>
+</div>
+<style type="text/css">
+	.recommendation-products__container {
+		position: relative;
+	}
+	.recommendation-products__title {
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.product-card-slider__content {
+		text-align: center;
+	}
+	.product-card-slider__image {
+		text-align: center;
+	}
+	.recommendation-products {
+		margin-bottom: 50px;
+	}
+	.swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
+		color: #000;
+		width: 40px;
+	    height: 40px;
+	    background: #fff;
+	    border-radius: 50%;
+	    border:  1px solid #000;
+	}
+	.swiper-container .swiper-button-next::after, .swiper-container .swiper-button-prev::after {
+		font-size: 20px;
+	}
+</style>
+
+<script type="text/javascript">
+	var swiper = new Swiper(".product-swiper", {
+        loop: false,
+        breakpoints: {
+        	768: {
+        		slidesPerView: 2,
+        		spaceBetween: 10
+        	},
+        	1024: {
+        		slidesPerView: 4,
+        		spaceBetween: 20
+        	}
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+	});
+</script>
+{% schema %}
+{
+	"name": "Product Recommendations",
+	"settings": [
+		{
+			"type": "text",
+			"id": "title",
+			"label": "Title",
+			"default": "Recommendation Products"
+		}
+	],
+	"blocks": [
+		{
+			"name": "Recommendation Products",
+			"type": "recommendation_products",
+			"settings": [
+				{
+					"type": "product",
+					"id": "product",
+					"label": "Product"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

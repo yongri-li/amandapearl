@@ -1,0 +1,105 @@
+<div class="home-sliders container">
+	{% if section.blocks.size > 0 %}
+		<div class="swiper-container home-swiper">
+			<div class="swiper-wrapper">
+				{% for block in section.blocks %}
+					<div class="swiper-slide">
+						<a class="home-slide-title" href="{{ block.title_url }}">
+							{{ block.settings.title }}
+						</a>
+						<div class="home-slide-image">
+							<img src="{{ block.settings.image | img_url: '1000x' }}">
+						</div>
+						<div class="home-slide-content">
+							<div class="home-slide-description">
+								{{ block.settings.description }}
+							</div>
+							<a href="{{ block.settings.button_url }}">
+								{{ block.settings.button_text }}
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>
+	{% endif %}
+</div>
+<style type="text/css">
+	.home-sliders {
+		margin-bottom: 50px;
+	}
+	.home-slide-title {
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+	.home-slide-image img {
+		width: 100%;
+		height: 500px;
+		object-fit: cover;
+	}
+	.home-slide-content a {
+		text-decoration: underline;
+		text-transform: uppercase;
+	}
+</style>
+<script type="text/javascript">
+	var swiper = new Swiper(".home-swiper", {
+        loop: true,
+        breakpoints: {
+        	768: {
+        		slidesPerView: 1,
+        	},
+        	1024: {
+        		slidesPerView: 1,
+        	}
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+	});
+</script>
+{% schema %}
+{
+	"name": "Home Slider",
+	"blocks": [
+		{
+			"name": "Slider",
+			"type": "slider",
+			"settings": [
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "url",
+					"id": "title_url",
+					"label": "Title Link"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Slider Image"
+				},
+				{
+					"type": "textarea",
+					"id": "description",
+					"label": "Description"
+				},
+				{
+					"type": "text",
+					"id": "button_text",
+					"label": "Button Text"
+				},
+				{
+					"type": "url",
+					"id": "button_url",
+					"label": "Button Link"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

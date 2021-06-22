@@ -1,10 +1,17 @@
 <div class="container">
 	<div class="featured-blogs">
-		{% if section.settings.title != blank %}
-			<h3 class="featured-blogs__title">
-				{{ section.settings.title }}
-			</h3>
-		{% endif %}
+		<div class="featured-blogs__header">
+			{% if section.settings.title != blank %}
+				<h3 class="featured-blogs__title">
+					{{ section.settings.title }}
+				</h3>
+			{% endif %}
+			<div class="featured-blogs__action">
+				<a href="/blogs/amanda-pearl">All Blogs</a>
+				<div class="swiper-button-prev blog-swiper-prev"></div>
+				<div class="swiper-button-next blog-swiper-next"></div>
+			</div>
+		</div>
 		<div class="featured-blogs__container blog-swiper swiper-container">
 			<div class="swiper-wrapper">
 				{% if section.blocks.size > 0 %}
@@ -14,8 +21,6 @@
 					{% endfor %}
 				{% endif %}
 			</div>
-			<div class="swiper-button-next"></div>
-      		<div class="swiper-button-prev"></div>
 		</div>
 	</div>
 </div>
@@ -24,8 +29,20 @@
 		position: relative;
 	}
 	.featured-blogs__title {
-		text-align: center;
+		float: left;
+		text-align: left;
 		text-transform: uppercase;
+	}
+	.featured-blogs__action {
+		display: flex;
+		float: right;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
+	.featured-blogs__header::after {
+		content: " ";
+		display: table;
+		clear: both;
 	}
 	.article-content {
 		margin-top: 20px;
@@ -37,6 +54,21 @@
 	.featured-blogs .article {
 		position: relative;
 	}
+	.featured-blogs__action .swiper-button-next, .featured-blogs__action .swiper-button-prev {
+		color: #000;
+		width: 30px;
+    height: 30px;
+    position: relative;
+    top: 16px;
+    left: 0;
+	}
+	.featured-blogs__action a {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	.featured-blogs__action .swiper-button-next::after, .featured-blogs__action .swiper-button-prev::after {
+		font-size: 20px;
+	}
 	.article-content {
 		position: absolute;
 		bottom: 0;
@@ -47,7 +79,7 @@
 </style>
 <script type="text/javascript">
 	var swiper = new Swiper(".blog-swiper", {
-        loop: false,
+        loop: true,
         breakpoints: {
         	768: {
         		slidesPerView: 2,
@@ -59,8 +91,8 @@
         	}
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".blog-swiper-next",
+          prevEl: ".blog-swiper-prev",
         },
 	});
 </script>

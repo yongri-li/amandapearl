@@ -1,21 +1,25 @@
 <div class="container">
 	<div class="recommendation-products">
-		{% if section.settings.title != blank %}
-			<h3 class="recommendation-products__title">
-				{{ section.settings.title }}
-			</h3>
-		{% endif %}
+		<div class="recommendation-header">
+			{% if section.settings.title != blank %}
+				<h3 class="recommendation-products__title">
+					{{ section.settings.title }}
+				</h3>
+			{% endif %}
+			<div class="recommendation-action">
+				<a href="/collections/all">Shop All</a>
+  			<div class="swiper-button-prev product-swiper-prev"></div>
+				<div class="swiper-button-next product-swiper-next"></div>
+			</div>
+		</div>
 		<div class="recommendation-products__container swiper-container product-swiper">
 			<div class="swiper-wrapper">
 				{% if section.blocks.size > 0 %}
 					{% for block in section.blocks %}
-						{% assign product = all_products[block.settings.product] %}
-						{% include 'product-card-slider' with product: product %}
+						{% include 'collection-card' with: block: block %}
 					{% endfor %}
 				{% endif %}
 			</div>
-			<div class="swiper-button-next"></div>
-      		<div class="swiper-button-prev"></div>
 		</div>
 	</div>
 </div>
@@ -23,8 +27,21 @@
 	.recommendation-products__container {
 		position: relative;
 	}
+	.recommendation-header::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+	.recommendation-header .recommendation-products__title {
+		float: left;
+	}
+	.recommendation-header .recommendation-action {
+		float: right;
+		text-transform: uppercase;
+		font-size: 18px;
+	}
 	.recommendation-products__title {
-		text-align: center;
+		text-align: left;
 		text-transform: uppercase;
 	}
 	.product-card-slider__content {
@@ -36,22 +53,40 @@
 	.recommendation-products {
 		margin-bottom: 50px;
 	}
-	.swiper-container .swiper-button-next, .swiper-container .swiper-button-prev {
-		color: #000;
-		width: 40px;
-	    height: 40px;
-	    background: #fff;
-	    border-radius: 50%;
-	    border:  1px solid #000;
+	.swiper-container {
+		margin-bottom: 100px;
+		padding-bottom: 30px;
+		border-bottom: 1px solid #000;
 	}
-	.swiper-container .swiper-button-next::after, .swiper-container .swiper-button-prev::after {
+	.recommendation-action {
+		display: flex;
+	}
+	.recommendation-action .swiper-button-next, .recommendation-action .swiper-button-prev {
+		color: #000;
+		width: 30px;
+    height: 30px;
+    position: relative;
+    top: 16px;
+    left: 0;
+	}
+	.recommendation-action a {
+		text-decoration: underline;
+		text-underline-offset: 2px;
+	}
+	.recommendation-action .swiper-button-next::after, .recommendation-action .swiper-button-prev::after {
 		font-size: 20px;
+	}
+	.collection-card__image {
+		object-fit: cover;
+	}
+	.collection-card__title {
+		text-align: center;
 	}
 </style>
 
 <script type="text/javascript">
 	var swiper = new Swiper(".product-swiper", {
-        loop: false,
+        loop: true,
         breakpoints: {
         	768: {
         		slidesPerView: 2,
@@ -63,31 +98,36 @@
         	}
         },
         navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".product-swiper-next",
+          prevEl: ".product-swiper-prev",
         },
 	});
 </script>
 {% schema %}
 {
-	"name": "Product Recommendations",
+	"name": "Favorite Collection",
 	"settings": [
 		{
 			"type": "text",
 			"id": "title",
 			"label": "Title",
-			"default": "Recommendation Products"
+			"default": "Favorite Collection"
 		}
 	],
 	"blocks": [
 		{
-			"name": "Recommendation Products",
-			"type": "recommendation_products",
+			"name": "Collections",
+			"type": "collections",
 			"settings": [
 				{
-					"type": "product",
-					"id": "product",
-					"label": "Product"
+					"type": "collection",
+					"id": "collection",
+					"label": "collection"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
 				}
 			]
 		}

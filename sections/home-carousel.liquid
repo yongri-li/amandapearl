@@ -1,9 +1,17 @@
 <div class="home-sliders container">
-    <div>
-        <div class="featured-blogs__action">
-            <a href="{{section.settings.button_url}}">{{section.settings.button_text}}</a>
-            <div class="swiper-button-prev blog-swiper-prev"></div>
-            <div class="swiper-button-next blog-swiper-next"></div>
+    <div class="home-sliders__header">
+        {% if section.settings.title != blank %}
+            <h3 class="home-sliders__header-title">
+                {{ section.settings.title }}
+            </h3>
+        {% endif %}
+
+        <div class="home-sliders__header-action">
+            <a class="" href="{{section.settings.button_url}}">
+                {{ section.settings.button_text }}
+            </a>
+            <div class="swiper-button-prev home-swiper-prev"></div>
+            <div class="swiper-button-next home-swiper-next"></div>
         </div>
     </div>
     {% if section.blocks.size > 0 %}
@@ -11,9 +19,6 @@
             <div class="swiper-wrapper">
                 {% for block in section.blocks %}
                     <div class="swiper-slide">
-                        <a class="home-slide-title" href="{{ block.title_url }}">
-                            {{ block.settings.title }}
-                        </a>
                         <div class="home-slide-image">
                             <img src="{{ block.settings.image | img_url: '1000x' }}">
                         </div>
@@ -32,32 +37,41 @@
     {% endif %}
 </div>
 <style type="text/css">
-    .home-sliders {
-        margin-bottom: 50px;
+    .home-sliders__header-title {
+        text-transform: uppercase;
+        font-size: 24px;
     }
-    .home-slide-title {
-        font-size: 20px;
+    .home-sliders__header {
         margin-bottom: 30px;
+    }
+    .home-sliders__header::after {
+        display: table;
+        content: ' ';
+        clear: both;
+    }
+    .home-sliders__header .home-sliders__header-title {
+        float: left;
+    }
+    .home-sliders__header .home-sliders__header-action {
+        float: right;
         text-transform: uppercase;
-        display: block;
+        font-size: 18px;
+        display: flex;
     }
-    .home-slide-image img {
-        width: 100%;
-        height: 500px;
-        object-fit: cover;
+    .home-sliders__header-action .swiper-button-next, .home-sliders__header-action .swiper-button-prev {
+        color: #000;
+        width: 30px;
+        height: 30px;
+        position: relative;
+        top: 16px;
+        left: 0;
     }
-    .home-slide-content {
-        margin-top: 20px;
-    }
-    .home-slide-description {
-        text-transform: uppercase;
-        font-size: 12px;
-        line-height: 22px;
-        margin-bottom: 20px;
-    }
-    .home-slide-content a {
+    .home-sliders__header-action a {
         text-decoration: underline;
-        text-transform: uppercase;
+    }
+    
+    .home-sliders__header-action .swiper-button-next::after, .home-sliders__header-action .swiper-button-prev::after {
+        font-size: 20px;
     }
 </style>
 <script type="text/javascript">
@@ -66,10 +80,16 @@
         breakpoints: {
             768: {
                 slidesPerView: 2,
+                spaceBetween: 10
             },
             1024: {
                 slidesPerView: 2,
+                spaceBetween: 40
             }
+        },
+        navigation: {
+          nextEl: ".home-swiper-next",
+          prevEl: ".home-swiper-prev",
         },
     });
 </script>
@@ -79,9 +99,15 @@
     "settings": [
         {
             "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "The pieces in action"
+        },
+        {
+            "type": "text",
             "id": "button_text",
             "label": "Button Text",
-            "default": "Shop All"
+            "default": "See All"
         },
         {
             "type": "url",
@@ -94,11 +120,6 @@
             "name": "Slider",
             "type": "slider",
             "settings": [
-                {
-                    "type": "text",
-                    "id": "title",
-                    "label": "Title"
-                },
                 {
                     "type": "image_picker",
                     "id": "image",

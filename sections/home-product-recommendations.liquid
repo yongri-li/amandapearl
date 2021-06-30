@@ -58,11 +58,14 @@
 		margin: 50px 0;
 		border-bottom:  1px solid #000;
 	}
-	.swiper-container {
-		margin-bottom: 100px;
-	}
 	.recommendation-action {
 		display: flex;
+	}
+
+	@media(max-width:  768px) {
+		.recommendation-header .recommendation-action {
+			float: left;
+		}	
 	}
 	.recommendation-action .swiper-button-next, .recommendation-action .swiper-button-prev {
 		color: #000;
@@ -80,10 +83,11 @@
 		font-size: 20px;
 	}
 	.collection-card__image {
+		margin-bottom: 30px;
 		object-fit: cover;
 	}
 	.collection-card__title {
-		text-align: center;
+		text-align: left;
 	}
 	.recommendation-products__container.swiper-container {
 		margin-bottom: 0;
@@ -93,10 +97,12 @@
 <script type="text/javascript">
 	var swiper = new Swiper(".product-swiper", {
         loop: true,
+        slidesPerView: 2.2,
+        spaceBetween: 10,
         breakpoints: {
         	768: {
-        		slidesPerView: 2,
-        		spaceBetween: 10
+        		slidesPerView: 3,
+        		spaceBetween: 10,
         	},
         	1024: {
         		slidesPerView: 5,

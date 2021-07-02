@@ -1,0 +1,97 @@
+<div class="home-icon">
+	{% if section.blocks.size > 0 %}
+		<ul class="home-icon__content">
+			{% for block in section.blocks %}
+				<li class="home-icon__item">
+					{% if block.settings.icon != blank %}
+						<a href="{{ block.settings.url }}">
+							<img class="home-icon__item-image" src="{{ block.settings.icon | img_url: '500x' }}">
+						</a>
+					{% endif %}
+					<div class="des">
+						{% if block.settings.title != blank %}
+							<h4 class="home-icon__item-title">
+								{{ block.settings.title }}
+							</h4>
+						{% endif %}
+						{% if block.settings.url != blank %}
+							<a class="btn" href="{{ block.settings.url }}">
+								Learn More
+								<span class="arrow">arrow</span>
+							</a>
+						{% endif %}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+</div>
+<style type="text/css">
+	.home-icon {
+		margin-bottom: 50px;
+	}
+
+	.home-icon__content {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+		padding-left: 10px;
+	}
+
+	.home-icon__item {
+		display: flex;
+	    max-width: 25%;
+		flex-direction: column;
+		margin: auto;
+    	justify-content: space-between;
+	}
+
+	.home-icon__item .btn {
+		margin: 0 40px;
+	}
+
+	.home-icon__item-title {
+		margin: 0 10px 20px 10px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.home-icon__item .des {
+		text-align: center;
+	}
+
+	@media (max-width:  768px) {
+		.home-icon__item {
+		    max-width: 50%;
+			margin:  0;
+		}
+	}
+</style>
+{% schema %}
+{
+	"name": "Home Icons",
+	"blocks": [
+		{
+			"type": "icon",
+			"name": "Icon",
+			"settings": [
+				{
+					"type": "image_picker",
+					"id": "icon",
+					"label": "Icon"
+				},
+				{
+					"type": "text",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "url",
+					"id": "url",
+					"label": "URL"
+				}
+			]
+		}
+	] 
+}
+{% endschema %}

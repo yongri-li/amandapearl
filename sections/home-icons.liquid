@@ -28,7 +28,7 @@
 </div>
 <style type="text/css">
 	.home-icon {
-		margin-bottom: 100px;
+		margin-bottom: 70px;
 	}
 
 	.home-icon__content {
@@ -44,6 +44,12 @@
 		flex-direction: column;
 		margin: auto;
     	justify-content: space-between;
+    	text-align: center;
+	}
+
+	.home-icon__item-image {
+		max-width: 200px;
+		margin-bottom: 20px;
 	}
 
 	.home-icon__item .btn {
@@ -51,7 +57,7 @@
 	}
 
 	.home-icon__item-title {
-		margin: 0 10px 20px 10px;
+		margin: 0 10px 30px 10px;
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -63,6 +69,14 @@
 	@media (max-width:  768px) {
 		.home-icon__item {
 		    max-width: 50%;
+			margin:  0;
+		}
+
+		.home-icon__item-image {
+			width: 100%;
+		}
+
+		.home-icon__item .btn {
 			margin:  0;
 		}
 	}

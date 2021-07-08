@@ -2,13 +2,33 @@
 <div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
   {% if product.images.size > 0 %}
     {% for image in product.images %}
-      <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
+      <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}" data-gallery-trigger data-idx="{{ forloop.index0 }}">
     {% endfor %}
   {% else %}
     {% for image in product.images %}
       <img class="product-gallery__item" id="product__img--{{ forloop.index0 }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
     {% endfor %}
   {% endif %}
+</div>
+
+{% capture imgs %}
+  {% for image in product.images %}
+    <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item><img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}"></div>
+  {% endfor %}
+{% endcapture %}
+
+<div class="product-gallery-popup">
+  <span class="popup-close" data-popup-close>
+    <svg width="32" height="32" viewBox="0 0 16 16" class="sc-cqtpGg jPwwre"><g fill="#000" fill-rule="nonzero"><path d="M2.343 15.071L.93 13.657 13.657.929l1.414 1.414z"></path><path d="M.929 2.343L2.343.93l12.728 12.728-1.414 1.414z"></path></g></svg>
+  </span>
+  <div class="product-gallery-popup-wrapper">
+    <div class="gallery-thumbs" data-gallery-thumbs>
+      <div class="gallery-thumbs-wrapper">{{ imgs }}</div>
+    </div>
+    <div class="gallery-images" data-gallery-imgs>
+      <div class="gallery-images-wrapper">{{ imgs }}</div>
+    </div>
+  </div>
 </div>
 
 <style type="text/css">

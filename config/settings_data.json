@@ -114,6 +114,7 @@
     "bg_body_attachment": "scroll",
     "body_font_size": "12",
     "body_color": "#000000",
+    "product_badge_color": "#f2f2f2",
     "display_breadcrumb": true,
     "breadcrumb_color": "#808080",
     "breadcrumb_text_transform": "uppercase",
@@ -1020,10 +1021,241 @@
     "border_color_product_item": "#ff0000",
     "product_item_border": "true",
     "product_main_height": "500",
-    "content_for_index": [
-
-    ]
+    "sections": {
+      "home-product-recommendations": {
+        "type": "home-product-recommendations",
+        "blocks": {
+          "eeb35aaa-bde8-4b43-81b3-0a70a4683edb": {
+            "type": "collections",
+            "settings": {
+              "collection": "14k-earrings",
+              "image": "shopify:\/\/shop_images\/14k-earrings-3.jpg"
+            }
+          },
+          "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2": {
+            "type": "collections",
+            "settings": {
+              "collection": "14k-charms",
+              "image": "shopify:\/\/shop_images\/14k-charm-locks.jpg"
+            }
+          },
+          "ac7c7ebe-26dd-4b06-9810-f9e9e9e76b4c": {
+            "type": "collections",
+            "settings": {
+              "collection": "14k-necklaces",
+              "image": "shopify:\/\/shop_images\/14k-necklace.jpg"
+            }
+          },
+          "fab70635-e968-4955-8849-3c88576cc48d": {
+            "type": "collections",
+            "settings": {
+              "collection": "14k-rings",
+              "image": "shopify:\/\/shop_images\/14k-rings.jpg"
+            }
+          },
+          "c9cdbdaa-58d5-4fbe-b9b0-906c3b1a720d": {
+            "type": "collections",
+            "settings": {
+              "collection": "14k-bracelets",
+              "image": "shopify:\/\/shop_images\/14k-Bracelets.jpg"
+            }
+          },
+          "3157d824-31d3-46e8-b55d-519e91b85d00": {
+            "type": "collections",
+            "settings": {
+              "collection": "aps-weekly-picks",
+              "image": "shopify:\/\/shop_images\/14k-charms-2.jpg"
+            }
+          },
+          "413621f7-57b7-4903-98d2-83240e57736b": {
+            "type": "collections",
+            "settings": {
+              "collection": "category-bags",
+              "image": "shopify:\/\/shop_images\/clutch-carousel.jpg"
+            }
+          }
+        },
+        "block_order": [
+          "eeb35aaa-bde8-4b43-81b3-0a70a4683edb",
+          "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2",
+          "ac7c7ebe-26dd-4b06-9810-f9e9e9e76b4c",
+          "fab70635-e968-4955-8849-3c88576cc48d",
+          "c9cdbdaa-58d5-4fbe-b9b0-906c3b1a720d",
+          "3157d824-31d3-46e8-b55d-519e91b85d00",
+          "413621f7-57b7-4903-98d2-83240e57736b"
+        ],
+        "settings": {
+          "title": "Revolutionary Pricing on Sustainable Luxury"
+        }
+      },
+      "home-featured-blogs": {
+        "type": "home-featured-blogs",
+        "blocks": {
+          "a52ed8db-568c-4d0b-8baf-6b2f72fbc6d6": {
+            "type": "blog",
+            "settings": {
+              "article": "amanda-pearl\/amandas-spring-2021-wish-list"
+            }
+          },
+          "9d82792f-7af4-4109-a0dc-803518883070": {
+            "type": "blog",
+            "settings": {
+              "article": "amanda-pearl\/ready-to-win-big"
+            }
+          },
+          "3c240235-e3ea-46bb-a6c9-fd3f2ac32d9e": {
+            "type": "blog",
+            "settings": {
+              "article": "amanda-pearl\/ap-in-schon"
+            }
+          },
+          "4f26a553-2837-4f8f-8533-9a82d41d9f81": {
+            "type": "blog",
+            "settings": {
+              "article": "amanda-pearl\/amanda-kelly-on-fashion-crimes-podcast"
+            }
+          }
+        },
+        "block_order": [
+          "a52ed8db-568c-4d0b-8baf-6b2f72fbc6d6",
+          "9d82792f-7af4-4109-a0dc-803518883070",
+          "3c240235-e3ea-46bb-a6c9-fd3f2ac32d9e",
+          "4f26a553-2837-4f8f-8533-9a82d41d9f81"
+        ],
+        "settings": {
+          "title": "Featured Blogs"
+        }
+      },
+      "home-sliders": {
+        "type": "home-sliders",
+        "blocks": {
+          "fe8711fe-fd7a-497f-805a-8a1fa0439ebb": {
+            "type": "slider",
+            "settings": {
+              "title": "WHO WE ARE",
+              "title_url": "shopify:\/\/pages\/about",
+              "image": "shopify:\/\/shop_images\/Amanda_Pearl_003.jpg",
+              "description": "Meet the bosslady who revolutionized sustainable luxury",
+              "button_text": "Learn More",
+              "button_url": "shopify:\/\/pages\/about"
+            }
+          },
+          "8146ca53-5d58-478c-b340-45be8a93f217": {
+            "type": "slider",
+            "settings": {
+              "title": "WHO WE GIVE TO",
+              "title_url": "shopify:\/\/collections\/40-off-last-chance-sale",
+              "image": "shopify:\/\/shop_images\/TPL-who-we-give-to.jpg",
+              "description": "YOU SHOP, WE GIVE:  Meet our current beneficiary",
+              "button_text": "LEARN More",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/community-for-cause"
+            }
+          }
+        },
+        "block_order": [
+          "fe8711fe-fd7a-497f-805a-8a1fa0439ebb",
+          "8146ca53-5d58-478c-b340-45be8a93f217"
+        ],
+        "settings": {}
+      },
+      "home-carousel": {
+        "type": "home-carousel",
+        "blocks": {
+          "632343bd-b340-4679-a7c9-06a8eaa481c5": {
+            "type": "slider",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pieces-in-action-1.jpg",
+              "description": "Summer Style Made Easy",
+              "button_text": "Read More",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/summer-style-made-easy"
+            }
+          },
+          "ae6145f2-2680-41b9-a326-016c7a68967b": {
+            "type": "slider",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/pieces-in-action-3.jpg",
+              "description": "Be Styled by Amanda",
+              "button_text": "LEARN MORE",
+              "button_url": "https:\/\/amandapearl.com\/pages\/events"
+            }
+          },
+          "4064ef7c-9e56-41a1-882f-0961d243b330": {
+            "type": "slider",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/UR-E-CURVE-RB-Y-14K_green_background_-_square.gif",
+              "description": "HOW TO PUT ON OUR CURVED CLIMBER EARRING",
+              "button_text": "Watch the video",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/curved-quill-climber-earring-how-to"
+            }
+          },
+          "08b500a5-506a-440c-bf8e-262e2e4b5e6e": {
+            "type": "slider",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/about-the-stones-square.jpg",
+              "description": "Learn more about the stones",
+              "button_text": "READ MORE",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/about-the-stones"
+            }
+          }
+        },
+        "block_order": [
+          "632343bd-b340-4679-a7c9-06a8eaa481c5",
+          "ae6145f2-2680-41b9-a326-016c7a68967b",
+          "4064ef7c-9e56-41a1-882f-0961d243b330",
+          "08b500a5-506a-440c-bf8e-262e2e4b5e6e"
+        ],
+        "settings": {
+          "title": "The pieces in action",
+          "button_text": "",
+          "button_url": "shopify:\/\/blogs\/amanda-pearl"
+        }
+      },
+      "home-icons": {
+        "type": "home-icons",
+        "blocks": {
+          "e9a605c5-593f-47b0-bd64-95f8fb761a1c": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-3.jpg",
+              "title": "FAIR PRICING",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/fair-pricing"
+            }
+          },
+          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-2.jpg",
+              "title": "SUSTAINABLE MATERIALS",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/sustainable-gems"
+            }
+          },
+          "aba8daf2-e904-4f79-a751-4818997d6726": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-4.jpg",
+              "title": "YOU SHOP WE GIVE",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/community-for-cause"
+            }
+          },
+          "952fe00c-feab-4a5e-94a4-e1390a577e38": {
+            "type": "icon",
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-1.jpg",
+              "title": "EMPOWERING YOU",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/empowering-women"
+            }
+          }
+        },
+        "block_order": [
+          "e9a605c5-593f-47b0-bd64-95f8fb761a1c",
+          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59",
+          "aba8daf2-e904-4f79-a751-4818997d6726",
+          "952fe00c-feab-4a5e-94a4-e1390a577e38"
+        ],
+        "settings": {}
+      }
+    },
+    "content_for_index": []
   },
-  "presets": {
-  }
+  "presets": {}
 }

@@ -31,9 +31,9 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
 
         {% for product in collection.products %}
 
-        {%- include 'bold-product' with product, hide_action: 'skip' -%}
-        {% assign color_index = -1 %}
-        {% if product.object_type == 'product' and product.type == 'SHOPSTORM_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
+          {%- include 'bold-product' with product, hide_action: 'skip' -%}
+          {% assign color_index = -1 %}
+          {% if product.object_type == 'product' and product.type == 'SHOPSTORM_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
           {% if settings.display_color_variant %}
             {% for option in product.options %}
               {% if option == 'GEM' or option == 'METAL' or option == 'Material' or option == 'EARRING SIZE' %}
@@ -41,7 +41,7 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
               {% endif %}
             {% endfor %}
           {% endif %}
-
+          
           {% if color_index != -1 %}
             {% assign _colorlist = '' %}
             {% for _variant in product.variants %}

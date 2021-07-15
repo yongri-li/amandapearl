@@ -70,6 +70,12 @@ function mobImageZoom() {
   })
 }
 
+  if($(window).width() > 767) {
+    productGalleryPopup();
+  }
+
+})
+
 
 function productGalleryPopup() {
 
@@ -114,6 +120,14 @@ function galleryImgSlide(idx) {
     }
   }
   console.log(top +""+ idx);
+  var $target = $('[data-gallery-imgs] [data-gallery-item][data-idx=' + idx + ']');
+  var top = 0;
+  for(var i = 0; i < idx; i ++) {
+    var $item = $('[data-gallery-imgs] [data-gallery-item][data-idx=' + idx + ']');
+    top += $item.height() + 15;
+  }
+
+  console.log(idx + "::::" + top);
   $content.animate({
     scrollTop: top
   }, 800);

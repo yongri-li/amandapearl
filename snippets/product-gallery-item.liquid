@@ -21,6 +21,7 @@
     {% for image in product.images %}
       {% assign handle = image.alt | handle %}
       <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-gallery-trigger data-idx="{{ forloop.index0 }}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
+      <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}" data-gallery-trigger data-idx="{{ forloop.index0 }}">
     {% endfor %}
   {% else %}
     {% for image in product.images %}
@@ -35,6 +36,7 @@
     <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item>
       <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
     </div>
+    <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item><img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}"></div>
   {% endfor %}
 {% endcapture %}
 

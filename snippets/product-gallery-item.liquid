@@ -1,14 +1,66 @@
 <!-- product-details__gallery -->
-<div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
+<div class="product__images product-details__gallery product-gallery" data-product-gallery data-theme-slick-init111 data-theme-slick-options="productGallery">
+
+  {% assign colorHandle = '' %}
+  {% for p_option in product.options_with_values %}
+    {% assign optionName = p_option.name | downcase %}
+    {% if optionName == 'color' %}
+      {% assign colorHandle = p_option.values.first | handle %}
+    {% elsif optionName == 'colour' %}
+      {% assign colorHandle = p_option.values.first | handle %}
+    {% elsif optionName == 'metal' %}
+      {% assign colorHandle = p_option.values.first | handle %}
+    {% elsif optionName == 'gem' %}
+      {% assign colorHandle = p_option.values.first | handle %}
+    {% elsif optionName == 'material' %}
+      {% assign colorHandle = p_option.values.first | handle %}
+    {% endif %}
+  {% endfor %}
+
   {% if product.images.size > 0 %}
     {% for image in product.images %}
-      <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
+      {% assign handle = image.alt | handle %}
+      <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-gallery-trigger data-idx="{{ forloop.index0 }}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
     {% endfor %}
   {% else %}
     {% for image in product.images %}
       <img class="product-gallery__item" id="product__img--{{ forloop.index0 }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}">
     {% endfor %}
   {% endif %}
+</div>
+
+{% capture imgs %}
+  {% for image in product.images %}
+    {% assign handle = image.alt | handle %}
+    <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item>
+      <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
+    </div>
+  {% endfor %}
+{% endcapture %}
+
+<div class="product-gallery-popup">
+  <span class="popup-close" data-popup-close>
+    <svg width="32" height="32" viewBox="0 0 16 16" class="sc-cqtpGg jPwwre"><g fill="#000" fill-rule="nonzero"><path d="M2.343 15.071L.93 13.657 13.657.929l1.414 1.414z"></path><path d="M.929 2.343L2.343.93l12.728 12.728-1.414 1.414z"></path></g></svg>
+  </span>
+  <div class="product-gallery-popup-wrapper">
+    <div class="gallery-thumbs" data-gallery-thumbs>
+      <div class="gallery-thumbs-wrapper">{{ imgs }}</div>
+    </div>
+    <div class="gallery-images" data-gallery-imgs>
+      <div class="gallery-images-wrapper">{{ imgs }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="hide--desktop product-image-popup" data-mob-image-popup>
+  <div class="popup-wrapper">
+    <div class="image_wrapper"><img src="" alt=""></div>
+    <div class="popup-close">
+      <button data-popup-close>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 496.096 496.096" style="enable-background:new 0 0 496.096 496.096;" xml:space="preserve"><g><g><path d="M259.41,247.998L493.754,13.654c3.123-3.124,3.123-8.188,0-11.312c-3.124-3.123-8.188-3.123-11.312,0L248.098,236.686 L13.754,2.342C10.576-0.727,5.512-0.639,2.442,2.539c-2.994,3.1-2.994,8.015,0,11.115l234.344,234.344L2.442,482.342 c-3.178,3.07-3.266,8.134-0.196,11.312s8.134,3.266,11.312,0.196c0.067-0.064,0.132-0.13,0.196-0.196L248.098,259.31 l234.344,234.344c3.178,3.07,8.242,2.982,11.312-0.196c2.995-3.1,2.995-8.016,0-11.116L259.41,247.998z"/></g></g></svg>
+      </button>
+    </div>
+  </div>
 </div>
 
 <style type="text/css">

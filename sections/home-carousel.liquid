@@ -20,7 +20,7 @@
                 {% for block in section.blocks %}
                     <div class="swiper-slide">
                         <div class="home-slide-image">
-                            <img src="{{ block.settings.image | img_url: '1000x' }}">
+                            <a href="{{ block.settings.button_url }}"><img src="{{ block.settings.image | img_url: '1000x' }}"></a>
                         </div>
                         <div class="home-slide-content">
                             <div class="home-slide-description">
@@ -109,7 +109,7 @@
 </script>
 {% schema %}
 {
-    "name": "Home Carousel",
+    "name": "Pieces in Action",
     "settings": [
         {
             "type": "text",

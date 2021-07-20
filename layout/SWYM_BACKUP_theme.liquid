@@ -18,7 +18,6 @@
   </title>
 
   <meta name="google-site-verification" content="kZ-GXJCQaQfJKuIqOVB94zh5NoBuJsTdK4oQ4tPFnx4" />
-  <meta name="facebook-domain-verification" content="0nwc43kfs2tm3xcxq6v1cdlymag7t3" /> 
 
   {% if page_description %}
   <meta name="description" content="{{ page_description | escape }}">
@@ -96,7 +95,7 @@
 
     <div class="canvas-container">
 
-    <main class="main-content {% if template contains 'index' or template contains 'contact' or template contains 'cart' or template contains 'product' %}{% else %}container{% endif %}" role="main">
+    <main class="main-content {% if template contains 'index' or template contains 'contact' or template contains 'cart' %}{% else %}container{% endif %}" role="main">
       {{ content_for_layout }}
 <limespot></limespot>
     </main>
@@ -137,8 +136,8 @@
 
 {% include 'swymSnippet' %}
 
-
-<!-- https://static.secure-afterpay.com.au/shopify-afterpay-javascript.html -->
+  
+<!-- http://static.secure-afterpay.com.au/shopify-afterpay-javascript.html -->
 
 <!-- Begin Shopify-Afterpay JavaScript Snippet (v1.0.1) -->
 <script type="text/javascript">
@@ -200,17 +199,9 @@ if (afterpay_product && afterpay_product.price == 0) {
 }
 </script>
 {{ 'instant.js' | asset_url | script_tag }}
-{{ 'slick.min.js' | asset_url | script_tag }}
-{{ 'product-slick.js' | asset_url | script_tag }}
-{{ 'custom.js' | asset_url | script_tag }}
-
 
 <script>window.KlarnaThemeGlobals={};{%case template.name%} {%when"product"%} window.KlarnaThemeGlobals.data_purchase_amount={{product.first_available_variant.price}};window.KlarnaThemeGlobals.productVariants={{product.variants|json}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%when"cart"%} window.KlarnaThemeGlobals.data_purchase_amount={{cart.total_price}};window.KlarnaThemeGlobals.documentCopy=document.cloneNode(true);{%endcase%}</script>
 
   {% render 'spurit_po2_theme_snippet' %}
-  {% if settings.collection_infinite_scrolling and settings.collection_infinite_scrolling_endless %}
-    {{ 'ajaxinate.min.js' | asset_url | script_tag }}
-  {% endif %}
-  <script src="https://cdn.attn.tv/amandapearl/dtag.js"></script>
 </body>
 </html>

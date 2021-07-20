@@ -3,24 +3,8 @@ $(document).ready(function(){
   if($(window).width() > 767) {
     productGalleryPopup();
   }
-  mobImageZoom();
+
 })
-
-
-function mobImageZoom() {
-  var $popup = $('[data-mob-image-popup]');
-  $(document).on('click', '.mobile-zoom', function(e) {
-    e.preventDefault();
-    var $target = $('.product-img-box .product__images .slick-slide.slick-current.slick-active img');
-    var $img = $popup.find('img');
-    $img.attr('src', $target.attr('src'));
-    $popup.fadeIn(300);
-  })
-
-  $(document).on('click', '[data-mob-image-popup] button[data-popup-close]', function() {
-    $popup.fadeOut(300);
-  })
-}
 
 
 function productGalleryPopup() {

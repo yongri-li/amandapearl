@@ -100,7 +100,7 @@
     "ajax_cart": {
       "continue_shopping": "Continue Shopping",
       "go_to_cart": "Go to bag",
-      "success_text": "is added to your shopping cart.",
+      "success_text": "is added to your shopping bag.",
       "error": "Error",
       "loading": "Loading",
       "close": "Close"

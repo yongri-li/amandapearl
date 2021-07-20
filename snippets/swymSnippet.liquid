@@ -7,29 +7,6 @@
 <link rel="preconnect" href="//swymprod.azureedge.net/code/swym-shopify.js">
 <script id="swym-snippet">
   window.swymLandingURL = document.URL;
-  (function loadSwymFaster(){
-    var elScripts = document.querySelectorAll("script:not([src]):not([class]):not([id])"), scriptLoadScript, scriptLoadScriptText;
-    for(var i = 0; i < elScripts.length; i++){
-      var elScript = elScripts[i];
-      // TODO change swym- check to script metafield
-      if(elScript.innerText.indexOf('swym-shopify.js') > -1){
-        scriptLoadScriptText = elScript.innerText;
-        break;
-      }
-    }
-    if(scriptLoadScriptText) {
-      var startStr = 'var urls =';
-      var startIdx = scriptLoadScriptText.indexOf(startStr);
-      var endStr = '"];';
-      var endIdx = scriptLoadScriptText.indexOf(endStr,startIdx);
-      var listOfUrlsText = scriptLoadScriptText.slice(startIdx + startStr.length, endIdx + endStr.length);
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src = ({{ shop.metafields.swym.js_path | json }} || "//swymprod.azureedge.net/code/swym-shopify.js") + "?shop={{shop.permanent_domain | url_encode}}";
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-    }
-  })();
   window.swymCart = {{ cart | json }};
   window.swymPageLoad = function(){
     window.SwymProductVariants = window.SwymProductVariants || {};

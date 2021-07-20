@@ -14,9 +14,9 @@
 {% endcomment %}
 
 {% if settings.enable_multilang %}
-<div class="rte lang1">{{ page.content | split: '[lang2]' | first }}</div>
-<div class="rte lang2">{{ page.content | split: '[lang2]' | last }}</div>
+<div class="rte lang1">{% capture accdesc %}{{ page.content | replace: 'fullwidth"', '" data-fullwidth="true"' }}{% endcapture %}{% assign content = accdesc | replace: '&lt;!-- acsplit --&gt;', '<!-- acsplit -->' | split: '<!-- acsplit -->' %}{% for c in content %}{% render 'product-description-slider-page' with c %}{% endfor %}| split: '[lang2]' | first }}</div>
+<div class="rte lang2">{% capture accdesc %}{{ page.content | replace: 'fullwidth"', '" data-fullwidth="true"' }}{% endcapture %}{% assign content = accdesc | replace: '&lt;!-- acsplit --&gt;', '<!-- acsplit -->' | split: '<!-- acsplit -->' %}{% for c in content %}{% render 'product-description-slider-page' with c %}{% endfor %}| split: '[lang2]' | last }}</div>
 {% else %}
-<div class="rte">{{ page.content | split: '[lang2]' | first }}</div>
+<div class="rte">{% capture accdesc %}{{ page.content | replace: 'fullwidth"', '" data-fullwidth="true"' }}{% endcapture %}{% assign content = accdesc | replace: '&lt;!-- acsplit --&gt;', '<!-- acsplit -->' | split: '<!-- acsplit -->' %}{% for c in content %}{% render 'product-description-slider-page' with c %}{% endfor %}| split: '[lang2]' | first }}</div>
 {% endif %}
 </div>

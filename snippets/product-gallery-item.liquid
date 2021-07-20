@@ -1,26 +1,7 @@
 <!-- product-details__gallery -->
-<div class="product__images product-details__gallery product-gallery" data-product-gallery data-theme-slick-init111 data-theme-slick-options="productGallery">
-
-  {% assign colorHandle = '' %}
-  {% for p_option in product.options_with_values %}
-    {% assign optionName = p_option.name | downcase %}
-    {% if optionName == 'color' %}
-      {% assign colorHandle = p_option.values.first | handle %}
-    {% elsif optionName == 'colour' %}
-      {% assign colorHandle = p_option.values.first | handle %}
-    {% elsif optionName == 'metal' %}
-      {% assign colorHandle = p_option.values.first | handle %}
-    {% elsif optionName == 'gem' %}
-      {% assign colorHandle = p_option.values.first | handle %}
-    {% elsif optionName == 'material' %}
-      {% assign colorHandle = p_option.values.first | handle %}
-    {% endif %}
-  {% endfor %}
-
+<div class="product__images product-details__gallery product-gallery" data-theme-slick-init data-theme-slick-options="productGallery">
   {% if product.images.size > 0 %}
     {% for image in product.images %}
-      {% assign handle = image.alt | handle %}
-      <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-gallery-trigger data-idx="{{ forloop.index0 }}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
       <img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}" data-gallery-trigger data-idx="{{ forloop.index0 }}">
     {% endfor %}
   {% else %}
@@ -32,10 +13,6 @@
 
 {% capture imgs %}
   {% for image in product.images %}
-    {% assign handle = image.alt | handle %}
-    <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item>
-      <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-handle="{% if handle == product.handle %}default{% else %}{{ handle }}{% endif %}">
-    </div>
     <div class="product-gallery-item-wrapper" data-idx="{{ forloop.index0 }}" data-gallery-item><img class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{{ image.alt }}"></div>
   {% endfor %}
 {% endcapture %}

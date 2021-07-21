@@ -97,7 +97,7 @@
           {% if collection.tags contains tag %}
             <li>
               <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}" {% if current_tags contains tag or current_tags contains tag_low or current_tags contains tag_up %}checked{% endif %} />
-              <label><img src="{{ color | asset_img_url: '15x' }}" alt="" style="display: none; border-radius: 0%"/> {{ tag | split: '|' | first }}</label>
+              <label><img src="{{ color | asset_img_url: '15x' }}" alt="color assets" style="display: none; border-radius: 0%"/> {{ tag | split: '|' | first }}</label>
             </li>
 
 
@@ -119,7 +119,7 @@
           {% if collection.tags contains tag %}
             <li>
               <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}" {% if current_tags contains tag or current_tags contains tag_low or current_tags contains tag_up %}checked{% endif %} />
-              <label><img src="{{ color | asset_img_url: '15x' }}" alt="" style="display: none; border-radius: 0%"/> {{ tag | split: '|' | first }}</label>
+              <label><img src="{{ color | asset_img_url: '15x' }}" alt="color asset" style="display: none; border-radius: 0%"/> {{ tag | split: '|' | first }}</label>
             </li>
 
 

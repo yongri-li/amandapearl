@@ -2,7 +2,7 @@
 {% assign image = block.settings.image %}
 <div class="swiper-slide collection-card">
 	<a href="{{ collection.url }}">
-		<img class="collection-card__image" src="{{ image | img_url: '500x' }}">
+		<img class="collection-card__image" src="{{ image | img_url: '500x' }}" alt="collection image">
 		<h3 class="collection-card__title">
 			{{ collection.title }}
 		</h3>

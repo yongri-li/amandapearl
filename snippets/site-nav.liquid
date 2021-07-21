@@ -184,7 +184,7 @@
 
   <li>
     <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
-    <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" width="15px"></span>
+    <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" width="15px" height="auto"></span>
     <span id="cartCount" style="position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
     </a>
   </li>

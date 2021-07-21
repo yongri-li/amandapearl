@@ -44,13 +44,13 @@
         {% capture dropdown_menu_image %}dropdown_{{ i }}_menu_image_1.jpg{% endcapture %}
         {% capture dropdown_menu_link_image %}dropdown_{{ i }}_menu_link_image_1{% endcapture %}
         <a href="{{ settings[dropdown_menu_link_image] }}">
-          <img src="{{ dropdown_menu_image | asset_url }}" alt="dropdown menu"/>
+          <img src="{{ dropdown_menu_image | asset_url }}" alt=""/>
         </a>
 
         {% capture dropdown_menu_image_2 %}dropdown_{{ i }}_menu_image_2.jpg{% endcapture %}
         {% capture dropdown_menu_link_image_2 %}dropdown_{{ i }}_menu_link_image_2{% endcapture %}
         <a href="{{ settings[dropdown_menu_link_image_2] }}">
-          <img src="{{ dropdown_menu_image_2 | asset_url }}" alt="dropdown menu"/>
+          <img src="{{ dropdown_menu_image_2 | asset_url }}" alt=""/>
         </a>
       {% endif %}
     </div>
@@ -60,7 +60,7 @@
       {% capture dropdown_menu_image_3 %}dropdown_{{ i }}_menu_image_3.jpg{% endcapture %}
       {% capture dropdown_menu_link_image_3 %}dropdown_{{ i }}_menu_link_image_3{% endcapture %}
       <a href="{{ settings[dropdown_menu_link_image_3] }}">
-        <img src="{{ dropdown_menu_image_3 | asset_url }}" alt="dropdown menu"/>
+        <img src="{{ dropdown_menu_image_3 | asset_url }}" alt=""/>
       </a>
     </div>
   </div>

@@ -23,7 +23,7 @@
               <div class="thumbnails__container sticky">
                 {% for image in product.images %}
                   <a class="thumbnails__items" href='#product__img--{{ forloop.index0 }}'>
-                    <img src="{{ image.src | product_img_url: 'medium' }}" alt="thumbnail image">
+                    <img src="{{ image.src | product_img_url: 'medium' }}">
                   </a>
                 {% endfor %}
               </div>
@@ -76,8 +76,7 @@
             <div class="prices" style="display:flex;flex-direction:column;">
               <center>
                 {% if bold_compare_at_price > bold_price %}
-                <div class="" style="font-size: 16px; color: #555; font-weight: 400;">Retail Price: <span class="compare-price">{{ product.compare_at_price | money }}</span></div>
-                <div class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700;">Your Price: <span class="price" itemprop="price">{{ product.price | money }}</span></div>
+                <div class="" itemprop="price" style="font-size: 16px;color: #555; font-weight: 400;"><span class="price" itemprop="price">{{ product.price | money }}</span></div>
                 {% else %}
                 <span class="" itemprop="price" style="font-size: 16px; color: #000; font-weight: 700; ">{{ product.price | money }}</span>
                 {% endif %}

@@ -5,7 +5,7 @@
 				<li class="home-icon__item">
 					{% if block.settings.icon != blank %}
 						<a href="{{ block.settings.url }}">
-							<img class="home-icon__item-image" alt="home icon" src="{{ block.settings.icon | img_url: '500x' }}">
+							<img class="home-icon__item-image" src="{{ block.settings.icon | img_url: '500x' }}">
 						</a>
 					{% endif %}
 					<div class="des">

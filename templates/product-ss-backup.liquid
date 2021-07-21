@@ -16,7 +16,7 @@
         <div class="col-xs-12 col-sm-7 product-img-box {% if settings.product_image_border%} grid-item-border {% endif %}">
           {% if product.images.size == 0 %}
           <div class="product-photo-container">
-            <img src="{{ '' | product_img_url: 'grande' }}" alt="grande">
+            <img src="{{ '' | product_img_url: 'grande' }}" alt="">
           </div>
           {% else %}
           <div class="product-photo-container">

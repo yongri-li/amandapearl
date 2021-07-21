@@ -80,11 +80,14 @@
   transition: all .3s ease;
 }
 
+.gallery-thumbs-wrapper .product-gallery-item-wrapper.border-hidden::after {
+  display: none;
+}
+
 .product-gallery-popup-wrapper .gallery-thumbs img {
   min-width: 100px;
   max-width: 100px;
 }
-
 
 
 .product-gallery-popup-wrapper .gallery-images {
@@ -105,3 +108,108 @@
   display: block;
 }
 
+@media (min-width: 768px) {
+  .hide--desktop {
+    display: none;
+  }
+  .product-img-box .product__images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .product-img-box .product__images img {
+    width: calc(50% - 5px);
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .product-img-box {
+    position: relative;
+  }
+  .product-img-box .slick-dots {
+    width: 100%;
+    overflow: auto;
+  }
+  .mobile-zoom {
+    background: #ffffff;
+    border: 1px solid #dddddd;
+    border-radius: 59%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 5px;
+    top: 5px;
+    width: 45px;
+    height: 45px;
+    outline: none;
+    position: absolute;
+    z-index: 999;
+  }
+}
+
+[data-mob-image-popup] {
+  background: #ffffff;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  z-index: 9999999999;
+}
+
+[data-mob-image-popup] .popup-wrapper {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  position: relative;
+}
+
+[data-mob-image-popup] .image_wrapper {
+  width: 600px;
+  height: fit-content;
+  padding: 45px;
+}
+
+[data-mob-image-popup] .image_wrapper img {
+  width: 100%;
+  height: auto;
+}
+
+[data-mob-image-popup] .popup-close {
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+}
+
+[data-mob-image-popup] .popup-close [data-popup-close] {
+  background: #FFF;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  box-shadow: #adadad 0px 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  outline: 0;
+}
+
+[data-mob-image-popup] .popup-close [data-popup-close] svg {
+  width: 18px;
+  height: auto;
+}
+
+[data--hidden] {
+  display: none !important;
+}
+
+
+@media (min-width: 768px) {
+  body.template-product .product-gallery__item {
+    max-height: unset !important;
+  }
+}

@@ -61,8 +61,7 @@
       <div class="price-box">
         {% if on_sale %}
         <p class="regular-product">
-          <span style="color:#555">Retail Price: {{ bold_compare_at_price_min | money }}</span><br>
-          <span style="font-weight:700">Your Price: {% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
+          <span style="font-weight:700;color:#555">{% if bold_price_varies %}{% include 'varies_from' %}{% endif %}{{ bold_price_min | money }}</span>
           {% include 'swym-product-view', product: product %}<button class="swym-button swym-add-to-wishlist-view-product product_{{product.id}}" data-swaction="addToWishlist" data-product-id="{{product.id | json}}"></button>
         </p>
         {% else %}

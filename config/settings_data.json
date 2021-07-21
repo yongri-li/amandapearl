@@ -341,7 +341,7 @@
     "slide_text_size": "12",
     "display_slideshow_1": "image",
     "video_1": "<video muted> <div style=\"padding:50% 0 0 0;position:relative;\"><iframe src=\"https:\/\/player.vimeo.com\/video\/365533418?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe><\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\"><\/script> <\/video>",
-    "image_1_link": "https:\/\/amandapearl.com\/collections\/all?sort_by=best-selling",
+    "image_1_link": "https:\/\/amandapearl.com\/search?type=product&q=best+seller",
     "image_1_alt": "Best Sellers from AMANDA PEARL",
     "slide-heading_1": "",
     "slide_heading_color_1": "#000000",
@@ -353,8 +353,8 @@
     "text_align_slide_1": "right",
     "display_slideshow_2": "image",
     "video_2": "",
-    "image_2_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Earrings?sort_by=best-selling",
-    "image_2_alt": "Ear Game - Earrings from the Fine Jewelry Collection",
+    "image_2_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry-under-250",
+    "image_2_alt": "Fine Jewelry under $250",
     "slide-heading_2": "",
     "slide_heading_color_2": "#000000",
     "slide_heading_size_2": "50",
@@ -365,8 +365,8 @@
     "text_align_slide_2": "center",
     "display_slideshow_3": "image",
     "video_3": "",
-    "image_3_link": "https:\/\/amandapearl.com\/search?type=product&q=charms+%2B+chains",
-    "image_3_alt": "Make a Neck Mess: Charms + Chains",
+    "image_3_link": "https:\/\/amandapearl.com\/collections\/aps-weekly-picks",
+    "image_3_alt": "Amanda's Edit",
     "slide-heading_3": "",
     "slide_heading_color_3": "#000000",
     "slide_heading_size_3": "40",
@@ -378,7 +378,7 @@
     "display_slideshow_4": "image",
     "video_4": "",
     "image_4_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/RINGS",
-    "image_4_alt": "Put a ring on it",
+    "image_4_alt": "Make a Neck Mess with Charms and Chains",
     "slide-heading_4": "",
     "slide_heading_color_4": "#000000",
     "slide_heading_size_4": "20",
@@ -389,8 +389,8 @@
     "text_align_slide_4": "left",
     "display_slideshow_5": "image",
     "video_5": "",
-    "image_5_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Bracelets",
-    "image_5_alt": "Get Stacked: Bracelets",
+    "image_5_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Earrings?sort_by=best-selling",
+    "image_5_alt": "Ear Game",
     "slide-heading_5": "",
     "slide_heading_color_5": "#000000",
     "slide_heading_size_5": "64",
@@ -401,8 +401,8 @@
     "text_align_slide_5": "left",
     "display_slideshow_6": "image",
     "video_6": "",
-    "image_6_link": "https:\/\/amandapearl.com\/collections\/bridal",
-    "image_6_alt": "Bridal Picks",
+    "image_6_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/RINGS",
+    "image_6_alt": "Put a Ring on It",
     "slide-heading_6": "",
     "slide_heading_color_6": "#000000",
     "slide_heading_size_6": "64",
@@ -413,8 +413,8 @@
     "text_align_slide_6": "right",
     "display_slideshow_7": "image",
     "video_7": "",
-    "image_7_link": "https:\/\/amandapearl.com\/collections\/category-bags",
-    "image_7_alt": "Made in Italy Clutches",
+    "image_7_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Bracelets",
+    "image_7_alt": "Get Stacked",
     "slide-heading_7": "",
     "slide_heading_color_7": "#ffffff",
     "slide_heading_size_7": "64",
@@ -425,8 +425,8 @@
     "text_align_slide_7": "center",
     "display_slideshow_8": "image",
     "video_8": "",
-    "image_8_link": "https:\/\/amandapearl.com\/collections\/demi-fine-jewelry",
-    "image_8_alt": "Demi-Fine Jewelry",
+    "image_8_link": "https:\/\/amandapearl.com\/collections\/bridal",
+    "image_8_alt": "Bridal Picks",
     "slide-heading_8": "",
     "slide_heading_color_8": "#ffffff",
     "slide_heading_size_8": "64",
@@ -435,10 +435,10 @@
     "slide_text_size_8": "14",
     "button-text_8": "",
     "text_align_slide_8": "center",
-    "display_slideshow_9": "none",
+    "display_slideshow_9": "image",
     "video_9": "",
-    "image_9_link": "",
-    "image_9_alt": "",
+    "image_9_link": "https:\/\/amandapearl.com\/collections\/category-bags",
+    "image_9_alt": "Made in Italy Clutches",
     "slide-heading_9": "",
     "slide_heading_color_9": "#ffffff",
     "slide_heading_size_9": "64",
@@ -1025,6 +1025,27 @@
       "home-product-recommendations": {
         "type": "home-product-recommendations",
         "blocks": {
+          "7fce856f-30fe-4703-a6ca-00c94cc443e6": {
+            "type": "collections",
+            "settings": {
+              "collection": "best-sellers",
+              "image": "shopify:\/\/shop_images\/best-sellers_3b1b7232-80e4-43fa-a40e-91a78a602dea.jpg"
+            }
+          },
+          "07ee228c-19f2-48c7-aa54-3d9687f8f381": {
+            "type": "collections",
+            "settings": {
+              "collection": "fine-jewelry-under-250",
+              "image": "shopify:\/\/shop_images\/under-250.jpg"
+            }
+          },
+          "3157d824-31d3-46e8-b55d-519e91b85d00": {
+            "type": "collections",
+            "settings": {
+              "collection": "aps-weekly-picks",
+              "image": "shopify:\/\/shop_images\/14k-charms-2.jpg"
+            }
+          },
           "eeb35aaa-bde8-4b43-81b3-0a70a4683edb": {
             "type": "collections",
             "settings": {
@@ -1060,13 +1081,6 @@
               "image": "shopify:\/\/shop_images\/14k-Bracelets.jpg"
             }
           },
-          "3157d824-31d3-46e8-b55d-519e91b85d00": {
-            "type": "collections",
-            "settings": {
-              "collection": "aps-weekly-picks",
-              "image": "shopify:\/\/shop_images\/14k-charms-2.jpg"
-            }
-          },
           "413621f7-57b7-4903-98d2-83240e57736b": {
             "type": "collections",
             "settings": {
@@ -1076,12 +1090,14 @@
           }
         },
         "block_order": [
+          "7fce856f-30fe-4703-a6ca-00c94cc443e6",
+          "07ee228c-19f2-48c7-aa54-3d9687f8f381",
+          "3157d824-31d3-46e8-b55d-519e91b85d00",
           "eeb35aaa-bde8-4b43-81b3-0a70a4683edb",
           "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2",
           "ac7c7ebe-26dd-4b06-9810-f9e9e9e76b4c",
           "fab70635-e968-4955-8849-3c88576cc48d",
           "c9cdbdaa-58d5-4fbe-b9b0-906c3b1a720d",
-          "3157d824-31d3-46e8-b55d-519e91b85d00",
           "413621f7-57b7-4903-98d2-83240e57736b"
         ],
         "settings": {
@@ -1134,10 +1150,10 @@
             "settings": {
               "title": "WHO WE ARE",
               "title_url": "shopify:\/\/pages\/about",
-              "image": "shopify:\/\/shop_images\/Amanda_Pearl_003.jpg",
+              "image": "shopify:\/\/shop_images\/who-we-are_8cc61cc4-e2ab-4ed5-8c27-dd92ccbf9438.jpg",
               "description": "Meet the bosslady who revolutionized sustainable luxury",
               "button_text": "Learn More",
-              "button_url": "shopify:\/\/pages\/about"
+              "button_url": "shopify:\/\/pages\/who-we-are"
             }
           },
           "8146ca53-5d58-478c-b340-45be8a93f217": {
@@ -1217,7 +1233,7 @@
             "type": "icon",
             "settings": {
               "icon": "shopify:\/\/shop_images\/icon-tester-3.jpg",
-              "title": "FAIR PRICING",
+              "title": "REVOLUTIONARY PRICING",
               "url": "shopify:\/\/blogs\/amanda-pearl\/fair-pricing"
             }
           },
@@ -1233,7 +1249,7 @@
             "type": "icon",
             "settings": {
               "icon": "shopify:\/\/shop_images\/icon-tester-4.jpg",
-              "title": "YOU SHOP WE GIVE",
+              "title": "10% Give Back",
               "url": "shopify:\/\/blogs\/amanda-pearl\/community-for-cause"
             }
           },

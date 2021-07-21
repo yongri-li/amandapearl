@@ -56,15 +56,15 @@
         {% if is_color %}
         <div class="tooltip">{{ value }}</div>
         {% endif %}
-        <input id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} {% unless variant.available %}disabled{% endunless %} />
+        <input {% if is_color %}data-color-swatch data-handle="{{ value | handle }}"{% endif %} id="swatch-{{ option_index }}-{{ value | handle }}" type="radio" name="option-{{ option_index }}" value="{{ value | escape }}"{% if forloop.first %} checked{% endif %} {% unless variant.available %}disabled{% endunless %} />
         {% if is_color %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}" style="background-color: {{ value | split: ' ' | last | handle }}; background-image: url({{ value | handle | append: '.' | append: file_extension | asset_url }}); background-position: center center;background-size: cover; width: 50px!important; height: 50px!important;">
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" alt="crossed-out" />
+          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
         </label>
         {% else %}
         <label for="swatch-{{ option_index }}-{{ value | handle }}">
           {{ value }}
-          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" alt="soldout" />
+          <img class="crossed-out" src="{{ 'soldout.png' | asset_url }}" />
         </label>
         {% endif %}
       </div>

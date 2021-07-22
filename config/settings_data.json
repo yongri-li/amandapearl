@@ -8,7 +8,7 @@
     "enable_retina": false,
     "min_height_logo": "",
     "display_header_top_text": true,
-    "header_top_text": "Free Shipping On All U.S. Orders  \/\/",
+    "header_top_text": "We are #OOO! Shipping will resume on 7\/27. Thanks for your understanding!<br>Free Shipping On All U.S. Orders   \/\/",
     "header_top_link_text": "SIGN UP FOR OUR E-NEWS FOR 15% OFF",
     "header_top_link": "http:\/\/eepurl.com\/bgd7jH",
     "bg_header_top_color": "#000000",
@@ -1172,7 +1172,8 @@
           "fe8711fe-fd7a-497f-805a-8a1fa0439ebb",
           "8146ca53-5d58-478c-b340-45be8a93f217"
         ],
-        "settings": {}
+        "settings": {
+        }
       },
       "home-carousel": {
         "type": "home-carousel",
@@ -1228,50 +1229,14 @@
       },
       "home-icons": {
         "type": "home-icons",
-        "blocks": {
-          "e9a605c5-593f-47b0-bd64-95f8fb761a1c": {
-            "type": "icon",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/icon-tester-3.jpg",
-              "title": "REVOLUTIONARY PRICING",
-              "url": "shopify:\/\/blogs\/amanda-pearl\/fair-pricing"
-            }
-          },
-          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59": {
-            "type": "icon",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/icon-tester-2.jpg",
-              "title": "SUSTAINABLE MATERIALS",
-              "url": "shopify:\/\/blogs\/amanda-pearl\/sustainable-gems"
-            }
-          },
-          "aba8daf2-e904-4f79-a751-4818997d6726": {
-            "type": "icon",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/icon-tester-4.jpg",
-              "title": "10% Give Back",
-              "url": "shopify:\/\/blogs\/amanda-pearl\/community-for-cause"
-            }
-          },
-          "952fe00c-feab-4a5e-94a4-e1390a577e38": {
-            "type": "icon",
-            "settings": {
-              "icon": "shopify:\/\/shop_images\/icon-tester-1.jpg",
-              "title": "EMPOWERING YOU",
-              "url": "shopify:\/\/blogs\/amanda-pearl\/empowering-women"
-            }
-          }
-        },
-        "block_order": [
-          "e9a605c5-593f-47b0-bd64-95f8fb761a1c",
-          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59",
-          "aba8daf2-e904-4f79-a751-4818997d6726",
-          "952fe00c-feab-4a5e-94a4-e1390a577e38"
-        ],
-        "settings": {}
+        "settings": {
+        }
       }
     },
-    "content_for_index": []
+    "content_for_index": [
+
+    ]
   },
-  "presets": {}
+  "presets": {
+  }
 }

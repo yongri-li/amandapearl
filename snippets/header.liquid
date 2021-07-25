@@ -8,7 +8,7 @@
       <div class="header-mobile">
         <div class="menu-block visible-phone" style="border-right: 0px solid #fff;"><!-- start Navigation Mobile  -->
           <div id="showLeftPush">
-   <button id="ChangeToggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+   <button id="ChangeToggle" aria-label="changeToggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
        <div id="navbar-hamburger"><i class="fa fa-bars fa-2x"></i></div>
        <div id="navbar-close" class="hidden"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
    </button>
@@ -56,7 +56,7 @@
           <div class="wrapper-top-cart">
             <p class="top-cart">
               <a href="/cart">
-                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px"></span>
+                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px" alt="alt text"></span>
 
               </a>
             </p>

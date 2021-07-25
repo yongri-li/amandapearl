@@ -20,7 +20,7 @@
                 {% for block in section.blocks %}
                     <div class="swiper-slide">
                         <div class="home-slide-image">
-                            <a href="{{ block.settings.button_url }}"><img src="{{ block.settings.image | img_url: '1000x' }}"></a>
+                            <a href="{{ block.settings.button_url }}"><img alt="alt text" src="{{ block.settings.image | img_url: '1000x' }}"></a>
                         </div>
                         <div class="home-slide-content">
                             <div class="home-slide-description">
@@ -72,8 +72,9 @@
     }
     .home-sliders__header-action .swiper-button-next, .home-sliders__header-action .swiper-button-prev {
         color: #000;
-        width: 30px;
-        height: 30px;
+        width: 45px;
+        height: 45px;
+        padding: 8px;
         position: relative;
         top: 16px;
         left: 0;

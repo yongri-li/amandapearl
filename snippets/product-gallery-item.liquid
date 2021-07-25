@@ -20,7 +20,7 @@
   {% if product.images.size > 0 %}
     {% for image in product.images %}
       {% assign handle = image.alt | handle %}
-      <img {% if colorHandle != '' and colorHandle != handle and handle != product.handle and handle != 'all' %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-gallery-trigger data-idx="{{ forloop.index0 }}" data-handle="{% if handle == product.handle or handle == 'all' %}default{% else %}{{ handle }}{% endif %}">
+      <img {% if colorHandle != handle and handle != product.handle and handle != 'all' %}data--hidden{% endif %} class="product-gallery__item" id="product__img--{{ i }}" src="{{ image.src | product_img_url: 'original' }}" alt="{% if handle != product.handle %}{{ handle }}{% endif %}" data-gallery-trigger data-idx="{{ forloop.index0 }}" data-handle="{% if handle == product.handle or handle == 'all' %}default{% else %}{{ handle }}{% endif %}">
     {% endfor %}
   {% else %}
     {% for image in product.images %}

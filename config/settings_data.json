@@ -8,7 +8,7 @@
     "enable_retina": false,
     "min_height_logo": "",
     "display_header_top_text": true,
-    "header_top_text": "We are #OOO! Shipping will resume on 7\/27. Thanks for your understanding!<br>Free Shipping On All U.S. Orders   \/\/",
+    "header_top_text": "Free Shipping On All U.S. Orders  \/\/",
     "header_top_link_text": "SIGN UP FOR OUR E-NEWS FOR 15% OFF",
     "header_top_link": "http:\/\/eepurl.com\/bgd7jH",
     "bg_header_top_color": "#000000",
@@ -351,7 +351,7 @@
     "slide_text_size_1": "16",
     "button-text_1": "",
     "text_align_slide_1": "right",
-    "display_slideshow_2": "image",
+    "display_slideshow_2": "none",
     "video_2": "",
     "image_2_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry-under-250",
     "image_2_alt": "Fine Jewelry under $250",
@@ -363,7 +363,7 @@
     "slide_text_size_2": "16",
     "button-text_2": "",
     "text_align_slide_2": "center",
-    "display_slideshow_3": "image",
+    "display_slideshow_3": "none",
     "video_3": "",
     "image_3_link": "https:\/\/amandapearl.com\/collections\/aps-weekly-picks",
     "image_3_alt": "Amanda's Edit",
@@ -375,7 +375,7 @@
     "slide_text_size_3": "16",
     "button-text_3": "",
     "text_align_slide_3": "left",
-    "display_slideshow_4": "image",
+    "display_slideshow_4": "none",
     "video_4": "",
     "image_4_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/RINGS",
     "image_4_alt": "Make a Neck Mess with Charms and Chains",
@@ -387,7 +387,7 @@
     "slide_text_size_4": "14",
     "button-text_4": "",
     "text_align_slide_4": "left",
-    "display_slideshow_5": "image",
+    "display_slideshow_5": "none",
     "video_5": "",
     "image_5_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Earrings?sort_by=best-selling",
     "image_5_alt": "Ear Game",
@@ -399,7 +399,7 @@
     "slide_text_size_5": "14",
     "button-text_5": "",
     "text_align_slide_5": "left",
-    "display_slideshow_6": "image",
+    "display_slideshow_6": "none",
     "video_6": "",
     "image_6_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/RINGS",
     "image_6_alt": "Put a Ring on It",
@@ -411,7 +411,7 @@
     "slide_text_size_6": "14",
     "button-text_6": "",
     "text_align_slide_6": "right",
-    "display_slideshow_7": "image",
+    "display_slideshow_7": "none",
     "video_7": "",
     "image_7_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry\/Bracelets",
     "image_7_alt": "Get Stacked",
@@ -423,7 +423,7 @@
     "slide_text_size_7": "14",
     "button-text_7": "",
     "text_align_slide_7": "center",
-    "display_slideshow_8": "image",
+    "display_slideshow_8": "none",
     "video_8": "",
     "image_8_link": "https:\/\/amandapearl.com\/collections\/bridal",
     "image_8_alt": "Bridal Picks",
@@ -435,7 +435,7 @@
     "slide_text_size_8": "14",
     "button-text_8": "",
     "text_align_slide_8": "center",
-    "display_slideshow_9": "image",
+    "display_slideshow_9": "none",
     "video_9": "",
     "image_9_link": "https:\/\/amandapearl.com\/collections\/category-bags",
     "image_9_alt": "Made in Italy Clutches",
@@ -1029,69 +1029,61 @@
             "type": "collections",
             "settings": {
               "collection": "best-sellers",
-              "image": "shopify:\/\/shop_images\/best-sellers_3b1b7232-80e4-43fa-a40e-91a78a602dea.jpg"
-            }
-          },
-          "07ee228c-19f2-48c7-aa54-3d9687f8f381": {
-            "type": "collections",
-            "settings": {
-              "collection": "fine-jewelry-under-250",
-              "image": "shopify:\/\/shop_images\/under-250.jpg"
+              "image": "shopify:\/\/shop_images\/best-sellers_ff138efe-038a-498e-8ffe-22d713ad6400.jpg"
             }
           },
           "3157d824-31d3-46e8-b55d-519e91b85d00": {
             "type": "collections",
             "settings": {
               "collection": "aps-weekly-picks",
-              "image": "shopify:\/\/shop_images\/14k-charms-2.jpg"
+              "image": "shopify:\/\/shop_images\/amanda-s-edit_10ae88ce-7d11-4df1-a33c-fc0adf2f2cd4.jpg"
             }
           },
           "eeb35aaa-bde8-4b43-81b3-0a70a4683edb": {
             "type": "collections",
             "settings": {
               "collection": "14k-earrings",
-              "image": "shopify:\/\/shop_images\/14k-earrings-3.jpg"
+              "image": "shopify:\/\/shop_images\/earrings-5_1ba2f16a-cd02-4daf-9b68-68a3fbc3f9de.jpg"
             }
           },
           "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2": {
             "type": "collections",
             "settings": {
               "collection": "14k-charms",
-              "image": "shopify:\/\/shop_images\/14k-charm-locks.jpg"
+              "image": "shopify:\/\/shop_images\/charms.jpg"
             }
           },
           "ac7c7ebe-26dd-4b06-9810-f9e9e9e76b4c": {
             "type": "collections",
             "settings": {
               "collection": "14k-necklaces",
-              "image": "shopify:\/\/shop_images\/14k-necklace.jpg"
+              "image": "shopify:\/\/shop_images\/necklaces.jpg"
             }
           },
           "fab70635-e968-4955-8849-3c88576cc48d": {
             "type": "collections",
             "settings": {
               "collection": "14k-rings",
-              "image": "shopify:\/\/shop_images\/14k-rings.jpg"
+              "image": "shopify:\/\/shop_images\/rings.jpg"
             }
           },
           "c9cdbdaa-58d5-4fbe-b9b0-906c3b1a720d": {
             "type": "collections",
             "settings": {
               "collection": "14k-bracelets",
-              "image": "shopify:\/\/shop_images\/14k-Bracelets.jpg"
+              "image": "shopify:\/\/shop_images\/bracelets.jpg"
             }
           },
           "413621f7-57b7-4903-98d2-83240e57736b": {
             "type": "collections",
             "settings": {
               "collection": "category-bags",
-              "image": "shopify:\/\/shop_images\/clutch-carousel.jpg"
+              "image": "shopify:\/\/shop_images\/clutch.jpg"
             }
           }
         },
         "block_order": [
           "7fce856f-30fe-4703-a6ca-00c94cc443e6",
-          "07ee228c-19f2-48c7-aa54-3d9687f8f381",
           "3157d824-31d3-46e8-b55d-519e91b85d00",
           "eeb35aaa-bde8-4b43-81b3-0a70a4683edb",
           "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2",
@@ -1101,7 +1093,7 @@
           "413621f7-57b7-4903-98d2-83240e57736b"
         ],
         "settings": {
-          "title": "Revolutionary Pricing on Sustainable Luxury"
+          "title": "EVERYDAY, APPROACHABLE LUXURY"
         }
       },
       "home-featured-blogs": {
@@ -1172,8 +1164,7 @@
           "fe8711fe-fd7a-497f-805a-8a1fa0439ebb",
           "8146ca53-5d58-478c-b340-45be8a93f217"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "home-carousel": {
         "type": "home-carousel",
@@ -1229,14 +1220,54 @@
       },
       "home-icons": {
         "type": "home-icons",
-        "settings": {
-        }
+        "blocks": {
+          "e9a605c5-593f-47b0-bd64-95f8fb761a1c": {
+            "type": "icon",
+            "disabled": true,
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-3.jpg",
+              "title": "REVOLUTIONARY PRICING",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/fair-pricing"
+            }
+          },
+          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59": {
+            "type": "icon",
+            "disabled": true,
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-2.jpg",
+              "title": "SUSTAINABLE MATERIALS",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/sustainable-gems"
+            }
+          },
+          "aba8daf2-e904-4f79-a751-4818997d6726": {
+            "type": "icon",
+            "disabled": true,
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-4.jpg",
+              "title": "10% Give Back",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/community-for-cause"
+            }
+          },
+          "952fe00c-feab-4a5e-94a4-e1390a577e38": {
+            "type": "icon",
+            "disabled": true,
+            "settings": {
+              "icon": "shopify:\/\/shop_images\/icon-tester-1.jpg",
+              "title": "EMPOWERING YOU",
+              "url": "shopify:\/\/blogs\/amanda-pearl\/empowering-women"
+            }
+          }
+        },
+        "block_order": [
+          "e9a605c5-593f-47b0-bd64-95f8fb761a1c",
+          "5e8df88c-ccc1-41f9-b60a-0bfbd3025e59",
+          "aba8daf2-e904-4f79-a751-4818997d6726",
+          "952fe00c-feab-4a5e-94a4-e1390a577e38"
+        ],
+        "settings": {}
       }
     },
-    "content_for_index": [
-
-    ]
+    "content_for_index": []
   },
-  "presets": {
-  }
+  "presets": {}
 }

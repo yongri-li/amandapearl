@@ -238,6 +238,17 @@
 
           {% include 'wishlist-product' %}
 
+          <div class="fair-wrapper">
+            <div class="fair-top">
+              <span class="fair-title">REVOLUTIONARY PRICING</span>
+              <a data-toggle="modal" data-target="#learn_more" class="learn_more">Learn more</a>
+            </div>
+            <div class="fair-bottom">
+              <span class="fair-price">{{ product.price | money | replace: '.00', '' }} AMANDA PEARL</span> | 
+              <span class="fair-total">{{ product.compare_at_price | money | replace: '.00', '' }} TRADITIONAL RETAIL</span>
+            </div>
+          </div>
+
           <div class="row" style="padding: 20px">
             {% if product.description contains '[countdown]' %}
             {% assign count_down_first = product.description | split:'[/countdown]' | first %}
@@ -654,6 +665,32 @@
   <fieldset class="box-title">
     <legend align="center">Reviews</legend>
   </fieldset>
+</div>
+
+<div class="modal fade halo_modal-custom" id="learn_more" role="dialog">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Smart & Fair</h5>
+              
+              <a data-dismiss="modal" class="close close-modal" title="close" href="javascript:void(0)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16.817" height="16.817" viewBox="0 0 16.817 16.817">
+                  <g id="cross" transform="translate(-564.343 -326.342)">
+                    <path id="Path_4946" data-name="Path 4946" d="M0,0H21.782" transform="translate(565.05 342.451) rotate(-45)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="1"/>
+                    <path id="Path_4947" data-name="Path 4947" d="M0,0H21.782" transform="translate(565.051 327.05) rotate(45)" fill="none" stroke="#333" stroke-linecap="round" stroke-width="1"/>
+                  </g>
+                </svg>
+              </a>
+          </div>
+      
+          <div class="modal-body">
+              <div class="modal-desc">
+                <p>Major brands in our industry markup their products 8-10x the actual cost. We do things differently. To make luxury accessible, we've built relationships with the best manufacturers and sell directly to you. Basically, our jewelry is handcrafted with the same top materials and quality craftsmanship as other luxury jewelry brands but without the traditional markups.</p>
+              </div>
+              <div class="Grid__Tag-n6bt23-0 eahLRs" data-h="grid-" data-testid="grid"><div class="Grid__Cell-n6bt23-1 bmRUGR"><div type="container" class="Container__Tag-mh3of2-0 eBktAE" data-h="container-fair-pricing-background" data-testid="container"></div></div><div class="Grid__Cell-n6bt23-1 kVUBwH"><div type="container" class="Container__Tag-mh3of2-0 fGyxkC" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 lloqGT" data-h="container-" data-testid="container"></div><div type="richText" class="RichText__Tag-sc-1m58rbj-0 bERXgT" data-h="rich-text-fair-pricing-mejuri" data-testid="rich-text"><p>Mejuri</p></div></div></div><div class="Grid__Cell-n6bt23-1 kTfEfL"><div type="container" class="Container__Tag-mh3of2-0 fGyxkC" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 lloqGT" data-h="container-" data-testid="container"></div><div type="richText" class="RichText__Tag-sc-1m58rbj-0 bERXgT" data-h="rich-text-fair-pricing-traditional" data-testid="rich-text"><p>Traditional fine jewerly</p></div></div></div><div class="Grid__Cell-n6bt23-1 dKattF"><div type="container" class="Container__Tag-mh3of2-0 fVnDQl" data-h="container-" data-testid="container"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 bUqiWn" data-h="rich-text-fair-pricing-mejuri-mark-up-text" data-testid="rich-text"><p>Cost to produce</p></div></div></div><div class="Grid__Cell-n6bt23-1 hjNCTh"><div type="container" class="Container__Tag-mh3of2-0 fVnDQl" data-h="container-" data-testid="container"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 bUqiWn" data-h="rich-text-fair-pricing-cost-to-reproduce-right" data-testid="rich-text"><p>Cost to produce</p></div></div></div><div class="Grid__Cell-n6bt23-1 hFLIfP"><div type="container" class="Container__Tag-mh3of2-0 iPEXpL" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 dsyPOl" data-h="container-" data-testid="container"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 bUqiWn" data-h="rich-text-fair-pricing-mejuri-mark-up-text" data-testid="rich-text"><p>Mejuri mark up</p></div></div></div></div><div class="Grid__Cell-n6bt23-1 ieJVgL"><div type="container" class="Container__Tag-mh3of2-0 hxBvqD" data-h="container-" data-testid="container"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 jsEjxX" data-h="rich-text-fair-pricing-other-mark-up-txt" data-testid="rich-text"><p>Other mark up</p></div></div></div><div class="Grid__Cell-n6bt23-1 kFoUZV"><div type="container" class="Container__Tag-mh3of2-0 beHeUt" data-h="container-fair-pricing-retail-markup-container" data-testid="container"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 YmkUx" data-h="rich-text-fair-pricing-retail-markup-text" data-testid="rich-text"><p>Retail mark up</p></div></div></div><div class="Grid__Cell-n6bt23-1 bsOtfx"><div type="container" class="Container__Tag-mh3of2-0 dweWBM" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 lloqGT" data-h="container-" data-testid="container"></div></div></div><div class="Grid__Cell-n6bt23-1 cCYBLB"><div type="container" class="Container__Tag-mh3of2-0" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 lloqGT" data-h="container-" data-testid="container"></div></div></div><div class="Grid__Cell-n6bt23-1 fmQvrh"><div type="container" class="Container__Tag-mh3of2-0 hOAMHL" data-h="container-" data-testid="container"><div type="container" class="Container__Tag-mh3of2-0 lloqGT" data-h="container-" data-testid="container"></div></div></div><div class="Grid__Cell-n6bt23-1 kgfXeP"><div class="Grid__Tag-n6bt23-0 kaUFZX" data-h="grid-" data-testid="grid"><div class="Grid__Cell-n6bt23-1 danilr"><div type="container" class="Container__Tag-mh3of2-0 hMiZOR" data-h="container-" data-testid="container"></div></div><div class="Grid__Cell-n6bt23-1 kiUUvL"><div type="richText" class="RichText__Tag-sc-1m58rbj-0 jdGHAQ" data-h="rich-text-fair-pricing-10xmarkups" data-testid="rich-text"><p>10x markups</p></div></div></div></div></div>
+          </div>
+      </div>
+  </div>
 </div>
 
 

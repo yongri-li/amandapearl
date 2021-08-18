@@ -7,11 +7,10 @@ $(document).ready(function(){
   }
   mobImageZoom();
 
-  $(document).on('click', '.swatch-element input', function(){
+  $(document).on('change', '.swatch-element input', function(){
     var container = $(this).closest('#product-variants');
     var price = $(container).find('#product-selectors option:selected').data('price');
     var compare = $(container).find('#product-selectors option:selected').data('compare');
-    console.log(compare);
     var containers = $(this).closest('.product-shop');
     $(containers).find('.fair-wrapper .fair-price').text(price + ' AMANDA PEARL');
     $(containers).find('.fair-wrapper .fair-total').text(compare + ' TRADITIONAL RETAIL');

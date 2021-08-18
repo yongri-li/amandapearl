@@ -245,8 +245,8 @@
               {%comment%}<a data-toggle="modal" data-target="#learn_more" class="learn_more">Learn more</a>{%endcomment%}
             </div>
             <div class="fair-bottom">
-              <span class="fair-price">{{ product.price | money | replace: '.00', '' }} AMANDA PEARL</span> | 
-              <span class="fair-total">{{ product.compare_at_price | money | replace: '.00', '' }} TRADITIONAL RETAIL</span>
+              <span class="fair-price">{{ product.first_available_variant.price | money | replace: '.00', '' }} AMANDA PEARL</span> | 
+              <span class="fair-total">{{ product.first_available_variant.compare_at_price | money | replace: '.00', '' }} TRADITIONAL RETAIL</span>
             </div>
           </div>
 

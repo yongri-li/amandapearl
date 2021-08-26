@@ -213,3 +213,7 @@
     max-height: unset !important;
   }
 }
+
+.swiper-container {
+  overflow: hidden;
+}

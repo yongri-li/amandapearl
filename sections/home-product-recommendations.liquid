@@ -62,19 +62,14 @@
 		display: flex;
 	}
 
-	@media(max-width:  768px) {
-		.recommendation-header .recommendation-action {
-			float: left;
-		}	
-	}
 	.recommendation-action .swiper-button-next, .recommendation-action .swiper-button-prev {
 		color: #000;
 		width: 45px;
-    height: 45px;
+    	height: 45px;
 		padding: 8px;
-    position: relative;
-    top: 16px;
-    left: 0;
+		position: relative;
+		top: 16px;
+		left: 0;
 	}
 	.recommendation-action a {
 		text-decoration: underline;
@@ -93,6 +88,19 @@
 	}
 	.recommendation-products__container.swiper-container {
 		margin-bottom: 0;
+	}
+	
+	@media(max-width:  768px) {
+		.recommendation-header .recommendation-action {
+			float: left;
+		}
+		.recommendation-products__title { 
+			padding-bottom: 10px;
+		}
+		.recommendation-action a {
+			width: 100%;
+    		margin-top: 5px;
+		}
 	}
 </style>
 

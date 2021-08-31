@@ -341,7 +341,7 @@
     "slide_text_size": "12",
     "display_slideshow_1": "image",
     "video_1": "<video muted> <div style=\"padding:50% 0 0 0;position:relative;\"><iframe src=\"https:\/\/player.vimeo.com\/video\/365533418?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe><\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\"><\/script> <\/video>",
-    "image_1_link": "https:\/\/amandapearl.com\/search?type=product&q=best+seller",
+    "image_1_link": "https:\/\/amandapearl.com\/collections\/fine-jewelry",
     "image_1_alt": "Best Sellers from AMANDA PEARL",
     "slide-heading_1": "",
     "slide_heading_color_1": "#000000",
@@ -1043,7 +1043,7 @@
             "type": "collections",
             "settings": {
               "collection": "14k-earrings",
-              "image": "shopify:\/\/shop_images\/earrings-5_1ba2f16a-cd02-4daf-9b68-68a3fbc3f9de.jpg"
+              "image": "shopify:\/\/shop_images\/earrings-9.jpg"
             }
           },
           "6d82b4e9-26fa-4645-b38b-cfc3e6eeaff2": {
@@ -1057,7 +1057,7 @@
             "type": "collections",
             "settings": {
               "collection": "14k-necklaces",
-              "image": "shopify:\/\/shop_images\/necklaces.jpg"
+              "image": "shopify:\/\/shop_images\/necklaces-2.jpg"
             }
           },
           "fab70635-e968-4955-8849-3c88576cc48d": {
@@ -1080,6 +1080,13 @@
               "collection": "category-bags",
               "image": "shopify:\/\/shop_images\/clutch.jpg"
             }
+          },
+          "7cac4628-0612-44bd-847c-3ed7db875e3c": {
+            "type": "collections",
+            "settings": {
+              "collection": "self-care",
+              "image": "shopify:\/\/shop_images\/self-care-2.jpg"
+            }
           }
         },
         "block_order": [
@@ -1090,7 +1097,8 @@
           "ac7c7ebe-26dd-4b06-9810-f9e9e9e76b4c",
           "fab70635-e968-4955-8849-3c88576cc48d",
           "c9cdbdaa-58d5-4fbe-b9b0-906c3b1a720d",
-          "413621f7-57b7-4903-98d2-83240e57736b"
+          "413621f7-57b7-4903-98d2-83240e57736b",
+          "7cac4628-0612-44bd-847c-3ed7db875e3c"
         ],
         "settings": {
           "title": "EVERYDAY, APPROACHABLE LUXURY"

@@ -6,7 +6,7 @@ $(document).ready(function(){
     productGalleryPopup();
   }
   mobImageZoom();
-
+  
   $(document).on('change', '.swatch-element input', function(){
     var container = $(this).closest('#product-variants');
     var price = $(container).find('#product-selectors option:selected').data('price');
@@ -122,7 +122,7 @@ function galleryImgSlide(idx) {
       top += $item.height() + 15;
     }
   }
-  
+  console.log(top +""+ idx);
   $content.animate({
     scrollTop: top
   }, 800);

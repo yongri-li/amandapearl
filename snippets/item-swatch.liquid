@@ -1,7 +1,7 @@
 {% if settings.display_color_variant %}
 <ul class="item-swatch">
 {% for option in product.options %}
-  {% if option == 'GEM' or option == 'METAL' or option == 'Material' %}
+  {% if option == 'GEM' or option == 'METAL' or option == 'Material' or option == 'SHAPE' %}
     {% assign index = forloop.index0 %}
     {% assign colorlist = '' %}
     {% assign color = '' %}

@@ -36,7 +36,7 @@ button.swym-button.swym-add-to-wishlist-view-product.product_ {
           {% if product.object_type == 'product' and product.type == 'SHOPSTORM_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
           {% if settings.display_color_variant %}
             {% for option in product.options %} 
-              {% if option == 'GEM' or option == 'METAL' or option == 'Material' or option == 'EARRING SIZE' or option == 'SHAPE' %}
+              {% if option == 'GEM' or option == 'METAL' or option == 'Material' or option == 'EARRING SIZE' %}
                 {% assign color_index = forloop.index0 %}
               {% endif %}
             {% endfor %}

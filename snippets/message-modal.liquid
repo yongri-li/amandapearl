@@ -13,8 +13,8 @@
       <h3>High five!</h3>
       <p>This has been added to your bag.</p>
     </center>
-      <div>
-        <img class="ajax-product-image" alt="alt text" src=""/>
+      <div style="text-align: center;">
+        <img class="ajax-product-image" alt="alt text" src="{{ product.images[0] | product_img_url: 'small' }}"/>
       </div>
       <div>
         <center>

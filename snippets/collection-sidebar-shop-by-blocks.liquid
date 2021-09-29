@@ -67,7 +67,7 @@
 
 
 {% if settings.enable_shop_by_tags_1 %}
-<div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-sm-7">
 <div class="sidebar-custom sidebar-tag">
   {% assign tags = settings.shop_by_tags_1_list_tags | split: ',' %}
   <div class="widget-title">
@@ -84,7 +84,7 @@
     </h3>
   </div>
   <div class="widget-content">
-    <ul class="col-xs-12 col-sm-6">
+    <ul class="col-xs-12 col-sm-4">
       {% for i in (1..20) %}
         {% capture shop_by_color_text %}shop_by_color_text_{{ i }}{% endcapture %}
         {% capture color %}color-{{ i }}.png{% endcapture %}
@@ -106,7 +106,7 @@
       {% endfor %}
     </ul>
 
-    <ul class="col-xs-12 col-sm-6">
+    <ul class="col-xs-12 col-sm-4">
       {% for i in (21..32) %}
         {% capture shop_by_color_text %}shop_by_color_text_{{ i }}{% endcapture %}
         {% capture color %}color-{{ i }}.png{% endcapture %}
@@ -124,6 +124,24 @@
 
 
         {% endif %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+    
+    <ul class="col-xs-12 col-sm-4">
+      {% for i in (33..41) %}
+        {% capture shop_by_color_text %}shop_by_color_text_{{ i }}{% endcapture %}
+        {% capture color %}color-{{ i }}.png{% endcapture %}
+
+        {% if settings[shop_by_color_text] != blank %}
+          {% assign tag = settings[shop_by_color_text] | strip %}
+          {% assign tag_low = tag | downcase %}
+          {% assign tag_up = tag | upcase %}
+          {% assign tag_value = tag | handleize %}
+          <li>
+            <input type="checkbox" class="lang1" value="{{ tag_value | split: '|' | first }}" {% if current_tags contains tag or current_tags contains tag_low or current_tags contains tag_up %}checked{% endif %} />
+            <label><img src="{{ color | asset_img_url: '15x' }}" alt="alt text" style="display: none; border-radius: 0%"/> {{ tag | split: '|' | first }}</label>
+          </li>
         {% endif %}
       {% endfor %}
     </ul>
@@ -149,7 +167,7 @@
       </a>
     </h3>
   </div>
-  <div class="widget-content">
+  <div 3 class="widget-content">
     <ul>
       {% for t in tags %}
       {% assign tag = t | strip %}

@@ -5042,6 +5042,114 @@
         "max-height": 200
       },
       {
+        "type": "text",
+        "id": "shop_by_color_text_33",
+        "label": "Shop by color text 33"
+      },
+      {
+        "type": "image",
+        "id": "color-33.png",
+        "label": "Shop by color image 33",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_34",
+        "label": "Shop by color text 34"
+      },
+      {
+        "type": "image",
+        "id": "color-34.png",
+        "label": "Shop by color image 34",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_35",
+        "label": "Shop by color text 35"
+      },
+      {
+        "type": "image",
+        "id": "color-35.png",
+        "label": "Shop by color image 35",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_36",
+        "label": "Shop by color text 36"
+      },
+      {
+        "type": "image",
+        "id": "color-36.png",
+        "label": "Shop by color image 36",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_37",
+        "label": "Shop by color text 37"
+      },
+      {
+        "type": "image",
+        "id": "color-37.png",
+        "label": "Shop by color image 37",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_38",
+        "label": "Shop by color text 38"
+      },
+      {
+        "type": "image",
+        "id": "color-38.png",
+        "label": "Shop by color image 38",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_39",
+        "label": "Shop by color text 39"
+      },
+      {
+        "type": "image",
+        "id": "color-39.png",
+        "label": "Shop by color image 39",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_40",
+        "label": "Shop by color text 40"
+      },
+      {
+        "type": "image",
+        "id": "color-40.png",
+        "label": "Shop by color image 40",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
+        "type": "text",
+        "id": "shop_by_color_text_41",
+        "label": "Shop by color text 41"
+      },
+      {
+        "type": "image",
+        "id": "color-41.png",
+        "label": "Shop by color image 41",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
         "type": "header",
         "content": "Shop by Size"
       },

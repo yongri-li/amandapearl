@@ -556,6 +556,7 @@
         initProductAddToCart: function() {
             e("#product-add-to-cart").length > 0 && e("#product-add-to-cart").click(function(i) {
                 if (i.preventDefault(), "disabled" != e(this).attr("disabled"))
+                        pintrk('track', 'AddToCart');
                     if (window.ajax_cart) {
                         var a = e("#add-to-cart-form select[name=id]").val();
                         a || (a = e("#add-to-cart-form input[name=id]").val());

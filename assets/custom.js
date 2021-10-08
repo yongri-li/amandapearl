@@ -128,3 +128,9 @@ function galleryImgSlide(idx) {
   }, 800);
 
 }
+
+
+$('#add-to-cart-form').on('submit', function(e){
+  console.log('form submit');
+  pintrk('track', 'AddToCart');
+})

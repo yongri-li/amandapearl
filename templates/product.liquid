@@ -81,7 +81,7 @@
             <meta itemprop="priceCurrency" content="{{ shop.currency }}">
             <link itemprop="availability" href="http://schema.org/{% if product.available %}InStock{% else %}OutOfStock{% endif %}">
 
-            <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form">
+            <form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-cart-form" data-product-id="{{ product.id }}">
               <div class="text-center klara-wrapper">
                 <hr>
               </div>

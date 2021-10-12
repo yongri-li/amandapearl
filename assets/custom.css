@@ -217,3 +217,7 @@
 .swiper-container {
   overflow: hidden;
 }
+
+.cushion-label {
+  border-radius: 0 !important;
+}

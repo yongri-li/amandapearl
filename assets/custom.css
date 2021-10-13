@@ -221,3 +221,7 @@
 .cushion-label {
   border-radius: 0 !important;
 }
+
+.cushion-label label {
+  border-radius: 0 !important;
+}

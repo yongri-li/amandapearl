@@ -225,3 +225,8 @@
 .cushion-label label {
   border-radius: 0 !important;
 }
+
+.standalone-bottomline {
+  width: fit-content;
+  margin: auto !important;
+}

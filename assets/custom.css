@@ -230,3 +230,16 @@
   width: fit-content;
   margin: auto !important;
 }
+
+@media (min-width: 751px) {
+  .footer-top .col-xs-12.wow:nth-child(4) {
+    transform: translateX(35px);
+  }    
+}
+
+@media (max-width: 750px) {
+  .footer-top .col-xs-12.wow:nth-child(4) {
+    margin-bottom: 20px;
+    max-width: 120px;
+  }
+}

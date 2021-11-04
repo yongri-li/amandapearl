@@ -239,17 +239,19 @@
 
           {% include 'wishlist-product' %}
 
-          <div class="fair-wrapper">
-            <div class="fair-top">
-              <span class="fair-title">REVOLUTIONARY PRICING</span>
-              <a target="_blank" href="/blogs/amanda-pearl/fair-pricing" class="learn_more">Learn more</a>
+          {% unless product.handle == 'amanda-pearl-gift-card' %}
+            <div class="fair-wrapper">
+              <div class="fair-top">
+                <span class="fair-title">REVOLUTIONARY PRICING</span>
+                <a target="_blank" href="/blogs/amanda-pearl/fair-pricing" class="learn_more">Learn more</a>
+              </div>
+              <div class="fair-bottom">
+                {% assign price_variant = product.first_available_variant | default: product.variants[0] %}
+                <span class="fair-price">{{ price_variant.price | money | replace: '.00', '' }} AMANDA PEARL</span> | 
+                <span class="fair-total">{{ price_variant.compare_at_price | money | replace: '.00', '' }} TRADITIONAL RETAIL</span>
+              </div>
             </div>
-            <div class="fair-bottom">
-              {% assign price_variant = product.first_available_variant | default: product.variants[0] %}
-              <span class="fair-price">{{ price_variant.price | money | replace: '.00', '' }} AMANDA PEARL</span> | 
-              <span class="fair-total">{{ price_variant.compare_at_price | money | replace: '.00', '' }} TRADITIONAL RETAIL</span>
-            </div>
-          </div>
+          {% endunless %}
 
           <div class="row" style="padding: 20px">
             {% if product.description contains '[countdown]' %}

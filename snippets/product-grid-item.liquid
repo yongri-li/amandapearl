@@ -40,9 +40,9 @@
     </div>
     {% include 'item-swatch' with current_variant: current_variant %}
 
-    {% if isCollection and current_variant != blank %}
+    <!-- {% if isCollection and current_variant != blank %}
       {% include 'item-earring-size' with current_variant: current_variant %}
-    {% endif %}
+    {% endif %} -->
 
     <div class="product-bottom" style="background: #fff; height: 130px; padding: 10px;">
       <a class="product-title" href="{{ product.url | within: collection }}">

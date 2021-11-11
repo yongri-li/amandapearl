@@ -129,12 +129,12 @@
     </ul>
     
     <ul class="col-xs-12 col-sm-4">
-      {% for i in (33..41) %}
+      {% for i in (33..42) %}
         {% capture shop_by_color_text %}shop_by_color_text_{{ i }}{% endcapture %}
         {% capture color %}color-{{ i }}.png{% endcapture %}
 
         {% if settings[shop_by_color_text] != blank %}
-          {% assign tag = settings[shop_by_color_text] | strip %}
+          {% assign tag = settings[shop_by_color_text] | strip %} 
           {% assign tag_low = tag | downcase %}
           {% assign tag_up = tag | upcase %}
           {% assign tag_value = tag | handleize %}

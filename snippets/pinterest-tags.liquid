@@ -11,10 +11,13 @@ r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(t,r)}}
 </noscript>
 <script>
   {% if product == blank %}
-    pintrk('track', 'pagevisit');
+    pintrk('track', 'pagevisit', {
+      em: '{{ customer.email }}'
+    });
   {% else %}
     pintrk('track', 'pagevisit', {
       product_id: '{{ product.id }}',
+      em: '{{ customer.email }}'
     });
   {% endif %}
 </script>

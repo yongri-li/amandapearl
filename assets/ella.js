@@ -559,6 +559,7 @@
                         console.log(e("#add-to-cart-form").data('product-id'));
                         pintrk('track', 'AddToCart', {
                             product_id: e("#add-to-cart-form").data('product-id'),
+                            em: e('body').data('customer-email')
                         });
                     if (window.ajax_cart) {
                         var a = e("#add-to-cart-form select[name=id]").val();

@@ -5150,6 +5150,18 @@
         "max-height": 200
       },
       {
+        "type": "text",
+        "id": "shop_by_color_text_42",
+        "label": "Shop by color text 42"
+      },
+      {
+        "type": "image",
+        "id": "color-42.png",
+        "label": "Shop by color image 42",
+        "max-width": 200,
+        "max-height": 200
+      },
+      {
         "type": "header",
         "content": "Shop by Size"
       },

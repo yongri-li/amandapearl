@@ -2333,8 +2333,16 @@ div.snize-ac-results.snize-ac-results-mobile {
 }
 
 .product-item .height_fix .product-badge {
+    width: fit-content;
+    margin-left: auto;
+    background: #F1F2F2;
     position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 20;
+    z-index: 999;
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .recommendation-products__title {        
+        font-size: 20px !important;        
+    }
 }

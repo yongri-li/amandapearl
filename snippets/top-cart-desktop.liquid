@@ -5,7 +5,7 @@
                 <p class="top-cart">
                   <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
                     <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><b>CART</b>  <i class="fa fa-shopping-cart fa-lg hidden-xs" aria-hidden="true"></i></span>
-                    <span id="cartCount" style="position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
+                    <span id="cartCount" style="display: none; position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
                   </a>
                 </p>
 

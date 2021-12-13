@@ -124,7 +124,12 @@
   }
 }
 
+.mobile-shopping-bag img{
+	display: none;
+}
+
 @media (max-width: 767px) {
+  
   .product-img-box {
     position: relative;
   }
@@ -146,6 +151,9 @@
     outline: none;
     position: absolute;
     z-index: 999;
+  }
+  .mobile-shopping-bag img{
+	display: block;
   }
 }
 
@@ -243,3 +251,103 @@
     max-width: 120px;
   }
 }
+
+/*===============BEGIN MEGA MENU CUSTOM STYLE CSS============*/
+@media(min-width: 768px) {
+  .header-logo {
+    margin: 0 !important;
+  }  
+}
+ul.site-nav {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.wrapper-container .site-nav li.mega-menu .site-nav-dropdown{
+	width: 100% !important;
+}
+.parent-mega-menu{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 15px;
+  float: right !important;
+}
+
+@media (min-width: 768px) {
+  .parent-mega-menu-fine-jewelry{
+    margin-right: 131px;	
+  }
+
+  
+}
+
+@media (max-width: 768px) {
+  .site-nav b {
+    font-weight: normal !important;    
+  }
+}
+
+.site-nav-dropdown .style_3 .inner{
+	width: auto;
+  	padding-left: 0;
+  	padding-right: 0;
+}
+
+.header-group{
+	position: relative;
+}
+.header-group .icon-button-group{
+  position: absolute;
+    top: 20px;
+    right: 50px;
+    display: flex;
+    list-style: none;
+}
+.header-group .icon-button-group li{
+    padding-right: 20px;
+}
+.site-nav>li:hover>a, 
+.site-nav>li:hover>a:hover{
+  font-weight: bold;
+}
+@media (max-width: 1200px) {
+  ul.site-nav {
+	width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .header-top{
+    display: block !important;
+    margin-top: 0px;
+  }
+  .site-header .header-top{
+  	margin-top: 0px;
+  }
+  
+  .header-logo{
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    width: 64%;
+  }
+  .header-logo img{
+   	width: 120px;
+  }
+  .header-mobile{
+  	width: 100%;
+  }
+  .header-bottom .top-header{
+  	width: 100% !important;
+  }
+  .header-logo ul.icon-button-group{
+	display: none;
+  }
+  #navbar-close i{
+    display: none;
+  }
+}
+/*===============ENDMEGA MENU CUSTOM STYLE CSS===============*/

@@ -678,7 +678,11 @@
             })
         },
         doUpdateDropdownCart: function(i) {
-            var a = '<li class="item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-details"><a href="javascript:void(0)" title="Remove This Item" class="btn-remove">X</a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral">{QUANTITY} x <span class="price">{PRICE}</span></div></div></li>';
+            var a = '<li class="item" id="cart-item-{ID}"><a href="{URL}" title="{TITLE}" class="product-image"><img src="{IMAGE}" alt="{TITLE}"></a><div class="product-details"><a href="javascript:void(0)" title="Remove This Item" class="btn-remove">X</a><p class="product-name"><a href="{URL}">{TITLE}</a></p><div class="cart-collateral">{QUANTITY} x <span class="price">{PRICE}</span></div></div></li>';            
+            console.log('cart update');
+            $('.cartCount').text(i.item_count);
+            $('.cartCount').show();
+            $('#cartCount').show();
             if (e("#cartCount").text(i.item_count), e("#dropdown-cart .summary .price").html(Shopify.formatMoney(i.total_price, window.money_format)), e("#dropdown-cart .mini-products-list").html(""), i.item_count > 0) {
                 for (var o = 0; o < i.items.length; o++) {
                     var n = a;

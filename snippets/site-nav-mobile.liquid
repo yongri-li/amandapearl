@@ -42,7 +42,7 @@
       {% comment %} normal menu {% endcomment %}
       <ul class="site-nav-dropdown">
         {% for childlink in linklists[link.handle].links %}
-          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+          <li {% if linklists[childlink.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 21"{% endif %}>
             <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
               <span>
                 {% if settings.enable_multilang %}
@@ -56,7 +56,7 @@
             </a>
             <ul class="site-nav-dropdown">
               {% for childlink2 in linklists.[childlink.handle].links %}
-                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                <li {% if linklists[childlink2.handle] != empty and childlink2.object.handle != 'clutches' %}class="dropdown 22"{% endif %}>
                   <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
                     <span>
                       {% if settings.enable_multilang %}
@@ -128,7 +128,7 @@
       {% comment %} normal menu {% endcomment %}
       <ul class="site-nav-dropdown">
         {% for childlink in linklists[link.handle].links %}
-          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+          <li {% if linklists[childlink.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 1"{% endif %}>
             <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
               <span>
                 {% if settings.enable_multilang %}
@@ -142,7 +142,7 @@
             </a>
             <ul class="site-nav-dropdown">
               {% for childlink2 in linklists.[childlink.handle].links %}
-                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                <li {% if linklists[childlink2.handle] != empty and childlink2.object.handle != 'clutches' %}class="dropdown 2"{% endif %}>
                   <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
                     <span>
                       {% if settings.enable_multilang %}

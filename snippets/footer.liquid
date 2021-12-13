@@ -34,7 +34,7 @@
   </script>
     {% endif %}
   {% endif %}
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer" id="site_footer" role="contentinfo">
   <div class="container">
 
     <div class="footer-top">
@@ -56,7 +56,7 @@
                 <li class="lang1">{{ link.title | split: '|' | first | link_to: link.url }}</li>
                 <li class="lang2">{{ link.title | split: '|' | last | link_to: link.url }}</li>
               {% else %}
-              	<li>{{ link.title | split: '|' | first | link_to: link.url }}</li>
+              	<li {% if link.title == 'Blog' %}class="footer-blog-link"{% endif %}>{{ link.title | split: '|' | first | link_to: link.url }}</li>
               {% endif %}
             {% endfor %}
           </ul>

@@ -13,7 +13,7 @@
        <div id="navbar-close" class="hidden"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
    </button>
 </div>
-          <a href="#" data-reveal-id="myModal"><i class="fa fa-search fa-lg" aria-hidden="true" style="color: #000; position: fixed; z-index: 9999; top: 17px; left:17%;"></i></a>
+          <a href="#" data-reveal-id="myModal"><i class="fa fa-search fa-lg" aria-hidden="true" style="color: #000; position: fixed; z-index: 9999; top: 98px; right:58px;"></i></a>
         </div><!-- end Navigation Mobile  -->
 
         <div class="customer-area dropdown hidden-xs" style="border-left: 0px solid #fff;">
@@ -53,29 +53,28 @@
         {% endif %}
 
         <div class="top-header" style="margin-left:30px">
+          {% comment %}
           <div class="wrapper-top-cart">
             <p class="top-cart">
               <a href="/cart">
-                <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px" alt="alt text"></span>
-
+                <span {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px" alt="alt text"></span>
               </a>
             </p>
           </div>
 
-          {% comment %}
           If customer accounts are enabled, provide login and create account links
           {% endcomment %}
         </div> <!-- End Top Header -->
 
       </div>
 
-      <div class="header-panel">
-        <div class="row">
+      <div class="header-panel header-group">
+        <div class="row header-logo">
           <h1 class="header-logo col-xs-12">
             <center>
             {% if settings.brand_type == 'image' %}
-            <a href="/">
-              {{ 'logo.png' | asset_url | img_tag: shop.name }}</a><h4><font size="6"><b>{{ settings.brand_text }}</b></font></h4>
+            <a href="/" class="logo-img">
+              {{ 'extend_logo.png' | asset_url | img_tag: shop.name }}</a>{% comment %}<h4><font size="6"><b>{{ settings.brand_text }}</b></font></h4>{% endcomment %}
               {% if settings.enable_retina %}
               	{{ 'logo_2x.png' | asset_url | img_tag: shop.name }}
               <h2>{{ settings.brand_text }}</h2>
@@ -87,20 +86,98 @@
             {% else %}
             <a class="logo-title" href="/">{{shop.name}}</a>
             {% endif %}
-
+				
             </center>
           </h1>
-        </div>
+          <a href="/cart" class="first"style="width: 17px; margin-right: -46px; margin-top: 14px; position: relative;transform: translateY(8px);" >
+                <span class="first mobile-shopping-bag" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px" alt="alt text"></span>
+                <span class="visible-xs" id="cartCount" style="position: absolute; background: transparent; border-radius: 100%; right: -16px; top: -4px; width: 20px; text-align: center; z-index: 999999999999999999; padding: 3px; color: #000!important">{{ cart.item_count }}</span>
 
+              </a>
+        </div>
+		
+        <ul class="icon-button-group">
+                    <li class="hidden-xs"><a href="#" data-reveal-id="myModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+                    <li>
+                      <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
+                      <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>
+                        <img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" alt="alt text" width="15px">
+                      </span>
+                        <span class="cartCount" style="display: none;">{{ cart.item_count }}</span>
+                      </a>
+                    </li>
+                    <li>
+                        <a href="#swym-wishlist" class="" data-swym-loaded="true">
+                          <span>
+                            <i class="fa fa-heart-o hidden-xs" aria-hidden="true"></i> <span class="visible-xs">Wishlist</span>
+
+                          </span>
+                        </a>
+                    </li>	
+                    
+                    <div id="dropdown-cart" style="display:none">
+                       <div class="no-items">
+                         <center><p>{{ 'cart.general.empty' | t }}</p></center>
+                         <p class="text-continue"><a href="javascript:void(0)" {% if settings.enable_multilang %}data-translate="cart.ajax_cart.continue_shopping"{% endif %} style="text-align: center">{{ 'cart.ajax_cart.continue_shopping' | t }}</a></p>
+                       </div>
+                       <div class="has-items">
+                         <h2 style="text-align: center; text-transform: uppercase;">Your Cart</h2>
+                         <ol class="mini-products-list">
+                           {% for item in cart.items %}
+                           <li class="item" id="cart-item-{{item.id}}">
+                             <a href="{{item.url}}" class="product-image">
+                               <img src="{{ item.image | product_img_url: 'small' }}" alt="{{item.title}}">
+                             </a>
+                             <div class="product-details">
+                               <a href="javascript:void(0)" title="{{ 'cart.general.remove' | t }}" class="btn-remove">X</a>
+                               <p class="product-name">
+                                 <a href="{{item.url}}">
+                                   {% if settings.enable_multilang %}
+                                     <span class="lang1">{{ item.product.title | split: '|' | first }}</span>
+                                     <span class="lang2">{{ item.product.title | split: '|' | last }}</span>
+                                   {% else %}
+                                     {{ item.product.title | split: '|' | first }}
+                                   {% endif %}
+                                 </a>
+                               </p>
+                               <div class="option">
+                                 {% if item.product.variants.size != 0 %}
+                                 {% unless item.variant.title contains 'Default' %}
+                                 <small>{{ item.variant.title }}</small>
+                                 {% endunless %}
+                                 {% endif %}
+                               </div>
+                               <div class="cart-collateral"><span class="price">{{item.price | money}}</span> x {{item.quantity}}</div>
+                             </div>
+                           </li>
+                           {% endfor %}
+                         </ol>
+                         <div class="summary">
+                           <p class="total">
+                             <span class="label"><span {% if settings.enable_multilang %}data-translate="cart.label.total"{% endif %}>{{ 'cart.label.total' | t }}</span>:</span>
+                             <span class="price"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_total" style="display:none !important;"></span>{{cart.total_price | money}}</span>
+                           </p>
+                         </div>
+                         <div class="actions">
+                           <button class="btn" onclick="window.location='/checkout'" {% if settings.enable_multilang %}data-translate="cart.general.checkout"{% endif %}>{{ 'cart.general.checkout' | t }}</button>
+                         </div>
+                         <p class="text-cart"><a href="/cart" {% if settings.enable_multilang %}data-translate="cart.general.view_cart"{% endif %}>{{ 'cart.general.view_cart' | t }}</a></p>
+                       </div>
+                      </div>
+
+
+                </ul>
+
+        
       </div>
     </div>
 
     <nav class="nav-bar" role="navigation">
       <div class="container visible-xs" style="margin-top: 0px">
-        {% include 'site-nav-mobile' %}
+        {% include 'site-main-nav-mobile' %}
       </div>
       <div class="hidden-xs" style="margin-top: -17px">
-        {% include 'site-nav' %}
+        {% include 'site-main-nav' %}
       </div>
     </nav>
 
@@ -113,7 +190,6 @@
   translator.doTranslate(".site-header");
 </script>
 {% endif %}
-<span class="visible-xs" id="cartCountm" style="position: fixed; background: transparent; border-radius: 100%; right: 23px; top: 10px; width: 20px; text-align: center; z-index: 999999999999999999; padding: 3px; color: #000!important">{{ cart.item_count }}</span>
 
 {% comment %}
 <div class="visible-xs">

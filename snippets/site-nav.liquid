@@ -43,7 +43,7 @@
       {% comment %} normal menu {% endcomment %}
       <ul class="site-nav-dropdown ">
         {% for childlink in linklists[link.handle].links %}
-          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+          <li {% if linklists[childlink.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 31"{% endif %}>
             <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
               <span>
                 {% if settings.enable_multilang %}
@@ -53,11 +53,14 @@
                 {{ childlink.title | split: '|' | first }}
                 {% endif %}
               </span>
-              {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+              {% unless childlink.object.handle == 'clutches' %}
+                {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+              {% endunless %}
             </a>
+            {% unless childlink.object.handle == 'clutches' %}
             <ul class="site-nav-dropdown">
               {% for childlink2 in linklists.[childlink.handle].links %}
-                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                <li {% if linklists[childlink2.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 34"{% endif %}>
                   <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
                     <span>
                       {% if settings.enable_multilang %}
@@ -88,6 +91,7 @@
               {% endfor %}
 
             </ul>
+            {% endunless %}
           </li>
         {% endfor %}
       </ul>
@@ -127,9 +131,10 @@
 
       {% else %}
       {% comment %} normal menu {% endcomment %}
+      {% unless childlink.object.handle == 'clutches' %}
       <ul class="site-nav-dropdown">
         {% for childlink in linklists[link.handle].links %}
-          <li {% if linklists[childlink.handle] != empty %}class="dropdown"{% endif %}>
+          <li {% if linklists[childlink.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 32"{% endif %}>
             <a href="{{ childlink.url }}" class="{% if childlink.active %}current{% endif %}">
               <span>
                 {% if settings.enable_multilang %}
@@ -139,11 +144,14 @@
                 {{ childlink.title | split: '|' | first }}
                 {% endif %}
               </span>
-              {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+              {% unless childlink.object.handle == 'clutches' %}
+                {% if linklists[childlink.handle] != empty and settings.show_dropdown_arrow %}+{% endif %}
+              {% endunless %}
             </a>
+            {% unless childlink.object.handle == 'clutches' %}
             <ul class="site-nav-dropdown">
               {% for childlink2 in linklists.[childlink.handle].links %}
-                <li {% if linklists[childlink2.handle] != empty %}class="dropdown"{% endif %}>
+                <li {% if linklists[childlink2.handle] != empty and childlink.object.handle != 'clutches' %}class="dropdown 33"{% endif %}>
                   <a href="{{ childlink2.url }}" class="{% if childlink2.active %}current{% endif %}">
                     <span>
                       {% if settings.enable_multilang %}
@@ -174,9 +182,11 @@
               {% endfor %}
 
             </ul>
+            {% endunless %}
           </li>
         {% endfor %}
       </ul>
+      {% endunless %}
       {% endif %}
 
     </li>
@@ -185,7 +195,7 @@
   <li>
     <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
     <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" alt="alt text" width="15px"></span>
-    <span id="cartCount" style="position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
+    <span id="cartCount" style="display: none; position: relative; z-index: 999; color: #000; padding: 0px; text-align: left; margin-left: 2px">{{ cart.item_count }}</span>
     </a>
   </li>
   <div id="dropdown-cart" style="display:none">

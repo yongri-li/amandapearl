@@ -13,7 +13,7 @@
        <div id="navbar-close" class="hidden"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
    </button>
 </div>
-          <a href="#" data-reveal-id="myModal"><i class="fa fa-search fa-lg" aria-hidden="true" style="color: #000; position: fixed; z-index: 9999; top: 98px; right:58px;"></i></a>
+          <a href="#" data-reveal-id="myModal"><i class="fa fa-search fa-lg" aria-hidden="true" style="color: #000; position: fixed; z-index: 9999; top: 110px; right:58px;"></i></a>
         </div><!-- end Navigation Mobile  -->
 
         <div class="customer-area dropdown hidden-xs" style="border-left: 0px solid #fff;">
@@ -89,23 +89,15 @@
 				
             </center>
           </h1>
-          <a href="/cart" class="first"style="width: 17px; margin-right: -46px; margin-top: 14px; position: relative;transform: translateY(8px);" >
+          <a href="/cart" class="first"style="width: 17px; margin-right: -46px; margin-top: 16px; position: relative;transform: translateY(8px);" >
                 <span class="first mobile-shopping-bag" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}><img src="{{ 'cart.png' | asset_url }}" width="40px" alt="alt text"></span>
                 <span class="visible-xs" id="cartCount" style="position: absolute; background: transparent; border-radius: 100%; right: -16px; top: -4px; width: 20px; text-align: center; z-index: 999999999999999999; padding: 3px; color: #000!important">{{ cart.item_count }}</span>
 
-              </a>
+              </a> 
         </div>
 		
         <ul class="icon-button-group">
-                    <li class="hidden-xs"><a href="#" data-reveal-id="myModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>
-                    <li>
-                      <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
-                      <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>
-                        <img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" alt="alt text" width="15px">
-                      </span>
-                        <span class="cartCount" style="display: none;">{{ cart.item_count }}</span>
-                      </a>
-                    </li>
+                    <li class="hidden-xs"><a href="#" data-reveal-id="myModal"><i class="fa fa-search" aria-hidden="true"></i></a></li>                    
                     <li>
                         <a href="#swym-wishlist" class="" data-swym-loaded="true">
                           <span>
@@ -114,6 +106,14 @@
                           </span>
                         </a>
                     </li>	
+                    <li>
+                      <a href="javascript:void(0)" id="cartToggle" style="text-decoration:none!important;">
+                      <span class="first" {% if settings.enable_multilang %}data-translate="cart.general.shopping_cart"{% endif %}>
+                        <img class="dt_rd_tp" src="{{ 'cart.png' | asset_url }}" alt="alt text" width="15px">
+                      </span>
+                        <span class="cartCount" style="display: none;">{{ cart.item_count }}</span>
+                      </a>
+                    </li>
                     
                     <div id="dropdown-cart" style="display:none">
                        <div class="no-items">

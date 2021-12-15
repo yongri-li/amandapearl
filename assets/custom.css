@@ -266,9 +266,7 @@ ul.site-nav {
   padding-left: 15px;
   padding-right: 15px;
 }
-.wrapper-container .site-nav li.mega-menu .site-nav-dropdown{
-	width: 100% !important;
-}
+
 .parent-mega-menu{
   display: flex;
   justify-content: space-between;
@@ -320,6 +318,11 @@ ul.site-nav {
   }
 }
 @media (max-width: 767px) {
+
+  .header-panel.header-group {
+    margin-top: 10px;
+  }
+
   .header-top{
     display: block !important;
     margin-top: 0px;
@@ -335,10 +338,11 @@ ul.site-nav {
     width: 64%;
   }
   .header-logo img{
-   	width: 120px;
+   	width: 140px;
   }
   .header-mobile{
   	width: 100%;
+    height: 64px;
   }
   .header-bottom .top-header{
   	width: 100% !important;

@@ -18,7 +18,7 @@
   {% for link in linklists.custom-main-menu.links %}
   	{% assign i = forloop.index | downcase %}
     {% assign cat = link.title | downcase %}
-    <li {% if linklists[link.handle] != empty %}class="{% unless cat == 'about' %}dropdown{% endunless %} {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
+    <li {% if linklists[link.handle] != empty %}class="dropdown {% if settings.display_megamenu and items_list contains cat %}mega-menu{% endif %}"{% endif %}>
       <a href="{{ link.url }}" class="{% if link.active %}current{% endif %}">
         <span>
           {% if settings.enable_multilang %}

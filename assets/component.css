@@ -2,7 +2,18 @@
 .cbp-spmenu {
 	position: fixed;
 }
-
+.cbp-spmenu .gf-menu-device-wrapper {
+	z-index: 2;
+	height: 100%;
+}
+.cbp-spmenu.cbp-spmenu-open .cbp-spmenu-bg {
+	position: fixed;
+    top: 0;
+    left: 240px;
+    right: 0;
+    bottom: 0;
+	z-index: 1;
+}
 .cbp-spmenu h3 {
 	margin: 0;	
 }

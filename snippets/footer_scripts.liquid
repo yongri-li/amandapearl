@@ -24,6 +24,18 @@
       classie.toggle( body, 'cbp-spmenu-push-toright' );
       classie.toggle( menuLeft, 'cbp-spmenu-open' );
   };
+  $('.cbp-spmenu-bg').on('click', function(e){
+    var $target = $(e.target);
+    if($('.cbp-spmenu').hasClass('cbp-spmenu-open')) {
+      if($target.closest('.gf-menu-device-wrapper').length == 0 && $target.closest('.navbar-toggle').length == 0) {
+        console.log($target)
+        classie.toggle( showLeftPush, 'active' );
+        classie.toggle( body, 'cbp-spmenu-push-toright' );
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+      }
+    }
+    
+  })
 </script>
 
 {% if settings.enable_lazy_loading_pc or settings.enable_lazy_loading_mobile %}

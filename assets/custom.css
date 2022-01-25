@@ -124,7 +124,7 @@
   }
 }
 
-.mobile-shopping-bag img{
+.mobile-shopping-bag img, .mobile-shopping-bag svg{
 	display: none;
 }
 
@@ -153,7 +153,13 @@
     z-index: 999;
   }
   .mobile-shopping-bag img{
-	display: block;
+	  display: block;
+    
+  }
+  .mobile-shopping-bag svg {
+    display: block;
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -265,6 +271,7 @@ ul.site-nav {
   justify-content: space-between;
   padding-left: 15px;
   padding-right: 15px;
+  padding-top: 10px;
 }
 
 .parent-mega-menu{
@@ -300,13 +307,28 @@ ul.site-nav {
 }
 .header-group .icon-button-group{
   position: absolute;
-    top: 20px;
-    right: 50px;
+    bottom: 0;
+    margin-bottom: 0;
+    right: 0px;
     display: flex;
     list-style: none;
+    line-height: 1;
 }
 .header-group .icon-button-group li{
-    padding-right: 20px;
+  margin-bottom: 0;
+  padding-right: 20px;
+}
+.header-group .icon-button-group li svg {
+  width: 20px;
+  height: 20px;
+}
+.site-nav-dropdown .col-1 .inner {
+  padding-right: 30px;
+  padding-left: 30px;
+  width: max-content;
+}
+.site-nav-dropdown li:hover>a {
+  padding-left: 40px;
 }
 .site-nav>li:hover>a, 
 .site-nav>li:hover>a:hover{
@@ -354,5 +376,33 @@ ul.site-nav {
   #navbar-close i{
     display: none;
   }
+  .gf-menu-device-wrapper .wishlist{
+    list-style: none;
+    margin-top: 40px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-weight: 100;
+  }
 }
+
+
 /*===============ENDMEGA MENU CUSTOM STYLE CSS===============*/
+
+#cartToggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+#cartToggle .cartCount {
+  margin-left: 5px;
+}
+
+#cloverly-container {
+  margin-bottom: 10px;
+  
+}
+#cloverly-container .cloverly-container .cloverly-estimate-container{
+  width: 100%;
+  justify-content: center;
+}

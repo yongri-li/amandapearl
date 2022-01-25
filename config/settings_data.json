@@ -341,20 +341,20 @@
     "slide_text_size": "12",
     "display_slideshow_1": "image",
     "video_1": "<video muted> <div style=\"padding:50% 0 0 0;position:relative;\"><iframe src=\"https:\/\/player.vimeo.com\/video\/365533418?autoplay=1&loop=1&muted=1&title=0&byline=0&portrait=0\" style=\"position:absolute;top:0;left:0;width:100%;height:100%;\" frameborder=\"0\" allow=\"autoplay; fullscreen\" allowfullscreen><\/iframe><\/div>\n<script src=\"https:\/\/player.vimeo.com\/api\/player.js\"><\/script> <\/video>",
-    "image_1_link": "https:\/\/amandapearl.com\/collections\/all",
-    "image_1_alt": "Shop all the great gifts from AMANDA PEARL at 60% off",
+    "image_1_link": "https:\/\/amandapearl.com\/collections\/valentines-day-gift-guide",
+    "image_1_alt": "Spread the Love with JEWELRY",
     "slide-heading_1": "",
     "slide_heading_color_1": "#000000",
     "slide_heading_size_1": "50",
     "slide-text_1": "",
     "slide_text_color_1": "#ffffff",
     "slide_text_size_1": "16",
-    "button-text_1": "SHOP NOW",
+    "button-text_1": "",
     "text_align_slide_1": "left",
     "display_slideshow_2": "image",
     "video_2": "",
-    "image_2_link": "https:\/\/amandapearl.com\/collections\/most-gifted",
-    "image_2_alt": "Most Gifted",
+    "image_2_link": "https:\/\/amandapearl.com\/collections\/valentines-day-gift-guide",
+    "image_2_alt": "Be Your Own Valentine",
     "slide-heading_2": "",
     "slide_heading_color_2": "#ffffff",
     "slide_heading_size_2": "50",
@@ -365,8 +365,8 @@
     "text_align_slide_2": "right",
     "display_slideshow_3": "image",
     "video_3": "",
-    "image_3_link": "https:\/\/amandapearl.com\/collections\/ready-to-ship",
-    "image_3_alt": "The perfect gifts are Ready to Ship",
+    "image_3_link": "https:\/\/amandapearl.com\/collections\/valentines-day-gift-guide",
+    "image_3_alt": "Lock on your love",
     "slide-heading_3": "",
     "slide_heading_color_3": "#ffffff",
     "slide_heading_size_3": "50",
@@ -377,8 +377,8 @@
     "text_align_slide_3": "right",
     "display_slideshow_4": "image",
     "video_4": "",
-    "image_4_link": "https:\/\/amandapearl.com\/collections\/dream-gifts",
-    "image_4_alt": "Dream Gifts, from AMANDA PEARL",
+    "image_4_link": "https:\/\/amandapearl.com\/collections\/valentines-day-gift-guide",
+    "image_4_alt": "Find your match",
     "slide-heading_4": "",
     "slide_heading_color_4": "#ffffff",
     "slide_heading_size_4": "50",
@@ -389,8 +389,8 @@
     "text_align_slide_4": "center",
     "display_slideshow_5": "image",
     "video_5": "",
-    "image_5_link": "https:\/\/amandapearl.com\/collections\/for-you",
-    "image_5_alt": "For You - you deserve a gift too!",
+    "image_5_link": "https:\/\/amandapearl.com\/collections\/valentines-day-gift-guide",
+    "image_5_alt": "What's your love language?",
     "slide-heading_5": "",
     "slide_heading_color_5": "#ffffff",
     "slide_heading_size_5": "50",
@@ -1170,8 +1170,8 @@
             "type": "slider",
             "settings": {
               "title": "WHO WE GIVE TO",
-              "title_url": "shopify:\/\/collections\/40-off-last-chance-sale",
-              "image": "shopify:\/\/shop_images\/TPL-who-we-give-to.jpg",
+              "title_url": "shopify:\/\/blogs\/amanda-pearl\/community-for-cause",
+              "image": "shopify:\/\/shop_images\/Who-We-Are-Cultural-Survival-homepage.jpg",
               "description": "YOU SHOP, WE GIVE:  Meet our current beneficiary",
               "button_text": "LEARN More",
               "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/community-for-cause"
@@ -1187,39 +1187,12 @@
       "home-carousel": {
         "type": "home-carousel",
         "blocks": {
-          "05eeb49f-4bbf-42eb-82b5-0d4062e048a9": {
+          "ab5c482c-f2bb-41ea-b24d-fbbc0de30d4e": {
             "type": "slider",
             "settings": {
-              "image": "shopify:\/\/shop_images\/2021-holiday-gift-guide-insta.jpg",
-              "description": "OUR 2021 HOLIDAY GIFT GUIDE IS READY TO SOLVE ALL YOUR HOLIDAY SHOPPING QUANDRIES!",
-              "button_text": "EXPLORE",
-              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/2021-holiday-gift-guide"
-            }
-          },
-          "2cf3c429-8141-460a-8956-efc422e81fd3": {
-            "type": "slider",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/2021-holiday-style-guide-sparkle-on-sparkle-1.jpg",
-              "description": "SPARKLE ON SPARKLE STYLE GUIDE",
-              "button_text": "EXPLORE",
-              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/2021-holiday-style-guide-sparkle-on-sparkle"
-            }
-          },
-          "632343bd-b340-4679-a7c9-06a8eaa481c5": {
-            "type": "slider",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/2021-09-Amandas-Fall-Wish-List-Insta-Square.jpg",
-              "description": "Amanda's Fall 2021 wish list",
+              "image": "shopify:\/\/shop_images\/2022-Winter-Wish-List-APB_3eec81fe-ee32-4692-b066-a8435b5fb40d.jpg",
+              "description": "Amanda's Winter 2022 Wishlist",
               "button_text": "Read More",
-              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/summer-style-made-easy"
-            }
-          },
-          "af2d8b79-be52-49b1-ae37-153ba48047b9": {
-            "type": "slider",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/One-earring-many-looks.jpg",
-              "description": "One Earring, 4 Looks",
-              "button_text": "1 Earring, 4 Looks",
               "button_url": ""
             }
           },
@@ -1241,6 +1214,15 @@
               "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/about-the-stones"
             }
           },
+          "af2d8b79-be52-49b1-ae37-153ba48047b9": {
+            "type": "slider",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/One-earring-many-looks.jpg",
+              "description": "One Earring, 4 Looks",
+              "button_text": "1 Earring, 4 Looks",
+              "button_url": ""
+            }
+          },
           "ae6145f2-2680-41b9-a326-016c7a68967b": {
             "type": "slider",
             "settings": {
@@ -1249,16 +1231,47 @@
               "button_text": "LEARN MORE",
               "button_url": "https:\/\/amandapearl.com\/pages\/events"
             }
+          },
+          "05eeb49f-4bbf-42eb-82b5-0d4062e048a9": {
+            "type": "slider",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2021-holiday-gift-guide-insta.jpg",
+              "description": "OUR 2021 HOLIDAY GIFT GUIDE IS READY TO SOLVE ALL YOUR HOLIDAY SHOPPING QUANDRIES!",
+              "button_text": "EXPLORE",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/2021-holiday-gift-guide"
+            }
+          },
+          "2cf3c429-8141-460a-8956-efc422e81fd3": {
+            "type": "slider",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2021-holiday-style-guide-sparkle-on-sparkle-1.jpg",
+              "description": "SPARKLE ON SPARKLE STYLE GUIDE",
+              "button_text": "EXPLORE",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/2021-holiday-style-guide-sparkle-on-sparkle"
+            }
+          },
+          "632343bd-b340-4679-a7c9-06a8eaa481c5": {
+            "type": "slider",
+            "disabled": true,
+            "settings": {
+              "image": "shopify:\/\/shop_images\/2021-09-Amandas-Fall-Wish-List-Insta-Square.jpg",
+              "description": "Amanda's Fall 2021 wish list",
+              "button_text": "Read More",
+              "button_url": "https:\/\/amandapearl.com\/blogs\/amanda-pearl\/summer-style-made-easy"
+            }
           }
         },
         "block_order": [
-          "05eeb49f-4bbf-42eb-82b5-0d4062e048a9",
-          "2cf3c429-8141-460a-8956-efc422e81fd3",
-          "632343bd-b340-4679-a7c9-06a8eaa481c5",
-          "af2d8b79-be52-49b1-ae37-153ba48047b9",
+          "ab5c482c-f2bb-41ea-b24d-fbbc0de30d4e",
           "4064ef7c-9e56-41a1-882f-0961d243b330",
           "08b500a5-506a-440c-bf8e-262e2e4b5e6e",
-          "ae6145f2-2680-41b9-a326-016c7a68967b"
+          "af2d8b79-be52-49b1-ae37-153ba48047b9",
+          "ae6145f2-2680-41b9-a326-016c7a68967b",
+          "05eeb49f-4bbf-42eb-82b5-0d4062e048a9",
+          "2cf3c429-8141-460a-8956-efc422e81fd3",
+          "632343bd-b340-4679-a7c9-06a8eaa481c5"
         ],
         "settings": {
           "title": "The pieces in action",

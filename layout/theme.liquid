@@ -87,6 +87,13 @@
   <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
     <div class="gf-menu-device-wrapper">
       <div class="gf-menu-device-container"></div>
+      <li class="wishlist">
+        <a href="#swym-wishlist" class="" >
+          <span>
+            <span class="visible-xs">Wishlist</span>
+          </span>
+        </a>
+      </li>
     </div>
     <div class="cbp-spmenu-bg"></div>
   </nav>
@@ -193,9 +200,12 @@ $(function() {
 </script>
 
 <style>
-.navbar-toggle { max-height: 40px; position: absolute; top: 7px; left: 7px; }
+.navbar-toggle { max-height: 40px; position: absolute; top: 5px; left: 7px; }
 .header-mobile #showLeftPush { background: #fff!important }
 #navbar-close { position: absolute; z-index: 99; left: 750%; top: 80px; }
+.header-bottom .container{
+  width: 100%;
+}
 </style>
 <script>
 if (afterpay_product && afterpay_product.price == 0) {

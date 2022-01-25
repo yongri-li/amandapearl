@@ -1464,7 +1464,9 @@ table.wishlist-product .a-center { text-align: center; }
 .site-nav > li.mega-menu { position: static; }
 .wrapper-container .site-nav li.mega-menu:hover .site-nav-dropdown { display: block; }
 .wrapper-container .site-nav li.dropdown:hover.mega-menu > a > .icon-dropdown { border-top-color: #fff; opacity: 1; }
-.wrapper-container .site-nav li.mega-menu .site-nav-dropdown { position: absolute; top: 54px; width: 250%; left: 50%; transform: translateX(-50%); right: 0%; float: center; border: 0; padding: 24px 0; }
+.wrapper-container .site-nav li.mega-menu .site-nav-dropdown { position: absolute; top: 54px; width: 250%; left: 0; right: 0%; float: center; border: 0; padding: 24px 0; }
+.wrapper-container .site-nav li.mega-menu .site-nav-dropdown .container.style_3{ width: 100%; }
+
 .sub-mega-menu .parent-link { border-bottom: 1px solid #3d4549; color: #fff; font-weight: 500; padding-bottom: 20px; margin-bottom: 15px; }
 .sub-mega-menu .parent-link a { text-transform: uppercase; color: #fff; font-weight: 500; letter-spacing: 0.05em; display: inline-block; padding: 0; margin: 0; }
 .sub-mega-menu .parent-link > span.up { text-indent: -999em; display: block; background: url(icon-menu-up.png) no-repeat; opacity: 0.5; width: 9px; height: 6px; position: absolute; left: 50%; top: 6px; cursor: pointer; }
@@ -2368,7 +2370,7 @@ div.snize-ac-results.snize-ac-results-mobile {
     }
 
     .mega-menu .site-nav-dropdown .container {
-        width: fit-content;
+        {% comment %} width: fit-content; {% endcomment %}
     }
 
     .mega-menu .site-nav-dropdown .col-1 {
@@ -2381,7 +2383,7 @@ div.snize-ac-results.snize-ac-results-mobile {
     }
 
     .main-slideshow {
-        margin-top: 50px !important;
+        margin-top: 20px !important;
     }
 }
 
@@ -2393,4 +2395,11 @@ div.snize-ac-results.snize-ac-results-mobile {
     .canvas-container .header-top {
         display: none;
     }
+}
+
+.no-items .text-continue {
+    margin-top: 30px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
 }

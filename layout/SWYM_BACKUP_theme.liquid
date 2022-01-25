@@ -83,11 +83,19 @@
 {% comment %}
   Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
-<body id="{{ page_title | handle }}" class=" {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
+<body id="{{ page_title | handle }}" data-customer-email="{{ customer.email }}" class=" {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
   <nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
     <div class="gf-menu-device-wrapper">
       <div class="gf-menu-device-container"></div>
+      <li class="wishlist">
+        <a href="#swym-wishlist" class="" >
+          <span>
+            <span class="visible-xs">Wishlist</span>
+          </span>
+        </a>
+      </li>
     </div>
+    <div class="cbp-spmenu-bg"></div>
   </nav>
   <div class="wrapper-container">
     {% include 'header' %}
@@ -186,13 +194,18 @@ $(function() {
     $('#navbar-hamburger').toggleClass('block');
     $('#navbar-close').toggleClass('hidden');
   });
+  
 });
+
 </script>
 
 <style>
-.navbar-toggle { max-height: 40px; position: absolute; top: 7px; left: 7px; }
+.navbar-toggle { max-height: 40px; position: absolute; top: 5px; left: 7px; }
 .header-mobile #showLeftPush { background: #fff!important }
 #navbar-close { position: absolute; z-index: 99; left: 750%; top: 80px; }
+.header-bottom .container{
+  width: 100%;
+}
 </style>
 <script>
 if (afterpay_product && afterpay_product.price == 0) {
@@ -211,6 +224,6 @@ if (afterpay_product && afterpay_product.price == 0) {
   {% if settings.collection_infinite_scrolling and settings.collection_infinite_scrolling_endless %}
     {{ 'ajaxinate.min.js' | asset_url | script_tag }}
   {% endif %}
-<div class="klaviyo-form-WA3sf8"></div>
+  <script src="https://cdn.attn.tv/amandapearl/dtag.js"></script>
 </body>
 </html>

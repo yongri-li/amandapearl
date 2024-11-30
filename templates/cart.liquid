@@ -142,9 +142,21 @@
         name="checkout" is required for the update button to work
       {% endcomment %}
 
-        <div id="cloverly-container"></div>
+      <div class="signature-required" style="margin-bottom: 20px;">
+        <div class="signature-option">
+          <input type="radio" name="signature" checked id="signature-required">
+          <label for="signature-required">Require signature upon delivery (safest option)</label>
+        </div>
+        <div class="signature-option">
+          <input type="radio" name="signature" id="signature-not-required">
+          <label for="signature-not-required">No signature required upon delivery</label>
+        </div>
+      </div>
+
+        
       <input type="submit" name="checkout" class="btn" {% if settings.enable_multilang %}data-translate="cart.general.button_checkout"{%endif%} value="{{ 'cart.general.button_checkout' | t }}">
 
+      <div id="cloverly-container"></div>
       {% comment %}
         name="update" is required for the update button to work
       {% endcomment %}
@@ -193,3 +205,9 @@
 {% include 'recently-viewed-products' %}
 {% endif %}
 </div>
+
+<style>
+  .signature-option label {
+    transform: translateY(-2px);
+  }
+</style>
